@@ -1,0 +1,359 @@
+{
+    "topics": {
+        "Topic 0": {
+            "words": [
+                "internet",
+                "mòbil",
+                "ordinador",
+                "software",
+                "cobertura",
+                "sistema",
+                "connectar",
+                "utilitzar",
+                "diuar",
+                "explotació"
+            ],
+            "scores": [
+                0.07511556790559477,
+                0.04634490231106566,
+                0.041364795892594466,
+                0.03478872403159251,
+                0.026933692610743968,
+                0.02059155642506256,
+                0.019449191999691685,
+                0.017151256833514778,
+                0.015834871362176088,
+                0.015367683958696171
+            ],
+            "count": 107,
+            "representative_docs": [
+                "home suposar sí ser cobertura sre ser dir ser alarma puguar cobertura voler dir clar internet nordest bueno clar cobertura necessit granja lo ser dotació mare necessitar alarma haver sistema haver seguretat estar alarma alarma necessita internet cobertura mòbil partir mares dic programa producció necessites connexió internet moment clar dependre ser engreix ser diferent clar engreix ser diferent gestió se fer se fer mòbil puntualment demés vegada se tecnificar ser dir creure avançar clar surtir software surtir cosa nou vol aprofitar creure s haver fer nos haver adaptar venir mica",
+                "nivell truja gran truja internet engreix inclús vegada mòbil arribar xarxa mòbil internet truja sí s haver posar internet granja",
+                "oficina se trobar ordinador treballar res dona fill haver connexió internet dos antena nau ser internet placa solar connectar màquina feed internet mòbil 4g sí sí passar se dir pda sre pda ser mica gran mòbil lo fer servir llegir codi barra truja ser programa holandès nos dir posar targeta sim comunicar dada temps real ordinador connexió fallar passar dada s agafar gaire passar màquina arribar oficina tarda nit se sincronitzar mitjançant wi bo sí dada se carreguar servidor través wi ser treballar granja g dada"
+            ],
+            "group": ""
+        },
+        "Topic 1": {
+            "words": [
+                "interpretació",
+                "interpretar",
+                "confiar",
+                "acabar",
+                "lliure",
+                "erp",
+                "engreixar",
+                "agafar",
+                "sabriar_dir",
+                "sabriar"
+            ],
+            "scores": [
+                0.07689154548622844,
+                0.06812567591136647,
+                0.06056838975771939,
+                0.06039122566594013,
+                0.05256428690437916,
+                0.0510105033350948,
+                0.04838307913102715,
+                0.04581039293557535,
+                0.045426292318289534,
+                0.04477462109846111
+            ],
+            "count": 102,
+            "representative_docs": [
+                "confiar evidentment necessitar interpretació interpretació ser ser programa tothom dir comptar comptar agafar toc tirs",
+                "sí confiar resultat nos donar sí interpretació haver sip t ajudar interpretar ell se fer reunió feedback sema utilitzar dada sí sí exacte",
+                "sí començar mirar gerent mica pla lo deure acabar principi hivern passat acabar pla començar procés mirar diferent erp erp vincular haver ser cosa haver fer ara ser part erp base dada cosa servidor fer nos cosa exemple programa mbi programa ser nexe unió programa se agafar fer recepta agafar deixar punt intercanvi"
+            ],
+            "group": ""
+        },
+        "Topic 2": {
+            "words": [
+                "feina",
+                "decisió",
+                "gaire",
+                "esclar",
+                "diner",
+                "sistema",
+                "factura",
+                "porc",
+                "acabar",
+                "dia_dia"
+            ],
+            "scores": [
+                0.025089347908663222,
+                0.018683005843491297,
+                0.018357448884388755,
+                0.017507408503394495,
+                0.017237579759982812,
+                0.01675807286247156,
+                0.01603901279586905,
+                0.015870201176808207,
+                0.014299083754451632,
+                0.013885804277458282
+            ],
+            "count": 70,
+            "representative_docs": [
+                "haver eina bàsicament veritat eina haver dir aplicar intel ligència artificial granja servir gran ajuda sector sector haver carència personal qualificat ajudar moltíssim prendre decisió encarregat granja funció dada feina s haver fer granja creure ajudar moltíssim evidentment principi haver d haver temps coneixa persona agafar confiança haver veure desè decisiar lo haver encertar evidentment t haver fer justificació decisió cop revis decisió correctament veure gaire problema t haver dir sentit mica avantatge ser enginyer informàtic ser enginyer informàtic treure carrera treballar tres quatre any analista sistema programador veure empresa fer disseny programa ajudar implementació pare arribar punt ell estar punt porta començar parlar jubilació dir fer menys mirar llogar vendre ficar balança pro cosa dir veritat ser animal sempre metre haver agradar sempre petit cap setmana sempre l haver ajudar família final ser moment entrar nou normativa animal mirar treure anàlisi saragossa important bestiar presentar sistema alimentació electrònic moment haver cap granja sistema noi dir vol buscar diu voler granja olot treballar voler parlar sabaté ser dominar parlar voler vinguar viatge ensenyar maco voler treballar granja almenys dia buscar família veure començar veure moment començar veure nou tecnologia començar entrar exportació agrícol pensar bueno ser interessant metre llançar metre dir val quedaré aniré modernitzar granja endavant plegar informàtic principi temps fer programa seguretat haver fer sentit ser bonic avantatge tema edat deure ser generació company haver zona costa part fer tràmit just dir administració ordenador diu se l mirar generació avall sí ser veritat lo controlat veure haver venar treure purí jove aplicació mòbil camp hectàrea fer divisió conductímetre portar sabar cuba purí haver administrar apamat generació ara generació n haver sí sí exacte",
+                "haver cosa antonio gerent interès fer haver aconseguir fer ser feina haver granja se tecnificar antonio estar invertir diner mòbil se predicció pes porc fer millor carga escorxador informació informació fer millor previsió venta aplicació nos predir porc carregar puguar ajudar los venda transport organitzar transport matèria prim pinso porc esclar manual haver mirar aplicació haver trobar res funcionar ser aspecte ser específic sector avui haver solució mercat ser principal avantatge trobeu digitalització avantatge digitalització ser fer feina fàcil millor final automatitzar processo ser millorar feina estar fer comuniqu fer feina dependre persona principal dificultat haver trobar adopció tipus eina haver cosa específic sector mercat estar volum lo mereixar pena exemple dynamics ser plataforma estàndard comptabilitzar recurs humà estar ser sector entendre part contractar dynamics contracte vertical ifr estar pensat sector porcí ramaderia general parles lot parla animal parla criança parla idioma idioma general haver programa valdre ser específicament haver ser vertical haver part estar fet faltar cosa vos informeu novetat mercat referència eina digital sortir haver equip it vegada arribar tercer sàpigar haver canal concret cosa ser genèric sí entendre mica específiqua volum gent solar vindre presentar cosa ser empresa gran sector haver algú fer cosa voler vendre agafar llistat nos venir vindre lo ser maquinària tecnologia específic general haver fer processo digitalització empresa haver fer entrevista treballador veure fer avui estar fer processo se fer eina forma se fer ràpid millor",
+                "presa decisió se basar dada entorn intuïció informació rebent informació tens millor final evolució empresa dada compte dada tècnic mercat sre tu acabar prenre decisió fer fer sre presa decisió ser cosa mi àmpli absolutament àmpli provar cosa passar ordenador bueno passar ordenador ser presa decisió enllà sre clar part utilitzar dada estar vinculat compte balanç sip dada tècnic sistema iniciació tècnic final t donar torn financer ser rellevant presa decisió partir proveïdor financer client acabar configurar fer canviar bueno final estar decisió provre munt cosa tona arribar creure ser intuïtiu diguar estar ben alimentat entorn perspectiva curt termini termini acabar decisió s haver fer mica cas ser intuïtiu sre fer semblar ara apostemar fer tema elaborat ser mica estrany haver indicador t indiquar elaborar escala ser ser complicat fer mira sre venir gust sortida comercial ser bo ser desafiament semblar producte fer ser millor haver mercat ser complicat sre se passar sortir final punt vista feina estar orientat guanyar diner diner ser indicador cosa menys perjudici alt ser intentar fer cosa sentit ser interessant aportir societat ser ser final t acabar tornar diner bueno cosa perfil especulatiu perfil portar valor portar valor directament clarament normalment ser millor n ser especulatiu agafar diner posar davant sí diguar mi donar sentit feina ser intentar portar valor fer cosa funcionir sentit guanyar diner desprè comprar cotxe euro sí sí sí ser tema acumular diner clar vol acumular diner hauria fer ser invertir bo edat n hauria pagar revés tingui mai diner bueno ser sí manera entendre feina sí haver gent estar enfocat diner diner ser resultat cosa haver ser interessant haver funcionar fer haver diner conseqüència treure objectiu ser diner diner ser objectiu ser indicador estàs aconseguir objectiu vol estar fer manera adequat funcionar gent pagar gent pagar ser estar fer portar prou valor estàs fer haver fer estàs fer haver fer"
+            ],
+            "group": ""
+        },
+        "Topic 3": {
+            "words": [
+                "decisió",
+                "prendre",
+                "analitzar",
+                "dia_dia",
+                "comprar",
+                "estratègia",
+                "prendre_decisió",
+                "canvi",
+                "estratègic",
+                "prenar"
+            ],
+            "scores": [
+                0.0745606196506304,
+                0.036911587018451424,
+                0.029583544725210364,
+                0.027876520190040374,
+                0.027497482324052025,
+                0.02547607067355358,
+                0.02337221465529494,
+                0.022285096875662196,
+                0.021445381381183168,
+                0.019929440131130547
+            ],
+            "count": 63,
+            "representative_docs": [
+                "ser clar portar bàsicament separat soci ser treballar granja portar part administratiu gestió ser mica ser decisió encomunat manera ell conir necessitat dia dia granja explotació coneixar tema estadístic cost normativa mica visió lloc canviar ser se fer forma conjunt ser dir mica dos suportar feina diferent decisió sí lo prenar sre preferir ell s haver canviar companyia assegurança fer nos fer millor dia dia problema ser tipus decisió tipus decisió sí haver fer inversió haver fer canvi important ser decisió conjunt",
+                "sí haver diferència vol dir hora presa decisió se prenar estratègia ser mancomunat é dir haver fer granja canviar integrador ser ser totalment mancomunat fer inversió importantíssim operativa ser ser menys final prendre decisió prendre entenar haver prendre protocol litzat final dia dia portar dir funció ser independent mantenir bo relació veritat ser prenar comú inclús prendre decisió acaba explicar estar acord s intentar revertir sí sí clar operació operatiu dia dia entendre ser vol dir ser independent fer diferent forma treballar nos haver ara voldriar seguir fer",
+                "tàctiques estratègiqua sí sí bueno sí haver diferència estratègiqua haver sigui pla dir entrar haver executar pla menys haver dissenyar pensar evidentment l haver fer vegada atrassar estratègia cap vol vegada dependre econòmic finança dia dia vegada haver decisió diuar ser haver claríssim ser cap vol entendre ser decisió estratègic sí haver clar sempre haver prenre decisió arribar punt ara estar moment proposar estar veritat ser sentit estar satisfet haver arribar volíar ara ser replantejar se estratègia futur ser veritat estar dilema dilema dir ara haver arribar voliar ser ara haver aconseguir cap edat punt començar influir edat estratègia any ara fer any dius home any estar porta jubilació sí any estar porta jubilació dependre inversió plantejar fer podré lo motivar dependre generació realment voler continuar dir estratègia ara lo miqueta bueno dia dia sí clar cosa haver fer decisió tàctic termini ara estar moment dubte haver clar haver fer sí veritat ser sí"
+            ],
+            "group": ""
+        },
+        "Topic 4": {
+            "words": [
+                "temperatura",
+                "sensor",
+                "ventilació",
+                "aigua",
+                "alarma",
+                "menjar",
+                "problema",
+                "humitat",
+                "llum",
+                "ser_sensor"
+            ],
+            "scores": [
+                0.10790373181657455,
+                0.09804088619621629,
+                0.039312833853632705,
+                0.03756294911801305,
+                0.033231075036988134,
+                0.02908626700944936,
+                0.02827741506167091,
+                0.027919238847834118,
+                0.027205926572054666,
+                0.023930776155286385
+            ],
+            "count": 54,
+            "representative_docs": [
+                "sensors explotació mare garrí petit estar ventilació forçat ser funcionar temperatura sre se considerar sensor exacte regular ser temperatura temperatura tema humitat gas moment estar fet funcionar sistema temperatura ventilació funcionar sensor sistema alimentació mares funcionar xip ser dir mare explotació explotació xip entrar màquina depenent gestació cara donar alimentació quantitat estar fer ara estar implantar ara ser dir estar unir programa gestió granja màquina haver gestació estar ficar nou paridora sensor entrar barra ser dir dependre programari dir moment haver representar t enllaçar granja programari tu pots controlar alimentació part entrant dada productiu dada se n màquina diuar quantitat haver menjar maternitat maternitat dos granja barra entrar se marcar corba alimentació part sensor ser dir tu dir cosa diu haver menjar toma dia ell lo donar depenre toquar sensor menys lo donar menjar s evitar perdre pinso sentit sí",
+                "creure pregunta estar encarat granger naltro solució digital dir haver sistema metre acabar convèncer solució digital ser clar veure estar parlar ascensor temperatura ascensor temperatura ser grau amunt grau avall sensació tu veus animal estar creure ser important pensar exemple tema ventilació nos haver fiar ascensor amoníac co2 necessitar calibratge mes compte se fer implementat tingui estar ordinador intel ligència artificial estar parlar sensor haver donar moment ppm concentració resultar estar desajustar dona hiperventilació animal frec gastar energia sigui sensor malament se comportar punyetero desastre granja dos sistema exemple dir posaria clarament posar pes sí passar fiquar lo fiquar comoditat ser millor sinó comoditat ser haver dir haver gent venir fum fiqu sensor sre sensor depenar temperatura fer fred fer calor haver unitat n haver menys tu ficar cèl lul carga se descalibrar tu ten correct d sistema alimentació automatitzat normalment funcionar cèl lul càrrega tu pesa penso distribueixa fer alimentació líquid pesa estar deixar estar bàscula bàscula ser únic sistema sensor bueno lo fiquar comoditat qualsevol lo pot instal lar tu vol ficar sensor pes sitja haver haver agafar sitja haver aixecar haver ficar cèl lul càrrega haver fer calibratge sre exemple sensor pressió dipòsit quanta aigua haver nivell tu calibr sensor zero pressió dipòsit ple litre pressió regul passar equivocar litre passar res exacte bàscula enten clar dependre sensor metre haver donar vida tanto sensor ser guia estar ser",
+                "tipus perdó nivell gran parlar sensor sala se se maternitar se arreu sensor xoc haver sensor temperatura haver seguretat animal pujar temperatura s obrir finestra emergència tingui alarma connectat x hora tu haver clar hivern baixar temperatura estiu pugar clar est normal estar ventilació forçat voler dir baixar pujar temperatura se arribar asfixiar millor possible haver granja mare arreu haver sensor granja ser estar sensor sitges granja ser massa definitiu se depurar sitges se mengar sitges massa ple se pinso se fer malbé estiu temperatura clar sí metre explico n haver gran ser fer massa massa ser empresa ser sre dir company sre dir clar explotació necessitar sensor arribar fer gestió òptim dia avui acabar veure cost lo acabar aportant metre explico bueno dia avui sí utilitzar"
+            ],
+            "group": ""
+        },
+        "Topic 5": {
+            "words": [
+                "granja_mare",
+                "porc",
+                "engreixar",
+                "integrat",
+                "ramader",
+                "agrícola",
+                "activitat",
+                "escorxador",
+                "cereal",
+                "exclusivament"
+            ],
+            "scores": [
+                0.07828570304380418,
+                0.07729134862748806,
+                0.07277291000445478,
+                0.06600640343149747,
+                0.06439467626064758,
+                0.05905619854953419,
+                0.05320060013030419,
+                0.05114440168991404,
+                0.048587101729143205,
+                0.04390360078119455
+            ],
+            "count": 53,
+            "representative_docs": [
+                "ramgerpig haver comentar anteriorment se dedicar cria comercialització porc blanc granja productiu mare se caracteritzar produir ral avinyó sre coneixeu ser tipus sigui ser creuament berxa duroc truja dir ser duroc sigui busquar producte qualitat escorxador estar avinyó ser producte vendre supermercat valer granja mare fer ral avinyó produir porc capa blanc comercialitzar porc empresa familiar fer comercialització semblar tràiler setmanal comercialitzar diferent escorxador catalunya zona activitat ser divers granja mare engreixar cicle multiplicador fer part comercialització",
+                "ser empresa familiar divers activitat bàsicament activitat ser agrícola ramader dos explotació ramader haver mare tancat menys ecològic ser albi haver mare ecològic haver finca omellons haver plaça engreixar pendent emplenar mica agrícola hectàrea festuc finca omellons haver hectàrea puigròs part ser cereal estar pendent planta activitat ser ramader convencional agrícola ecològic",
+                "activitat se centrar producció integració porcí granja engreixar mare transició ser tema integració ser fenomen se estendre cap any començar força portar garrí petit granja integrada lo prestar pinso servei veterinari seguiment evolució porc porc fer pes haver fer escorxador lo venar escorxador fer fabricació pinso fàbrica pinso vendre tercer sinó servir pinsar granja integrat petit parell granja gallina ponedor centre classificació ou ser activitat mínim gruix estar producció integració porcí fabricació pinso comercialització cereal campanya estiu centrar cereal zona se fer compra ventar cereal any funció mica necessitat"
+            ],
+            "group": ""
+        },
+        "Topic 6": {
+            "words": [
+                "cost",
+                "sip",
+                "fer_any",
+                "consultor",
+                "any_fer",
+                "canviar",
+                "sip_consultor",
+                "informe",
+                "haver_entrar",
+                "analitzar"
+            ],
+            "scores": [
+                0.07388141714303864,
+                0.06301843389717196,
+                0.051141545282184904,
+                0.050275371761041764,
+                0.044667402103405314,
+                0.04371951732480127,
+                0.04367468367224906,
+                0.036967311475226625,
+                0.0366747748635352,
+                0.034158965837372136
+            ],
+            "count": 50,
+            "representative_docs": [
+                "sí sí part part cost l analitzar empresa citar consultor analitzar cost nos comparar objectiu marquar principi any part nos comparar resta mercat sabar ser partir mes informe lo entrar nos enviar informe sabar objectiu desviació cost nos suposar comparat resta sabar cost partir prenar decisió decisió haver prendre canvi alimentació maternitat ser cos massa alt comparat fer temps ser dir s amortitzar ràpid sí sentit sí",
+                "sí tens raó ara metre haver haver matado treballar sip consultor reunió semestral lo donar dada mensual nos enviar informe informe estar cost setmana rebar informe client nos fer informe trimestral donar dada mensual nos donar informe trimestral haver resoldre cost respecte cost sip sis mes fer reunió clar base edat gran veure estàs millorar vegada lo preguntar ser reàci explicar t sí pujada càlcul estar copiat text surtar formula haver provar formula lo preguntar clar ser correcte hora tu vol t expliquir criteri cost l expliquar ara funcionar base edat excel donar evidentment t donar",
+                "recordar fer estadístic granja cip sistema cip cip consultors fer estadístic programa transició nos donar informació consum haver cosa haver entrar manualment haver cosa donar sensor inventador donar informació creixement llum haver gastar pinso aigua mica programa prendre decisió l engreixar transició mica donar cost cip ser cost quilo sí haver associat voler dir dona ser n recordar nom sí nos facilitar cargi veritat part taito nos facilitar haver entrar consum manualment comptador haver entrar consum dos dia tres dia estar protocol litzat haver entrar consum fer estadístic setmana gastar preu fic corresponent factura sí se validar cap mes sí sí se fer estimació informació cap mes se validar canviar bueno canviar preu haver entrar inform sigui tens calendari entrar informació haver informació exemple consum pinso alimentador lo sabar consum aigua llum haver entrar registre creixement animal transició lo pesar prova lo sabar perfecte s entrar se fer imatge sí sí ser feina ser feinada por sí sí sí bueno fer prova nos compensar fer feina nos deixar pesar animal déu n do entrada sortida entrada sortida sí sí sí déu n do"
+            ],
+            "group": ""
+        },
+        "Topic 7": {
+            "words": [
+                "econòmic",
+                "cost",
+                "benestar",
+                "porc",
+                "quilo",
+                "criteri",
+                "vell",
+                "econòmic_ser",
+                "bo",
+                "escorxador"
+            ],
+            "scores": [
+                0.04509505748509157,
+                0.03557851657784575,
+                0.034529318424194023,
+                0.03092329864195521,
+                0.027167786783797075,
+                0.022678109126343805,
+                0.021469584892323472,
+                0.020994637585380258,
+                0.020543205492904726,
+                0.020462233295265128
+            ],
+            "count": 34,
+            "representative_docs": [
+                "creure estar relacionat gerència criteri econòmic ser fer balanç engreixada exemple liquidació engreixat t acabar sortir t acabar sortir consum pínso consum medicament consum haver haver voltant granja pes haver acabar sortir for pes haver arribar escorxador s haver matar pes canal índex conversió acabar sortir ser sí ser veritat criteri benestar granja ser emissió dèiar nivell amoníac haver granja acabar incidència benestar animal procés creixement evidentment traducció econòmic ser dèiar animal estar ben cuidat t acabar incidir consumir medicament exemple haver criteri econòmic estar mica relacionat nivell ambiental actualment s haver fer declaració risc ambiental part administratiu tona exigir fer penalitzir cosa funcionar nivell base purí regulació sí sí",
+                "interpretació donar número final ser ser haver fer cosa final entenguar ser representar estar sector estar marcat preu mercolleda cosa fer incrementar benefici preu estar tu vendre porc s haver vendre petit diferencial petit diferencial representar topallat capacitat creixement ingres únic fer ser ajustar cost intentar buscar eficiència produir porc possible millor cost possible clar sí eina dir mira medicament estar mirar baixar afectar sre ostres nivell producció garrí estar preu mirar baixar clar ser permetar eina intentar buscar ser control diar fer mensualment rendiment tècnic ser dir cost exemple consum pinso ser eina bàsic sigui pinso ser part important cost animal ser haver dos cost cost animal nos haver costar produir garrí granja mare consum pinso tu consum pinso intent lo tar índex transformació basat sempre comptar entrada pes quilo sortida pes quilo donar dada dir granja estar x x intent ser gram gram gram nombre porc cost pinso número total granja número total animal ser estalvi importantíssim buscar haver establir competència granja diguir mitja empresa ser voler situar rúbric aconseguir granja se situir mitja tu fer baixar mitja ser baixa voler estar baixa sector intentar buscar competitivitat granja",
+                "mira mica enrere estar fart dir consellera ara conseller nom haver parlar ministre haver fer pla renovació granja granja vell s haver fer granja vell s haver ensorrar s haver fer granja nou ser imatge sector granja nou mirar fer porc granja vell granja vell granja nou t jugu sis set euro animal t ser ser diner granja obsolet ser vell tirar terra fer granja nou imatge bo exterior tecnologia ser maco s aplicar cost mà obra gestió ser econòmic s perfilar prim ser necessitar cosa ser just sigui tu estàs dire haver fer granja vell ensorrar granja vell deixar fer granja nou avui dir granja vell ser moure ningú granja se disparar creure ser diner sis set euro animal cosa s haver enforcar obliguar ser benestar animal sí sre dir manera tu estar xalet cinc estrella casa piset entendre pis viurà negat sector haver manera fer los entendre pregunta extra conèixer ser vos haver explicar control sitges s estar aprovar creixement animal consum truja sre dir truja bueno truja sí home sistema nou alimentació xip sí home avui ser top ser top controlar consum pinso etcètera sabar mare estar sí home sí mira avui exemple enviar ser estar provar granja mare granja engreix demà matí haver carregar camió porc ell programar dir vull porc pes endemà matí se trobar passadís hòstia ser almenar sí almenar semblar ser sí matí granja sortir porta estar passadís col locar camió carregar sortir ser passada ser passada home escorxador gust portar ser interessar t pagar ser fer cosa ben fet perfilar prim ser importantíssim home ser passat part feina treure sí sí ser meravella sí treure plus parell tres cèntim quilo surtar diner camió ser fer ull ser feina l haver fer vida sempre t engany tipus porc genètica temps ser estiu ara pesar porc ara beu ple aigua abulta ser bascula t enganya canvi hivern abultar gaire ser massís pesar haver ser vida t enganya tothom fer feina vida costa pregunta extra home s estar provar ser sí home sí se fiquar mitjà gent s adaptar sí sí passar ser haver cosa ser granja ara engreixar normalment ser integrat integrat paguar voler problema tecnologia finestra automàtic sensor tu ser mirar matí finestra torn diu bueno menys fer fred ara ara haver sensor temperatura grau finestra fer moment ser confort animal"
+            ],
+            "group": ""
+        },
+        "Topic 8": {
+            "words": [
+                "veterinari",
+                "veterinari_ser",
+                "decidir",
+                "diferent",
+                "experiència",
+                "agrocat",
+                "consultor",
+                "assessor",
+                "dependre",
+                "productor"
+            ],
+            "scores": [
+                0.15210819218961744,
+                0.03927341533891532,
+                0.032513482600207,
+                0.03159905876732254,
+                0.02823344342512155,
+                0.027734690336778677,
+                0.02762971195916201,
+                0.026175533419114792,
+                0.025295159522805227,
+                0.02413960410046693
+            ],
+            "count": 34,
+            "representative_docs": [
+                "sigui ara creure haver sortir carrera sentir preparat format tirar endavant carrera professional d estar fer pla formació agrocat sigui mi se metre fer entrevista decidir entrar agrocat ell oferir dir tres mes formació segons sis mes ser pla formació ara dir veterinari veure diferent punt vista creure ser metre enriquir persona aprens manera sí punt vista cinc sis personer diferent forma creure sigui sortir veterinari carrera decidir cap sector porcí ser diferent tu haver ser sector porcí haver ser clar creure avantatge haver veure haver ser estiu haver treballar dir haver fer granger clar donar ser ara comenca zero entendre tu posa granja mare entens cicle clar carrera estudia estudiar any estudiar any estudiar any clar veure aplicat sí sí creure ser avantatge sí metre haver donar dir empresa familiar casa clar haver treballar estiu tocar fase producció",
+                "sí dependre ser veterinari dependre creure confiança n haver fer any estar sector menys sempre algú veterinari veterinari veterinari ser recolzar dir",
+                "actualment únic estar desenvolupar ramgerpig ser part tècnic veterinari estar treballar veterinari agrocat ramgerpig ser empresa familiar ser soci important agrocat donar servei tècnic veterinari simplement fer haver diferent figura empresa familiar ser gerència se prenar decisió exemple ser familiar granja gran mare cosí gran ser encarregat treballador granja haver diferent encarregat cosí petit ser responsable engreix càrrega final rol moment rol simplement fer veterinari empresa sigui exemple prescripció medicament ahir se formalitzar número col legiat podiar dir pare ser veterinari ser ara ser voler dir ara estar dos ara sempre haver ser ell veterinari empresa s haver dedicar haver pogre dir haver feina exacte exacte sí sí sí estar fer tema visita veterinari ser englobat tema veterinari maneig nutrició ser dir nivell camp sempre"
+            ],
+            "group": ""
+        },
+        "Topic 9": {
+            "words": [
+                "porc",
+                "digitalitzat",
+                "control",
+                "digitalitzar",
+                "anàlisi",
+                "sensor",
+                "consum",
+                "càmera",
+                "digital",
+                "comptar"
+            ],
+            "scores": [
+                0.04189170950962657,
+                0.03825300695664874,
+                0.030542284649691862,
+                0.022792197047556674,
+                0.02127516065356841,
+                0.021100484254538476,
+                0.020336236791808526,
+                0.019471290910064665,
+                0.019353231652410863,
+                0.018569473778452226
+            ],
+            "count": 30,
+            "representative_docs": [
+                "exemple dia ser sí metre haver comentar se fer prova exemple control peso mitjançant imatge fer temps estar fet tipus porc fer porc qualitat duroc animal fosc animal fosc càmera l agafar animal blanc porc blanc porc duroc haver forma detectar pes cosa conya estar mercat dia esperar s arribar provar ser tema control comptar animal garrí desmamat garrí se portar granja sempre t haver portar haver ser haver ser haver problema camioner surtar porc granja arribar desmamador sistema automàtic diuar mitjançant càmera comptar porc estar centre cometa investigació controlar diferent pinso consum individual animal tipus irta dir manera puguar instal lacion ser gran bueno ser inversió ser integrador petit ser complicat",
+                "veure exemple ser càmera t haver explicar principi control pes ser conya dir granja haver porc estar quilo quilo funció voler carregar dir acord sre quantitat porc caldre persona comptar marcar porc estar quilo automàticament oficina dir granja porc granja barri tens granja c tens fer programació haver granja automàticament haver granja possible error persona mirar porc vegada granja passadís estar elevat respecte portal donar error diferència alçada estàs acostumat veure sempre porc alçada haver pensar hòstia porc estar enlairat porc petit cosa t ajudar prendre decisió comptar porc sala diu haver carregar sala d acord garrí acord n haver acord ser deixar prendre hora comptar porc quadre ser gros litre haver comptar l haver comptar litre haver descomptar sre",
+                "veure quasi haver separar mica voler dir cometa exemple pensar pinso voler dir mi metre monitoritzar haver logística dipòsit córrer s haver córrer vegada pens voler dir haver capacitat llegir pes animal evolució avui dia sre haver sortir divers càmera se punt encertar podria arribar conversió creixement diari voler mica evolució piràmide tindria sensor haver animal treure t explicar cos mica dir vegada sre país pinso demanar granger sinó ser integrador lo portar granja país est haver robatori pinso acabar ficar sensor camió realment arribar granja s haver enviat haver subtracció t dir dir índex conversió ser variable entendre haver rang millor pitjor exemple haver engreix porc voler dir haver dos tres dipòsit pinso engreix volguar enviar dipòsit pinso real trobar dia estar ple bo quedar curt dir vegada porc se fiquar malalt mengar clar voler dir vegada pensar haver sensor real dir sitja realment evolució real pinso exemple ajudar ser comanda passar ser t estar donar informació estar passar animal tu fer taula estàndard menys pinso consumit deuar estar ser dia avui fer passar realitat ser ser mitjà avaluar forma fiable sensor sàpiguar evolució animal informació t ensenyar millorar dir sentit dir exemple eina fer mica investigació vegada mostrar diferent tipus semen finalitzador modelitzar animal diferència creixement conversió ser carro remolc bascula lo portar granja fer unitat investigació ser quadra vagoneta lo omplir pinso portar sensor dia emplenar tolva diferència ser consum diari valer tu fer període període setmanal tens pes animal tens pinso consumim veire cosa arribar edat adult exemple haver densitat corral conversió s empitjorar sí tu començar carregar comencar millorar volta sempre metre haver dir porc gran se fer millor convertir d se trencar teoria ara ser gran porc tornar convertir haver factor ficar exemple vegada conèixer aplicar maneig minimitzar prejudici coneixa ser punt moment clar voler dir processo voler dir haver cas gran estudiar treure sre"
+            ],
+            "group": ""
+        }
+    },
+    "metadata": {
+        "source": "topic_modeling_input.json",
+        "document_count": 930,
+        "algorithm": "bertopic",
+        "generated_at": "2025-05-22T14:31:09.099584"
+    },
+    "diagnostics": {
+        "processing_time": "0:01:22.822081",
+        "n_topics": 10,
+        "outlier_percentage": 35.8,
+        "avg_5nn_distance": 2.266,
+        "median_topic_size": 53.5,
+        "topic_size_distribution": {
+            "34": 2,
+            "333": 1,
+            "107": 1,
+            "102": 1,
+            "70": 1,
+            "63": 1,
+            "54": 1,
+            "53": 1,
+            "50": 1,
+            "30": 1
+        }
+    }
+}

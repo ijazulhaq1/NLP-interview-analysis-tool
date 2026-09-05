@@ -1,0 +1,242 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Analysis App</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <!--
+
+        <script>
+            $(document).ready(function() {
+                $('#myButton').click(function() {
+                    // Perform AJAX request when button is clicked
+                    $.ajax({
+                        type: 'POST',
+                        url: '/button_click',
+                        contentType: 'application/json',
+                        data: JSON.stringify({ 'message': 'Button clicked' }),
+                        success: function(response) {
+                            // Handle response from Flask route
+                            console.log(response);
+                            alert(response.message);
+                        },
+                        error: function(error) {
+                            // Handle errors
+                            console.log(error);
+                            alert('Error occurred while processing request.');
+                        }
+                    });
+                });
+            });
+        </script>
+-->
+        <script>
+            function toggleSection(id) {
+                var section = document.getElementById(id);
+                if (section.style.display === "block") {
+                    section.style.display = "none";
+                } else {
+                    section.style.display = "block";
+                }
+            }
+            function textProcesses(process) {
+                var displayText = document.getElementById("processes");
+                var currentText = displayText.textContent;
+                if(process == '-')
+                    var newText = currentText.slice(0, -1); // Remove the last character
+                else if(process == '')
+                    var newText = '';
+                else
+                    var newText = currentText + process; 
+                displayText.textContent = newText;
+            }
+            function selectFile() {
+                var fileInput = document.getElementById("fileInput");
+                fileInput.click(); // Simulate click on file input element
+                fileInput.addEventListener('change', function() {
+                    var filePath = fileInput.value; // Get the selected file path
+                    document.getElementByName("wordBlacklist").textContent = "Selected File Path: " + filePath;
+                });
+            }
+            function getSelectedRadioButton(radioId) {
+                const radioButtons = document.getElementsByName(radioId);
+                let selectedValue = null;
+                for (let i = 0; i < radioButtons.length; i++) {
+                    if (radioButtons[i].checked) {
+                        selectedValue = radioButtons[i].value;
+                        break;
+                    }
+                }
+                return selectedValue;
+            }
+            function getSelectedCheckboxes(checkboxId) {
+                const checkboxes = document.getElementsByName(checkboxId);
+                let selectedValues = [];
+                for (let i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        selectedValues.push(checkboxes[i].value);
+                    }
+                }
+                return selectedValues;
+            }
+            function gatherAnalyzeParameters(textProcess, blacklists, algorithm, topics, words) {
+                const text = document.getElementById(textProcess).innerText;
+                const black = getSelectedCheckboxes(blacklists);
+                const alg = getSelectedRadioButton(algorithm);
+                const n_topics = document.getElementById(topics).value;
+                const n_words = document.getElementById(words).value;
+                fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    //body: JSON.stringify({ text: text, blacklists: black, algorithm: alg})
+                    body: JSON.stringify({ text: text, blacklists: black, algorithm: alg, n_topics: n_topics, n_words:n_words })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert('Text sent successfully: ' + data.received_text);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+            function gatherCountWords(textProcess, blacklists, wordsRaw) {
+                const text = document.getElementById(textProcess).innerText;
+                const black = getSelectedCheckboxes(blacklists);
+                const words_raw = document.getElementById(wordsRaw).value;
+                fetch('/countwords', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ text: text, blacklists: black, words: words_raw})
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(tableHtml => {
+                    document.getElementById('word-count-table').innerHTML = tableHtml;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+            }
+        </script>
+        <header>
+            <div></div>
+            <div>
+                <h1>Text Analysis App</h1>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <img src="/static/logo/udl-logo-header.png" alt="Image">
+                <div>
+                    <p style="font-size: 18; font-weight:bold; margin-bottom: 1px;">Universitat de Lleida</p>
+                    <p style="font-size: 14; margin-top: 2px;">AI4Pork</p>
+                </div>
+            </div>
+            
+        </header>
+        <!--
+        <nav>
+            <button onclick="showCategory('all')">All</button>
+            <button onclick="showCategory('nature')">Nature</button>
+            <button onclick="showCategory('animals')">Animals</button>
+            <button onclick="showCategory('cities')">Cities</button>
+        </nav>
+        -->
+        <div class="playzone">
+            <div class="sidebar">
+                <h2>Text processing</h2>
+                <div>
+                    <button class="small" onclick="textProcesses('t')">translate</button>
+                    <button class="small" onclick="textProcesses('c')">correct</button>
+                    <button class="small" onclick="textProcesses('p')">prune</button>
+                    <button class="small" onclick="textProcesses('l')">lemmatize</button>
+                    <button class="small" onclick="textProcesses('s')">stem</button>
+                </div>
+                <div style="color:black;background:rgb(255, 255, 255);">
+                    <p id="processes" style="height:16px;font-weight:bold;letter-spacing:1px;font-size:16px;padding:10px;"></p>
+                </div>
+                <button class="small" onclick="textProcesses('-')">remove</button>
+                <button class="small" onclick="textProcesses('')">clean</button>
+                <h3>Word Blacklist</h3>
+                <ul name="blacklists" style="list-style-type:none;">
+                    {% for file in files %}
+                    <li>
+                        <input type="checkbox" name="selected_files" value="{{ file }}">{{ file }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <input type="file" id="fileInput" style="display:none;">
+                <p id="wordBlacklist"></p>
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection('section1')">Analyzer</button>
+                    <div class="section-content" id="section1">
+                        <h3>Algorithm</h3>
+                        <form>
+                            <div style="display:flex;justify-content:center;">
+                                <label>
+                                    <input type="radio" name="algorithm" value="nmf" checked>NMF
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="radio" name="algorithm" value="lda">LDA
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="radio" name="algorithm" value="svd">SVD
+                                </label>
+                                <br>
+                            </div>
+                        </form>
+                        <div style="display:flex; align-items: center;">
+                            <label for="n_topics" style="margin-right: 10px;">Nº Topics:</label>
+                            <input type="number" id="n_topics" name="n_topics" min="1" max="10" value="4"/>
+                        </div>
+                        <div style="display:flex; align-items: center;">
+                            <label for="n_words" style="margin-right: 10px;">Nº Words:</label>
+                            <input type="number" id="n_words" name="n_words" min="1" max="50" value="10"/>
+                        </div>
+                        <br>
+                        <button onclick="gatherAnalyzeParameters('processes', 'selected_files', 'algorithm', 'n_topics', 'n_words')">Analyze</button>
+                    </div>
+                </div>
+                </br>
+                <div class="section">
+                    <button class="section-header" onclick="toggleSection('section2')">Word counting</button>
+                    <div class="section-content" id="section2" style="display: none">
+                        <label for="inputWords">Enter words to count:</label>
+                        <textarea id="inputWords" name="inputWords"></textarea>
+                        <button onclick="gatherCountWords('processes', 'selected_files', 'inputWords')">Count</button>
+                        <form action="/dataframe" method="get">
+                            <button type="submit">Show DataFrame</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <h1>Word Counting</h1>
+                    <div id="word-count-table"></div>
+                </div>
+                <h1>Word Clouds</h1>
+                <div class="gallery">
+                    <div class="images">
+                        {% for image_file in image_files %}
+                        <div>
+                            <p>{{ image_file }}</p>
+                            <img src="{{ url_for('static', filename='wordcloud/' + image_file) }}" alt="Image">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <title>Counting Results</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+  <h1>Word counting</h1>
+  <div>
+    {{ table|safe }}
+  </div>
+</body>
+</html>

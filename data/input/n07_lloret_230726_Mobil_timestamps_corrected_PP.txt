@@ -1,0 +1,299 @@
+-.Pregunta 1.1.-
+[00:00:24.200 --> 00:00:32.520]   Nosaltres tenim la representació d'una empresa alemanya de sistemes de ventilació i alimentació, que és Big Dutchman.
+[00:00:32.520 --> 00:00:40.000]   Bàsicament el que fem és venda i muntatge de sistemes d'alimentació i ventilació amb granges,
+[00:00:40.000 --> 00:00:44.320]   de porcines, tant de truges com d'engreixos com d'estetes.
+-.Pregunta 1.2.-
+[00:00:46.960 --> 00:00:49.960]   Aquest any fa 19 anys.
+-.Pregunta 1.3a.-
+[00:00:58.840 --> 00:01:04.880]   Nosaltres som una empresa petita, però avui dia tenim la ratlla de 200 clients.
+[00:01:04.880 --> 00:01:09.280]   I és una empresa petita, estem treballant 11 persones.
+-.Pregunta 1.3b.-
+[00:01:12.840 --> 00:01:13.840]   No.
+-.Pregunta 2.1.-
+[00:01:13.840 --> 00:01:20.760]   Sí
+-.Pregunta 2.2a.-
+[00:01:23.160 --> 00:01:29.080]   Bàsicament pel sistema de dia a dia, perquè ho necessités i perquè també fem servir molt remota les granges.
+-.Pregunta 2.2b.-
+[00:01:31.080 --> 00:01:33.080]   Amb què et refereixes dispositius?
+[00:01:33.080 --> 00:01:37.080]   Tàblet, ordinador, mòbil, sí
+-.Pregunta 2.3a.-
+[00:01:45.080 --> 00:01:47.080]   Sí.
+-.Pregunta 2.3b.-
+[00:01:51.080 --> 00:01:55.080]   Suposo que el que caldria és millor comunicació.
+[00:01:58.080 --> 00:02:00.080]   Jo penso que sí.
+[00:02:03.080 --> 00:02:06.080]   No, la gent gran és un altre tema.
+[00:02:06.080 --> 00:02:08.080]   Molt bé.
+-.Pregunta 3.1.-
+[00:02:17.080 --> 00:02:21.080]   Sí, nosaltres és el que fem, ens dediquem a això.
+[00:02:24.080 --> 00:02:25.080]   Sí.
+[00:02:27.080 --> 00:02:33.080]   No, la nostra activitat no es pot digitalitzar perquè nosaltres fem servir les granges, no podem digitalitzar-nos.
+[00:02:36.080 --> 00:02:40.080]   No, la part administrativa, que es refereix a digitalitzar.
+[00:02:48.080 --> 00:02:54.080]   Això ho fem, les factures les enviem totes digitalment, no les enviem en papers, s'envien des dels programes.
+-.Pregunta 3.4.-
+[00:03:04.080 --> 00:03:07.080]   Per la nostra feina o per les granges?
+[00:03:11.080 --> 00:03:17.080]   Les granges nosaltres ja és el que fem, implementem sistemes que podem controlar tots a distància.
+[00:03:22.080 --> 00:03:24.080]   No.
+[00:03:26.080 --> 00:03:28.080]   No, anem amb el nostre producte i ja està.
+[00:03:28.080 --> 00:03:31.080]   No solament interessar-nos pel que fa la competència.
+-.Pregunta 3.2.-
+[00:03:44.080 --> 00:03:53.080]   No sé, pot ser el tema digitalitzar, pot ser el tema de fer-ho amb suport digital,
+[00:03:53.080 --> 00:03:58.080]   el tema d'albarans de feina i això potser sí que és una cosa que estem en procés.
+[00:03:58.080 --> 00:04:04.080]   Perquè cada operari porti una tablet o un telèfon, que de fet dos tinc jo,
+[00:04:04.080 --> 00:04:12.080]   perquè puguin fer els albarans in situ i això quedo ja enregistrat directament en la plataforma dels programes de facturació.
+-.Pregunta 3.3b.-
+[00:04:20.080 --> 00:04:23.080]   Bé, moltes vegades la formació del personal.
+[00:04:23.080 --> 00:04:25.080]   La formació del personal.
+-.Pregunta 4.1.-
+[00:04:48.080 --> 00:04:54.080]   Treballes amb sensors, si et refereixes a les instal·lacions de ventilació, treballes amb sensors de temperatura,
+[00:04:54.080 --> 00:04:59.080]   sensors de CO2, sensors d'amoníac i si parlem de sistemes d'alimentació,
+[00:04:59.080 --> 00:05:07.080]   normalment treballes amb sensors capacitatius per saber a on estan els pinsos i a quin nivell estan.
+[00:05:07.080 --> 00:05:11.080]   També treballes amb sensors de pes, moltíssimes vegades.
+[00:05:11.080 --> 00:05:15.080]   També pel sistema d'alimentació treballes amb sensors de pes, amb l'oïda de carga.
+[00:05:15.080 --> 00:05:19.080]   I a vegades per l'estat dels sitges treballes amb sensors que van via ràdio,
+[00:05:19.080 --> 00:05:22.080]   que mesuren la quantitat de penso que hi ha dins dels sitges.
+-.Pregunta 4.2.-
+[00:05:30.080 --> 00:05:38.080]   No, no, que treballen, quan treballes per regular temperatures necessites les lectures dels sensors per a treballar,
+[00:05:38.080 --> 00:05:46.080]   o sigui, són actius per a poder regular les temperatures i per a poder regular els pinsos que necessites a cada lloc.
+[00:05:55.080 --> 00:06:00.080]   Sí, clar, amb els sistemes d'alimentació a través dels sensors sabem quants quilos de penso han menjat els animals,
+[00:06:00.080 --> 00:06:05.080]   quants han caigut a les tolves i les temperatures, clar, tot mos queda enregistrat.
+[00:06:05.080 --> 00:06:10.080]   Per exemple, el cas de temperatures exteriors, interiors, humitat, CO2 queda enregistrat,
+[00:06:10.080 --> 00:06:14.080]   podem tenir registres de fins un any, cada dos minuts tenim una lectura.
+-.Pregunta 4.3.-
+[00:06:20.080 --> 00:06:26.080]   Quan el client vol mirar gràfiques de temperatura o el que sigui, per si hi ha hagut un problema a la granja,
+[00:06:26.080 --> 00:06:31.080]   és quan agafen i els descarreguen o els miren directament a dintre del programa.
+[00:06:35.080 --> 00:06:40.080]   Nosaltres no fem anàlisis de dades, podem analitzar dades quan tenim un problema en una granja,
+[00:06:40.080 --> 00:06:45.080]   una avaria o un mal funcionament, mos serveix recollir i mirar totes aquestes dades
+[00:06:45.080 --> 00:06:47.080]   per veure on pot estar el problema.
+[00:06:50.080 --> 00:06:54.080]   No, del client, queda enregistrat al seu ordinador això.
+[00:07:00.080 --> 00:07:02.080]   És el client que ho té a necessitat.
+[00:07:02.080 --> 00:07:08.080]   El client, però si el client no vol tindre un núvol, és un tipus de programa,
+[00:07:08.080 --> 00:07:12.080]   en el nostre cas és el fusion, però ho poden tindre el núvol si volen.
+-.Pregunta 5.1.-
+[00:07:23.080 --> 00:07:26.080]   L'empresa o els llocs on muntem?
+[00:07:29.080 --> 00:07:34.080]   Digitalització, però com vols dir el canvi? No entenc gaire bé la pregunta.
+[00:07:47.080 --> 00:07:49.080]   No hem fet res altres d'això.
+[00:07:49.080 --> 00:07:50.080]   No?
+[00:07:50.080 --> 00:07:51.080]   No, no.
+[00:07:54.080 --> 00:07:57.080]   No, és que no fem processos d'aquestes altres, és el que t'he dit.
+[00:07:57.080 --> 00:08:03.080]   Aquesta pregunta no és gaire per a nosaltres, però no fem altres uns controls d'estocs exhaustiu
+[00:08:03.080 --> 00:08:07.080]   d'animals o de consumibles.
+[00:08:07.080 --> 00:08:11.080]   No, nosaltres tenim un magatzem que hi ha recanvis i això ja està comptabilitzat,
+[00:08:11.080 --> 00:08:13.080]   però no fem una digitalització.
+[00:08:20.080 --> 00:08:24.080]   Bé, és que això, hi ha molts tipus de productes, perquè tenim des de productes
+[00:08:24.080 --> 00:08:28.080]   per fer sistemes d'alimentació, per fer sistemes de ventilació,
+[00:08:28.080 --> 00:08:32.080]   per comptar els animals quan surten de la granja perquè es comptin automàticament
+[00:08:32.080 --> 00:08:35.080]   o quan entren que es puguin comptar els números d'animals.
+[00:08:35.080 --> 00:08:41.080]   Hi ha sistemes de controls d'estocs als sitges a la granja, del que pesen els sitges,
+[00:08:41.080 --> 00:08:45.080]   dels porcs que s'han posat a dintre, dels pinços que s'han tret, dels que han entrat.
+-.Pregunta 5.2.-
+[00:08:51.080 --> 00:08:58.080]   Jo que sé l'últim que hem tret ara és el tema del comptatge dels porcs automàtic,
+[00:08:58.080 --> 00:09:01.080]   a la sortida o a l'entrada, o els dos.
+[00:09:01.080 --> 00:09:03.080]   A la sortida o a l'entrada de la granja.
+[00:09:03.080 --> 00:09:04.080]   De la granja, sí.
+[00:09:04.080 --> 00:09:10.080]   Si acabem unes càmeres i reconeixem els animals,
+[00:09:10.080 --> 00:09:15.080]   inclús quan tornen enrere aquell ja no el compte, és tot una pel·lícula.
+[00:09:19.080 --> 00:09:20.080]   No, no.
+[00:09:20.080 --> 00:09:22.080]   Únicament amb imatge?
+[00:09:22.080 --> 00:09:23.080]   No, amb imatge sol.
+[00:09:23.080 --> 00:09:27.080]   Sí, té una eficiència molt elevada, això.
+-.Pregunta 5.3.-
+[00:09:41.080 --> 00:09:45.080]   No ho sé, és que tampoc no conec gaire això de la intel·ligència artificial.
+[00:09:47.080 --> 00:09:48.080]   Sí, bueno.
+[00:09:49.080 --> 00:09:50.080]   Sí.
+[00:09:50.080 --> 00:09:54.080]   Bueno, la veritat és que poques coses m'he sorprès.
+[00:09:54.080 --> 00:09:57.080]   Amb aquestes coses, vull dir, m'entens?
+[00:09:57.080 --> 00:10:01.080]   Bueno, aquesta de contra els animals és una cosa que és curiosa.
+-.Pregunta 6.1.-
+[00:10:23.080 --> 00:10:28.080]   Jo crec que els clients, normalment el primer...
+[00:10:28.080 --> 00:10:30.080]   A veure, això és una opinió molt particular, no?
+[00:10:30.080 --> 00:10:35.080]   Però com totes les inversions, jo crec que primer ha de resultar econòmicament viable
+[00:10:35.080 --> 00:10:38.080]   i si dintre d'aquesta econòmicament viable,
+[00:10:38.080 --> 00:10:44.080]   doncs ajuda que aquest món que tenim s'aguanti una miqueta més, no?
+[00:10:44.080 --> 00:10:47.080]   Doncs benvingudes siguin, no?
+[00:10:47.080 --> 00:10:53.080]   Però primordialment crec que tant aquestes com totes les inversions han de ser viables econòmicament
+[00:10:53.080 --> 00:10:57.080]   perquè si no ho són no les pots dur a terme.
+[00:11:04.080 --> 00:11:08.080]   Sí, clar, les normatives ambientals estan bé perquè si no totes farien el que voldrien.
+[00:11:08.080 --> 00:11:11.080]   Les coses són correctes, no?
+[00:11:11.080 --> 00:11:18.080]   El que passa que també penso que els casos ambientals s'haurien d'estudiar una miqueta més
+[00:11:18.080 --> 00:11:23.080]   amb cura, cas per cas, i no fer un vestit a mida per tothom
+[00:11:23.080 --> 00:11:27.080]   perquè això, vull dir, no és així.
+[00:11:27.080 --> 00:11:30.080]   Llavors, com tota la vida, sempre paguen justos per pecadors.
+[00:11:30.080 --> 00:11:34.080]   Pot haver gent que fa les coses molt bé i pot haver que les fan malament
+[00:11:34.080 --> 00:11:37.080]   i les que les fan malament normalment sempre són les que guanyen.
+-.Pregunta 6.3.-
+[00:11:47.080 --> 00:11:53.080]   Sí, moltes vegades la gent se fia massa dels sensors i el que s'ha de fer també,
+[00:11:53.080 --> 00:11:57.080]   parlo del tema de granges, és posar els peus a la granja
+[00:11:57.080 --> 00:11:59.080]   i veure in situ què és el que està passant.
+[00:11:59.080 --> 00:12:03.080]   No ens podem fiar només del que ens diu una pantalla en una granja
+[00:12:03.080 --> 00:12:07.080]   perquè podem tindre una sorpresa realment desagradable.
+-.Pregunta 6.4.-
+[00:12:16.080 --> 00:12:26.080]   Bé, és que en una granja estàs en un context una mica, parlo d'una granja,
+[00:12:26.080 --> 00:12:36.080]   estàs en un context una mica complicat perquè si tu físicament no tens una visió de la granja
+[00:12:36.080 --> 00:12:42.080]   has d'estar molt entrenat per saber interpretar el que et diuen els sensors,
+[00:12:42.080 --> 00:12:46.080]   el que et diu el consum de la granja, el que et diu el sensor de l'altra sala
+[00:12:46.080 --> 00:12:51.080]   i veure les diferències i això per fer-ho automàticament,
+[00:12:51.080 --> 00:12:54.080]   suposo que arribarà un dia que es podrà fer,
+[00:12:54.080 --> 00:13:00.080]   però per fer aquesta comparativa i prendre la decisió si aquella sala o aquella nau en concret està bé,
+[00:13:00.080 --> 00:13:04.080]   doncs em sembla complicat, almenys de moment.
+[00:13:22.080 --> 00:13:29.080]   Sí, però per exemple si quatre corrals s'han embossat dels abeuradors i no baixa aigua,
+[00:13:29.080 --> 00:13:33.080]   la intel·ligència artificial no anirà a apretar el xupet a veure si li rega l'aigua.
+[00:13:33.080 --> 00:13:40.080]   Jo puc tenir sensors de pressió a l'aigua, que per exemple el cas de la nostra granja hi tenim,
+[00:13:40.080 --> 00:13:43.080]   puc tenir comptadors d'aigua, puc tenir de tot,
+[00:13:43.080 --> 00:13:47.080]   però si hi ha un corral, dos corrals, tres corrals,
+[00:13:47.080 --> 00:13:54.080]   que s'ha medicat i s'ha fet un llac al tub i aquells corrals s'ha embossat dels abeuradors,
+[00:13:54.080 --> 00:13:58.080]   doncs aquells animals se me moriran.
+[00:13:58.080 --> 00:14:04.080]   És una recomanació quan tu passes a mirar els animals que entres dintre del corral
+[00:14:04.080 --> 00:14:08.080]   i mires a veure si estan bé, toques els xupets a veure si rega aigua.
+[00:14:08.080 --> 00:14:16.080]   Al final, torno a dir, crec que al final s'ha d'estar omnipresent en la granja sigui un moment o altre.
+[00:14:16.080 --> 00:14:22.080]   Entre les decisions de si allò està bé, tu podràs dir, no, el que jo estic monitoritzant està bé.
+[00:14:22.080 --> 00:14:29.080]   Tinc temperatura, tinc ventilació, tinc aigua a la línia, el pinso,
+[00:14:29.080 --> 00:14:35.080]   però ningú em diu si aquella tolva s'ha embossat i aquestes porcs passaran tot el diumenge sense menjar
+[00:14:35.080 --> 00:14:40.080]   i perdré pes o si passaran sense beure tot el diumenge que llavors se me moriran.
+[00:14:40.080 --> 00:14:45.080]   Això són coses que són complicades.
+-.Pregunta 6.6.-
+[00:14:52.080 --> 00:14:55.080]   No entenc què vols dir amb el software.
+[00:15:05.080 --> 00:15:08.080]   No, jo crec que al final el software és el que ens ajuda.
+[00:15:08.080 --> 00:15:11.080]   Jo crec que hem de ser una ajuda, no una decisió.
+[00:15:11.080 --> 00:15:13.080]   Llavors, quins ens ajuden més?
+[00:15:13.080 --> 00:15:15.080]   A mi són tots vàlids, nosaltres ens dediquem a això.
+[00:15:15.080 --> 00:15:20.080]   M'agrada tenir controlat la ventilació, l'alimentació, saber què fan els sistemes i registres.
+[
+[00:15:24.080 --> 00:15:29.080]   Jo el que ficaria primer és el tema de control ambiental a les granges.
+[00:15:29.080 --> 00:15:33.080]   Control ambiental, perquè el control ambiental si està ben fet, ens dona,
+[00:15:33.080 --> 00:15:38.080]   i aquí veieu una mica el que m'has preguntat abans del tema de sostenibilitat i medi ambient i tot això,
+[00:15:38.080 --> 00:15:43.080]   el control ambiental el que ens dona és un estalvi d'energia.
+[00:15:43.080 --> 00:15:51.080]   Tant amb pensos que mengen els animals com un estalvi d'energia amb calefaccions o amb refrigeracions,
+[00:15:51.080 --> 00:15:54.080]   si es dona el cas, el control és molt important.
+[00:15:57.080 --> 00:16:04.080]   Sí, lògicament si tu tens un bon sistema, està ben controlat, aquells animals estaran millor.
+[00:16:04.080 --> 00:16:08.080]   Si tu ho tens controlat de la forma que tu vulguis.
+-.Pregunta 6.8.-
+[00:16:24.080 --> 00:16:26.080]   No, no.
+[00:16:26.080 --> 00:16:31.080]   Jo crec que aquesta pregunta està més encarada al granger, que no pas a naltros.
+[00:16:31.080 --> 00:16:37.080]   No, solucions digitals, jo podria dir que hi ha sistemes que no m'acaben de convèncer,
+[00:16:37.080 --> 00:16:40.080]   però solució digital és que clar...
+[00:16:51.080 --> 00:16:53.080]   A veure, estàvem parlant abans d'ascensors de temperatura,
+[00:16:53.080 --> 00:16:56.080]   ascensors de temperatura si és un grau amunt o un grau avall,
+[00:16:56.080 --> 00:16:59.080]   també sensacions que tu veus que els animals estan bé, no crec que sigui important.
+[00:16:59.080 --> 00:17:03.080]   Penso que, per exemple, temes de ventilació,
+[00:17:03.080 --> 00:17:08.080]   si ens hem de fiar d'ascensors d'amoníac o de CO2 que necessiten un calibratge cada 6 mesos i tot això,
+[00:17:08.080 --> 00:17:15.080]   compte, perquè si això no es fa, per molt implementat que ho tinguis,
+[00:17:15.080 --> 00:17:19.080]   i per molt que estigui en un ordinador i en una intel·ligència artificial que estàvem parlant abans,
+[00:17:19.080 --> 00:17:25.080]   si aquell sensor ha de donar en aquell moment 3.000 ppm de concentració,
+[00:17:25.080 --> 00:17:29.080]   resulta que està desajustat i en dona 10.000,
+[00:17:29.080 --> 00:17:33.080]   tindrem una hiperventilació, tindrem els animals més frecs, gastarem més energia,
+[00:17:33.080 --> 00:17:39.080]   o sigui, un sensor malament no es comportarà, tindrem un punyetero desastre a la granja.
+[00:17:59.080 --> 00:18:05.080]   Nosaltres tenim dos sistemes, per exemple. Dius quin posaries? Jo clarament posaria el del pes.
+[00:18:09.080 --> 00:18:12.080]   Sí, però saps el que passa? Per què fiquem l'altre?
+[00:18:12.080 --> 00:18:15.080]   L'altre el fiquem per comoditat, no perquè sigui millor,
+[00:18:15.080 --> 00:18:19.080]   sinó per comoditat, perquè és el que hem dit abans,
+[00:18:19.080 --> 00:18:22.080]   hi ha molta gent que ve amb fums, "no, fiques aquest sensor a dalt", no sé què.
+[00:18:22.080 --> 00:18:27.080]   Tots aquests sensor depenen de temperatures, si fa fred, si fa calor,
+[00:18:27.080 --> 00:18:31.080]   si hi ha més unitat, si n'hi ha menys.
+[00:18:31.080 --> 00:18:36.080]   Tu ficaràs unes cèl·lules de carga, se te podran descalibrar, quant?
+[00:18:36.080 --> 00:18:40.080]   Un 2%, un 8%, però tu tens una altra correcta.
+[00:18:40.080 --> 00:18:45.080]   D'aquí que tots els sistemes d'alimentació automatitzats, normalment,
+[00:18:45.080 --> 00:18:48.080]   funcionen per cèl·lules de càrrega.
+[00:18:48.080 --> 00:18:51.080]   Tu peses un penso i el distribueixes.
+[00:18:51.080 --> 00:18:54.080]   Faràs una alimentació líquida, peses.
+[00:18:54.080 --> 00:18:57.080]   I com sap on està i on deixa d'estar? Té la bàscula.
+[00:18:57.080 --> 00:18:59.080]   La bàscula són els únics sistemes.
+[00:18:59.080 --> 00:19:02.080]   Els sensors, bueno, els fiquem per comoditat,
+[00:19:02.080 --> 00:19:05.080]   perquè qualsevol el pot instal·lar. Si tu vols ficar sensors de pes en un sitja,
+[00:19:05.080 --> 00:19:08.080]   has d'anar, has d'agafar el sitja, has de aixecar, has de ficar les cèl·lules de càrrega,
+[00:19:08.080 --> 00:19:11.080]   has de fer un calibratge, no sé què.
+[00:19:11.080 --> 00:19:15.080]   Per exemple, jo tinc sensors de pressió al dipòsit
+[00:19:15.080 --> 00:19:18.080]   per saber quanta aigua hi ha dintre. No hi tinc un nivell.
+[00:19:18.080 --> 00:19:21.080]   Tu calibres el sensor, zero pressió,
+[00:19:21.080 --> 00:19:24.080]   dipòsit ple, 30.000 litres, 100% de pressió,
+[00:19:24.080 --> 00:19:27.080]   i regules. Què passa? Que em puc equivocar?
+[00:19:27.080 --> 00:19:30.080]   De 1.000 litres? No passa res. Però si ho pogués saber exacte,
+[00:19:30.080 --> 00:19:33.080]   tindria una bàscula.
+[00:19:33.080 --> 00:19:35.080]   Entens?
+[00:19:35.080 --> 00:19:38.080]   Tot això, clar, depèn,
+[00:19:38.080 --> 00:19:41.080]   si aquell sensor m'ha de donar la vida, al tanto.
+[00:19:41.080 --> 00:19:44.080]   Si aquell sensor és per tindre una guia, ja està bé.
+[00:19:44.080 --> 00:19:47.080]   És com tot això.
+-.Pregunta 6.11b.-
+[00:20:08.080 --> 00:20:11.080]   Jo crec que aquestes solucions s'han de desenvolupar
+[00:20:11.080 --> 00:20:14.080]   lògicament per una empresa
+[00:20:14.080 --> 00:20:17.080]   que sigui capaç de desenvolupar el software
+[00:20:17.080 --> 00:20:20.080]   i tot això, que sigui capaç de desenvolupar-lo
+[00:20:20.080 --> 00:20:23.080]   i continuar-hi treballant.
+[00:20:23.080 --> 00:20:26.080]   Totes aquestes solucions digitals
+[00:20:26.080 --> 00:20:29.080]   que dieu o que pregunteu,
+[00:20:29.080 --> 00:20:32.080]   què passa?
+[00:20:32.080 --> 00:20:35.080]   Començaran amb 3 punts i a la llarga acabaran
+[00:20:35.080 --> 00:20:38.080]   amb 26 punts d'eficiència o 30 o 40, els que siguin.
+[00:20:38.080 --> 00:20:41.080]   Però això serà una cosa que anirà creixent.
+[00:20:41.080 --> 00:20:44.080]   Ningú farà una solució digital, penso jo,
+[00:20:44.080 --> 00:20:47.080]   és una opinió meva això, que faci tot el que ha de fer
+[00:20:47.080 --> 00:20:50.080]   al 100% a la primera. Anirà creixent
+[00:20:50.080 --> 00:20:53.080]   conforme s'aniran tenint diferents
+[00:20:53.080 --> 00:20:56.080]   reclamacions perquè allò funcioni bé.
+[00:20:56.080 --> 00:20:59.080]   Indiscutiblement s'ha de fer
+[00:20:59.080 --> 00:21:02.080]   amb gent del sector
+[00:21:02.080 --> 00:21:05.080]   perquè, amb tot el respecte, les empreses de software
+[00:21:05.080 --> 00:21:08.080]   saben molt de software, però de tocinos i de granges
+[00:21:08.080 --> 00:21:11.080]   no. Llavors, aquest és
+[00:21:11.080 --> 00:21:14.080]   un dels grans problemes que hi ha hagut, amb moltes coses
+[00:21:14.080 --> 00:21:17.080]   que s'han desenvolupat, que les han desenvolupat unes persones
+[00:21:17.080 --> 00:21:20.080]   que saben molt de la seva feina, però
+[00:21:20.080 --> 00:21:23.080]   la vida real a la granja no la saben. Llavors, s'ha d'escoltar
+[00:21:23.080 --> 00:21:26.080]   tota aquesta gent que treballa a les granges, nosaltres particularment,
+[00:21:26.080 --> 00:21:29.080]   la nostra empresa, nosaltres, intentem aprendre el màxim
+[00:21:29.080 --> 00:21:32.080]   de la gent de les granges, però després
+[00:21:32.080 --> 00:21:35.080]   puc transmetre i dir "escolta, jo necessitem
+[00:21:35.080 --> 00:21:38.080]   que a més a més digui això que està fent, també faig això, això, això altre
+[00:21:38.080 --> 00:21:41.080]   i això que heu fet ha de ser més senzill perquè
+[00:21:41.080 --> 00:21:44.080]   la gent ho pugui fer funcionar". Igual que hi ha d'haver coses
+[00:21:44.080 --> 00:21:47.080]   que no hi han de ser perquè no fa falta manipular-les,
+[00:21:47.080 --> 00:21:50.080]   també hi ha d'haver coses que han de ser molt més fàcils d'accés.
+[00:21:50.080 --> 00:21:53.080]   Però que s'ha de desenvolupar juntament amb el sector,
+[00:21:53.080 --> 00:21:56.080]   o sigui, l'empresa de software que vulgui o d'intel·ligència artificial
+[00:21:56.080 --> 00:21:59.080]   que vulgui desenvolupar alguna cosa, si no compta amb gent del sector
+[00:21:59.080 --> 00:22:02.080]   i els escolta molt i molt bé i no solament a uns,
+[00:22:02.080 --> 00:22:05.080]   jo ho veig complicat realment
+[00:22:05.080 --> 00:22:08.080]   de dir que funciona bé.
+[00:22:08.080 --> 00:22:11.080]   És la meva opinió.
+-.Pregunta 6.12.-
+[00:22:14.080 --> 00:22:17.080]   És que, clar, això jo
+[00:22:17.080 --> 00:22:20.080]   tampoc no crec que aquesta pregunta vagi encara de nosaltres, això
+[00:22:20.080 --> 00:22:23.080]   més aviat és a les empreses integradores o als propietaris de granges.
+[00:22:41.080 --> 00:22:44.080]   Tu refeixes a consultoria que analitzi les dades. Correcte, sí. 
+[00:22:50.080 --> 00:22:53.080]   Això a nivell de clients petits o de gent que treballa
+[00:22:53.080 --> 00:22:56.080]   per el seu compte que diem, o empreses
+[00:22:56.080 --> 00:22:59.080]   diguéssim més familiars, pot ser interessant perquè potser no hi ha ningú
+[00:22:59.080 --> 00:23:02.080]   darrere que analitzi les dades, però quan anem a empreses
+[00:23:02.080 --> 00:23:05.080]   grans del sector, tenen
+[00:23:05.080 --> 00:23:08.080]   la seva gent que analitza i que compare dades
+[00:23:08.080 --> 00:23:11.080]   que és el que més interessant.
+[00:23:11.080 --> 00:23:14.080]   I després passa una cosa, per analitzar totes aquestes dades
+[00:23:14.080 --> 00:23:17.080]   o sigui, si al final
+[00:23:17.080 --> 00:23:20.080]   tu analitzes dades de consum, per exemple, de pinso
+[00:23:20.080 --> 00:23:23.080]   tu pots analitzar dades
+[00:23:23.080 --> 00:23:26.080]   de consum de pinso
+[00:23:26.080 --> 00:23:29.080]   en una granja d'un any, per dir-ho d'alguna manera.
+[00:23:29.080 --> 00:23:32.080]   Si no tens d'altra informació, aquelles dades
+[00:23:32.080 --> 00:23:35.080]   podràs fer una gestió, però si no tens d'altra informació
+[00:23:35.080 --> 00:23:38.080]   no podràs fer una gestió, perquè no saps si en aquella
+[00:23:38.080 --> 00:23:41.080]   granja durant aquell mes hi ha hagut un pas
+[00:23:41.080 --> 00:23:44.080]   d'una malaltia, si hi ha hagut un no constipat, si hi ha hagut no sé què
+[00:23:44.080 --> 00:23:47.080]   si han fet un canvi de pinso
+[00:23:47.080 --> 00:23:50.080]   de fabricació de pinso i aquest pinso
+[00:23:50.080 --> 00:23:53.080]   està compost de A, B i C, està compost de A i C
+[00:23:53.080 --> 00:23:56.080]   només, se pot fer
+[00:23:56.080 --> 00:23:59.080]   però totes aquestes informacions s'han de tindre, llavors que
+[00:23:59.080 --> 00:24:02.080]   les empreses que analitzen les dades puguin tindre totes aquestes
+[00:24:02.080 --> 00:24:05.080]   informacions és complicat. Vosaltres sabeu com funcionen les empreses
+[00:24:05.080 --> 00:24:08.080]   que analitzen dades, les empreses els donen les dades
+[00:24:08.080 --> 00:24:11.080]   i diuen "tant de consum per quilo de pinso
+[00:24:11.080 --> 00:24:14.080]   amb aquests preus, això, val els costos, són aquests"
+[00:24:14.080 --> 00:24:17.080]   però el que diem, si volem analitzar
+[00:24:17.080 --> 00:24:20.080]   i anar directament al important a veure
+[00:24:20.080 --> 00:24:23.080]   què és el que han fet
+[00:24:23.080 --> 00:24:26.080]   si aquells porcs han crescut més amb aquest pinso o han crescut més amb aquest altre
+[00:24:26.080 --> 00:24:29.080]   això són coses que jo crec que si no es fan
+[00:24:29.080 --> 00:24:32.080]   des de dintre l'empresa, una empresa externa
+[00:24:32.080 --> 00:24:35.080]   perquè pot ser que aquella persona que està asseguda a l'ordre que fan
+[00:24:35.080 --> 00:24:38.080]   les dades, li falti informació
+[00:24:38.080 --> 00:24:41.080]   o no et diu coneixement de segons quina escolla. Aquesta és la meva opinió.

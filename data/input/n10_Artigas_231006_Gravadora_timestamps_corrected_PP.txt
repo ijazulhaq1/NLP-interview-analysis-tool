@@ -1,0 +1,532 @@
+-.Pregunta 1.1.-
+[00:00:49.320 --> 00:00:58.840]   Principalment porcí belluguem alguna cosa de vedells, però no qualsevol cosa.
+-.Pregunta 1.2.-
+[00:01:03.720 --> 00:01:17.160]   Jo vaig començar fa 6 anys aquí, però l'empresa penso que és des dels 56.
+[00:01:17.160 --> 00:01:31.000]   56 o 57, vull dir per un logo que hi ha fora que marca el 56 o 57.
+-.Pregunta 1.3a.-
+[00:01:44.600 --> 00:01:53.880]   És una empresa integradora, no es pot dir que és grossa perquè més bé petita, perquè hi haurà unes 7.000 mares.
+[00:01:53.880 --> 00:02:05.800]   Total de granges estarem entre reproductores que són 9, desmamadors que ja són diferents tipus de granges,
+[00:02:05.800 --> 00:02:12.200]   desmamador engreix o desmamador sol, i engreixos, si no recordo malament, 68 granges.
+-.Pregunta 1.3b.-
+[00:02:19.560 --> 00:02:24.840]   En projectes?
+[00:02:31.720 --> 00:02:45.960]   No, és una empresa única, la mateixa empresa potser té un parell d'empreses però és la mateixa empresa que porta tot.
+[00:02:45.960 --> 00:02:53.960]   Hi havia l’escorxador que també pertanyia als mateix socis, però l’escorxador acaba de tancar ara mateix.
+[00:02:55.960 --> 00:03:08.680]   Bueno, és el que hi ha. És el que hi ha, és complicat. És complicat de construir-ho però és el que hi ha.
+-.Pregunta 2.1.-
+[00:03:21.400 --> 00:03:23.400]   No.
+[00:03:23.400 --> 00:03:44.520]   A nivell de truges, totes les grans truges aquí tenen internet, però en els engreixos inclús a vegades vas amb el mòbil i encara no arriba la xarxa mòbil d'internet.
+[00:03:46.680 --> 00:03:52.600]   Però les truges sí que s'ha posat a internet a totes les granges.
+-.Pregunta 2.2a.-
+[00:03:57.720 --> 00:04:06.280]   S'ha posat a internet a totes les granges pel tema del programa de control de reproductores.
+-.Pregunta 2.2b.-
+[00:04:13.800 --> 00:04:28.360]   Cada granja té el seu ordinador amb el seu dispositiu mòbil amb el que entren les dades i des d'aquí, des de les oficines, es controlen els resultats i bueno, principalment és això.
+-.Pregunta 2.3a.-
+[00:04:34.920 --> 00:04:45.240]   Imprescindible. Tal com ens belluguem avui, si te digués que no t'estaria fotent ara mateix el vostre projecte.
+[00:04:45.240 --> 00:04:49.720]   Mira, mira't per al vostre projecte així, no?
+[00:04:49.720 --> 00:05:11.320]   Crec, a més per al meu tarannà, que jo sóc enginyer, crec que hem d'estar connectats a tot arreu i cada dia més dades, més controls i més de tot, però sort o per desgràcia.
+-.Pregunta 2.3b.-
+[00:05:27.480 --> 00:05:43.000]   A veure, jo tinc clar que, parlo ara de la província de Girona, a Osca, per dir alguna cosa, a Lleida, bueno, a Lleida potser trobareu granges de tota mena,
+[00:05:43.000 --> 00:05:51.400]   però a Osca, que tot són granges grosses, allà internet segur que funciona per totes les granges, parlo granges d'engreix i d'esmamadores.
+[00:05:51.400 --> 00:06:03.560]   Aquí a Girona hi ha granges petites, granges de 120 porcs, de 300, de 400. Això li dius a l'integrat, al titular de l'explotació, que hi ha de posar internet,
+[00:06:03.560 --> 00:06:14.120]   i et diu que ja té prou amb el canvi dels lots, amb la tanca perimetral, ara amb el vestidor, amb tot el tema del benestar animal,
+[00:06:14.120 --> 00:06:19.880]   i que vols que et posi internet, dius, no, no, me'n vaig, tanco. Ja ens estem trobant..
+[00:06:24.840 --> 00:06:42.920]   No, com no sigui per part de l'integrador, és a dir, si hi ha l'integrador, tampoc crec que li puguin servir molt internet en aquestes granges petites, ara per arà.
+-.Pregunta 3.1a.-
+[00:06:56.120 --> 00:06:59.800]   No, sempre hi fa falta.
+[00:06:59.800 --> 00:07:15.960]   Sempre, tot i que sóc dels que intento anar millorant el sistema, per exemple, el registre de visites, ho fem tot a través del codi de barres a l’explotació d'entrada,
+[00:07:15.960 --> 00:07:24.760]   i així queda marcat més fàcilment la visita i més fàcil que estar anotant.
+[00:07:24.760 --> 00:07:41.880]   Però al camí hi ha altres coses, sensors, control de pinsos, temperatures, unitats, gasos, tot això que cada dia per al benestar animal l'estan demanant més.
+[00:07:41.880 --> 00:07:45.880]   Per això he dit que... Perdona?
+[00:07:47.880 --> 00:08:01.400]   No, però per això deia que posar internet potser és molt fàcil perquè amb una targeta, si hi ha cobertura mòbil, tens internet a la granja,
+[00:08:01.400 --> 00:08:13.160]   però no ve d'això, sinó tota la mena de sensors que vulguis posar per darrere per al control d'això, que et surti a compte.
+[00:08:13.160 --> 00:08:24.840]   Tema d'alarmes també podries posar per veure si... sensors de temperatura humitat, en un moment donat que sort salti una alarma aquí a les oficines,
+[00:08:24.840 --> 00:08:41.640]   però en granges petites això és molt complicat, que retornin els números perquè al final no ens hem d'oblidar, l'empresa està per guanyar calés, no per altra cosa, com tothom.
+-.Pregunta 3.1b.-
+[00:08:57.160 --> 00:09:06.360]   Sí, el software de gestió, sí, tenim un servidor, que ho tenim per a nivell intern a les oficines,
+[00:09:06.360 --> 00:09:19.880]   tot el programa de control de les truges és extern, el veterinari va amb la seva tablet mòbil, més que res,
+[00:09:19.880 --> 00:09:29.800]   i totes les visites entra al seu informe a través de mòbil i després jo les recullo i ho té a la seva base de dades.
+[00:09:29.800 --> 00:09:45.320]   Principalment és això, algun tema en alguna granja d'alarma, però és que això jo no ho porto, jo diria que no arriba aquí, és que era la mateixa granja.-.Pregunta 3.2.-
+[00:10:00.200 --> 00:10:15.240]   Aquí, per exemple, en el seu dia, jo no hi era encara, però sí que m'han comentat que es van fer proves, per exemple, de control de peso mitjançant imatge.
+[00:10:15.240 --> 00:10:30.760]   Això ja fa temps que estava fet, però per al nostre tipus de porc no va anar bé, perquè nosaltres fem un porc de qualitat en duroc i tenim molts animals foscos.
+[00:10:30.760 --> 00:10:39.880]   Llavors aquests animals foscos, les càmeres no l'agafaven.
+[00:10:39.880 --> 00:10:49.880]   Anava molt bé amb els animals blancs, amb els porcs blancs, però els porcs duroc no hi ha forma de detectar el pes.
+[00:10:49.880 --> 00:11:02.120]   Altres coses que anirien de conya i estan en el mercat i algun dia espero que s'arribi a provar, és el tema de control, de comptar els animals.
+[00:11:02.120 --> 00:11:12.200]   Sobretot els garrins desmamats i els garrins que es porten a la granja, perquè sempre, ja no, que jo t'he portat 213, no han sigut 218, no han sigut 215.
+[00:11:12.200 --> 00:11:22.920]   Hi ha un problema del camioner, de quan surten els porcs de granja i de quan arriben els desmamadors.
+[00:11:22.920 --> 00:11:33.880]   Aquest sistema automàtic que diuen que, mitjançant càmera, que compta molt bé els porcs, estaria molt bé.
+[00:11:33.880 --> 00:11:43.000]   Després un centre, entre cometes, d'investigació, de controlar diferents pinsos amb el consum individual dels animals,
+[00:11:43.000 --> 00:11:49.560]   tipus IRTA, per dir d'alguna manera que puguis tenir les teves instal·lacions, potser seria un altre gran què.
+[00:11:49.560 --> 00:11:56.280]   Però bueno, tot això són inversions, som una integradora petita i és complicat.-.Pregunta 3.3a.-
+[00:12:50.440 --> 00:13:00.520]   -No, no, o sigui, els controls, com sempre dic, et posaré un exemple una mica tonto, no?, que faig jo,
+[00:13:00.520 --> 00:13:10.840]   que és el control de la neteja dels camions. Fas una visió visual, veus el camionet, o veus el camió brut.
+[00:13:10.840 --> 00:13:17.800]   A l'hora de dir-li al xofer "aquest camió està brut", i ells ja estaven acostumats a veure'l d'una altra manera, no?
+[00:13:17.800 --> 00:13:28.360]   Passes un lector d'ATP, li dius "mira, veus?, marca 500 unitats i diries que està per sota de 100, està brut, ho sento".
+[00:13:28.360 --> 00:13:34.440]   Ho veus clarament amb un aparell i l'hi pots explicar, no?
+[00:13:34.440 --> 00:13:41.960]   És un sistema que potser no va bé amb la digitalització, però tota la presa de dades...
+[00:13:41.960 --> 00:13:45.880]   Saps que tu mires un porc i dius "va, d'aquell porc està a 95 quilos".
+[00:13:45.880 --> 00:13:50.440]   És possible que te'n vagis d'un quilo o de mig quilo si tens molta experiència.
+[00:13:50.440 --> 00:13:58.440]   Però si li poses una bàscula i et diu 95,8, t'assegures que el pes és el que és.
+[00:13:58.440 --> 00:14:04.840]   Llavors, tot el tema de sensors et diran una dada que és la bona.
+[00:14:04.840 --> 00:14:17.960]   A l’escorxador, quan m'enviaven dades d’engreix, aquelles me les feia, però quan el greix m'ho deia de forma visual dic "ho sento molt".
+[00:14:17.960 --> 00:14:24.120]   Aquí hi ha un factor humà que ho veu millor que jo segur, perquè jo n'estic acostumat a veure canals,
+[00:14:24.120 --> 00:14:27.960]   però jo amb aquestes dades m'és molt difícil analitzar aquelles dades.
+[00:14:27.960 --> 00:14:38.760]   En canvi, serà perquè la meva faceta o el meu cap d’enginyeria, en principi.
+[00:14:46.760 --> 00:14:52.760]   -Sí, en un principi em crec més en els aparells que en la teva visió,
+[00:14:52.760 --> 00:15:00.120]   però la teva visió té que corroborar el que t'està dient l'aparell perquè potser l'aparell s'ha espatllat i està mal configurat.
+[00:15:01.160 --> 00:15:12.760]   -Com entres en una granja i sents que està molt carregat, poses el lector de l’amoníac i et marques a sobre i dius "no, no pot ser, has de calibrar el lector perquè no està ben calibrat".
+-.Pregunta 3.3b.-
+[00:15:20.760 --> 00:15:28.760]   -No t'acabo d'entendre la pregunta, perdona.
+[00:15:45.760 --> 00:15:57.760]   -Hi ha eines que no són complicades, la gran majoria és acostumar-te a utilitzar-les, és igual que un mòbil.
+[00:15:57.760 --> 00:16:06.760]   Vam començar amb el mòbil i què és això del wifi? No sabem què és això del wifi, jo almenys al principi, quan vaig tenir els primers mòbils.
+[00:16:06.760 --> 00:16:18.760]   Els primers mòbils eren unes eines enormes que pesaven un munt i això què? Simplement despenjaves un telèfon fixe i podies utilitzar-lo.
+[00:16:18.760 --> 00:16:29.760]   I ara hi ha totes aquestes taules de telèfon que necessiten el seu, però és que aquestes eines, per exemple, el lector de amoníac, el lector de zel,
+[00:16:29.760 --> 00:16:39.760]   quan la casa comercial t'ho explica o llegeixes el manual és molt fàcil.
+[00:16:39.760 --> 00:16:49.760]   Una altra cosa que ara tenim digitalitzada, ja no me'n recordava de fa uns anys, és tot el tema de les truges en gestació, xips i alimentació automàtica.
+[00:16:49.760 --> 00:17:02.760]   El personal de granja que hi ha no és gens d'indicar, la paraula intel·ligent no és la correcta, però no és res de l'altre món.
+[00:17:02.760 --> 00:17:11.760]   No vull desmerèixer-ho a la gent, però tampoc hi ha molts que quan tenen un problema amb l'ordinador ens estan trucant
+[00:17:11.760 --> 00:17:25.760]   "Escolta, que se'ns ha esborrat aquest arxiu, se'ns ha esborrat aquesta aplicació i hem de pujar per el sistema de portar la quantitat de pinso que mengen les trulles,
+[00:17:25.760 --> 00:17:35.760]   aquella truja que no ha menjat, aquella truja que no ha anat a la menjadora, he de buscar aquesta truja o l'altra truja", ho tenen assumit perfectament.
+[00:17:35.760 --> 00:17:55.760]   Al final tot aquest sistema requereix una petita formació i tothom "per què no s'utilitza o per què no s'utilitza més?" per un tema de costos.
+-.Pregunta 3.4.-
+[00:18:07.760 --> 00:18:30.760]   A vegades per xarxes socials, a vegades per comercials, t'arriba correu electrònic de les empreses comercials
+[00:18:30.760 --> 00:18:43.760]   i per exemple aquí el DSP Girona s'està posant en marxa una nova eina per control de visites,
+[00:18:43.760 --> 00:19:03.760]   els veterinaris que vagin informats de malalties, amb el PRRS Rosalia Famos i diferents controls que es volen fer. Vull dir que veu una mica de l'exterior.
+-.Pregunta 4.1.-
+[00:19:32.760 --> 00:19:44.760]   En el tema més de garrins, desmamadors i mares tenim tot el tema de control de ventilació a base d'en sensors principalment de temperatura.
+[00:19:44.760 --> 00:19:55.760]   Hi ha engreixos, que molts engreixos tenim també tema de temperatura per l'obertura i tancament de finestres de forma automàtica.
+[00:19:55.760 --> 00:20:04.760]   En engreixos molt petits aquest tipus de finestres funcionen, són manuals. Principalment és això.
+[00:20:04.760 --> 00:20:16.760]   Després hi ha el tema de la cisterna de purins amb el GPS i tota la lectura de la cisterna de l'aplicació de purins.
+[00:20:29.760 --> 00:20:40.760]   No, no ho tenim cert. S'ha estudiat una mica per posar-ho però tenim una mica de dubtes.
+[00:20:40.760 --> 00:20:55.760]   Tenim dubtes perquè aquí a fàbrica s'ha intentat llegir el tema de quina quantitat de matèria prima hi ha en una sitja
+[00:20:55.760 --> 00:21:08.760]   amb lectures d'infraroig, que molts d'aquests aparells van amb infraroig i ens ha donat problemes.
+[00:21:08.760 --> 00:21:23.760]   L'hem intentat fer amb distanciòmetre de làser d'infraroig aquest i a fàbrica els donava aquest tipus de lectura de problemes.
+[00:21:23.760 --> 00:21:37.760]   Llavors no volem que els animals en el principi es queden sense pinso i estem tirant del tradicional,-.Pregunta 4.2.-
+[00:22:02.760 --> 00:22:13.760]   Nosaltres en un principi, si no estic equivocat perquè jo no porto, però sí que porto molt de registres,
+[00:22:13.760 --> 00:22:15.760]   a mi no m'arriba aquest tipus de registre.
+[00:22:15.760 --> 00:22:24.760]   Jo diria que simplement és un control diari que tot funcioni correctament,
+[00:22:24.760 --> 00:22:32.760]   però de registre, l'únic tipus de registre és el que hem pres en el seu dia, que vam fer.
+[00:22:32.760 --> 00:22:42.760]   En el seu dia vam fer una prova de gasos per reduir el nivell de gasos amb INNOVAC i vam adquirir aparells de lectura
+[00:22:42.760 --> 00:22:51.760]   i anàvem a mesurar els gasos i preníem registres, però actualment el tema de registres...
+[00:22:53.760 --> 00:22:55.760]   No.
+-.Pregunta 5.1.-
+[00:23:09.760 --> 00:23:16.760]   El canvi que estic recordant ara, però és que jo tot això tampoc ho porto.
+[00:23:16.760 --> 00:23:19.760]   Però sabia que em tocaria a mi.
+[00:23:19.760 --> 00:23:25.760]   Va ser el canvi del programa de software de porcs de reproductora,
+[00:23:25.760 --> 00:23:34.760]   que abans ho teníem centralitzat tot aquí a la granja de les oficines
+[00:23:34.760 --> 00:23:45.760]   i ara s'ha posat un control que cada granja pugui tenir accés a les seves dades
+[00:23:45.760 --> 00:23:55.760]   i treure d'allà el control de les seves necessitats de fitxes i veure resultats i coses d'aquestes.
+[00:23:55.760 --> 00:23:58.760]   Aquest és l'últim.
+[00:23:58.760 --> 00:24:10.760]   Després una millora d'instal·lació a la granja amb control de temperatura i de calefacció també s'ha fet.
+[00:24:10.760 --> 00:24:17.760]   Però el més, a lo millor, és aquest software que s'ha posat a cadascuna de les granges de Maragall.
+-.Pregunta 5.2.-
+[00:24:35.760 --> 00:24:42.760]   En el meu cap està tot el tema de millorar de visites, de control veterinari,
+[00:24:42.760 --> 00:24:51.760]   tot això, encara que ja ho tenim, està en el meu cap millorar aquest sistema.
+[00:24:51.760 --> 00:24:58.760]   També millorar l'Excel, que l'utilitzem, o l'utilitzo principalment jo moltíssim.
+[00:24:58.760 --> 00:25:06.760]   Tot el tema de millorar a l'hora d'usuari.
+[00:25:06.760 --> 00:25:12.760]   Per dir-ho d'alguna manera, més macros, més programació, més coses d'aquestes.
+[00:25:12.760 --> 00:25:19.760]   Però això ha de ser a poc a poc.
+[00:25:19.760 --> 00:25:26.760]   M'agradaria, per exemple, quan fas tot el tema de sistema i gestió de la granja,
+[00:25:26.760 --> 00:25:32.760]   tenir-ho més actualitzat amb els titulars de l'explotació.
+[00:25:32.760 --> 00:25:39.760]   Una vegada que ho tinguis fet o modificat, passa automàticament cap a ell.
+[00:25:39.760 --> 00:25:45.760]   Tot això requereix el seu temps i potser una mica més de coneixements
+[00:25:45.760 --> 00:25:47.760]   que el que arribo a tenir jo.
+-.Pregunta 5.3.-
+[00:26:03.760 --> 00:26:12.760]   La intel·ligència artificial he intentat utilitzar-la, per dir-ho d'alguna manera,
+[00:26:12.760 --> 00:26:20.760]   amb l'Excel, que és el que més utilitzo i a vegades l'he utilitzat molt poc.
+[00:26:20.760 --> 00:26:23.760]   Per un parell de vegades, per dir-ho d'alguna manera.
+[00:26:23.760 --> 00:26:29.760]   I m'he sorprès per les respostes que t'arriba a donar,
+[00:26:29.760 --> 00:26:36.760]   però no tinc temps d'utilitzar-la perquè en l'administració ja tinc prou.
+[00:26:36.760 --> 00:26:40.760]   Soc una persona que estic molt en contacte amb l'administració,
+[00:26:40.760 --> 00:26:48.760]   en el tema del benestar animal, auditories, bioseguretat, inspeccions...
+-.Pregunta 6.2.-
+[00:27:00.760 --> 00:27:03.760]   És molt complicat, perquè és una empresa petita.
+[00:27:03.760 --> 00:27:06.760]   Llavors, sempre has de consultar a tots, evidentment,
+[00:27:06.760 --> 00:27:11.760]   el que juguen els cales, que és el que  tenim de costat.
+[00:27:11.760 --> 00:27:14.760]   Llavors, tu prens decisions.
+[00:27:14.760 --> 00:27:18.760]   Comentes decisions que després sí que es porten a terme.
+[00:27:18.760 --> 00:27:23.760]   Tot el tema de bioseguretat, de benestar animal,
+[00:27:23.760 --> 00:27:32.760]   sempre, escolta, el tema del SAGE, aquest sistema de gestió,
+[00:27:32.760 --> 00:27:35.760]   l'estic portant jo, l'estic fent a la meva manera,
+[00:27:35.760 --> 00:27:40.760]   i vinc amb el suport també del servei veterinari.
+[00:27:40.760 --> 00:27:45.760]   Però ells ja tenen prou feina a visitar granges,
+[00:27:45.760 --> 00:27:49.760]   jo estic més en oficina.
+[00:27:49.760 --> 00:27:56.760]   Però després, tot el tema de digitalització de granja,
+[00:27:56.760 --> 00:28:01.760]   el cap és el que volta més granges, el veterinari,
+[00:28:01.760 --> 00:28:04.760]   l'encarregat de les granges de truja,
+[00:28:04.760 --> 00:28:10.760]   que són ells més els que veuen les necessitats
+[00:28:10.760 --> 00:28:17.760]   de posar moltes vegades tot el tema de digitalització en marxa.
+-.Pregunta 6.1.-
+[00:28:31.760 --> 00:28:35.760]   - Al final tot influeix, però és l'eficàcia.
+[00:28:35.760 --> 00:28:39.760]   És l'eficàcia que aquesta retorni als calés.
+[00:28:39.760 --> 00:28:44.760]   El benestar és important perquè avui en dia tot és benestar.
+[00:28:44.760 --> 00:28:49.760]   Avui he hagut de fer un informe de benestar animal
+[00:28:49.760 --> 00:28:52.760]   en cas de terratrèmol o d'incendi.
+[00:28:52.760 --> 00:28:55.760]   però és impossible fer-lo.
+[00:28:55.760 --> 00:28:58.760]   L'únic que puc fer és riscos laborals
+[00:28:58.760 --> 00:29:01.760]   per al personal que pugui haver-hi dins de l'habitació.
+[00:29:01.760 --> 00:29:05.760]   És més important que les persones que hi hagi dins que no el bestiar.
+[00:29:05.760 --> 00:29:07.760]   Evidentment, el bestiar l'hem de cuidar,
+[00:29:07.760 --> 00:29:10.760]   però si hi ha un terratrèmol el que no faràs
+[00:29:10.760 --> 00:29:14.760]   és anar a treure el bestiar mentre estiguin caient les bigues.
+[00:29:14.760 --> 00:29:19.760]   Sortiràs fora i després miraràs com està el bestiar quan pugui.
+[00:29:19.760 --> 00:29:24.760]   Llavors, clar, diem benestar animal, bioseguretat, sí, sí, molt bé,
+[00:29:24.760 --> 00:29:29.760]   però al final si no et retornes els calés l'empresa anirà a fer punyeta.
+[00:29:29.760 --> 00:29:33.760]   Llavors, eficàcia.
+[00:29:33.760 --> 00:29:42.760]   Eficàcia del que vulguis pretendre a l'hora de fer una millora digital
+[00:29:42.760 --> 00:29:46.760]   i del que retorni aquesta millora.
+[00:29:46.760 --> 00:29:51.760]   Moltes vegades potser la millora pot ser la reducció del personal.
+[00:29:51.760 --> 00:29:54.760]   Però a vegades és així.
+[00:29:54.760 --> 00:30:02.760]   Però si et retorna més calés del que al final et costa a les persones
+[00:30:02.760 --> 00:30:07.760]   per controlar una sèrie de paràmetres, doncs benvingut, sí.
+-.Pregunta 6.3.-
+[00:30:33.760 --> 00:30:39.760]   -Sí, evidentment, això és una decisió que tu li marques una corba d'acció
+[00:30:39.760 --> 00:30:42.760]   i el sensor et fa obrir o tancar una finestra.
+[00:30:42.760 --> 00:30:48.760]   Això ja ho dones per fet, la calefacció que es posi quan baixi de 25 graus
+[00:30:48.760 --> 00:30:51.760]   en garrins de desmamador, que es posi en marxa.
+[00:30:51.760 --> 00:30:53.760]   Això està en el sensor.
+[00:30:53.760 --> 00:30:58.760]   Després hi ha altres aplicacions, per exemple, el tema, torno a dir,
+[00:30:58.760 --> 00:31:04.760]   l'aplicació típica meva, que és l'Excel, que poso el pes dels garrins centrats
+[00:31:04.760 --> 00:31:08.760]   i quan he de buscar quines granges estan per sobre dels 80 quilos,
+[00:31:08.760 --> 00:31:16.760]   doncs li tinc posat una corba de creixement i miro quines granges estan
+[00:31:16.760 --> 00:31:19.760]   teòricament per sobre dels 80 quilos.
+[00:31:19.760 --> 00:31:24.760]   M'equivoco poc, m'equivoco poc en aquest tipus de...
+[00:31:24.760 --> 00:31:28.760]   a l'estiu m'equivocaré una mica més perquè el porc deixa de menjar,
+[00:31:28.760 --> 00:31:39.760]   però no és veritat que per la funció que necessito ja funciona.
+-.Pregunta 6.4.-
+[00:32:00.760 --> 00:32:06.760]   -A veure, per exemple, el que són les càmeres que t'havia explicat
+[00:32:06.760 --> 00:32:11.760]   al principi de control de pesos, això seria de conya perquè diria
+[00:32:11.760 --> 00:32:16.760]   en aquesta granja hi ha 200 porcs que estan per sobre dels 105 quilos
+[00:32:16.760 --> 00:32:19.760]   o dels 112 quilos en funció del que vulguis carregar.
+[00:32:19.760 --> 00:32:23.760]   Dic "d'acord, ja sé la quantitat de porcs, no cal que hi vagi una persona
+[00:32:23.760 --> 00:32:26.760]   a comptar i a marcar els porcs que estan per sobre dels 105 quilos".
+[00:32:26.760 --> 00:32:31.760]   I automàticament des d'aquí, des de l'oficina, diria
+[00:32:31.760 --> 00:32:35.760]   que la granja té 200 porcs, de la granja B tens 400
+[00:32:35.760 --> 00:32:38.760]   i de la granja C tens 150.
+[00:32:38.760 --> 00:32:44.760]   Ja fas la programació sense haver d'anar a granja automàticament,
+[00:32:44.760 --> 00:32:49.760]   sense haver d'anar a granja i sense el possible error
+[00:32:49.760 --> 00:32:54.760]   de la persona que mira el porc.
+[00:32:54.760 --> 00:33:00.760]   A vegades vas a una granja i el passadís està elevat respecte al portal
+[00:33:00.760 --> 00:33:05.760]   et dona errors per la diferència d'alçada.
+[00:33:05.760 --> 00:33:09.760]   Perquè estàs acostumat a veure sempre els porcs a la mateixa alçada
+[00:33:09.760 --> 00:33:13.760]   i has de pensar "hòstia, aquí els porcs estan més enlairats
+[00:33:13.760 --> 00:33:16.760]   i els porcs més petits".
+[00:33:16.760 --> 00:33:22.760]   Aquestes coses t'ajuden a prendre decisions.
+[00:33:22.760 --> 00:33:28.760]   Comptar els porcs que pots tenir en una sala
+[00:33:28.760 --> 00:33:30.760]   i dius "hem de carregar tota aquesta sala".
+[00:33:32.760 --> 00:33:35.760]   D'acord, 500 garrins, d'acord, no n'hi ha ni 4.
+[00:33:35.760 --> 00:33:40.760]   O 494, d'acord, 494, no són 500.
+[00:33:40.760 --> 00:33:46.760]   Deixar de prendre en una hora comptant els porcs,
+[00:33:46.760 --> 00:33:48.760]   si les quadres són molt grosses, que aquest l'has comptat,
+[00:33:48.760 --> 00:33:52.760]   que aquest no l'has comptat, que aquest l'has descomptat, no ho sé.
+-.Pregunta 6.5a.-
+[00:34:15.760 --> 00:34:19.760]   -A veure, al final el que pren la decisió és el que fa.
+[00:34:20.760 --> 00:34:22.760]   -Però escolta a tothom.
+[00:34:23.760 --> 00:34:29.760]   -Escolta a tothom i al final el que té més convenient
+[00:34:29.760 --> 00:34:34.760]   és per on s'ha d'anar.
+-.Pregunta 6.5c.-
+[00:34:46.760 --> 00:34:55.760]   -Veig diferències, per exemple, avui, a la data d'avui,
+[00:34:55.760 --> 00:35:00.760]   pel tema de l’escorxador, el problema que hi ha
+[00:35:00.760 --> 00:35:04.760]   del tema de l’escorxador són les decisions econòmiques
+[00:35:04.760 --> 00:35:08.760]   a vegades, en un moment donat, que retallen
+[00:35:08.760 --> 00:35:11.760]   alguna sèrie de projectes que n'hi ha.
+[00:35:11.760 --> 00:35:16.760]   Però hi ha unes altres decisions
+[00:35:16.760 --> 00:35:19.760]   que podria dir que econòmicament,
+[00:35:19.760 --> 00:35:23.760]   potser això sí que és difícil d'entendre,
+[00:35:23.760 --> 00:35:27.760]   però a nivell de control sanitari
+[00:35:27.760 --> 00:35:34.760]   es retornaran els calés que puguis invertir,
+[00:35:34.760 --> 00:35:38.760]   per exemple, en una bona neteja dels camions
+[00:35:38.760 --> 00:35:41.760]   o una bona desinfecció.
+[00:35:41.760 --> 00:35:44.760]   Està gastant més temps en netejar,
+[00:35:44.760 --> 00:35:47.760]   està gastant més temps en desinfectar,
+[00:35:47.760 --> 00:35:50.760]   això són més calés, però es retornarà.
+[00:35:53.760 --> 00:35:57.760]   -Sí, l'eficiència, però avui en dia
+[00:35:57.760 --> 00:36:02.760]   el tema econòmic és important.
+-.Pregunta 6.6.-
+[00:36:15.760 --> 00:36:20.760]   -Jo, a part dels softwares comptables,
+[00:36:20.760 --> 00:36:23.760]   de la REP comptable,
+[00:36:23.760 --> 00:36:27.760]   el que utilitzo principalment és l'Excel.
+[00:36:27.760 --> 00:36:30.760]   Aquest és l'Excel.
+[00:36:30.760 --> 00:36:33.760]   Després, quan he fet alguna presentació
+[00:36:33.760 --> 00:36:36.760]   en el escorxador pel tema de qualitat de camp,
+[00:36:36.760 --> 00:36:40.760]   el PowerPoint, però això és ridícul.
+[00:36:40.760 --> 00:36:46.760]   L'Excel i de tant en tant
+[00:36:46.760 --> 00:36:49.760]   utilitzo un programa d'estadística.
+-.Pregunta 6.7.-
+[00:36:53.760 --> 00:36:56.760]   Tota la vida
+[00:36:58.760 --> 00:37:01.760]   -Per dir-ho d'alguna manera, 90%.
+[00:37:01.760 --> 00:37:04.760]   No, potser no tant, però si he elevat
+[00:37:04.760 --> 00:37:07.760]   i després tinc un programa de base de dades
+[00:37:07.760 --> 00:37:11.760]   en el que faig controls de temperatura i d'aigua,
+[00:37:11.760 --> 00:37:14.760]   de biodiversitat i tot això,
+[00:37:14.760 --> 00:37:17.760]   primer que com a base de dades.
+-.Pregunta 6.8.-
+[00:37:28.760 --> 00:37:30.760]   Algun programa?
+[00:37:30.760 --> 00:37:33.760]   -Bé, hi ha programes de truges
+[00:37:33.760 --> 00:37:36.760]   en el mercat que els havia provat
+[00:37:36.760 --> 00:37:40.760]   i no em van agradar massa el dia i els vaig deixar.
+[00:37:40.760 --> 00:37:44.760]   El que passa és que molts d'aquests ja no existeixen.
+[00:37:46.760 --> 00:37:50.760]   -S'han quedat tots obsolets, però que ells sàpiguen no existeix.
+[00:37:56.760 --> 00:37:59.760]   -Bé, hi ha algun programa, per exemple,
+[00:37:59.760 --> 00:38:02.760]   que estava fet a MS-DOS.
+[00:38:02.760 --> 00:38:05.760]   Estava fet a MS-DOS a l'inici,
+[00:38:05.760 --> 00:38:08.760]   bé, no sé si era a l'inici.
+[00:38:08.760 --> 00:38:12.760]   Estava fet a MS-DOS, sí, i després va passar a ACCES.
+[00:38:14.760 --> 00:38:17.760]   -I era molt lent, molt lent.
+[00:38:17.760 --> 00:38:20.760]   Vaig provar un altre, em van parlar molt bé d'un altre,
+[00:38:20.760 --> 00:38:23.760]   vaig provar un altre i evidentment...
+[00:38:23.760 --> 00:38:26.760]   No, vaig entrar en genètica i em demanaven un altre
+[00:38:26.760 --> 00:38:31.760]   perquè pel tema de genètica d'enviar de la reposició
+[00:38:31.760 --> 00:38:34.760]   ho havia d'enviar a un altre programa.
+[00:38:34.760 --> 00:38:39.760]   Vaig provar un altre i era oli en un llum,
+[00:38:39.760 --> 00:38:42.760]   per dir-ho d'alguna manera,
+[00:38:42.760 --> 00:38:45.760]   que no hi havia color.
+[00:38:45.760 --> 00:38:48.760]   Em vaig quedar amb les ganes, a l'hora de buscar programes,
+[00:38:48.760 --> 00:38:51.760]   per dir-ho d'alguna forma, del Pigchamp,
+[00:38:51.760 --> 00:38:55.760]   del Pigchamp, perquè a mi quan ho vaig veure
+[00:38:55.760 --> 00:38:59.760]   i em va deixar... Aquell m'encantava,
+[00:38:59.760 --> 00:39:04.760]   però l'estrella genètica no portava aquell programa
+[00:39:04.760 --> 00:39:07.760]   i no podia fer la feina amb aquell programa
+[00:39:07.760 --> 00:39:10.760]   i no el vaig utilitzar.
+[00:39:10.760 --> 00:39:17.760]   O ja no hi havia programes en el mercat
+[00:39:17.760 --> 00:39:21.760]   que no recollien totes les dades que jo volia.
+[00:39:21.760 --> 00:39:25.760]   Per exemple, les baixes de garrins a lactació,
+[00:39:25.760 --> 00:39:28.760]   no sabia, sabia que al final de la lactació
+[00:39:28.760 --> 00:39:31.760]   hi havia dues baixes de garrins,
+[00:39:31.760 --> 00:39:34.760]   però no sabia quan s'havien produït aquestes baixes,
+[00:39:34.760 --> 00:39:37.760]   si el primer, el segon o el cinquè dia.
+[00:39:37.760 --> 00:39:41.760]   Per mi és important saber quan es produeixen
+[00:39:41.760 --> 00:39:44.760]   les baixes de garrins.
+[00:39:44.760 --> 00:39:52.760]   Això depèn una mica de les necessitats
+[00:39:52.760 --> 00:39:56.760]   o del que creu cadascú que necessita
+[00:39:56.760 --> 00:40:02.760]   per controlar tot el tema de resultats
+[00:40:02.760 --> 00:40:07.760]   o de resultats, després de fer un estudi correcte
+[00:40:07.760 --> 00:40:10.760]   de les dades i què està passant amb les teves explotacions.
+-.Pregunta 6.9.-
+[00:40:23.760 --> 00:40:28.760]   -No, totes les dades s'han d'interpretar.
+[00:40:28.760 --> 00:40:32.760]   Les dades te donen un valor.
+[00:40:32.760 --> 00:40:35.760]   Moltes vegades pots dir "hòstia, quina merda,
+[00:40:35.760 --> 00:40:40.760]   per què estàs produint, ara ho invento 25 garrins
+[00:40:40.760 --> 00:40:44.760]   per truja allà, quan tothom està produint 38.
+[00:40:44.760 --> 00:40:47.760]   Hòstia, pensa-hi que estàs treballant
+[00:40:47.760 --> 00:40:49.760]   amb una truja dura".
+[00:40:49.760 --> 00:40:52.760]   Llavors, clar, no pots tenir més.
+[00:40:52.760 --> 00:40:55.760]   Ja ha d'haver-hi una interpretació en aquest cas,
+[00:40:55.760 --> 00:40:58.760]   alguna cosa que ja ho tens assumit,
+[00:40:58.760 --> 00:41:03.760]   però per un que vingui de fora s'ha d'explicar
+[00:41:03.760 --> 00:41:06.760]   per què tens aquests 25, aquests 28,
+[00:41:06.760 --> 00:41:08.760]   per què no arribes a 30,
+[00:41:08.760 --> 00:41:11.760]   per què tens una conversió de 2.8,
+[00:41:11.760 --> 00:41:14.760]   quan tothom potser està per sota de 2.4
+[00:41:14.760 --> 00:41:16.760]   amb un porc blanc,
+[00:41:16.760 --> 00:41:19.760]   quan tu tens un porc dur a 87.8%
+[00:41:19.760 --> 00:41:22.760]   i estàs més a prop del 3 que del 2.4
+[00:41:22.760 --> 00:41:25.760]   perquè els teus costos de producció,
+[00:41:25.760 --> 00:41:30.760]   per exemple, em va arribar, ja parlo d'uns anys,
+[00:41:30.760 --> 00:41:33.760]   un resultat de SIP consultors,
+[00:41:33.760 --> 00:41:37.760]   que jo no estava llavors ficat a cinc consultors,
+[00:41:37.760 --> 00:41:41.760]   que deien que l’escorxador pagava 7 pessetes,
+[00:41:41.760 --> 00:41:44.760]   parlo de pessetes, no parlo d'euros, que imagina,
+[00:41:44.760 --> 00:41:47.760]   7 pessetes per sota del preu de mercat.
+[00:41:47.760 --> 00:41:50.760]   I dic "doncs a mi no m'està passant això,
+[00:41:50.760 --> 00:41:53.760]   els escorxadors que mato m'estan pagant
+[00:41:53.760 --> 00:41:56.760]   el preu de mercat, inclús algun per sobre".
+[00:41:56.760 --> 00:41:58.760]   "No, no pot ser, Pau,
+[00:41:58.760 --> 00:42:00.760]   a SIP consultors li surt això".
+[00:42:00.760 --> 00:42:02.760]   I després, indagant una mica,
+[00:42:02.760 --> 00:42:05.760]   interpretant què era d'un SIP consultors,
+[00:42:05.760 --> 00:42:07.760]   aquí estava el tema del transport,
+[00:42:07.760 --> 00:42:09.760]   que també ho ficava dintre.
+[00:42:09.760 --> 00:42:11.760]   Per això, depèn una mica
+[00:42:11.760 --> 00:42:14.760]   de com calculis les teves dades,
+[00:42:14.760 --> 00:42:16.760]   si no saps com estan calculades,
+[00:42:16.760 --> 00:42:18.760]   a vegades veus un programa.
+[00:42:18.760 --> 00:42:21.760]   Resultat per truja productiva,
+[00:42:21.760 --> 00:42:23.760]   resultat per truja present.
+[00:42:23.760 --> 00:42:26.760]   Què és truja productiva i què és truja present.
+[00:42:29.760 --> 00:42:31.760]   -Sí.
+-.Pregunta 6.10.-
+[00:42:43.760 --> 00:42:45.760]   -Bueno, ja assessors externs.
+[00:42:45.760 --> 00:42:48.760]   Hi ha assessors externs,
+[00:42:48.760 --> 00:42:50.760]   que, clar, nosaltres,
+[00:42:50.760 --> 00:42:53.760]   sí, tenim set o vuit granges de mare,
+[00:42:53.760 --> 00:42:55.760]   però sempre veus,
+[00:42:55.760 --> 00:42:57.760]   vuit granges de mare,
+[00:42:57.760 --> 00:42:59.760]   sempre veus els vuit granges de mare.
+[00:42:59.760 --> 00:43:01.760]   I et veu una persona externa
+[00:43:01.760 --> 00:43:05.760]   i et dona la seva opinió.
+[00:43:05.760 --> 00:43:08.760]   En quant a la fabricació de pinsos,
+[00:43:08.760 --> 00:43:10.760]   que també en fem,
+[00:43:10.760 --> 00:43:12.760]   també ve assessor nutricional,
+[00:43:12.760 --> 00:43:18.760]   i mira una mica per on va anar el resultat.
+[00:43:18.760 --> 00:43:20.760]   Nosaltres, sempre aquí,
+[00:43:20.760 --> 00:43:22.760]   se li apreta, perquè volem
+[00:43:22.760 --> 00:43:24.760]   creixement més ràpid
+[00:43:24.760 --> 00:43:26.760]   i conversió més petita, evidentment,
+[00:43:26.760 --> 00:43:28.760]   com no, però bueno.-.Pregunta 6.11a.-
+[00:43:50.760 --> 00:43:56.760]   -Hòstia, ara mateix m'agafes
+[00:43:56.760 --> 00:43:59.760]   que no sé què dir-te.
+[00:43:59.760 --> 00:44:01.760]   Per exemple, a la fàbrica
+[00:44:01.760 --> 00:44:04.760]   de pinsos,
+[00:44:04.760 --> 00:44:06.760]   fa un parell d'anys
+[00:44:06.760 --> 00:44:08.760]   es va escollir
+[00:44:08.760 --> 00:44:12.760]   es va agafar un mòbil,
+[00:44:12.760 --> 00:44:14.760]   senzill,
+[00:44:14.760 --> 00:44:16.760]   doncs bueno,
+[00:44:16.760 --> 00:44:18.760]   ara s'està utilitzant
+[00:44:18.760 --> 00:44:20.760]   i ojalà hi hagués
+[00:44:20.760 --> 00:44:22.760]   una mir
+[00:44:22.760 --> 00:44:26.760]   més professional.
+[00:44:26.760 --> 00:44:28.760]   També m'agradaria
+[00:44:28.760 --> 00:44:32.760]   fer analítica de micotoxines
+[00:44:32.760 --> 00:44:34.760]   d'una forma més senzilla
+[00:44:34.760 --> 00:44:36.760]   que no amb un kit
+[00:44:36.760 --> 00:44:38.760]   per fer una analítica
+[00:44:38.760 --> 00:44:40.760]   de micotoxines.
+[00:44:40.760 --> 00:44:42.760]   Guanyaries temps i eficàcia.
+[00:44:42.760 --> 00:44:50.760]   Al visitador
+[00:44:50.760 --> 00:44:52.760]   no sé si
+[00:44:52.760 --> 00:44:56.760]   alguna aplicació
+[00:44:56.760 --> 00:44:58.760]   que es pogués fer
+[00:44:58.760 --> 00:45:00.760]   perquè les dades
+[00:45:00.760 --> 00:45:02.760]   arribessin automàticament
+[00:45:02.760 --> 00:45:04.760]   i no quan estan aquí,
+[00:45:04.760 --> 00:45:06.760]   crec que això ja s'està fent
+[00:45:06.760 --> 00:45:08.760]   però no tot ho planteges
+[00:45:08.760 --> 00:45:10.760]   i hi ha altres coses
+[00:45:10.760 --> 00:45:12.760]   que no sé,
+[00:45:12.760 --> 00:45:14.760]   no m'és fàcil
+[00:45:14.760 --> 00:45:16.760]   no m'és fàcil
+[00:45:16.760 --> 00:45:18.760]   de dir quina.
+[00:45:18.760 --> 00:45:24.760]   Aquí una altra cosa
+[00:45:24.760 --> 00:45:26.760]   que feia encara
+[00:45:26.760 --> 00:45:28.760]   com el tema de l’escorxador
+[00:45:28.760 --> 00:45:30.760]   ha baixat
+[00:45:30.760 --> 00:45:32.760]   és el tema
+[00:45:32.760 --> 00:45:34.760]   d'ecografia
+[00:45:34.760 --> 00:45:36.760]   que s'està utilitzant
+[00:45:36.760 --> 00:45:38.760]   a les mares
+[00:45:38.760 --> 00:45:40.760]   per veure si estan prenyades o no
+[00:45:40.760 --> 00:45:42.760]   però nosaltres, jo personalment
+[00:45:42.760 --> 00:45:44.760]   que és per això que vaig entrar aquí
+[00:45:44.760 --> 00:45:46.760]   és pel tema de qualitat de camp
+[00:45:46.760 --> 00:45:48.760]   feia ecografia
+[00:45:48.760 --> 00:45:50.760]   per veure infiltració
+[00:45:50.760 --> 00:45:52.760]   de greix en el lloc
+[00:45:52.760 --> 00:45:54.760]   i bueno
+[00:45:54.760 --> 00:45:56.760]   estava molt bé
+[00:45:56.760 --> 00:45:58.760]   amb l'estudi que es feia
+[00:45:58.760 --> 00:46:00.760]   ara aquest estudi
+[00:46:00.760 --> 00:46:02.760]   l'hem deixat una mica
+[00:46:02.760 --> 00:46:04.760]   pel tema de
+[00:46:04.760 --> 00:46:06.760]   de l’escorxador i realment
+[00:46:06.760 --> 00:46:08.760]   tenia molta
+[00:46:08.760 --> 00:46:10.760]   o tenia molta informació
+[00:46:10.760 --> 00:46:12.760]   dels diferents encreuaments que estem fent
+-.Pregunta 6.11b.-
+[00:46:30.760 --> 00:46:32.760]   Aquestes eines
+[00:46:32.760 --> 00:46:34.760]   que utilitzo
+[00:46:34.760 --> 00:46:36.760]   per exemple això
+[00:46:36.760 --> 00:46:38.760]   per exemple
+[00:46:38.760 --> 00:46:40.760]   això de
+[00:46:40.760 --> 00:46:42.760]   l'avaluació d'imatges
+[00:46:42.760 --> 00:46:44.760]   de llom
+[00:46:44.760 --> 00:46:46.760]   mitjançant ecografia
+[00:46:46.760 --> 00:46:48.760]   el software que es va agafar
+[00:46:48.760 --> 00:46:50.760]   és un software americà
+[00:46:50.760 --> 00:46:52.760]   softonic
+[00:46:52.760 --> 00:46:54.760]   penso que es diu
+[00:46:54.760 --> 00:46:56.760]   vale
+[00:46:56.760 --> 00:46:58.760]   que el distribuïdor aquí
+[00:46:58.760 --> 00:47:00.760]   en Espanya
+[00:47:00.760 --> 00:47:02.760]   és un eco
+[00:47:02.760 --> 00:47:04.760]   i ell ha fet
+[00:47:04.760 --> 00:47:06.760]   també el seu programa
+[00:47:06.760 --> 00:47:08.760]   en un principi per ibèric
+[00:47:08.760 --> 00:47:10.760]   i per vedells
+[00:47:10.760 --> 00:47:12.760]   de control
+[00:47:12.760 --> 00:47:14.760]   d'infiltració grassa
+[00:47:14.760 --> 00:47:16.760]   a través d'ecografia
+[00:47:16.760 --> 00:47:18.760]   no sé si al final ha fet això de tot blanc
+[00:47:18.760 --> 00:47:20.760]   o no
+[00:47:20.760 --> 00:47:22.760]   però clar, evidentment
+[00:47:22.760 --> 00:47:24.760]   aquest tipus de software
+[00:47:24.760 --> 00:47:26.760]   especialitzada en imatge
+[00:47:26.760 --> 00:47:28.760]   i proves
+[00:47:28.760 --> 00:47:30.760]   i proves
+[00:47:30.760 --> 00:47:32.760]   amb el sector
+[00:47:32.760 --> 00:47:36.760]   per exemple
+[00:47:36.760 --> 00:47:38.760]   amb els escorxadors
+[00:47:38.760 --> 00:47:40.760]   alhora m'havia barallat molt
+[00:47:40.760 --> 00:47:42.760]   entre cometes
+[00:47:42.760 --> 00:47:44.760]   he demanat molt a escorxadors
+[00:47:44.760 --> 00:47:46.760]   que
+[00:47:46.760 --> 00:47:48.760]   que la selecció de llocs
+[00:47:48.760 --> 00:47:50.760]   no es fes per vista
+[00:47:50.760 --> 00:47:52.760]   si no es fes mitjançant
+[00:47:52.760 --> 00:47:54.760]   ecografia o mir
+[00:47:54.760 --> 00:47:56.760]   o alguna cosa
+[00:47:56.760 --> 00:47:58.760]   d'aquestes
+[00:47:58.760 --> 00:48:00.760]   jo vaig anar a escorxador
+[00:48:00.760 --> 00:48:02.760]   alguna vegada a fer ecografia
+[00:48:02.760 --> 00:48:04.760]   directament sobre canal
+[00:48:04.760 --> 00:48:06.760]   em va donar bon resultat
+[00:48:06.760 --> 00:48:08.760]   però operativament no era viable
+[00:48:08.760 --> 00:48:10.760]   però sí que hi ha altres
+[00:48:10.760 --> 00:48:12.760]   altres sistemes
+[00:48:12.760 --> 00:48:14.760]   que semblava que era viable
+[00:48:14.760 --> 00:48:16.760]   però tot era qüestió econòmica
+-.Pregunta 6.12a.-
+[00:48:28.760 --> 00:48:32.760]   bueno el d'assessoria
+[00:48:32.760 --> 00:48:34.760]   productiva
+[00:48:34.760 --> 00:48:36.760]   no sé
+[00:48:36.760 --> 00:48:38.760]   quin tipus
+[00:48:38.760 --> 00:48:40.760]   de
+[00:48:40.760 --> 00:48:42.760]   de diferents estudis
+[00:48:42.760 --> 00:48:44.760]   pot fer SIP consultor
+[00:48:44.760 --> 00:48:46.760]   perquè jo normalment
+[00:48:46.760 --> 00:48:48.760]   no estic amb ells
+[00:48:48.760 --> 00:48:50.760]   però sé que fan
+[00:48:50.760 --> 00:48:52.760]   anàlisis dels resultats productius
+[00:48:52.760 --> 00:48:54.760]   dels engreixos
+[00:48:54.760 --> 00:48:56.760]   en comparativa amb el resto
+[00:48:56.760 --> 00:48:58.760]   de Catalunya
+[00:48:58.760 --> 00:49:00.760]   els reuneixen un cop a l'any
+[00:49:00.760 --> 00:49:02.760]   que jo sàpiga
+[00:49:02.760 --> 00:49:04.760]   dos cops a l'any
+[00:49:04.760 --> 00:49:06.760]   i comenten resultats
+[00:49:06.760 --> 00:49:08.760]   respecte
+[00:49:08.760 --> 00:49:10.760]   a competidors
+[00:49:10.760 --> 00:49:12.760]   dintre del mateix nivell
+[00:49:12.760 --> 00:49:14.760]   per exemple nosaltres
+[00:49:14.760 --> 00:49:16.760]   de la genètica
+[00:49:16.760 --> 00:49:18.760]   principalment d'Europa
+[00:49:18.760 --> 00:49:20.760]   perquè comparar-lo
+[00:49:20.760 --> 00:49:22.760]   amb el porc blanc pur i dur
+[00:49:22.760 --> 00:49:24.760]   és possible
+-.Pregunta 6.12b.-
+[00:49:36.760 --> 00:49:40.760]   quin tipus de mètodes
+[00:49:40.760 --> 00:49:42.760]   utilitzen
+[00:49:42.760 --> 00:49:44.760]   estadístics
+[00:49:44.760 --> 00:49:46.760]   o informació
+[00:49:46.760 --> 00:49:48.760]   que el productor li vol donar
+[00:49:48.760 --> 00:49:50.760]   remarco que el productor
+[00:49:50.760 --> 00:49:52.760]   li vol donar
+[00:49:52.760 --> 00:49:54.760]   perquè no posarà
+[00:49:54.760 --> 00:49:56.760]   com he dit alguna empresa
+[00:49:56.760 --> 00:49:58.760]   no posarà la teva empresa
+[00:49:58.760 --> 00:50:00.760]   en mans d'aquestes assessories
+[00:50:00.760 --> 00:50:02.760]   tota l'empresa
+[00:50:02.760 --> 00:50:04.760]   se li passa la informació
+[00:50:04.760 --> 00:50:06.760]   que ells demanen
+[00:50:06.760 --> 00:50:08.760]   que és la que tu vols donar
+[00:50:08.760 --> 00:50:10.760]   i després ells es reporten
+[00:50:10.760 --> 00:50:12.760]   resultats de tots aquells números
+[00:50:12.760 --> 00:50:14.760]   tant de truges com d’engreixos
+[00:50:14.760 --> 00:50:16.760]   com de desmamador
+[00:50:16.760 --> 00:50:18.760]   quina conversió
+[00:50:18.760 --> 00:50:20.760]   això ho tens tu
+[00:50:20.760 --> 00:50:22.760]   però t'ho donen més resumit
+[00:50:22.760 --> 00:50:24.760]   i més maco
+[00:50:24.760 --> 00:50:26.760]   i a lo millor
+[00:50:26.760 --> 00:50:28.760]   més analitzat
+[00:50:28.760 --> 00:50:30.760]   d'allò que s'ha fet

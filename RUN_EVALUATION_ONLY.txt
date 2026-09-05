@@ -1,0 +1,34 @@
+V8 manuscript-results project — evaluation-only update
+
+PRESERVED:
+- Existing data/output/topic_results_bertopic.json (10 manuscript topics)
+- Existing data/output/topic_modeling_input.json (930 documents)
+- BERTopic implementation and parameters
+- preprocessing.py
+- sentiment_analysis.py
+- visualization.py
+- existing processed/sentiment data
+
+ONLY UPDATED:
+- LDA now runs at K=10 instead of K=5
+- NMF now runs at K=10 instead of K=5
+- SVD/LSA support added at K=10
+- evaluation.py added
+- scipy/gensim added to requirements only for evaluation
+
+IMPORTANT:
+Do NOT run preprocessing.
+Do NOT run BERTopic again for the main result.
+Do NOT run sentiment.
+
+Run only:
+1) main.py --mode terminal
+2) Menu 2 -> LDA
+3) Menu 2 -> NMF
+4) Menu 2 -> SVD/LSA
+5) Exit
+6) python evaluation.py
+
+The evaluation script keeps the saved 10-topic BERTopic manuscript result as
+the main BERTopic result. It reruns BERTopic only in memory across random seeds
+to calculate stability; it does not overwrite topic_results_bertopic.json.

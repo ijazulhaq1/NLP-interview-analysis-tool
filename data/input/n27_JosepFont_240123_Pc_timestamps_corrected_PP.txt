@@ -1,0 +1,158 @@
+-.Pregunta 1.1.-
+[00:02:01.000 --> 00:02:13.000]   Mira, nosaltres tenim, és una empresa familiar, llavors tenim una explotació porcina d'unes 450 mares.
+[00:02:13.000 --> 00:02:21.000]   Estem dintre del projecte d'Orral, que és un porc d'una qualitat una mica diferenciada, poma d'escorxador de Avinyó.
+[00:02:21.000 --> 00:02:28.000]   I llavors, doncs a banda d'aquesta granja, que és una granja pròpia, tenim les mares i la transició.
+[00:02:28.000 --> 00:02:33.000]   I llavors tenim altres, tenim tota la fase d'engreix però ho tenim amb integració.
+[00:02:33.000 --> 00:02:39.000]   O sigui, tenim una petita part que és pròpia, però llavors la resta la tenim integrada amb gent d'aquí l'entorn,
+[00:02:39.000 --> 00:02:44.000]   la zona del Lluçanès i també del Bages, principalment.
+-.Pregunta 1.2.-
+[00:02:48.000 --> 00:02:58.000]   En el sector et diria que, bueno, jo soc de la tercera generació, és a dir, la granja la va començar el meu avi.
+[00:02:58.000 --> 00:03:05.000]   El que passa que primer era en una altra ubicació, estava a Prats de Lluçanès i era més petita.
+[00:03:05.000 --> 00:03:12.000]   I llavors l'any 2000 es va construir aquesta nova explotació, més allunyada del que seria el municipi,
+[00:03:12.000 --> 00:03:18.000]   també principalment aquest va ser el motiu i també es va modernitzar la instal·lació i això.
+[00:03:18.000 --> 00:03:24.000]   Per tant, diguéssim que des de l'any 70, més o menys, que estem dintre del sector en l'activitat
+[00:03:24.000 --> 00:03:29.000]   i amb aquest nou emplaçament, amb aquesta nova activitat des de l'any 2000, o així.
+-.Pregunta 1.3a.-
+[00:03:39.000 --> 00:03:48.000]   Sí, cicle tancat. El que passa que et dic, una part, més o menys la meitat, no, una mica més, un 60% de l'engreix és en integració.
+[00:03:48.000 --> 00:03:58.000]   Nosaltres tenim els animals, però les instal·lacions i això són d'altra gent. Nosaltres els hi paguem un tant cada mes perquè ells cuidin dels animals.
+-.Pregunta 1.3b.-
+ .[00:04:12.000 --> 00:04:15.000]   No, és una empresa 100% familiar.
+-.Pregunta 2.1.-
+[00:04:26.000 --> 00:04:38.000]   Sí, en dues. Allà on tenim la granja de mare sí i llavors tenim un altre engreix que també és propi, que és bastant gran, que també. A la resta no.
+[00:04:38.000 --> 00:04:42.000]   Podríem tenir-ne, però no n'hi ha.
+-.Pregunta 2.2.-
+[00:04:47.000 --> 00:04:59.000]   Tenim un control de temperatures que podem seguir a nivell d'una aplicació mòbil, també una càmera de vigilància i què més tenim?
+[00:04:59.000 --> 00:05:06.000]   Tenim plaques solars i també per consultar el rendiment de les plaques solars. Principalment crec que aquests són els tres punts.
+-.Pregunta 2.3.-
+[00:05:15.000 --> 00:05:29.000]   A nivell de sector crec que és interessant. Cada cop, evidentment, hi ha més eines i la tecnologia utilitzada d'una forma correcta pot ser molt útil pel nostre sector.
+[00:05:29.000 --> 00:05:39.000]   Com això, control de temperatures, control d'ambients, per tot això podria ser molt útil estar a casa o per alarmes, fins i tot alarmes de si hi ha problemes.
+[00:05:39.000 --> 00:05:46.000]   Per tant, jo crec que sí, sobretot amb explotacions modernes i grans com les que tenim al nostre país, crec que és una eina molt útil.
+-.Pregunta 3.1.-
+[00:06:03.000 --> 00:06:13.000]   Cada cop més, tot i que encara ens falta molt per fer, com et dic tenim alguns sistemes de control que ja són automatitzats.
+[00:06:13.000 --> 00:06:18.000]   Llavors també tenim programes de gestió tècnica que també els portem des del dispositiu mòbil.
+[00:06:18.000 --> 00:06:24.000]   Una cosa que m'he descuidat abans, també tenim el programa de gestió tècnica que actualment a través d'un telèfon mòbil,
+[00:06:24.000 --> 00:06:33.000]   també ja des de la granja entrem tot el que serien les dades productives, que llavors ja ho tenim connectat també a l'ordinador i podem consultar-lo.
+[00:06:33.000 --> 00:06:38.000]   I ara no me'n recordo de la pregunta, era?
+[00:06:42.000 --> 00:06:48.000]   Queda molt per fer, però sí que és veritat que els últims anys, perquè tot això ho hem anat fent en qüestió de 3-4 anys,
+[00:06:48.000 --> 00:06:55.000]   estem en un camí de cada cop tenir més presència d'aquestes noves tecnologies en el que seria l'empresa.
+-.Pregunta 3.4.-
+[00:07:03.000 --> 00:07:13.000]   Primer de tot, els propis, els que són de les empreses aquestes que estan interessats,
+[00:07:13.000 --> 00:07:19.000]   que ofereixen aquests serveis a través de propaganda, de trucades, de correus que te'n informen.
+[00:07:19.000 --> 00:07:24.000]   També la persona que ens porta una mica el que seria la part més, no l'electricista,
+[00:07:24.000 --> 00:07:32.000]   però sí que aquesta persona també està al corrent d'alarmes, de sistemes de control, de ventilació, etcètera, que també ens informa.
+[00:07:32.000 --> 00:07:38.000]   I llavors el que seria el servei informàtic de l'empresa, diguéssim que el tenim externalitzat,
+[00:07:38.000 --> 00:07:45.000]   però sí que hi ha una persona que és la que ens porta una mica la part informàtica que també ens va ajudar,
+[00:07:45.000 --> 00:07:49.000]   ens va donant algunes indicacions de què es pot fer.
+-.Pregunta 3.2.-
+[00:08:05.000 --> 00:08:14.000]   Bé, el que ara s'està parlant bastant i que també és un tema que és interessant és tot el que seria aquests sensors
+[00:08:14.000 --> 00:08:21.000]   que et permeten fer controls per malalties, per exemple, en relació a controlar els caudals d'aigua
+[00:08:21.000 --> 00:08:25.000]   o sensors d'aquests que fiquen per mesurar tos o coses d'aquestes,
+[00:08:25.000 --> 00:08:32.000]   que a nivell pràctic sí que serien molt interessants per poder evitar problemes d'aquests sanitaris.
+[00:08:32.000 --> 00:08:36.000]   Evidentment tot el que és això, control de temperatures, alarmes per si marxa la llum,
+[00:08:36.000 --> 00:08:40.000]   tot això també ho és, però podria estar més desenvolupat.
+-.Pregunta 3.3.-
+[00:08:53.000 --> 00:08:59.000]   En el nostre sector una de les dificultats és la falta de, no sé com dir-ho,
+[00:08:59.000 --> 00:09:05.000]   però la especialització del personal o que a vegades, segons quines explotacions,
+[00:09:05.000 --> 00:09:11.000]   pot ser difícil treure un rendiment, fer un bon rendiment d'aquestes aplicacions.
+[00:09:11.000 --> 00:09:16.000]   Nosaltres tenim la sort, per exemple, que el personal que tenim són bastant joves
+[00:09:16.000 --> 00:09:19.000]   i s'adapten molt bé a aquestes noves tecnologies,
+[00:09:19.000 --> 00:09:23.000]   però sí que és veritat que poden, segons quines circumstàncies,
+[00:09:23.000 --> 00:09:27.000]   pot ser complicat de treure el màxim potencial d'aquestes eines.
+[00:09:40.000 --> 00:09:46.000]   Potser la combinació dels dos, que no estic dient que sigui culpa del personal,
+[00:09:46.000 --> 00:09:50.000]   sinó que no estan ben adaptades.
+[00:09:50.000 --> 00:09:54.000]   Potser les eines haurien de ser més senzilles o potser falta una mica de formació,
+[00:09:54.000 --> 00:09:56.000]   en alguns casos també, en el personal.
+[00:09:56.000 --> 00:09:58.000]   També a vegades l'edat fa que no sigui...
+[00:09:58.000 --> 00:10:03.000]   També pot ser culpa de les eines, que a vegades poden ser molt sofisticades
+[00:10:03.000 --> 00:10:09.000]   o van molt al detall i una cosa més senzilla que es pogués adaptar més bé a les explotacions
+[00:10:09.000 --> 00:10:11.000]   seria millor.
+[00:10:25.000 --> 00:10:30.000]   I a vegades no tant perquè no siguin capaços de fer-ho, sinó perquè sempre ho han fet d'una forma
+[00:10:30.000 --> 00:10:33.000]   i canviar-los a vegades els costa fer aquest pas.
+-.Pregunta 4.1.-
+[00:10:48.000 --> 00:10:52.000]   Doncs tenim de temperatura,
+[00:10:52.000 --> 00:10:59.000]   llavors tenim d'humitat, els ventilacions, sensors.
+[00:10:59.000 --> 00:11:01.000]   Llavors hi ha del...
+[00:11:01.000 --> 00:11:06.000]   Això no sé si és un sensor ben bé, però per si marxa la llum, diguéssim que ens avisa
+[00:11:06.000 --> 00:11:09.000]   que hi ha hagut un fallo elèctric.
+[00:11:09.000 --> 00:11:14.000]   Jo et diria que principalment aquests.
+[00:11:19.000 --> 00:11:25.000]   Sí, això. També tenim una càmera de seguretat exterior.
+[00:11:31.000 --> 00:11:35.000]   És a dir, hi ha el comptador que sí que es pot mirar el consum que hi ha hagut,
+[00:11:35.000 --> 00:11:39.000]   però no ho tenim, és a dir, no podem seguir de forma...
+[00:11:42.000 --> 00:11:49.000]   Això sí que és un dels punts que també creiem important poder ficar alguna cosa per poder-lo controlar,
+[00:11:49.000 --> 00:11:52.000]   perquè és un indicador bastant important.
+-.Pregunta 4.2.-
+[00:12:10.000 --> 00:12:16.000]   Sí, és informació útil. És informació útil perquè a vegades pots detectar, per exemple, a la nit,
+[00:12:16.000 --> 00:12:22.000]   o que veus alguna baixada de la temperatura important d'alguna hora, sobretot a l'hivern, d'alguna nau,
+[00:12:22.000 --> 00:12:25.000]   o coses que poden passar, et pot indicar que hi ha hagut algun problema,
+[00:12:25.000 --> 00:12:28.000]   que hi ha hagut alguna porta que ha quedat oberta i pots reaccionar.
+[00:12:28.000 --> 00:12:34.000]   I si convé, baixes a mirar què està passant. Per tant, sí, jo crec que és útil.
+[00:12:39.000 --> 00:12:43.000]   Si baixa sota un nivell determinat, dona alertes.
+[00:12:43.000 --> 00:12:48.000]   L'alarma de si se'n va la llum, igual, també et truca al mòbil i et dona l'alerta.
+[00:12:48.000 --> 00:12:53.000]   Si no arriba a un punt molt crític, que està dintre d'uns valors normals, no t'avisa.
+[00:12:53.000 --> 00:12:56.000]   Però sí que pots consultar tu, a veure com està.
+[00:13:08.000 --> 00:13:13.000]   Normalment no. Sí que és veritat que, per exemple, si hi ha hagut algun problema, no ho sé,
+[00:13:13.000 --> 00:13:19.000]   alguna cosa que... Amb els animals, per exemple, que hi ha hagut algun problema sanitari o el que sigui,
+[00:13:19.000 --> 00:13:24.000]   sí que controlem, doncs, ostres, si a la millor se'ns ha passat que hi ha hagut algun dia que poder...
+[00:13:24.000 --> 00:13:28.000]   Ha fet una temperatura fora de la normal o hi ha hagut algun problema.
+[00:13:28.000 --> 00:13:33.000]   Però d'entrada, si no hi ha res, diguéssim que tot va més o menys normal, no fem un seguiment de l'històric.
+[00:13:33.000 --> 00:13:39.000]   Cada dia o cada dos dies ens anem connectant per mirar com està, encara que no ens doni avisos.
+-.Pregunta 5.1.-
+[00:13:53.000 --> 00:14:03.000]   Jo diria que va ser aquest sensor, aquesta alarma que ens avisa en el cas que hi hagi una... que marxi la llum.
+[00:14:03.000 --> 00:14:09.000]   Perquè aquest estiu vam tenir... Bé, al final vam estar de sort i ens en vam adonar,
+[00:14:09.000 --> 00:14:16.000]   però havia marxat la llum i havien quedat unes portes tancades i sort que estàvem per allà a prop i ho vam deixar i vam anar-hi.
+-.Pregunta 5.2.-
+[00:14:27.000 --> 00:14:35.000]   Ara mateix previst no, però sí que és veritat que temes com aquest que t'he dit, de fer el control del consum d'aigua
+[00:14:35.000 --> 00:14:42.000]   i d'aquest, sobretot, és un punt que tenim pendent i que sí que volem ficar en marxa.
+-.Pregunta 5.3.-
+[00:14:52.000 --> 00:15:06.000]   Home, hi ha aquestes que fan, per exemple, no estic molt al cas, però hi ha aquestes càmeres que són capaces de mesurar el pes dels animals,
+[00:15:06.000 --> 00:15:16.000]   almenys de donar una aproximació. Penso que pot ser una cosa que si està, no sé a quin lloc es troba, però si està ben desenvolupada pot ser molt interessant.
+-.Pregunta 6.1.-
+[00:15:40.000 --> 00:15:51.000]   Home, jo et diria que una mica la combinació, però crec que tant el benestar com l'ambient, el medi ambient, són dos punts molt importants.
+[00:15:51.000 --> 00:16:05.000]   A banda que a nivell social és un punt molt important com a sector, també perquè cada cop està més controlat i cada cop hem d'estar més al dia i és un punt que és cabdal.
+[00:16:05.000 --> 00:16:10.000]   Llavors, evidentment, la part econòmica en una empresa sempre és important.
+[00:16:10.000 --> 00:16:23.000]   Però diria que en aquest tema de les noves tecnologies podria ser més la part ambiental i de benestar que no pas la part econòmica.
+[00:16:23.000 --> 00:16:27.000]   També sense tenir-ho en compte perquè no deixa de ser important.
+[00:16:27.000 --> 00:16:35.000]   Per exemple, això que et deia de les temperatures, si se't moren uns quants animals perquè no s'han obert bé les portes,
+[00:16:35.000 --> 00:16:42.000]   al final el primer que et sap greu és per la part que aquells animals s'han mort i d'aquesta part de benestar o que han patit.
+[00:16:42.000 --> 00:16:48.000]   Llavors, evidentment, està la part econòmica que també t'afecta i que també ho vols evitar, però és un punt important.
+-.Pregunta 6.2.-
+[00:17:03.000 --> 00:17:17.000]   Sí, moltes vegades, principalment parlant amb altres productors, amb altres ramaders que tenen situacions semblants o que utilitzen aparells semblants
+[00:17:17.000 --> 00:17:28.000]   i en el cas que no hi sigui, també a nivell tècnic, per internet, a vegades fent consultes directament amb els tècnics de l'empresa, amb alguna reunió.
+[00:17:28.000 --> 00:17:35.000]   Jo diria que molt l'opinió d'altres ramaders que utilitzen és el punt que utilitzo més.
+-.Pregunta 6.3.-
+[00:17:52.000 --> 00:18:06.000]   Tenim aquest programa de gestió tècnica que en base a les dades que entrem allà, els podem analitzar amb aquest software que és el PORSITEC.
+[00:18:06.000 --> 00:18:17.000]   Utilitzem l'Excel i això per fer anàlisis de dades i tal, però no més que això.
+[00:18:26.000 --> 00:18:28.000]   Això sí.
+[00:18:33.000 --> 00:18:46.000]   La ventilació, en llocs tenim ventiladors que llavors, quan hi ha una certa temperatura, també s'activen i funcionen automàticament.
+[00:18:47.000 --> 00:18:57.000]   I podria estar les calefaccions, però això ja són sistemes més tradicionals.
+-.Pregunta 6.5a.-
+[00:19:21.000 --> 00:19:30.000]   Sí, sempre són consensuades. També sempre intentem parlar-ho amb el que serien els treballadors de la granja,
+[00:19:30.000 --> 00:19:39.000]   sobretot amb el que és el responsable de la granja i llavors també a vegades amb els tècnics o veterinaris,
+[00:19:39.000 --> 00:19:46.000]   que són també els que són en aquest servei. També a vegades els consultem i intentem estar tots una mica d'acord amb això.
+-.Pregunta 6.5c.-
+[00:19:59.000 --> 00:20:07.000]   Sí, jo penso que sobretot les decisions més del dia a dia o així es recauen més amb el que seria el responsable de la granja.
+[00:20:07.000 --> 00:20:15.000]   I és el que al final moltes decisions d'aquestes dies les acaba prenent ell. Llavors més del que seria l'estratègia o més a llarg termini
+[00:20:15.000 --> 00:20:26.000]   sí que són moltes coses que sempre intentem consensuar-ho, però que podeu prendre més del que seria la direcció o la gerència de l'empresa. Una mica la línia de treball.
+-.Pregunta 6.6.-
+[00:20:35.000 --> 00:20:54.000]   No ho sé, jo diria que aquest programa de gestió tècnica pel dia a dia és el més important.
+-.Pregunta 6.7.-
+[00:20:58.000 --> 00:21:14.000]   Vam començar fa 4 o 5 anys, el 2017 o el 2018, però llavors hi ha d'haver una nova versió, que és aquesta que és molt més avançada, que ens permet entrar les dades amb el mòbil,
+[00:21:14.000 --> 00:21:19.000]   que ja està connectat des de l'ordinador i això deu fer un parell d'anys.
+-.Pregunta 6.8.-
+[00:21:30.000 --> 00:21:42.000]   No, des que jo hi soc, no. En veritat vam començar amb aquest, perquè abans ho fèiem amb Excel i d'això.
+[00:21:42.000 --> 00:21:49.000]   Vam començar amb aquest i estem contents i des del principi hi treballem i no tenim intenció de canviar.
+-.Pregunta 6.9.-
+[00:21:59.000 --> 00:22:07.000]   Sí, els resultats són interessants, però és veritat que tal com dius cal una interpretació.
+[00:22:07.000 --> 00:22:19.000]   És a dir, t'ajuda, però has de saber què mirar i llavors a banda què vol dir. No n'hi ha prou només amb els informes o amb els resultats.
+[00:22:19.000 --> 00:22:26.000]   No són intuïtius així directament. Cal un coneixement, una experiència per extraure la informació.
+-.Pregunta 6.10.-
+[00:22:44.000 --> 00:22:53.000]   Sí, jo crec que és un punt important. Al final nosaltres, per exemple, som una empresa i una granja petita dintre del que és el sector
+[00:22:53.000 --> 00:23:03.000]   i tenir en consideració l'opinió d'altres granges poder quan implementat abans o d'altres gent coneguda,
+[00:23:03.000 --> 00:23:12.000]   no per força tècnics o gent que es coneix dintre del sector que té experiència prèvia, és una cosa útil a l'hora de prendre decisions.
+-.Pregunta 6.11.-
+[00:23:29.000 --> 00:23:41.000]   Jo crec que una mica la combinació entre l'empresa i centres de recerca i això de l'estranger no.
+[00:23:41.000 --> 00:23:50.000]   Jo crec que som un país molt potencial i amb gent molt capaç i crec que de fet ja s'està anant cap a aquesta línia.
+[00:23:50.000 --> 00:23:56.000]   Abans potser sí que hi havia la idea que tot el que venia de fora era millor, però cada cop més es demostra que no té per què ser així.
+-.Pregunta 6.12.-
+[00:24:07.000 --> 00:24:13.000]   Nosaltres treballem amb SIP consultors, per lo que és més la gestió tècnica i econòmica.
+[00:24:13.000 --> 00:24:26.000]   I a les reunions ens expliquen, bé, tots els càlculs. Això, evidentment, no ho sabem, però sí que una petita idea de com funciona.

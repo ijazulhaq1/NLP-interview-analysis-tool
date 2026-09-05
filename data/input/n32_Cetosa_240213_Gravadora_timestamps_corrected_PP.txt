@@ -1,0 +1,402 @@
+-.Pregunta 1.1.-
+[00:00:27.600 --> 00:00:33.600]   - A l'empresa Cereals Torremorell, Agro Vilanova, és agrícola i ramadera.
+[00:00:33.600 --> 00:00:37.600]   Després compravenda de materials primes i transport.
+-.Pregunta 1.2.-
+[00:00:42.600 --> 00:00:48.600]   - Uns 25 anys ja deuen portar des de la primera granja,
+[00:00:48.600 --> 00:00:51.600]   de les primeres granges de reproductores.
+-.Pregunta 1.3.-
+[00:00:56.600 --> 00:01:00.600]   - Només porcs sí, entre les dues empreses,
+[00:01:00.600 --> 00:01:04.600]   perquè són dues societats diferents però formen part del mateix grup,
+[00:01:04.600 --> 00:01:08.600]   serien unes 10.000 truges amb les 150.000 places d'engreix.
+[00:01:08.600 --> 00:01:12.600]   Si no, 100 -150.000, no ho sé de memòria.
+[00:01:16.600 --> 00:01:20.600]   - No, tot és un grup d'empreses familiars.
+-.Pregunta 2.1.-
+[00:01:27.600 --> 00:01:31.600]   - A nivell de granges, totes no.
+[00:01:31.600 --> 00:01:35.600]   Tenim granges amb el sistema Big Dutchman,
+[00:01:35.600 --> 00:01:40.600]   que és un sistema molt innovador i que necessita internet i les agafem des d'aquí.
+[00:01:40.600 --> 00:01:46.600]   Llavors, allà on hi ha cobertura de 3G o 4G,
+[00:01:46.600 --> 00:01:50.600]   sí que ens podem connectar a les granges de mares, a d'altres no.
+-.Pregunta 2.2.-
+[00:01:55.600 --> 00:01:58.600]   - A l'empresa? Per tot.
+[00:02:01.600 --> 00:02:03.600]   - Ah, a les granges.
+[00:02:03.600 --> 00:02:07.600]   - Les granges que tenim informatitzades tenen el sistema Big Dutchman,
+[00:02:07.600 --> 00:02:10.600]   que és una cuina, que té unes corbes d'alimentació...
+[00:02:10.600 --> 00:02:13.600]   Va tot informatitzat i per ordinador.
+[00:02:13.600 --> 00:02:16.600]   A les altres granges, no.
+[00:02:16.600 --> 00:02:19.600]   És el sistema tradicional de tota la vida.
+[00:02:22.600 --> 00:02:25.600]   - No hi ha res informatitzat.
+[00:02:27.600 --> 00:02:30.600]   - A la granja del Clot, sí, però l'ordinador està allà.
+[00:02:30.600 --> 00:02:33.600]   O sigui, sense accés a internet.
+[00:02:33.600 --> 00:02:41.600]   Perquè a la granja del Clot hi ha una granja d'unes paridores que es van fer noves,
+[00:02:41.600 --> 00:02:45.600]   i aquelles paridores que es va fer per ficar el sistema Big Dutchman,
+[00:02:45.600 --> 00:02:48.600]   totes les granges tenen plaques solars, això sí.
+[00:02:48.600 --> 00:02:52.600]   - Està bé. I creus que tothom necessitaria internet en un futur immediat?
+[00:02:52.600 --> 00:02:56.600]   - Sí, és que... bueno, vamos, segur.
+-.Pregunta 2.3.-
+[00:03:00.600 --> 00:03:05.600]   - Nosaltres ens trobem que hi ha parts que no els tenim per la cobertura.
+[00:03:05.600 --> 00:03:10.600]   Si hi hagués més cobertura, jo penso que la mitjana d'edat ara
+[00:03:10.600 --> 00:03:13.600]   de la gent que està al sector és més jove
+[00:03:13.600 --> 00:03:16.600]   i tothom té clar que ha de funcionar tot en internet.
+[00:03:19.600 --> 00:03:21.600]   - Fora, fora, ja queda poc.
+-.Pregunta 3.1a.-
+[00:03:31.600 --> 00:03:35.600]   - La empresa com a tal, com a Cereals Torremorell sí.
+-.Pregunta 3.1b.-
+[00:03:40.600 --> 00:03:45.600]   - Home, aquí tot el que és la part de compra i venda de materials primers,
+[00:03:45.600 --> 00:03:49.600]   després tot el ERP de les empreses, a la fàbrica de pinsos,
+[00:03:49.600 --> 00:03:53.600]   tot el sistema i processos automatitzats de fabricació,
+[00:03:53.600 --> 00:03:58.600]   treballem amb Núvols, treballem tot el sistema de correus el Outlook
+[00:03:58.600 --> 00:04:02.600]   i tot ho tenim tot en Núvol  i en diferents dispositius.
+[00:04:02.600 --> 00:04:06.600]   De fet, treballem molt amb el WhatsApp en totes les àrees de l'empresa.
+[00:04:06.600 --> 00:04:10.600]   La majoria de les... totes les vendes que jo faig del transport 
+[00:04:10.600 --> 00:04:13.600]   ho he fet per WhatsApp, o sigui, jo penso que aquí sí.
+[00:04:13.600 --> 00:04:17.600]   Treballem amb el Sage, tenim totes les eines, tot.
+[00:04:17.600 --> 00:04:22.600]   Aquí sí, si es crema l'empresa, en dues hores podem continuar treballant amb un ordenador.
+[00:04:22.600 --> 00:04:24.600]   - Molt bé. - Això sí.
+-.Pregunta 3.2.-
+[00:04:28.600 --> 00:04:32.600]   - La que està menys digitalitzada, precisament, és les explotacions porcines.
+[00:04:32.600 --> 00:04:35.600]   És que és en la que tenim un parell d'ingressos que són nous,
+[00:04:35.600 --> 00:04:38.600]   que sí que estan digitalitzats, que es van fer nous,
+[00:04:38.600 --> 00:04:42.600]   però hi ha grans reproductors, hi ha una que té el sistema Big Dutchman amb unes paridores,
+[00:04:42.600 --> 00:04:45.600]   però hi ha una altra granja que no hi ha cobertura.
+[00:04:45.600 --> 00:04:48.600]   A les grans sí que falta una mica de digitalització,
+[00:04:48.600 --> 00:04:55.600]   tot i que estem ara en un projecte d'IA amb el Soundtalks que mos fan els de Boehringer,
+[00:04:55.600 --> 00:04:58.600]   que això estarà una de les grans digitalitzades.
+[00:05:00.600 --> 00:05:02.600]   - La detecció d’infermetats respiratòries, sí.
+[00:05:02.600 --> 00:05:04.600]   Mitjançant la intel·ligència artificial.
+[00:05:04.600 --> 00:05:07.600]   Ara ja ho estem instal·lant, perquè aquella granja està digitalitzada.
+-.Pregunta 3.3a.-
+[00:05:15.600 --> 00:05:21.600]   - Eficiència, velocitat, productivitat, comoditat...
+[00:05:21.600 --> 00:05:26.600]   És un altre món, on és ràpid tot, i més net.
+-.Pregunta 3.3b.-
+[00:05:34.600 --> 00:05:39.600]   - Jo crec que també hi ha moltes explotacions.
+[00:05:39.600 --> 00:05:45.600]   La majoria de la gent del nostre sector treballa amb granges integrades.
+[00:05:45.600 --> 00:05:54.600]   I aquí trobem que moltes granges no són prou noves per apostar per una digitalització.
+[00:05:54.600 --> 00:05:57.600]   I també la mentalitat del ramader.
+[00:05:57.600 --> 00:06:05.600]   La majoria dels ramaders són agricultors i tenen una mentalitat més analògica.
+[00:06:05.600 --> 00:06:08.600]   I els costa més.
+[00:06:08.600 --> 00:06:12.600]   Perquè els diners per digitalitzar els haurien de posar ells, no nosaltres.
+[00:06:12.600 --> 00:06:16.600]   Nosaltres, a les nostres granges pròpies, estem digitalitzant tot el que podem.
+[00:06:16.600 --> 00:06:19.600]   Però la majoria de les granges són integrades.
+[00:06:24.600 --> 00:06:33.600]   - Jo penso que és una mica al nivell de mentalitat i que moltes granges integrades,
+[00:06:33.600 --> 00:06:40.600]   ja t'ho he dit abans, són agricultors que tenen una granja com un més a més.
+[00:06:40.600 --> 00:06:46.600]   Llavors, invertir en digitalitzar una granja com un més a més, que la tenen integrada amb el Torremorell,
+[00:06:46.600 --> 00:06:52.600]   potser pensen més ells de dir "jo me canvio un tractor, jo me compro un tractor,
+[00:06:52.600 --> 00:06:57.600]   jo em dono unes històries només per la lliçó, perquè la granja la tinc com un més a més i tot l'hem pagat jo mateix".
+[00:06:57.600 --> 00:07:00.600]   És una mica aquesta mentalitat. I costa.
+-.Pregunta 3.4.-
+[00:07:09.600 --> 00:07:16.600]   - Fires, internet, el boca a boca, el laboratori que t'explica que hi ha el Soundtalk,
+[00:07:16.600 --> 00:07:22.600]   una mica mirar també el sector, pàgines web, històries...
+[00:07:22.600 --> 00:07:24.600]   - Els comercials també potser...
+[00:07:24.600 --> 00:07:26.600]   - Sí, sí.
+-.Pregunta 4.1.-
+[00:07:38.600 --> 00:07:47.600]   - El deslletament de 6.000 places i l'engreix de 5.000 places que tenim nous, que van fer amb propietat,
+[00:07:47.600 --> 00:07:54.600]   tenim tots els sensors. Tots. De caudal, d'unitat, de temperatura... De tot.
+[00:07:54.600 --> 00:08:02.600]   Perquè està totalment digitalitzada. I ara ficarem aquest que hem comentat de la detecció de malalties respiratòries.
+-.Pregunta 4.2.-
+[00:08:10.600 --> 00:08:15.600]   - A veure, les dades se'n registren i en un moment donat les pots consultar.
+[00:08:15.600 --> 00:08:22.600]   Si tu, per exemple, veus en una granja que tenim la gràfica del consum d'aigua,
+[00:08:22.600 --> 00:08:27.600]   i veus que en una granja, en una sala en concret, veus que el consum d'aigua baixa,
+[00:08:27.600 --> 00:08:32.600]   això et pot detectar una alerta que hi ha una avaria o una malaltia.
+[00:08:32.600 --> 00:08:36.600]   Perquè quan es posen malalts els pots deixar de beure i de menjar.
+[00:08:36.600 --> 00:08:39.600]   Llavors, tots aquests sensors et poden servir per ajudar.
+[00:08:39.600 --> 00:08:47.600]   De vegades tenim més sensors... Tenim una xarxa d'informació que de vegades no fas anar
+[00:08:47.600 --> 00:08:53.600]   per falta de temps, per falta de costum... I si no hi ha problemes en una granja sanitària,
+-.Pregunta 4.3.-
+[00:08:58.600 --> 00:09:02.600]   d'aquests sensors? - Quan hi ha algun problema o quan tens ganes
+[00:09:02.600 --> 00:09:07.600]   o temps de fer algun estudi o alguna cosa. Però la majoria de la informació queda registrada.
+[00:09:07.600 --> 00:09:12.600]   - És a dir, queda registrada el que s'analitza. - Clar, el granger, el telèfon, té el programa
+[00:09:12.600 --> 00:09:18.600]   de la granja i si hi ha un tall d'aigua, un tall de llum o una disminució de la temperatura,
+[00:09:18.600 --> 00:09:23.600]   amb ell ja li salten les alarmes. Llavors, el granger sí que ho fa anar per tema d'alarmes,
+[00:09:23.600 --> 00:09:30.600]   per evitar problemes, però a l'hora d'estudiar les dades, si no hi ha cap problema, no es mira tant.
+-.Pregunta 5.1.-
+[00:09:39.600 --> 00:09:45.600]   - Bueno, el que hem comentat abans que m'he avançat, el de la detecció de malalties respiratòries
+[00:09:45.600 --> 00:09:51.600]   que el laboratori de Boehringer ens ho van proposar i sembla ser que és molt interessant
+[00:09:51.600 --> 00:09:57.600]   i el posarem a la granja d'engreix, que són uns micròfons, per dir-ho d'alguna forma,
+[00:09:57.600 --> 00:10:04.600]   i si el col·loquem en un semàfor, que et detecten malalties respiratòries o problemes respiratòries
+[00:10:04.600 --> 00:10:09.600]   abans que tu els puguis detectar. Tot això amb intel·ligència artificial i tal,
+[00:10:09.600 --> 00:10:16.600]   i suposadament avancem a l'hora de vacunar, menys consum d’antibiòtics, menys vacunes i menys problemes.
+[00:10:16.600 --> 00:10:18.600]   I ara ho estem implementant ara mateix.
+-.Pregunta 5.2.-
+[00:10:24.600 --> 00:10:29.600]   - En un principi aquest. Més endavant alguna coseta farem, perquè sempre ens agrada fer coses,
+[00:10:29.600 --> 00:10:33.600]   però primer acabarem aquest i després sabrem com funciona, l'analitzarem i després ja mirarem
+[00:10:33.600 --> 00:10:35.600]   a veure si pot fer alguna cosa més.
+-.Pregunta 5.3.-
+[00:10:47.600 --> 00:10:51.600]   - És que és molt nou això. I el nostre sector és molt nou.
+[00:10:51.600 --> 00:10:56.600]   Llavors, jo estic molt interessat en temes d'aquestes i ens volem ficar,
+[00:10:56.600 --> 00:11:01.600]   però és tan nou que el que més ens va sorprendre és això, perquè en tu no pots...
+[00:11:01.600 --> 00:11:06.600]   Però l'altre dia parlàvem amb la direcció de l'empresa, també estàvem comentant
+[00:11:06.600 --> 00:11:11.600]   que això de la intel·ligència artificial ens hem de donar informació per millora de processos
+[00:11:11.600 --> 00:11:15.600]   al Cereal, per millora de processos al Departament d'Administració,
+[00:11:15.600 --> 00:11:20.600]   per millora de processos en moltes àrees de l'empresa que ara no ho estem fent.
+-.Pregunta 5.4.-
+[00:11:22.600 --> 00:11:26.600]   - No, és perquè ho veus per la tele i veus que la cosa va per aquí.
+[00:11:26.600 --> 00:11:29.600]   I que la cosa està avançant molt, que està anant molt ràpid
+[00:11:29.600 --> 00:11:34.600]   i que nosaltres ens hem d'anar ficant al dia amb aquesta història, que sortiran coses.
+[00:11:34.600 --> 00:11:40.600]   Però és que és tan innovador que... Ja ens aniran a informar realment.
+[00:11:40.600 --> 00:11:46.600]   A la mesura que sortiran eines noves al nostre sector ja ens trucaran.
+-.Pregunta 6.1.-
+[00:12:05.600 --> 00:12:09.600]   - Bueno, a nivell econòmic les decisions les prenc jo.
+[00:12:09.600 --> 00:12:19.600]   A nivell ambiental, això ho parlem amb veterinaris, visitadors i jo.
+[00:12:19.600 --> 00:12:23.600]   I l'altre era a nivell benestar.
+[00:12:23.600 --> 00:12:26.600]   A nivell benestar ho porta personalment la veterinària,
+[00:12:26.600 --> 00:12:29.600]   que és la que porta la direcció tècnica de les dues empreses.
+[00:12:33.600 --> 00:12:36.600]   - El factor que té més pes? De els tres?
+[00:12:38.600 --> 00:12:41.600]   - No, no. Nosaltres ara estem molt, molt, molt ficats.
+[00:12:41.600 --> 00:12:48.600]   El que més importància li estem donant avui en dia és el tema de la bioseguretat,
+[00:12:48.600 --> 00:12:52.600]   per tots els problemes sanitaris que estan en el tema de la rosalia,
+[00:12:52.600 --> 00:12:54.600]   els problemes sanitaris que hi ha al sector,
+[00:12:54.600 --> 00:12:59.600]   benestar animal i els mediambientals, és que ja els tenim assolits
+[00:12:59.600 --> 00:13:05.600]   perquè la pròpia administració ja ens obliga a estar de forma estricta en temes mediambientals.
+[00:13:05.600 --> 00:13:08.600]   És un tema que vas al dia i estàs al dia,
+[00:13:08.600 --> 00:13:11.600]   però en el que li fiquen molts esforços,
+[00:13:11.600 --> 00:13:14.600]   el mediambiental és que ja se dona per fet.
+[00:13:14.600 --> 00:13:17.600]   Això ha d'estar bé sí o sí i ha d'estar perfecte.
+[00:13:17.600 --> 00:13:23.600]   Llavors, a nivell de sanitat, bioseguretat i benestar animal,
+[00:13:23.600 --> 00:13:26.600]   és el que estem molt ficats perquè si tot això va bé,
+[00:13:26.600 --> 00:13:30.600]   llavors després les decisions econòmiques vindran soles.
+[00:13:30.600 --> 00:13:35.600]   Perquè les decisions econòmiques són les decisions d'inversió, de compra i de venda.
+[00:13:35.600 --> 00:13:38.600]   Però clar, si tot el que més va bé, això ha de venir sol.
+-.Pregunta 6.2a.-
+[00:13:45.600 --> 00:13:51.600]   - Totes les decisions de les vendes de les dues empreses, dels porcs,
+[00:13:51.600 --> 00:13:55.600]   les decisions de la compra de la genètica per les dues empreses,
+[00:13:55.600 --> 00:13:59.600]   totes les decisions de compres de medicaments també per les dues empreses,
+[00:13:59.600 --> 00:14:06.600]   per ser les propietaris de la nova, el personal i alguna cosa més.
+[00:14:06.600 --> 00:14:11.600]   També porto el tema de la informàtica,
+[00:14:11.600 --> 00:14:14.600]   però ho tinc subcontractat perquè no tinc temps.
+[00:14:14.600 --> 00:14:16.600]   Això m'ho explico en el dia.
+[00:14:16.600 --> 00:14:19.600]   Però a nivell de la ramaderia, ja t'ho he explicat.
+[00:14:19.600 --> 00:14:24.600]   Com vendes, compres, personal i el dia a dia, i la gestió del dia a dia.
+[00:14:26.600 --> 00:14:30.600]   - Sí, tinc feina. Si no m'avorreixo.
+-.Pregunta 6.2b.-
+[00:14:38.600 --> 00:14:41.600]   - Llegim molt, llegim molts informes.
+[00:14:41.600 --> 00:14:45.600]   Aquest sector és un sector que sempre coneixes gent,
+[00:14:45.600 --> 00:14:47.600]   gent de confiança, gent d'altres empreses,
+[00:14:47.600 --> 00:14:51.600]   gent que té més experiència que tu i si tens algun dubte t'ajuden.
+[00:14:51.600 --> 00:14:56.600]   Fins a cert punt, compartim molta informació entre les empreses.
+[00:14:56.600 --> 00:15:00.600]   Jo què sé, si tinc un dubte amb el tema de la genètica
+[00:15:00.600 --> 00:15:04.600]   i jo m'hi trobo limitat, perquè de tot no es pot saber,
+[00:15:04.600 --> 00:15:08.600]   truco a una altra empresa amb la qual tinc confiança
+[00:15:08.600 --> 00:15:12.600]   i li pregunto quines genètiques treballen i què és el que vull millor.
+[00:15:12.600 --> 00:15:15.600]   Tinc molta amistat amb gent de VallCompanys
+[00:15:15.600 --> 00:15:19.600]   que prenen decisions i m'han ajudat molt a aconsellar-te,
+[00:15:19.600 --> 00:15:25.600]   llegeixes els informes... Una mica es fa així, amb tot.
+-.Pregunta 6.3.-
+[00:15:43.600 --> 00:15:49.600]   - A nivell d'administració tenim el Sage 200, que és l'ERP,
+[00:15:49.600 --> 00:15:54.600]   que molts processos automàtics fan, no hem entès gaire del Sage,
+[00:15:54.600 --> 00:15:57.600]   perquè això ja hi ha altres persones que se n'acullen,
+[00:15:57.600 --> 00:16:00.600]   però que fan un albarà a la bascula ja surt la factura,
+[00:16:00.600 --> 00:16:02.600]   però no en reposo ni tota la història.
+[00:16:02.600 --> 00:16:05.600]   - I el Sage 200, que és el que més s'ha automatitzat
+[00:16:05.600 --> 00:16:08.600]   - A nivell de decisions, penso que tot el que comporta
+[00:16:08.600 --> 00:16:13.600]   un moviment de diners, el Josep Maria Torremorell,
+[00:16:13.600 --> 00:16:16.600]   és el que pren totes les decisions a l'hora de comprar
+[00:16:16.600 --> 00:16:19.600]   i vendre materials primes, que és la part important
+[00:16:19.600 --> 00:16:23.600]   de la facturació de l'empresa i la ramaderia les faig jo.
+[00:16:26.600 --> 00:16:29.600]   - No, no, perquè a part d'aquelles pinsos,
+[00:16:29.600 --> 00:16:34.600]   la fàbrica de pinces és nostra, però ara, per exemple,
+[00:16:34.600 --> 00:16:37.600]   quan has vingut tu que estàs a parlar per telèfon,
+[00:16:37.600 --> 00:16:43.600]   estic mirant de canviar un pinso en una de les empreses
+[00:16:43.600 --> 00:16:49.600]   que treballem en una casa de pinsos que ens venia el corrector
+[00:16:49.600 --> 00:16:52.600]   i que ens va oferir el seu pinso, en una altra que ens va oferir
+[00:16:52.600 --> 00:16:55.600]   un servei millor, els preus són millors,
+[00:16:55.600 --> 00:16:58.600]   però també hi ha el deslletament, llavors estem valorant
+[00:16:58.600 --> 00:17:01.600]   amb la veterinària quines granges canviaríem,
+[00:17:01.600 --> 00:17:04.600]   ahir vaig fer un estudi d'a veure econòmicament
+[00:17:04.600 --> 00:17:07.600]   l'estalvi que no suposaria canviar de pinso,
+[00:17:07.600 --> 00:17:10.600]   a part que m'oferís un servei veterinari de recolzament
+[00:17:10.600 --> 00:17:13.600]   a la nostra veterinària, llavors totes aquestes decisions
+[00:17:13.600 --> 00:17:16.600]   sempre les estudiem nosaltres, estudio jo, me la miro,
+[00:17:16.600 --> 00:17:20.600]   després me reuniré en una reunió amb el Josep Maria Torremorell pare
+[00:17:20.600 --> 00:17:26.600]   que està jubilat però està més o menys tenint un suport
+[00:17:26.600 --> 00:17:29.600]   a la part de la ramaderia, jo li comento
+[00:17:29.600 --> 00:17:32.600]   "he pensat en fer això i això i això" i ho tirem en davant.
+[00:17:32.600 --> 00:17:34.600]   Llavors una mica així.
+-.Pregunta 6.4.-
+[00:17:45.600 --> 00:17:50.600]   Jo trobo que a la part que em toca a mi de la compra, de la venda,
+[00:17:50.600 --> 00:17:57.600]   moltes decisions són de negociació, llavors les puc automatitzar.
+[00:17:57.600 --> 00:18:03.600]   Jo ara he quedat amb un laboratori per acabar de decidir
+[00:18:03.600 --> 00:18:07.600]   si aquesta vacuna que li gastarem, a veure quins descomptes
+[00:18:07.600 --> 00:18:12.600]   ens fa, quines condicions ens fa, la majoria, el 99% de les decisions
+[00:18:12.600 --> 00:18:17.600]   que jo he de prendre cada dia tenen una mesura de negociació
+[00:18:17.600 --> 00:18:22.600]   de mirar a veure, "ostres, ara m'interessa fer..."
+[00:18:22.600 --> 00:18:26.600]   Per exemple, podries automatitzar les vendes a escorxadors, no?
+[00:18:26.600 --> 00:18:30.600]   "Dos aquí, dos aquí, dos aquí" i no, perquè cada dia mirem
+[00:18:30.600 --> 00:18:33.600]   les liquidacions dels escorxadors i si veig que tinc que un afluixar una mica
+[00:18:33.600 --> 00:18:37.600]   a l'hora de bonificar-me, la següent setmana li venc un camió menys.
+[00:18:37.600 --> 00:18:40.600]   Llavors li faig una mica de pressió perquè no pagui millor
+[00:18:40.600 --> 00:18:43.600]   perquè si no li faré un viatge a menys.
+[00:18:43.600 --> 00:18:48.600]   Vendre 20 o 23 canyons a la setmana no fa que sempre siguin
+[00:18:48.600 --> 00:18:54.600]   els mateixos clients, perquè va en funció del que jo estic veient.
+[00:18:54.600 --> 00:18:59.600]   És complicat, penso que les decisions econòmiques és complicat.
+[00:18:59.600 --> 00:19:02.600]   L'altre dia vaig anar a mirar una gàbia, "ostres, jo me'n vaig anar a veure
+[00:19:02.600 --> 00:19:07.600]   el que mos fabrica la gàbia, vaig parlar amb ell, li vaig dir
+[00:19:07.600 --> 00:19:11.600]   "m'has de fer un descompte, això mos ho has de ficar". És complicat.
+[00:19:11.600 --> 00:19:15.600]   -És un factor important. -Importantíssim.
+-.Pregunta 6.5a.-
+[00:19:30.600 --> 00:19:36.600]   -Depèn. Cada setmana quan venen els porcs, jo lo guiso y me lo como
+[00:19:36.600 --> 00:19:40.600]   Ara, per exemple, a l'hora de fer una inversió, a l'hora de canviar uns pinsos
+[00:19:40.600 --> 00:19:44.600]   que mos aportarà uns beneficis econòmics, uns beneficis productius i tal,
+[00:19:44.600 --> 00:19:51.600]   tot això jo ho parlo abans amb la veterinària i amb la seva opinió l'ajudo.
+[00:19:51.600 --> 00:19:57.600]   Amb la seva opinió i els seus coneixements tècnics i el que ella tracta cada dia
+[00:19:57.600 --> 00:20:00.600]   fa que jo me decanti més per una decisió que per una altra.
+[00:20:00.600 --> 00:20:05.600]   Una vacuna, la decideix la veterinària. Però jo no sóc veterinari,
+[00:20:05.600 --> 00:20:09.600]   a part que encara que fos veterinari no em dedico a la part tècnica.
+[00:20:09.600 --> 00:20:12.600]   Llavors a mi la veterinària em diu "mira Edu, jo vull treballar amb aquesta vacuna,
+[00:20:12.600 --> 00:20:16.600]   amb aquesta granja, llavors jo ja em cuidaré després d'agafar el laboratori
+[00:20:16.600 --> 00:20:21.600]   i negociar tot el que pugui perquè me surti la més barata possible".
+[00:20:21.600 --> 00:20:25.600]   Ara, si ja és un problema seriós i un laboratori mos enganya,
+[00:20:25.600 --> 00:20:28.600]   llavors jo sí que li dic "escolta, aquí fora la vacuna busca un altre".
+[00:20:28.600 --> 00:20:32.600]   Però n'hi ha decisions que és molt important, a part d'un tècnic,
+[00:20:32.600 --> 00:20:36.600]   hi ha d'altres decisions que les prenc jo sol.
+[00:20:36.600 --> 00:20:41.600]   La genètica, nosaltres tenim, amb el Torremorell clar, que treballem en pic.
+[00:20:41.600 --> 00:20:45.600]   Si s'ha de canviar la genètica, evidentment he de parlar amb la direcció,
+[00:20:45.600 --> 00:20:48.600]   però la negociació de cada any i renegociacions de genètica,
+[00:20:48.600 --> 00:20:54.600]   de condicions i de subministrament, ja les prenc jo, igual que les vendes.
+-.Pregunta 6.5b.-
+[00:21:03.600 --> 00:21:09.600]   Sí, les decisions... El fill està molt ficat en el tema del cereal,
+[00:21:09.600 --> 00:21:13.600]   que ja en té prou perquè és un volum molt, molt, molt important.
+[00:21:13.600 --> 00:21:19.600]   Amb el fill, compartís informació, pregunta-li un informe, tal qual,
+[00:21:19.600 --> 00:21:22.600]   i a nivell de decisions seria jo i el pare.
+-.Pregunta 6.5c.-
+[00:21:33.600 --> 00:21:39.600]   Bé, de vegades i de vegades, no, va com tot. I a més, clar, com treballem amb animals vius,
+[00:21:39.600 --> 00:21:48.600]   la sanitat moltes vegades fa que no puguin anar a la part,
+[00:21:48.600 --> 00:21:52.600]   el que sigui l'estratègia amb les decisions tàctiques que es van prenent.
+[00:21:52.600 --> 00:21:55.600]   Per ficar-te un exemple, tu dius, ostres, jo d'aquí 5 anys vull tindre,
+[00:21:55.600 --> 00:21:59.600]   tinc la idea de construir una granja de mare de reproductors,
+[00:21:59.600 --> 00:22:02.600]   però resulta que ara el tema del medi ambient canvia.
+[00:22:02.600 --> 00:22:05.600]   No plou, no hi ha aigua, molts permisos ja no te'ls donen,
+[00:22:05.600 --> 00:22:08.600]   i si a sobre tens uns problemes sanitaris, o no se saben les granges,
+[00:22:08.600 --> 00:22:10.600]   problemes, i dius, ostres, paro, paro.
+[00:22:10.600 --> 00:22:13.600]   L'estratègia que jo tenia ficada en millorar les altres històries,
+[00:22:13.600 --> 00:22:17.600]   o imprevistos, o canvis, és molt dinàmica això.
+[00:22:17.600 --> 00:22:21.600]   Fer una estratègia a mitjà termini la pots fer,
+[00:22:21.600 --> 00:22:24.600]   però només a més a canvis normatius,
+[00:22:24.600 --> 00:22:29.600]   de vegades fan que hagis de replantejar-te l'estratègia.
+-.Pregunta 6.6.-
+[00:22:37.600 --> 00:22:41.600]   el que més faig, o sigui,
+[00:22:41.600 --> 00:22:44.600]   el que més faig és l'Excel.
+[00:22:47.600 --> 00:22:50.600]   És brutal, però fem anar molt l'Excel
+[00:22:50.600 --> 00:22:52.600]   i algun programa que ens proporcionen,
+[00:22:52.600 --> 00:22:55.600]   clar, jo parlo de la ramaderia,
+[00:22:55.600 --> 00:22:58.600]   si et parles de la empresa en si,
+[00:22:58.600 --> 00:23:00.600]   t'ho diria que el Sage 200.
+[00:23:00.600 --> 00:23:03.600]   És el software més important que hi ha a la empresa, el Sage 200.
+[00:23:03.600 --> 00:23:08.600]   A nivell personal, el que jo més faig són Excels
+[00:23:08.600 --> 00:23:13.600]   vinculats amb programes informàtics de gestió tècnica i econòmica dels porcs.
+-.Pregunta 6.7.-
+[00:23:18.600 --> 00:23:23.600]   Home, l'Excel, per tot això, uns 10 o 11 anys.
+[00:23:23.600 --> 00:23:27.600]   Sí, sí, el que passa és que el Sage, jo, només he de consultar fitxes majors.
+[00:23:27.600 --> 00:23:29.600]   No tinc ni idea de com va.
+[00:23:31.600 --> 00:23:33.600]   Sí, sí, es veu que també és super-potent,
+[00:23:33.600 --> 00:23:37.600]   però nosaltres, a la part de la ramaderia, no el fem anar gaire.
+[00:23:37.600 --> 00:23:42.600]   Perquè tota la comptabilitat i tot ho portem des de les administratives.
+[00:23:42.600 --> 00:23:45.600]   Nosaltres, a nivell de gestió diària, de consultar coses,
+[00:23:45.600 --> 00:23:48.600]   ho fem amb consultes majors i poc més.
+-.Pregunta 6.8.-
+[00:23:57.600 --> 00:24:02.600]   Bé, el Pigchamp té una part tècnica que és molt bona, molt potent,
+[00:24:02.600 --> 00:24:04.600]   de les ramaderies reproductores,
+[00:24:04.600 --> 00:24:07.600]   però tenia una part econòmica que vam intentar...
+[00:24:07.600 --> 00:24:13.600]   que nosaltres la vam utilitzar durant uns mesos i no ens va anar bé,
+[00:24:13.600 --> 00:24:15.600]   la van deixar.
+[00:24:15.600 --> 00:24:19.600]   Alguna altra no me ve al cap, s'hauria de dir.
+[00:24:22.600 --> 00:24:25.600]   Era molt feixuc. De fet, em sembla que l'han deixat de comercialitzar
+[00:24:25.600 --> 00:24:31.600]   perquè era molt feixuga i molt lenta a l'hora d'introduir la informació,
+[00:24:31.600 --> 00:24:34.600]   era molt manual, no ens anava bé.
+[00:24:34.600 --> 00:24:36.600]   I no s'adaptava al que nosaltres volíem.
+[00:24:36.600 --> 00:24:39.600]   Nosaltres necessitem una eina en la qual puguem fer modificacions al programa
+[00:24:39.600 --> 00:24:41.600]   per adaptar-lo al que nosaltres necessitem.
+[00:24:41.600 --> 00:24:45.600]   I el Pigchamp era totalment tancat i s'havien de posar moltíssimes coses.
+[00:24:45.600 --> 00:24:48.600]   A mai era impossible, era inviable.
+[00:24:48.600 --> 00:24:49.600]   Era massa estricte.
+[00:24:49.600 --> 00:24:51.600]   Sí, sí, sí, no servia per res.
+-.Pregunta 6.9.-
+00:24:57.600 --> 00:24:59.600]   Dels llistats que jo feia anar?
+[00:24:59.600 --> 00:25:01.600]   Sí.
+[00:25:01.600 --> 00:25:05.600]   Home, jo confio en els resultats perquè la majoria de fulles i de llistats
+[00:25:05.600 --> 00:25:08.600]   i històries d'aquestes les he fet jo.
+[00:25:08.600 --> 00:25:13.600]   O sigui, nosaltres fa deu anys vam entrar una persona que no estava a l'empresa, jo,
+[00:25:13.600 --> 00:25:18.600]   però una mica separar dels cereals de la la ramaderia,
+[00:25:18.600 --> 00:25:20.600]   posar-la a part i estudiar-la a part,
+[00:25:20.600 --> 00:25:25.600]   i fer un compte de resultats interns, de costos, d'una estructura de costos a part.
+[00:25:25.600 --> 00:25:29.600]   Tot això ho van muntar dues persones, i com ho van muntar naltros,
+[00:25:29.600 --> 00:25:33.600]   me n'enfio dels llistats, perquè si no, malament.
+-.Pregunta 6.10.-
+[00:25:51.600 --> 00:25:56.600]   Clar, jo agafo un informe dels costos del SIP, nosaltres anem al SIP Consultors,
+[00:25:56.600 --> 00:26:00.600]   agafo un informe dels costos del SIP, els comparem amb els nostres costos,
+[00:26:00.600 --> 00:26:03.600]   llavors aquí dius "a veure, en funció dels informes que tu veus,
+[00:26:03.600 --> 00:26:06.600]   tu dius "a veure, però no entenc que no hi hagi altres costos".
+[00:26:06.600 --> 00:26:11.600]   Ara amb el tema aquest del pinso que tenim previst de fer un canvi a l'estructura,
+[00:26:11.600 --> 00:26:15.600]   clar, això no suposarà un estalvi del cost important,
+[00:26:15.600 --> 00:26:20.600]   però també vull analitzar que aquest pinso també sigui bo,
+[00:26:20.600 --> 00:26:24.600]   però com que hem fet aquest pinso de primeres edats,
+[00:26:24.600 --> 00:26:26.600]   a d'altres llocs ha funcionat molt bé,
+[00:26:26.600 --> 00:26:32.600]   doncs confio que ens anirà bé, tant per una part econòmica com per una part tècnica,
+[00:26:32.600 --> 00:26:34.600]   en el recolzament d'una altra veterinària.
+[00:26:34.600 --> 00:26:37.600]   Llavors, tu sempre mires llistats,
+[00:26:37.600 --> 00:26:42.600]   per exemple, cada mes traiem un informe de les vendes,
+[00:26:42.600 --> 00:26:45.600]   i ens surt de tots els escorçadors,
+[00:26:45.600 --> 00:26:50.600]   i com ens han estat bonificant les liquidacions,
+[00:26:50.600 --> 00:26:53.600]   i tenint en compte també el pes.
+[00:26:53.600 --> 00:26:58.600]   Llavors dius "ara aquest mes probablement miraré més de vendre amb aquest escorxador
+[00:26:58.600 --> 00:27:01.600]   que amb aquest altre perquè m'ha sortit molt més rentable".
+[00:27:01.600 --> 00:27:04.600]   Llavors mires molts estats i molta informació,
+[00:27:04.600 --> 00:27:07.600]   però ara prenen decisions, això sí que ho fem molt.
+-.Pregunta 6.11a.-
+[00:27:17.600 --> 00:27:23.600]   A mi m'aniria molt bé un business intelligence.
+[00:27:23.600 --> 00:27:27.600]   El que passa és que ara amb la intel·ligència artificial,
+[00:27:27.600 --> 00:27:30.600]   això potser fins i tot s'ha quedat una mica endarrerit,
+[00:27:30.600 --> 00:27:35.600]   però un business intelligence amb intel·ligència artificial,
+[00:27:35.600 --> 00:27:38.600]   això seria de conya, perquè ens estalviaria molt temps
+[00:27:38.600 --> 00:27:42.600]   a l'hora d'introduir informació i de prendre decisions.
+[00:27:42.600 --> 00:27:48.600]   Per això tinc molt d'interès en la intel·ligència artificial,
+[00:27:48.600 --> 00:27:53.600]   perquè com que treballen amb bases de dades espectacularment grans,
+[00:27:53.600 --> 00:27:59.600]   doncs clar, et poden ajudar a prendre decisions d'una manera més encertada, penso.
+[00:28:03.600 --> 00:28:06.600]   És clar, és que és molt nou això.
+[00:28:06.600 --> 00:28:09.600]   D'aquí dos anys, perquè dos anys és molt temps
+[00:28:09.600 --> 00:28:13.600]   amb aquest món de la informàtica i tot això,
+[00:28:13.600 --> 00:28:16.600]   d'aquí dos anys probablement serà més encertat.
+[00:28:16.600 --> 00:28:19.600]   Però jo, ja un business intelligence penso que va molt bé, ho vaig mirar,
+[00:28:19.600 --> 00:28:23.600]   però no teníem temps de fer el que ens volíem fer
+[00:28:23.600 --> 00:28:25.600]   i ens costava moltíssims diners.
+[00:28:25.600 --> 00:28:31.600]   I vam dir, bé, doncs nosaltres amb l'Excel, taules dinàmiques, històries, anem fent.
+[00:28:31.600 --> 00:28:35.600]   Però el que jo estic super-interessat és en això,
+[00:28:35.600 --> 00:28:37.600]   business intelligence, intel·ligència artificial,
+[00:28:37.600 --> 00:28:40.600]   a l'hora d'analitzar dades.
+[00:28:40.600 --> 00:28:43.600]   Perquè és que tant amb el Sage com amb els Excel,
+[00:28:43.600 --> 00:28:46.600]   tenim una barbaritat de dades,
+[00:28:46.600 --> 00:28:50.600]   però no tenim temps de traslladar-les-hi el suc.
+[00:28:55.600 --> 00:28:59.600]   Recordo que fa sis anys o així, que ho vaig preguntar,
+[00:28:59.600 --> 00:29:01.600]   no sé si ens volíem cobrar,
+[00:29:01.600 --> 00:29:04.600]   només per fer-nos un business intelligence per la ganaderia,
+[00:29:04.600 --> 00:29:07.600]   que és uns 50.000 euros, guai, només per...
+-.Pregunta 6.11b.-
+[00:29:19.600 --> 00:29:26.600]   Jo crec que la part de la investigació de les universitats és fonamental.
+[00:29:26.600 --> 00:29:31.600]   A més, crec que el bo que té les universitats
+[00:29:31.600 --> 00:29:36.600]   és que tens un equip de persones dedicant-se al 100% en un projecte concret.
+[00:29:36.600 --> 00:29:41.600]   Un informàtic té molta feina, té molts clients, té moltes històries,
+[00:29:41.600 --> 00:29:44.600]   llavors la part d'investigació seria el punt de sortida
+[00:29:44.600 --> 00:29:48.600]   perquè després les empreses privades, si pot ser,
+[00:29:48.600 --> 00:29:50.600]   s'ha de lluitar pel sector privat,
+[00:29:50.600 --> 00:29:54.600]   si les empreses privades després han volgut sortir d'una universitat, desenvolupar-ho.
+[00:29:54.600 --> 00:29:56.600]   Jo penso que una mica aquest és el que diu.
+-.Pregunta 6.12.-
+[00:30:06.600 --> 00:30:07.600]   No.
+[00:30:09.600 --> 00:30:12.600]   Sí, tens raó, ara m'he has matado.
+[00:30:12.600 --> 00:30:18.600]   Nosaltres treballem en SIP consultors, reunions semestrals i els donem les dades mensuals.
+[00:30:18.600 --> 00:30:23.600]   I ens envien informes, informes de com estan els costos cada setmana
+[00:30:23.600 --> 00:30:25.600]   que reben un informe només pels clients
+[00:30:25.600 --> 00:30:29.600]   i després ens fan l'informe nostre trimestral.
+[00:30:29.600 --> 00:30:32.600]   Nosaltres donem les dades mensuals i ens donen un informe trimestral
+[00:30:32.600 --> 00:30:35.600]   de com haurem de resoldre els costos en respecte dels costos del SIP
+[00:30:35.600 --> 00:30:37.600]   i cada sis mesos fem una reunió.
+[00:30:41.600 --> 00:30:43.600]   Clar, té una base d'edats molt gran.
+[00:30:43.600 --> 00:30:48.600]   Va bé veure on estàs i on pots millorar.
+[00:30:52.600 --> 00:30:56.600]   De vegades els hi pregunto, però són molt reàcis a explicar-t'ho.
+[00:30:56.600 --> 00:31:00.600]   Sí, les pujades de càlcul que també estan copiades com a textos,
+[00:31:00.600 --> 00:31:02.600]   no surten les formules.
+[00:31:02.600 --> 00:31:04.600]   Ho he provat.
+[00:31:04.600 --> 00:31:08.600]   I alguna formula els hi pregunto, però clar, és el seu...
+[00:31:10.600 --> 00:31:11.600]   Correcte.
+[00:31:11.600 --> 00:31:17.600]   Però a l'hora de... si tu vols que t'expliquin un criteri de costos, te l'expliquen.
+[00:31:17.600 --> 00:31:20.600]   Ara, com funciona la seva base d'edats i el seu Excel i tot que te donen,
+[00:31:20.600 --> 00:31:23.600]   evidentment no t'ho poden donar.

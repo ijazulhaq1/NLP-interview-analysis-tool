@@ -1,0 +1,165 @@
+{
+  "design": {
+    "main_topic_count": 10,
+    "top_n_words": 10,
+    "stability_seeds": [
+      0,
+      21,
+      42,
+      84,
+      123
+    ],
+    "bertopic_main_result": "existing manuscript BERTopic result; not regenerated",
+    "bertopic_stability": "original V8 adaptive BERTopic procedure rerun in memory",
+    "classical_stability": "LDA/NMF/SVD rerun at fixed K=10",
+    "stability_metric": "Hungarian-matched top-10-word Jaccard similarity against each model's saved main result",
+    "diversity_metric": "unique top-10 topic terms / total top-10 topic terms"
+  },
+  "metrics": {
+    "bertopic": {
+      "model": "BERTopic",
+      "k": 10,
+      "c_v": 0.387992676854819,
+      "c_npmi": -0.21831862507013441,
+      "diversity": 0.87,
+      "outliers": 35.8,
+      "stability": 0.3650934669046124,
+      "stability_sd": 0.21546733403590837
+    },
+    "lda": {
+      "model": "LDA",
+      "k": 10,
+      "c_v": 0.3835986226333019,
+      "c_npmi": -0.07821915454663027,
+      "diversity": 0.87,
+      "outliers": null,
+      "stability": 0.37385147360379556,
+      "stability_sd": 0.3511114949537279
+    },
+    "nmf": {
+      "model": "NMF",
+      "k": 10,
+      "c_v": 0.4762420312407577,
+      "c_npmi": 0.04032040292903888,
+      "diversity": 0.89,
+      "outliers": null,
+      "stability": 0.9521212121212121,
+      "stability_sd": 0.10706022437726265
+    },
+    "svd": {
+      "model": "SVD",
+      "k": 10,
+      "c_v": 0.4114469848636896,
+      "c_npmi": -0.011782996530597467,
+      "diversity": 0.6,
+      "outliers": null,
+      "stability": 0.8410722610722611,
+      "stability_sd": 0.1041393830309674
+    }
+  },
+  "stability_details": {
+    "bertopic": {
+      "seeds": [
+        0,
+        21,
+        42,
+        84,
+        123
+      ],
+      "topic_counts": {
+        "0": 2,
+        "21": 10,
+        "42": 9,
+        "84": 9,
+        "123": 9
+      },
+      "scores_against_saved_main_result": [
+        0.005263157894736842,
+        0.40662278897573023,
+        0.5602415128730918,
+        0.49313823431470494,
+        0.3602016404647984
+      ],
+      "mean": 0.3650934669046124,
+      "sd": 0.21546733403590837
+    },
+    "lda": {
+      "seeds": [
+        0,
+        21,
+        42,
+        84,
+        123
+      ],
+      "topic_counts": {
+        "0": 10,
+        "21": 10,
+        "42": 10,
+        "84": 10,
+        "123": 10
+      },
+      "scores_against_saved_main_result": [
+        0.25812202073811974,
+        0.19415204678362574,
+        1.0,
+        0.2269607843137255,
+        0.1900225161835069
+      ],
+      "mean": 0.37385147360379556,
+      "sd": 0.3511114949537279
+    },
+    "nmf": {
+      "seeds": [
+        0,
+        21,
+        42,
+        84,
+        123
+      ],
+      "topic_counts": {
+        "0": 10,
+        "21": 10,
+        "42": 10,
+        "84": 10,
+        "123": 10
+      },
+      "scores_against_saved_main_result": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7606060606060606
+      ],
+      "mean": 0.9521212121212121,
+      "sd": 0.10706022437726265
+    },
+    "svd": {
+      "seeds": [
+        0,
+        21,
+        42,
+        84,
+        123
+      ],
+      "topic_counts": {
+        "0": 10,
+        "21": 10,
+        "42": 10,
+        "84": 10,
+        "123": 10
+      },
+      "scores_against_saved_main_result": [
+        0.8243006993006994,
+        0.7621212121212121,
+        1.0,
+        0.8787878787878787,
+        0.7401515151515151
+      ],
+      "mean": 0.8410722610722611,
+      "sd": 0.1041393830309674
+    }
+  },
+  "software": {
+    "python": "3.11.9"
+  }
+}

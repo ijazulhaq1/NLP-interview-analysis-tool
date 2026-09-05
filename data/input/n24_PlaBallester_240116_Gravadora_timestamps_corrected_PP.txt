@@ -1,0 +1,533 @@
+-.Pregunta 1.1.-
+[00:01:40.720 --> 00:01:49.800]   -Tenim una explotació ramadera de porcí 
+-.Pregunta 1.2.-
+[00:01:40.720 --> 00:01:49.800]   500 mares en un cicle tancat.
+[00:01:49.800 --> 00:01:56.000]   No tot a la mateixa ubicació, sinó que tenim les mares en un nucli,
+[00:01:56.000 --> 00:02:07.480]   tenim un desmamador en una finca també pròpia i 3 o 4 engreixos en integració.
+-.Pregunta 1.3.-
+[00:02:13.640 --> 00:02:22.800]   -Tota la vida. Això ve familiar, ve ja del meu avi, del meu pare i jo he continuat.
+[00:02:22.800 --> 00:02:27.040]   -Sí.
+-.Pregunta 2.1.-
+[00:02:36.640 --> 00:02:49.640]   -Totes les explotacions que tinc, no. Aquí, que és el nucli de mares, aquí sí perquè hi ha bastanta tecnologia i és necessari.
+[00:02:49.640 --> 00:02:58.640]   Tot i que no tinc la cobertura que m'agradaria. M'hauria agradat que ens hagués arribat la fibra, que aquí al poble ja ha arribat,
+[00:02:58.640 --> 00:03:07.280]   però aquí, com que no passava cap pal telefònic per aquí a la vora, va dir que era massa car portar el cable
+[00:03:07.280 --> 00:03:15.600]   i ho continuo fent via això que en diuen de ràdio enllaç, bé, a través d'això de wifi i punt net,
+[00:03:15.600 --> 00:03:22.760]   a través dels campanars que està connectat. -Sí, el que diuen, la ràdio, que diuen, sí, sí, que és entre...
+-.Pregunta 2.2a.-
+[00:03:37.160 --> 00:03:45.160]   -Perquè l'utilitzem, com volíem dir, per rebre factures, per rebre receptes electròniques dels medicaments.
+[00:03:45.160 --> 00:03:51.960]   A més a més, aquí, com que tinc tecnologia a aquesta granja, ja em connecto, puc connectar des de qualsevol lloc,
+[00:03:51.960 --> 00:03:58.480]   a través del mòbil a la granja per veure com estan funcionant a la granja, com estan menjant les truges...
+[00:03:58.480 --> 00:04:05.960]   Vull dir, tot això ho puc controlar des del mòbil. A vegades massa facilitats, a vegades estic de vacances
+[00:04:05.960 --> 00:04:15.960]   i els treballadors només de fer-ho ells, em truquen i des de la platja em diuen "tu, connecta't pel mòbil i fes-me tu els canvis que faig"
+-.Pregunta 2.2b.-
+[00:04:24.960 --> 00:04:28.960]   -Internet, sí. -Dispositius que tenim a l'explotació. 
+[00:04:34.960 --> 00:04:41.960]   -El mòbil, tablet i un ordenador.
+[00:04:41.960 --> 00:04:47.960]   -Els treballadors que teniu el seu mòbil, que és l'empresa, també tenen la connexió a internet per també poder-los fer
+[00:04:47.960 --> 00:04:53.960]   des de qualsevol punt de l'aranya que també es puguin connectar amb el programa principal i funcionar.
+[00:05:00.960 --> 00:05:09.960]   -Tinc, sí, la caldera de biomassa. Aquesta també envia senyals en funció de si té alguna avaria o això,
+[00:05:09.960 --> 00:05:17.960]   envia senyals al mòbil, també està connectat. I en una de les explotacions d'engreix, que queda una mica aïllat,
+[00:05:17.960 --> 00:05:28.960]   tenim una centraleta que ens avisa si marxa la llum al mòbil. També l'ADSL, la connexió, envia un senyal.
+-.Pregunta 2.3a.-
+[00:05:34.960 --> 00:05:47.960]   -És bàsic. Crec que és bàsic, sobretot per temes que crec que aquí sí que l'administració hauria d'ajudar,
+[00:05:47.960 --> 00:05:54.960]   per temes de traçabilitat, de fer molt més àgils tots els tràmits amb l'administració.
+[00:05:54.960 --> 00:06:03.960]   Jo crec que si tot es digerís molt més fàcil, que fins i tot el propi Ramader pogués complir amb la normativa
+[00:06:03.960 --> 00:06:09.960]   que avui envia, o sigui, hi ha tota una sèrie d'obligacions, però sí que és veritat que hi comencen a haver eines,
+[00:06:09.960 --> 00:06:15.960]   però sempre van darrere. O sigui, primer sempre és l'obligació i l'eina es desenvolupa ja després.
+[00:06:15.960 --> 00:06:22.960]   Que dius, home, quan feu l'obligació, traieu-hi l'eina, expliqueu-los-hi facilitats, que vull dir que ens connectem
+[00:06:22.960 --> 00:06:30.960]   i directament entrem, jo què sé, als camps que anem a adobar amb purí, que ens podem connectar i que hi ha tot directament.
+[00:06:30.960 --> 00:06:39.960]   Jo crec que és bàsic i a més a més amb les noves generacions, per exemple, poder amb l'edat dels meus pares
+[00:06:39.960 --> 00:06:47.960]   introduir això seria complicat, amb les generacions que venen ja hi han nascut, per tant, ha de ser molt més fàcil.
+-.Pregunta 2.3b.-
+[00:07:19.960 --> 00:07:29.960]   Jo crec que, o sigui, perquè la gent l'utilitzi, ho ha de trobar útil, ha de trobar que sigui útil.
+[00:07:29.960 --> 00:07:38.960]   Per tant, han de ser processos que es poguessin, és això, del dia a dia, coses que es poguessin introduir directament al núvol
+[00:07:38.960 --> 00:07:46.960]   i que a partir d'allà, jo què sé, l'administració, el teu veterinari responsable, qualsevol persona es pogués penjar al núvol
+[00:07:46.960 --> 00:07:53.960]   i sabés en un sol moment els tipus de pinso que estàs utilitzant, els medicaments que hi ha a l'explotació.
+[00:07:53.960 --> 00:08:00.960]   Per tant, ha de ser una cosa que al ramader també vegi útil, que a ell li estalvia feina, diguéssim,
+[00:08:00.960 --> 00:08:08.960]   que després no ha de trucar amb un assessor, amb una tercera persona, perquè es clar, és un intermediari, al final és doble feina.
+[00:08:08.960 --> 00:08:16.960]   Perquè has de passar, i veig que amb bona voluntat cooperatives estan intentant fer aquesta feina com d'assessors o de gestors,
+[00:08:16.960 --> 00:08:24.960]   doncs es clar, el ramader té la feina igualment de passar-los les dades a ells i ells llavors penjar-ho a un núvol.
+[00:08:24.960 --> 00:08:33.960]   El penjar-ho deu fer falta. Si l'eina fos fàcil, jo crec que amb les noves generacions això se'ls podria, no sé si obligar,
+[00:08:33.960 --> 00:08:39.960]   però és que ells això ja ho tenen. Poder en les zones grans s'hauria de deixar un marge
+[00:08:39.960 --> 00:08:45.960]   que aquesta gent hauria de poder continuar treballant diferent, però amb les noves generacions jo crec que...
+[00:08:45.960 --> 00:08:54.960]   A més a més crec que ho agrairien, perquè si jo des del mòbil estic allà a l'explotació i tinc una eina que amb dues passes
+[00:08:54.960 --> 00:09:01.960]   em queda tota una sèrie de registres tot actualitzat, doncs home, molt més fàcil.
+-.Pregunta 3.1a.-
+[00:09:16.960 --> 00:09:29.960]   Bé, per exemple, bastant, sí, sí, bastant. Almenys és el que és el núvol de les mares, la resta no tant.
+-.Pregunta 3.1b.-
+[00:09:33.960 --> 00:09:43.960]   A més a més, enfocada a la producció, diguéssim. Tenim un sistema informàtic que també està penjat al núvol
+[00:09:43.960 --> 00:09:48.960]   i que és el QICAP, que també podem anar per tota la granja i en qualsevol moment podem anar actualitzant les dades
+[00:09:48.960 --> 00:09:53.960]   de tots els successos que passen, diguéssim, amb els animals.
+[00:09:53.960 --> 00:10:00.960]   En tema d'alimentació, també és alimentació electrònica i tant, per tant està tot digitalitzat.
+[00:10:00.960 --> 00:10:09.960]   El que sí que no està tan digitalitzat els engreixos, desmamadors, això sí que encara és un sistema més.
+[00:10:09.960 --> 00:10:14.960]   Sí que portem un registre, però no està digitalitzat, això.
+[00:10:14.960 --> 00:10:21.960]   Tinc un programa fet per la digitalització, però crec que es podria millorar bastant, sí.
+-.Pregunta 3.2.-
+[00:10:31.960 --> 00:10:39.960]   Jo crec que el que seria bàsic és connectar el tema que ningú porta, per exemple, un gestor,
+[00:10:39.960 --> 00:10:45.960]   amb el tema de comptabilitat, amb el tema de factures i medicaments, que ja hi tenen totes les dades
+[00:10:45.960 --> 00:10:51.960]   i hauria de poder fer un enllaç amb el tema de traçabilitat, de manera que no s'hagués de tornar a introduir les dades
+[00:10:51.960 --> 00:10:57.960]   de la traçabilitat, de tornar a aplicar les factures, o sigui, els dels grans de pinso que han arribat,
+[00:10:57.960 --> 00:11:03.960]   els medicaments, per saber que tot això hauria de ser automàtic.
+-.Pregunta 3.3a.-
+[00:11:15.960 --> 00:11:21.960]   Bé, la rapidesa a l'hora de trobar la informació. Aquesta és bàsica.
+[00:11:21.960 --> 00:11:27.960]   Vull dir, jo en el tema de l'alimentació, el tema de gestió, amb un cop de clic,
+[00:11:27.960 --> 00:11:31.960]   des de qualsevol punt, a més a més. Vull dir, podem estar reunits amb el veterinari,
+[00:11:31.960 --> 00:11:39.960]   en una reunió, no ho sé, a Sant Boi a Vic o el que sigui, i amb un cop de clic li puc ensenyar tot,
+[00:11:39.960 --> 00:11:45.960]   a la granja, en tot moment, com està funcionant. Vull dir, això sí que dóna avantatge.
+-.Pregunta 3.3b.-
+[00:11:53.960 --> 00:12:01.960]   Jo crec que és un sector que potser, almenys jo parlo de la meva generació,
+[00:12:01.960 --> 00:12:08.960]   potser els meus no, però als que els agrada molt treballar animals o el que sigui,
+[00:12:08.960 --> 00:12:13.960]   els costa més fer el pas aquest de treballar davant d'un ordinador.
+[00:12:13.960 --> 00:12:20.960]   I els sembla que és una pèrdua de temps. Perquè podrien estar treballant a l'explotació
+[00:12:20.960 --> 00:12:27.960]   i ara han d'estar al despatx tancats, això. Però tot això depèn també de com és l'aplicació aquesta,
+[00:12:27.960 --> 00:12:32.960]   que els hi diria, per exemple, el fet que pugui anar per la granja amb la tablet o amb el mòbil,
+[00:12:32.960 --> 00:12:38.960]   sense haver d'anar a un despatx i pugui fer totes aquestes gestions, no és estar-te dins d'un despatx.
+[00:12:38.960 --> 00:12:44.960]   Sí que, evidentment, que després tens tota una sèrie de dades i si les vols analitzar i treure conclusions,
+[00:12:44.960 --> 00:12:50.960]   sí que un dia t'has de tancar al despatx, amb el teu assessor, això, veure les dades més importants
+[00:12:50.960 --> 00:12:55.960]   i extreure conclusions. Perquè, al final, si no les fas servir per rebre les dades,
+[00:12:55.960 --> 00:12:59.960]   llavors sí que no cal guardar-les.
+-.Pregunta 3.4.-
+[00:13:05.960 --> 00:13:16.960]   Fires, estic adherit en algunes publicacions, porcinews, fòrums d'aquests de porcí.
+[00:13:16.960 --> 00:13:25.960]   Això i a través del meu veterinari assessor, que també és una persona que va bastant a l'Aragó i tot Catalunya,
+[00:13:25.960 --> 00:13:32.960]   també, es clar, també la veritat és que em dóna novetats que hi ha al sector.
+-.Pregunta 4.1.-
+[00:13:43.960 --> 00:13:48.960]   Sensors? 
+[00:13:48.960 --> 00:13:56.960]   Sí, control de temperatura. Per exemple, a la nevera de les dosis de semen, diguéssim,
+[00:13:56.960 --> 00:14:00.960]   hi ha un sensor que m'avisa si hi ha qualsevol variació amb la temperatura.
+[00:14:00.960 --> 00:14:05.960]   També m'envia un missatge al mòbil que es digui el cas que no està funcionant bé la nevera.
+[00:14:05.960 --> 00:14:11.960]   Per exemple, llavors, el que t'he dit abans d'aquest sensor de quan marxa la llum,
+[00:14:11.960 --> 00:14:21.960]   es podria sofisticar molt, es podria posar a cada sala un missatge en funció de les temperatures,
+[00:14:21.960 --> 00:14:24.960]   es podria posar una centraleta, això es podria fer.
+[00:14:24.960 --> 00:14:28.960]   La veritat és que tinc de moment això a la caldera de biomassa, per si marxa la llum,
+[00:14:28.960 --> 00:14:35.960]   i el tema aquest de la temperatura a les dosis, perquè llavors es fan malbé de seguida.
+[00:14:35.960 --> 00:14:39.960]   Llavors tu et penses que estan en correcte estat i resulta que han estat unes hores
+[00:14:39.960 --> 00:14:42.960]   amb una temperatura que no era l'adequada.
+[00:14:51.960 --> 00:14:58.960]   Sensors no n'hi tinc, ni pel pes no n'hi tinc. Ni pel pes ni per això.
+-.Pregunta 4.2.-
+[00:15:08.960 --> 00:15:11.960]   Això de moment són de monitoratge diari.
+[00:15:16.960 --> 00:15:21.960]   No, en aquest sentit en aquests sensors no, perquè són immediates.
+[00:15:21.960 --> 00:15:27.960]   Això són sensors que són acció-reacció, has de fer alguna cosa quan t'avisen.
+[00:15:28.960 --> 00:15:32.960]   El tema de temperatures, hem fet proves a vegades amb això també.
+[00:15:32.960 --> 00:15:35.960]   Veu el funcionament dels desmamadors, sobretot.
+[00:15:35.960 --> 00:15:39.960]   Sí que és veritat. El que passa és que no ha sigut un sensor que s'ha quedat allà fixa.
+[00:15:39.960 --> 00:15:43.960]   A través d'un assessor que tinc, ell sí que va ficar uns sensors que recollia dades
+[00:15:43.960 --> 00:15:49.960]   durant tota una setmana i llavors vam poder veure les variacions que hi havia de temperatures
+[00:15:49.960 --> 00:15:53.960]   entre dia i nit. Llavors sí que les vam analitzar.
+[00:15:53.960 --> 00:15:55.960]   Però no és una cosa que estigui fixa, diguéssim.
+[00:15:55.960 --> 00:16:02.960]   Això simplement té aquests sensors, té aquesta màquina que ho fa
+[00:16:02.960 --> 00:16:07.960]   i recollides de tant en tant per veure el funcionament de les màquines.
+[00:16:08.960 --> 00:16:09.960]   Sí.-.Pregunta 5.1.-
+[00:16:27.960 --> 00:16:33.960]   L'últim... És que ho vaig fet bastant...
+[00:16:33.960 --> 00:16:40.960]   L'últim és a la màquina d'alimentació electrònica.
+[00:16:40.960 --> 00:16:44.960]   Hem fet una prova amb una nau i hi ha uns sensors que és de moviment.
+[00:16:44.960 --> 00:16:49.960]   A més de donar menjar a les hores que jo he programat,
+[00:16:49.960 --> 00:16:53.960]   hi ha un sensor que quan la truja només donarà menjar,
+[00:16:53.960 --> 00:16:58.960]   a part que sigui a l'hora adequada, que la truja realment detecti que s'aixeca
+[00:16:58.960 --> 00:17:00.960]   i que té actitud de voler menjar.
+[00:17:00.960 --> 00:17:02.960]   Si no, no dona menjar.
+[00:17:02.960 --> 00:17:06.960]   Perquè si no, et trobes que algunes queden una mica darrere
+[00:17:06.960 --> 00:17:10.960]   perquè no tenien gana i llavors allò és una pèrdua.
+[00:17:10.960 --> 00:17:12.960]   En canvi, d'aquesta manera, no dona menjar,
+[00:17:12.960 --> 00:17:17.960]   no sent que el sensor detecti que la truja està aixecada i disposada a menjar.
+[00:17:23.960 --> 00:17:26.960]   No, no, no. Va per contacte.
+[00:17:26.960 --> 00:17:31.960]   O sigui, allò que n'ha de menjar, si ella toca amb el nas,
+[00:17:31.960 --> 00:17:36.960]   no sé si hi ha un sensor allà amunt que va amb ràdio enllaç,
+[00:17:36.960 --> 00:17:41.960]   i si toca allò, doncs la màquina sap que la truja està aixecada i a punt de menjar
+[00:17:41.960 --> 00:17:43.960]   i li comença a donar menjar.-.Pregunta 5.2.-
+[00:17:52.960 --> 00:18:01.960]   Bé, volia fer una centraleta d'alarma pel tema de temperatures als desmamadors,
+[00:18:01.960 --> 00:18:03.960]   que m'avisés.
+[00:18:03.960 --> 00:18:06.960]   Perquè, sobretot, l'hivern també és important,
+[00:18:06.960 --> 00:18:08.960]   però l'hivern és bàsicament si marxa la llum.
+[00:18:08.960 --> 00:18:12.960]   Però a l'estiu, si arriba a passar qualsevol cosa,
+[00:18:12.960 --> 00:18:17.960]   que s'espatlla alguna cosa del desmamador i comença a pujar la temperatura molt,
+[00:18:17.960 --> 00:18:20.960]   doncs clar, pots tenir un desastre.
+[00:18:20.960 --> 00:18:22.960]   Pots tenir molta mortalitat.
+[00:18:22.960 --> 00:18:29.960]   Per tant, he estat mirant en algunes empreses per instal·lar-me alguna centraleta.
+[00:18:29.960 --> 00:18:34.960]   El que passa és que en un dels llocs el gran problema és el tema de la cobertura.
+[00:18:37.960 --> 00:18:41.960]   Sí, hem provat i, clar, no hi ha molta cobertura.
+[00:18:41.960 --> 00:18:46.960]   No és que no n'hi hagi, però n'hi ha poca, justa.
+[00:18:46.960 --> 00:18:50.960]   Llavors, si quan al moment d'enviar la senyal, en aquell moment,
+[00:18:50.960 --> 00:18:53.960]   el que sigui, és massa baix o ha marxat,
+[00:18:53.960 --> 00:18:59.960]   llavors no t'avisa i tampoc et serveix perquè cap estona hi ha d'haver cobertura,
+[00:18:59.960 --> 00:19:01.960]   però no t'ha avisat.
+[00:19:01.960 --> 00:19:06.960]   S’ho van mirar i van dir que mirarien a veure com ho poden fer.
+[00:19:06.960 --> 00:19:11.960]   Si poden fer que sigui repetitiva, que vagi enviant senyals fins que...
+[00:19:11.960 --> 00:19:13.960]   Però bueno, va dir que això s'havien de mirar.
+[00:19:13.960 --> 00:19:19.960]   És que el seu sistema estava fet que al moment que passava ells enviaven la senyal
+[00:19:19.960 --> 00:19:21.960]   i ja està, i no hi tornaves.
+[00:19:21.960 --> 00:19:24.960]   Clar, diploma d'això no serveix perquè...
+[00:19:26.960 --> 00:19:28.960]   Igual em perdo la senyal.
+[00:19:28.960 --> 00:19:33.960]   Això és un problema, hi ha granges que és un problema, la cobertura.
+[00:19:45.960 --> 00:19:50.960]   Això és el que els hi vaig dir, em van dir que ho estudiarien,
+[00:19:50.960 --> 00:19:53.960]   però a vegades són aquests programes estàndards que tenen,
+[00:19:53.960 --> 00:19:57.960]   que abans no surti una actualització, doncs a vegades...
+[00:19:57.960 --> 00:20:05.960]   Llavors falta que l'enginyer de tot cregui que sigui adequat a fer aquesta actualització
+[00:20:05.960 --> 00:20:07.960]   i després falta que la facin.
+-.Pregunta 5.3.-
+[00:20:15.960 --> 00:20:23.960]   Bé, si és dins del sector no he vist cap d'això d'intel·ligència artificial.
+[00:20:23.960 --> 00:20:29.960]   El que he vist demostracions del ChatGPT, això sí que ho he vist.
+[00:20:29.960 --> 00:20:35.960]   La intel·ligència artificial, jo crec que dins d'una gestió d'una granja,
+[00:20:35.960 --> 00:20:41.960]   realment si se li donen les eines déu-n'hi-do la capacitat que podria tenir de prendre decisions.
+[00:20:41.960 --> 00:20:43.960]   I d'anàlisis.
+[00:20:43.960 --> 00:20:48.960]   Potser aquesta feina que fem, que diem que ens hem d'estar allà en un despatx
+[00:20:48.960 --> 00:20:53.960]   per poder extreure conclusions de les dades,
+[00:20:53.960 --> 00:20:57.960]   una eina d'intel·ligència artificial et donaria l'informe fet.
+[00:20:57.960 --> 00:21:06.960]   Té les dades, et diria "cuidado”, has de fer alguna cosa, l'alimentació t'estàs desviant".
+[00:21:06.960 --> 00:21:11.960]   Això sí que seria una gran eina, sí, sí. Una ajuda bastant important.
+-.Pregunta 6.1.-
+[00:21:29.960 --> 00:21:34.960]   Una mica es té en compte tot.
+[00:21:34.960 --> 00:21:37.960]   Clar, es té una mica...
+[00:21:37.960 --> 00:21:41.960]   Criteri econòmic, evidentment que hi ha de ser,
+[00:21:41.960 --> 00:21:45.960]   però arriba un punt, per exemple, al nostre sector per tema normatiu,
+[00:21:45.960 --> 00:21:51.960]   que ho has de fer sí o sí, moltes de les inversions que has de fer.
+[00:21:51.960 --> 00:21:55.960]   Llavors, dintre d'això, si cobraràs en termes econòmics,
+[00:21:55.960 --> 00:21:58.960]   és adequada o què convingui.
+[00:21:58.960 --> 00:22:02.960]   En tema de benestar, la veritat és que hem apostat bastant a la granja per tema de benestar,
+[00:22:02.960 --> 00:22:06.960]   i és una granja bastant modèlica.
+[00:22:06.960 --> 00:22:10.960]   Estan en palla, tenen molt espai,
+[00:22:10.960 --> 00:22:16.960]   realment, temes de benestar sí que ho estem mirant bastant.
+[00:22:16.960 --> 00:22:20.960]   I el tema ambiental, crec que va tenir-te lligat.
+[00:22:20.960 --> 00:22:23.960]   Sí que m'agrada complir les normatives,
+[00:22:23.960 --> 00:22:28.960]   no m'agrada haver d'estar patint per si compleixo alguna cosa,
+[00:22:28.960 --> 00:22:35.960]   sempre estic mirant d'actualitzar-me als lleis mediambientals que hi ha vigents.
+-.Pregunta 6.2a.-
+[00:22:47.960 --> 00:22:50.960]   Que prenc totes les decisions.
+[00:22:50.960 --> 00:22:55.960]   Sobre l'administrador, vull dir, que prenc totes les decisions.
+-.Pregunta 6.2b.-
+[00:22:57.960 --> 00:23:01.960]   L'administrador i sobre el propietari tinc el 60% de les accions.
+[00:23:11.960 --> 00:23:18.960]   Evidentment, sí, per això els pago els assessors i gestors,
+[00:23:18.960 --> 00:23:22.960]   perquè els gestors perquè m'informin de les dades,
+[00:23:22.960 --> 00:23:27.960]   de com està funcionant l'empresa econòmicament.
+[00:23:27.960 --> 00:23:32.960]   Llavors els assessors fan una valoració en termes econòmics i de producció.
+[00:23:32.960 --> 00:23:39.960]   Llavors intentem enllaçar les dues coses i ells assessoren amb el que ells com ho veuen.
+[00:23:39.960 --> 00:23:48.960]   I llavors també la meva experiència al final també diu això sí, això no, això sí.
+-.Pregunta 6.3.-
+[00:24:05.960 --> 00:24:11.960]   Això tot arreu està instal·lat, això de les temperatures, dels sensors de temperatura.
+[00:24:11.960 --> 00:24:15.960]   Això sí que n'hi ha, tot a arreu n'hi ha. Tot automàtic.
+[00:24:15.960 --> 00:24:22.960]   Això de la temperatura és evident que sí. Abans el tema de sensors potser no t'ho havies,
+[00:24:22.960 --> 00:24:25.960]   bueno, evidentment és com un sensor, però sí.
+[00:24:25.960 --> 00:24:27.960]   Sensors de temperatura a totes les sales n'hi ha.
+[00:24:27.960 --> 00:24:34.960]   I llavors automàticament pujo a les finestres, si marxa la llum s'obren les finestres d'emergència.
+[00:24:34.960 --> 00:24:38.960]   Tot això està fet.
+[00:24:44.960 --> 00:24:52.960]   Jo les dono per suposades, vull dir que han de ser sí o sí.
+[00:25:16.960 --> 00:25:21.960]   Bueno, per exemple, jo tinc un sistema d'alimentació electrònica,
+[00:25:21.960 --> 00:25:27.960]   on tinc un grup que hi ha unes 300 truges totes engegades en un mateix grup,
+[00:25:27.960 --> 00:25:31.960]   i passen a menjar en quatre estacions electròniques.
+[00:25:31.960 --> 00:25:34.960]   Llavors qualsevol problema que hi hagi a la màquina,
+[00:25:34.960 --> 00:25:39.960]   m'envia una senyal acústica o mòbil amb un correu electrònic,
+[00:25:39.960 --> 00:25:42.960]   amb l'alarma que hi ha, el que ha passat,
+[00:25:42.960 --> 00:25:48.960]   si s'ha trencat una porta, si s'ha encallat una truja a la sortida, qualsevol cosa.
+[00:25:48.960 --> 00:25:52.960]   Ella bloqueja la màquina perquè el problema no vagui a més,
+[00:25:52.960 --> 00:25:54.960]   vull dir, bé, no puguin entrar a més.
+[00:25:54.960 --> 00:25:59.960]   Bloqueja tot i m'envia l'alarma perquè jo vagui a l'explotació
+[00:25:59.960 --> 00:26:02.960]   o hi faig anar algun treballador a veure què ha passat.
+-.Pregunta 6.4.-
+[00:26:19.960 --> 00:26:24.960]   Bé, que hi hagin les eines, bàsicament.
+[00:26:24.960 --> 00:26:29.960]   Jo, la veritat, una eina, com la que hem dit abans,
+[00:26:29.960 --> 00:26:33.960]   aplicant la intel·ligència artificial a les granges
+[00:26:33.960 --> 00:26:35.960]   podria servir de gran ajuda al sector,
+[00:26:35.960 --> 00:26:41.960]   que dins el sector hi ha una carència de personal qualificat.
+[00:26:41.960 --> 00:26:47.960]   Llavors, ajudaria moltíssim a prendre decisions amb l'encarregat de la granja,
+[00:26:47.960 --> 00:26:54.960]   en funció de les dades que té de les feines que s'haurien de fer a la granja.
+[00:26:54.960 --> 00:26:56.960]   Això crec que podria ajudar moltíssim.
+[00:27:04.960 --> 00:27:11.960]   Evidentment que al principi hi hauria d'haver un temps
+[00:27:11.960 --> 00:27:14.960]   com quan coneixes una persona, d'agafar-li confiança.
+[00:27:14.960 --> 00:27:20.960]   Però quan has vist que veus que la desena decisio les ha encertat
+[00:27:20.960 --> 00:27:22.960]   i que ho té tot molt bé.
+[00:27:22.960 --> 00:27:26.960]   Evidentment que t'hauria de fer una justificació de la decisió.
+[00:27:26.960 --> 00:27:31.960]   Però un cop revises i veus que van les decisions més que correctament,
+[00:27:31.960 --> 00:27:34.960]   jo no hi veuria tampoc gaire problema.
+[00:27:41.960 --> 00:27:51.960]   Jo t'he de dir que en aquest sentit vaig una mica amb avantatge.
+[00:27:52.960 --> 00:27:54.960]   Jo sóc enginyer informàtic.
+[00:27:54.960 --> 00:28:00.960]   Jo sóc enginyer informàtic.
+[00:28:05.960 --> 00:28:11.960]   Vaig treure la carrera, vaig treballar durant tres o quatre anys
+[00:28:11.960 --> 00:28:18.960]   com a analista de sistemes i com a programador.
+[00:28:18.960 --> 00:28:23.960]   Vaig anar a veure les empreses, a fer disseny de programes
+[00:28:23.960 --> 00:28:26.960]   i després a ajudar a la seva implementació.
+[00:28:26.960 --> 00:28:30.960]   Però després els meus pares van arribar a un punt
+[00:28:30.960 --> 00:28:36.960]   que ells estaven a punt a les portes de començar a parlar de la jubilació
+[00:28:36.960 --> 00:28:39.960]   i em van dir "bé, què fem amb les menys?".
+[00:28:39.960 --> 00:28:42.960]   "Mirem de llogar-les, de vendre-les".
+[00:28:42.960 --> 00:28:47.960]   I llavors jo vaig ficar una balança pros i contres d'una cosa i d'una altra.
+[00:28:47.960 --> 00:28:53.960]   I vaig dir "jo la veritat és que els animals sempre m'han agradat".
+[00:28:53.960 --> 00:28:59.960]   Sempre de petit, els caps de setmana, sempre que podia l'he d'ajudar a la família.
+[00:28:59.960 --> 00:29:05.960]   I al final, a més a més, va ser el moment que va entrar a les noves normatives animal
+[00:29:05.960 --> 00:29:11.960]   i mira, em va treure després de l'anàlisi de Saragossa,
+[00:29:11.960 --> 00:29:14.960]   important de bestiar,
+[00:29:14.960 --> 00:29:18.960]   em van presentar aquest sistema d'alimentació electrònica
+[00:29:18.960 --> 00:29:22.960]   que aquí, en aquells moments, no hi havia cap granja amb aquest sistema.
+[00:29:22.960 --> 00:29:26.960]   I aquest noi em va dir "si vols et busco".
+[00:29:26.960 --> 00:29:29.960]   Diu "vull anar a una granja a Olot a treballar".
+[00:29:29.960 --> 00:29:32.960]   Vull parlar amb el Sabaté, que és qui ho dominava,
+[00:29:32.960 --> 00:29:38.960]   i pugui parlar i perquè no vull que vingueu de viatge allà
+[00:29:38.960 --> 00:29:43.960]   a ensenyar-me tot el maco, jo vull anar allà i treballar en una granja almenys 15 dies.
+[00:29:43.960 --> 00:29:47.960]   I em van buscar una família, vaig anar allà,
+[00:29:47.960 --> 00:29:52.960]   i vaig veure que això, a més a més, vaig començar a veure,
+[00:29:52.960 --> 00:29:55.960]   en aquell moment, vaig començar a veure que les noves tecnologies
+[00:29:55.960 --> 00:29:58.960]   començaven a entrar a les exportacions agrícoles.
+[00:29:58.960 --> 00:30:01.960]   I vaig pensar "bueno, això pot ser interessant".
+[00:30:01.960 --> 00:30:07.960]   I m'hi vaig llançar, i m'hi vaig dir "val, quedaré i aniré
+[00:30:07.960 --> 00:30:12.960]   per modernitzar la granja, i endavant".
+[00:30:12.960 --> 00:30:16.960]   Llavors vaig plegar d'informàtic.
+[00:30:16.960 --> 00:30:19.960]   Per això, fins i tot, al principi que tenia temps,
+[00:30:19.960 --> 00:30:26.960]   vaig fer fins i tot el programa de seguretat, com he fet jo.
+[00:30:26.960 --> 00:30:30.960]   En aquest sentit, sóc un bonic d'avantatge.
+[00:30:30.960 --> 00:30:33.960]   El tema de la meva edat, que deu ser de la meva generació,
+[00:30:33.960 --> 00:30:36.960]   els meus companys que hi ha per aquí a la zona,
+[00:30:36.960 --> 00:30:40.960]   els costa, a part de fer els tràmits justos, diguéssim,
+[00:30:40.960 --> 00:30:43.960]   amb l'administració, un ordenador, com aquest que dius,
+[00:30:43.960 --> 00:30:46.960]   no se'l miren.
+[00:30:46.960 --> 00:30:49.960]   Una generació més avall, sí que és veritat
+[00:30:49.960 --> 00:30:51.960]   que això el tenen més controlat.
+[00:30:51.960 --> 00:30:54.960]   Jo veig que hi ha alguns que venen a treure purí jove
+[00:30:54.960 --> 00:30:58.960]   amb aplicació de mòbil, i aquest camp té tantes hectàrees,
+[00:30:58.960 --> 00:31:02.960]   ja fan la divisió amb el conductímetre que porten,
+[00:31:02.960 --> 00:31:05.960]   i saben quantes cubes de purí han d'administrar.
+[00:31:05.960 --> 00:31:09.960]   Ho tenen bastant apamat, els de la meva generació.
+[00:31:09.960 --> 00:31:13.960]   Ara, els de la meva generació ja n'hi ha que no.
+[00:31:18.960 --> 00:31:20.960]   -Sí, sí, exacte.
+-.Pregunta 6.5a.-
+[00:31:36.960 --> 00:31:39.960]   -Bé, els altres dos socis són els meus pares.
+[00:31:41.960 --> 00:31:44.960]   -En general, el que dic jo els està bé.
+[00:31:44.960 --> 00:31:47.960]   Evidentment, no els hi comento perquè no els vingui...
+[00:31:47.960 --> 00:31:51.960]   no estiguin en una sorpresa i no diguem que això,
+[00:31:51.960 --> 00:31:56.960]   però la veritat és que em deixen prendre les decisions, no hi ha problema.
+-.Pregunta 6.5c.-
+[00:32:04.960 --> 00:32:08.960]   -Tàctiques i estratègiques?
+[00:32:17.960 --> 00:32:19.960]   -Sí, sí, bueno.
+[00:32:19.960 --> 00:32:21.960]   Sí que hi ha diferència.
+[00:32:21.960 --> 00:32:26.960]   Les estratègiques has de tenir, o sigui, un pla.
+[00:32:26.960 --> 00:32:32.960]   Jo diria que des que vaig entrar he anat executant el pla
+[00:32:32.960 --> 00:32:35.960]   que jo ja, més o menys, havia dissenyat.
+[00:32:35.960 --> 00:32:38.960]   Pensava, evidentment, que l'hauria de fer,
+[00:32:38.960 --> 00:32:42.960]   perquè a vegades atrassar alguna estratègia, cap on vols anar,
+[00:32:42.960 --> 00:32:46.960]   a vegades també depèn de l'econòmica i finances del dia a dia,
+[00:32:46.960 --> 00:32:50.960]   i a vegades hi ha decisions que et diuen que ho sigui.
+[00:32:50.960 --> 00:32:53.960]   El que has de tenir claríssim és cap on vols anar.
+[00:32:53.960 --> 00:32:56.960]   Jo el que entenc és una decisió estratègica.
+[00:32:56.960 --> 00:32:59.960]   Per tant, això sí que ho he tingut clar sempre
+[00:32:59.960 --> 00:33:02.960]   i he anat prenent decisions fins a arribar a un punt
+[00:33:02.960 --> 00:33:07.960]   que ara estem bastant on en el seu moment vaig proposar d'estar.
+[00:33:07.960 --> 00:33:11.960]   La veritat és que en aquest sentit estic satisfet
+[00:33:11.960 --> 00:33:16.960]   perquè hem anat arribant a on volíem.
+[00:33:18.960 --> 00:33:22.960]   -I ara és replantejar-se estratègies de futur.
+[00:33:22.960 --> 00:33:24.960]   Aquesta és la veritat.
+[00:33:24.960 --> 00:33:27.960]   Jo estic en aquest dilema, en aquest dilema de dir
+[00:33:27.960 --> 00:33:36.960]   "ara he arribat a on volia ser, ara que ho he aconseguit, cap a on".
+[00:33:36.960 --> 00:33:40.960]   Perquè l'edat també, en aquest punt també comença a influir l'edat.
+[00:33:40.960 --> 00:33:44.960]   Com això d'una estratègia que tenia 25-30 anys
+[00:33:44.960 --> 00:33:47.960]   i ara en tinc 50 en fer aquest any.
+[00:33:47.960 --> 00:33:51.960]   Dius "home, d'aquí 10-15 anys estic a les portes de la jubilació".
+[00:33:51.960 --> 00:33:54.960]   Sí, d'aquí 10-15 anys estic a les portes de la jubilació.
+[00:33:54.960 --> 00:33:58.960]   Depèn quines inversions em planteja fer, ja podré no les motivar.
+[00:33:58.960 --> 00:34:01.960]   Llavors també dependrà de la generació que després meu
+[00:34:01.960 --> 00:34:04.960]   i en si realment vol continuar o no.
+[00:34:04.960 --> 00:34:08.960]   Per això dic que l'estratègia ara la tinc una miqueta...
+[00:34:08.960 --> 00:34:11.960]   Bueno, el dia a dia sí que ho tinc molt clar
+[00:34:11.960 --> 00:34:15.960]   i les coses que hem d'anar fent i les decisions tàctiques,
+[00:34:15.960 --> 00:34:21.960]   però a llarg termini ara mateix estic en un moment de dubte.
+[00:34:21.960 --> 00:34:25.960]   Perquè he de tenir clar què he de fer i què no.
+[00:34:53.960 --> 00:34:56.960]   Sí, la veritat és que sí.
+-.Pregunta 6.6.-
+[00:35:04.960 --> 00:35:11.960]   Dels softwares que utilitzo?
+[00:35:11.960 --> 00:35:18.960]   Aquest el Picab, que és de l'empresa Semic,
+[00:35:18.960 --> 00:35:24.960]   que està penjant el núvol i és de gestió de la producció.
+[00:35:24.960 --> 00:35:29.960]   El tema econòmic, com que no el porto jo ja,
+[00:35:29.960 --> 00:35:31.960]   m'importen les informacions fets.
+[00:35:31.960 --> 00:35:35.960]   És bàsic el tema de comptabilització.
+[00:35:35.960 --> 00:35:38.960]   El que passa és que aquest software no el tinc jo aquí.
+[00:35:38.960 --> 00:35:39.960]   L'explotació.
+[00:35:39.960 --> 00:35:44.960]   Aquest, el de producció.
+[00:35:44.960 --> 00:35:48.960]   Llavors, el software del dia a dia, l'explotació de l'alimentació.
+[00:35:48.960 --> 00:35:51.960]   Aquest és bàsic perquè és el que faig servir més.
+[00:35:51.960 --> 00:35:55.960]   És a diari, quan anem a casa meva, que fem el treballador i jo,
+[00:35:55.960 --> 00:35:57.960]   connectant-nos a través de la taula i tot això,
+[00:35:57.960 --> 00:36:02.960]   donant un vol per la granja i allà davant teu tens exactament
+[00:36:02.960 --> 00:36:06.960]   què ha passat en aquelles 24 hores de l'explotació.
+[00:36:06.960 --> 00:36:09.960]   Per tant, saps on has, la teva atenció no ha d'anar dirigida,
+[00:36:09.960 --> 00:36:12.960]   has d'anar a l'ordinador teu i hi ha aquests quatre animals
+[00:36:12.960 --> 00:36:14.960]   que no han menjat.
+[00:36:14.960 --> 00:36:16.960]   Saps directament que estan a buscar aquests quatre animals
+[00:36:16.960 --> 00:36:17.960]   i veiem què passa.
+[00:36:17.960 --> 00:36:20.960]   Si estan malalts, si els han passat alguna cosa.
+[00:36:20.960 --> 00:36:24.960]   Aquest software sí que és indispensable perquè el faig servir
+[00:36:24.960 --> 00:36:26.960]   com he dit, a totes hores.
+[00:36:26.960 --> 00:36:32.960]   L'altre per a recollida de dades, el PickUp, també el fa servir diàriament.
+[00:36:32.960 --> 00:36:36.960]   Has d'anar a introduir tot el que passa a l'explotació,
+[00:36:36.960 --> 00:36:40.960]   parts, desallotjaments, col·lisions, tot això.
+[00:36:40.960 --> 00:36:44.960]   I l'altre d'anàlisi ja el deixes més per un dia puntual,
+[00:36:44.960 --> 00:36:49.960]   quan vénen les hores o quan tens una mica de temps.
+-.Pregunta 6.7.-
+[00:36:54.960 --> 00:36:58.960]   Aquest del dia a dia?
+[00:36:59.960 --> 00:37:04.960]   Aquest del dia a dia el faig servir des de l'any 2000,
+[00:37:04.960 --> 00:37:08.960]   amb aquesta versió com està ara, des de l'any 2013.
+[00:37:08.960 --> 00:37:14.960]   Abans havíem fet com un sistema molt rudimentari que era tipus autòmat,
+[00:37:14.960 --> 00:37:17.960]   que et generava aquest informe.
+[00:37:17.960 --> 00:37:21.960]   A més de poder-lo veure en una tablet, et generava una impressora,
+[00:37:21.960 --> 00:37:23.960]   et generava un rècord.
+[00:37:23.960 --> 00:37:30.960]   És a dir, això que hi ha a la tablet, abans t'ho feia amb un paper, diguéssim.
+[00:37:30.960 --> 00:37:33.960]   Però això ja m'ho feia el 2003,
+[00:37:33.960 --> 00:37:38.960]   quan vaig instal·lar el primer sistema d'alimentació electrònica
+[00:37:38.960 --> 00:37:42.960]   i em treia un llistat de les incidències de les últimes 24 hores.
+[00:37:42.960 --> 00:37:45.960]   Ara és molt més senzill perquè vas amb la tablet,
+[00:37:45.960 --> 00:37:47.960]   a més a més te'n gastes paper,
+[00:37:47.960 --> 00:37:53.960]   a més a més, insisteixo que vas amb la tablet i vas davant de l'animal.
+[00:37:53.960 --> 00:37:56.960]   És a dir, si has d'actualitzar alguna cosa, vas des d'allà mateix.
+[00:37:56.960 --> 00:38:00.960]   Abans amb l'altre sistema havies d'anar al despatx i produir-ho.
+[00:38:00.960 --> 00:38:02.960]   Va ser molt millor, doncs.
+-.Pregunta 6.8.-
+[00:38:11.960 --> 00:38:17.960]   Bueno, en principi, la veritat és que el que he agafat sempre,
+[00:38:17.960 --> 00:38:23.960]   ho estic utilitzant des de fa anys i no he deixat d'utilitzar cap eina d'aquestes.
+[00:38:23.960 --> 00:38:26.960]   Al contrari, qualsevol cosa que em surti bé i que sigui útil,
+[00:38:26.960 --> 00:38:31.960]   jo encantat de fer-la servir.
+[00:38:46.960 --> 00:38:50.960]   Sí, bueno, només vaig fer això en software, que era de gestió.
+[00:38:50.960 --> 00:38:56.960]   No me'n recordo el nom que era, però es van quedant...
+[00:38:56.960 --> 00:38:59.960]   Van fer aquest procés de...
+[00:38:59.960 --> 00:39:04.960]   O sigui, havies de treure totes les dades manualment.
+[00:39:04.960 --> 00:39:09.960]   I jo els hi he dit molts cops, és a dir, home, és que jo crec que al mercat ja hi havia
+[00:39:09.960 --> 00:39:13.960]   molts sistemes aquests que tu pots introduir des del mòbil, des d'una taula,
+[00:39:13.960 --> 00:39:20.960]   i dic, és que si no en feu aquest pas, això a mi em fa perdre molt de temps, no puc.
+[00:39:20.960 --> 00:39:22.960]   I bueno, ens van dir, no, ja ho farem.
+[00:39:22.960 --> 00:39:26.960]   Vaig tenir paciència un any perquè em van dir que la nova actualització sortiria
+[00:39:26.960 --> 00:39:29.960]   i quan va sortir no era així.
+[00:39:29.960 --> 00:39:34.960]   Llavors, vaig canviar i ja va estar.
+[00:39:36.960 --> 00:39:41.960]   No és perquè no fos útil, era simplement perquè em feia perdre temps.
+[00:39:41.960 --> 00:39:44.960]   Vist les eines que hi havia noves al mercat, em feia perdre temps.
+[00:39:44.960 --> 00:39:48.960]   I el temps, sorprenentment, em sembla que és el que, no sé si tots,
+[00:39:48.960 --> 00:39:50.960]   o almenys jo, és el que més em falta.
+[00:39:56.960 --> 00:40:00.960]   Perquè, si no, no tinc ni temps llavors per dedicar-me a la família.
+[00:40:00.960 --> 00:40:02.960]   Tot s'ha d'acompanyar.
+[00:40:02.960 --> 00:40:06.960]   Arribar unes vegades a casa i llavors hagués de picar les dades,
+[00:40:06.960 --> 00:40:10.960]   que dius, això no pot ser així.
+-.Pregunta 6.10.-
+[00:40:25.960 --> 00:40:29.960]   Bé, per això sempre va bé anar a reunions.
+[00:40:29.960 --> 00:40:33.960]   Jo sempre estic ficat dins del Consell Rector de la Cooperativa Plana de Vic.
+[00:40:33.960 --> 00:40:38.960]   I llavors, evidentment que dintre de reunions que fas,
+[00:40:38.960 --> 00:40:42.960]   entres dins del Consell Rector, o fins i tot que vas a fires,
+[00:40:42.960 --> 00:40:50.960]   que vas a reunions d'altres sectorials, allà tens les portes obertes
+[00:40:50.960 --> 00:40:55.960]   i tothom sents el que fan servir, coses noves.
+[00:40:55.960 --> 00:40:59.960]   I evidentment que estàs atent a tot i llavors el que t'interessa
+[00:40:59.960 --> 00:41:04.960]   truques a la persona i dius, escolta, en el teu sentit que explicaves això,
+[00:41:04.960 --> 00:41:09.960]   diguem, copies això i ho has aconseguit i ja està.
+-.Pregunta 6.9.-
+[00:41:19.960 --> 00:41:29.960]   Els que faig servir jo, el tema de gestió sí que requereix d'alguna interpretació,
+[00:41:29.960 --> 00:41:33.960]   però bé, això acostumat a treballar amb aquestes eines que he treballat
+[00:41:33.960 --> 00:41:40.960]   des de fa 25-30 anys, la confiança és màxima.
+[00:41:40.960 --> 00:41:45.960]   Si veus, ja ho hauries, quan estàs acostumat a fer-la servir,
+[00:41:45.960 --> 00:41:48.960]   si hi hagués algun error greu, ho detectaries de seguida.
+[00:41:53.960 --> 00:41:58.960]   La digitalització l'únic que em fa por és el tema de la seguretat, això sí.
+[00:42:02.960 --> 00:42:07.960]   I sé que la xarxa no és segura, és el més insegur que hi ha,
+[00:42:07.960 --> 00:42:12.960]   i per molt que et puguis vendre la moto o no, és que és un sistema molt segur.
+[00:42:12.960 --> 00:42:15.960]   Només has de veure que els rancs estan canviant el sistema d'autentificació
+[00:42:15.960 --> 00:42:19.960]   cada dos per tres.
+[00:42:19.960 --> 00:42:25.960]   Això vol dir que contínuament la gent sap com saltar-se això.
+[00:42:25.960 --> 00:42:31.960]   I llavors, clar, depèn si la granja arribes a fer tot molt connectat
+[00:42:31.960 --> 00:42:34.960]   i t'arriba a entrar un hacker o el que sigui,
+[00:42:34.960 --> 00:42:37.960]   es clar, t'ho pot bloquejar, et pot fer un prejudici important.
+[00:42:37.960 --> 00:42:43.960]   I això sí que és una amenaça important per la digitalització.
+[00:43:00.960 --> 00:43:05.960]   Sí, sí, per això que et refereixo, que és un problema.
+[00:43:05.960 --> 00:43:08.960]   I la gent, la majoria, no n'és conscient.
+[00:43:08.960 --> 00:43:12.960]   Es pensen que, bueno, no, no, jo això no els hi dic,
+[00:43:12.960 --> 00:43:17.960]   és que si sabessis realment l'amenaça que hi ha, no estaries tan tranquil.
+[00:43:19.960 --> 00:43:26.960]   Jo a la facultat vull dir que s'haurien de posar a tot arreu.
+-.Pregunta 6.11b.-
+[00:43:41.960 --> 00:43:48.960]   Bueno, jo crec que cadascú ha de fer el seu paper.
+[00:43:48.960 --> 00:43:53.960]   Al final, el tema de la relació amb l'administració
+[00:43:53.960 --> 00:43:55.960]   i d'agilitzar molt el tema burocràtic,
+[00:43:55.960 --> 00:43:59.960]   vull dir, això és un tema que pot estar sobre la taula moltíssim,
+[00:43:59.960 --> 00:44:02.960]   aquest tema crec que sí que l'ha de fer,
+[00:44:02.960 --> 00:44:07.960]   almenys ha de guiar l'administració exactament en el que vol, com ho vol,
+[00:44:07.960 --> 00:44:12.960]   perquè llavors la digitalització es fiqui ja directament com,
+[00:44:12.960 --> 00:44:15.960]   clar, no sé si l'ha de fer ell directament,
+[00:44:15.960 --> 00:44:18.960]   però indirectament hi ha de jugar un paper bastant important.
+[00:44:18.960 --> 00:44:25.960]   Llavors, altres temes de digitalització que ajudin a presa de decisions,
+[00:44:25.960 --> 00:44:27.960]   això crec que és un tema ja més privat,
+[00:44:27.960 --> 00:44:30.960]   això ja és el que, fins a quin grau,
+[00:44:30.960 --> 00:44:37.960]   cadascú vulgui aconseguir d'arribar o que l'ajudi.
+[00:44:37.960 --> 00:44:42.960]   Això ja és un tema més privat, diguéssim.
+[00:44:42.960 --> 00:44:46.960]   I bueno, i la universitat al final, jo crec que no sé,
+[00:44:46.960 --> 00:44:49.960]   que ha de ser per l'ajudar tant a l'administració
+[00:44:49.960 --> 00:44:53.960]   com fins i tot al sector privat.
+[00:44:53.960 --> 00:44:57.960]   Des de la universitat poden sortir moltes iniciatives privades
+[00:44:57.960 --> 00:45:00.960]   per desenvolupar tema d'aquests.
+[00:45:00.960 --> 00:45:06.960]   Però al final tot això serà un èxit si això té un valor que és útil
+[00:45:06.960 --> 00:45:09.960]   i algú està disposat a pagar per això.
+[00:45:09.960 --> 00:45:11.960]   Sí, és la clau.
+[00:45:13.960 --> 00:45:17.960]   Però ja et dic, el tema d'administració jo crec que sí que és clau,
+[00:45:17.960 --> 00:45:19.960]   però el tema d'agilitzar la burocràcia,
+[00:45:19.960 --> 00:45:22.960]   és que a més a més tampoc són tantes coses,
+[00:45:22.960 --> 00:45:24.960]   però si es penja bé el núvol,
+[00:45:24.960 --> 00:45:28.960]   això sí que crec que aquesta feina l'ha de fer poder una administració,
+[00:45:28.960 --> 00:45:32.960]   perquè si no a nivell privat costarà molt que s'entenguin,
+[00:45:32.960 --> 00:45:36.960]   o sigui, que pugui coincidir que tothom s'entengui de la mateixa manera.
+[00:45:36.960 --> 00:45:40.960]   Em refereixo a la fàbrica de Pinso pot penjar les factures
+[00:45:40.960 --> 00:45:42.960]   en un determinat format,
+[00:45:42.960 --> 00:45:46.960]   que per exemple l'administració els digui que un format
+[00:45:46.960 --> 00:45:50.960]   digui que fos un nivell universal o un estàndard,
+[00:45:50.960 --> 00:45:53.960]   i a partir d'aquí, tant els seus programes,
+[00:45:53.960 --> 00:45:55.960]   com llavors l'àmbit de privats,
+[00:45:55.960 --> 00:46:00.960]   quins protocols fessin servir per extreure aquestes dades.
+[00:46:00.960 --> 00:46:04.960]   Això ho hauria de marcar almenys l'administració,
+[00:46:04.960 --> 00:46:08.960]   i dins l'administració el poder l'hauria d'encarregar l'universitat,
+[00:46:08.960 --> 00:46:11.960]   que és qui realment entén d'aquestes coses,
+[00:46:11.960 --> 00:46:16.960]   de fer un protocol, ja sigui de medicaments, d'alimentació,
+[00:46:16.960 --> 00:46:19.960]   un protocol que ens ho puguem entendre tots,
+[00:46:19.960 --> 00:46:20.960]   que hi hagi idioma.
+[00:46:20.960 --> 00:46:23.960]   A partir d'aquí, després que surtin iniciatives privades
+[00:46:23.960 --> 00:46:25.960]   i facin un programa d'una manera o d'una altra,
+[00:46:25.960 --> 00:46:28.960]   que a una persona li pugui agradar més la pantalla
+[00:46:28.960 --> 00:46:30.960]   d'una manera o d'una altra,
+[00:46:30.960 --> 00:46:32.960]   llavors cadascú que triï.
+[00:46:32.960 --> 00:46:36.960]   Però, al darrera, jo crec que el protocol estàndard,
+[00:46:36.960 --> 00:46:38.960]   això l'hauria de marcar l'administració
+[00:46:38.960 --> 00:46:40.960]   amb l'ajuda de l'universitat.
+[00:46:51.960 --> 00:46:53.960]   Ho dic perquè jo m'hi he trobat,
+[00:46:53.960 --> 00:46:55.960]   perquè al ser informàtic,
+[00:46:55.960 --> 00:47:00.960]   jo vaig provar, per exemple, alguna cosa de sensors,
+[00:47:00.960 --> 00:47:02.960]   al principi tenia temps, ara no tinc temps,
+[00:47:02.960 --> 00:47:06.960]   però vaig intentar poder llegir les dades
+[00:47:06.960 --> 00:47:08.960]   per poder fer un programa,
+[00:47:08.960 --> 00:47:12.960]   i es clar, se't costa molt que l'empresa privada
+[00:47:12.960 --> 00:47:14.960]   doni el protocol que faig servir.
+[00:47:14.960 --> 00:47:15.960]   Això és el primer.
+[00:47:15.960 --> 00:47:18.960]   El següent, de llegir, diguéssim, el valor aquell,
+[00:47:18.960 --> 00:47:21.960]   que et diguin exactament què transmet,
+[00:47:21.960 --> 00:47:24.960]   hòstia, costa moltíssim.
+[00:47:24.960 --> 00:47:26.960]   Per exemple, quan havia treballat d'informàtic,
+[00:47:26.960 --> 00:47:27.960]   va ser es clar, era diferent,
+[00:47:27.960 --> 00:47:28.960]   perquè treballàvem per les empreses.
+[00:47:28.960 --> 00:47:29.960]   Llavors, què passa?
+[00:47:29.960 --> 00:47:31.960]   Les empreses, amb tots els sensors que tenien,
+[00:47:31.960 --> 00:47:33.960]   ells ens deien, directament,
+[00:47:33.960 --> 00:47:36.960]   cada paquet que transmet,
+[00:47:36.960 --> 00:47:39.960]   què volia dir cada dígit.
+[00:47:39.960 --> 00:47:41.960]   A partir de llavors, fèiem molts programes,
+[00:47:41.960 --> 00:47:44.960]   fèiem fins i tot programes de bàscula d'escorxador,
+[00:47:44.960 --> 00:47:47.960]   ho havia fet jo, coses d'aquestes, es clar.
+[00:47:47.960 --> 00:47:50.960]   Llavors, sí, el privat que et deia directament
+[00:47:50.960 --> 00:47:52.960]   com que a ell li convenia, t'ho deia.
+[00:47:52.960 --> 00:47:54.960]   Es clar, ara jo el vaig trucar amb algú
+[00:47:54.960 --> 00:47:56.960]   amb un sensor de temperatura de la granja
+[00:47:56.960 --> 00:47:59.960]   i per començar em deien que no ho sabien.
+[00:47:59.960 --> 00:48:01.960]   Com que pot ser que no ho sapigueu,
+[00:48:01.960 --> 00:48:02.960]   si sou de la casa de Rotecna,
+[00:48:02.960 --> 00:48:04.960]   bé, ho heu de saber.
+[00:48:04.960 --> 00:48:08.960]   Jo vaig prendre el que no m'ho volien dir directament,
+[00:48:08.960 --> 00:48:10.960]   perquè suposo que llavors potser jo puc fer un programa,
+[00:48:10.960 --> 00:48:12.960]   que em puc dedicar a vendre'l,
+[00:48:12.960 --> 00:48:17.960]   amb els seus clients, que suposo que ja hi juga coses d'aquestes.
+[00:48:17.960 --> 00:48:20.960]   Per això dic que el tema sí que no es pot deixar en mans privades,
+[00:48:20.960 --> 00:48:22.960]   sinó que ha de ser l'administració
+[00:48:22.960 --> 00:48:26.960]   que hauria de fer un protocol estàndard.
+-.Pregunta 6.12.-
+[00:48:49.960 --> 00:48:55.960]   M'ho ha explicat més o menys.
+[00:48:55.960 --> 00:48:58.960]   Per exemple, tinc un noi que es dedica a això,
+[00:48:58.960 --> 00:49:00.960]   que va fer un programa informàtic
+[00:49:00.960 --> 00:49:02.960]   que lliga el tema de la comptabilitat
+[00:49:02.960 --> 00:49:04.960]   amb el tema de la producció.
+[00:49:04.960 --> 00:49:06.960]   Llavors genera uns informes
+[00:49:06.960 --> 00:49:08.960]   i llavors ens assentem dos cops l'any
+[00:49:08.960 --> 00:49:12.960]   i sí que m'ho explica.
+[00:49:12.960 --> 00:49:15.960]   M'explica com ha fet l'enllaç aquest,
+[00:49:15.960 --> 00:49:17.960]   el que ell veu,
+[00:49:17.960 --> 00:49:20.960]   llavors valorem si hi ha coses a canvi,
+[00:49:20.960 --> 00:49:23.960]   anem bé o com funciona la cosa.

@@ -1,0 +1,358 @@
+-.Pregunta 1.1.-
+[00:02:19.000 --> 00:02:27.000]   Nosaltres criem i engreixem Garrí, i el venem i el comencem a utilitzar al escorxador.
+-.Pregunta 1.2.-
+[00:02:33.000 --> 00:02:39.000]   Ostres, jo des que em vaig iniciar laboralment, 32 anys. Sí, sí, fa molt temps.
+-.Pregunta 1.3.-
+[00:02:49.000 --> 00:03:03.000]   Nosaltres tenim una petita empresa, és una petita empresa agrària familiar, que estem el meu pare, el meu germà i jo, i anem fent.
+[00:03:03.000 --> 00:03:11.000]   Des de sempre hem fet el mateix, combinant això una mica amb la pagesia, ara ja ens dediquem 100% a la ramaderia,
+[00:03:11.000 --> 00:03:20.000]   i la pagesia, diguéssim, l'anem aparcant perquè no teníem temps, i en un moment d'aquí estem aguantant.
+-.Pregunta 2.1.-
+[00:03:34.000 --> 00:03:44.000]   Bé, sí, fins no fa massa. Aquí la granja tenia la DSL, ara no sé per què no fa dies que no ens l'estan reparant.
+[00:03:44.000 --> 00:03:52.000]   Em van comentar que hi ha hagut mòdems aquests que s'havien de ficar en una targeta com de mòbil, amb dades il·limitades.
+[00:03:52.000 --> 00:04:07.000]   I a l'altra part no hi tenim internet. Tot i així hi ha dispositius de les alarmes que sí que funcionen amb targetes de telèfon i que ens truquen.
+-.Pregunta 2.2.-
+[00:04:16.000 --> 00:04:24.000]   Doncs, internet més que res pel tema de vigilància de les càmeres de seguretat, que això sí que ho tenim comptat aquí.
+[00:04:24.000 --> 00:04:31.000]   Ara actualment no ens funciona, i et dic perquè no sé per què no ens ho arreglen, però teníem l'internet per això.
+[00:04:31.000 --> 00:04:43.000]   I, d'altra banda, sí que funcionava amb aquesta targeta SIM, que tenim inclosa dins de l'alarma, i llavors per aquella cobertura ens enviaven les imatges.
+[00:04:43.000 --> 00:04:51.000]   Però no és l'operativa per treballar amb ordinador, només és diguéssim de xarxa o imatges.
+-.Pregunta 2.3a.-
+[00:04:58.000 --> 00:05:08.000]   Jo crec que anem cap aquí, que les coses han de ser cap aquí, interconnectades contínuament.
+-.Pregunta 2.3b.-
+[00:05:17.000 --> 00:05:25.000]   Bé, jo crec que moltes vegades la gent és per desconeixement, perquè desconeixem les aplicacions que té,
+[00:05:25.000 --> 00:05:35.000]   desconeixem les solucions que et dona, desconeixem on anar a llogar o què llogar, quin equipament fa falta, entens el que et vull dir?
+[00:05:35.000 --> 00:05:38.000]   Jo crec que sí, jo crec que és això.
+-.Pregunta 3.1a.-
+[00:05:54.000 --> 00:06:04.000]   Bé, no. Digitalitzada en l'aspecte de poder treballar de forma digital des d'un lloc sentat, no.
+[00:06:04.000 --> 00:06:06.000]   Has de vindre físicament a treballar, no.
+[00:06:06.000 --> 00:06:15.000]   O sigui, podem tindre mesures de control digitalitzades, això sí, que ens avisin d'alarmes d'ambients,
+[00:06:15.000 --> 00:06:21.000]   les alarmes de falta d'energia, una sèrie d'alarmes que sí que és tot, això pot estar digitalitzat,
+[00:06:21.000 --> 00:06:25.000]   però la nostra empresa no.
+[00:06:25.000 --> 00:06:33.000]   Hi ha equipaments, hi ha granges que sí que tenen digitalitzades els menjadors,
+[00:06:33.000 --> 00:06:39.000]   hi ha una manera de donar menjar que és digital, tu pots controlar els grams que dones de menjar i tot això,
+[00:06:39.000 --> 00:06:43.000]   hi ha granges que ho tenen, això sí. Nosaltres no ho tenim.
+-.Pregunta 3.1b.-
+[00:06:53.000 --> 00:07:00.000]   El que et dic jo, a més que res, mesures de seguretat i de control, diguéssim, de manca d'energia, no?
+[00:07:00.000 --> 00:07:09.000]   És el que més desastre et pot parar, no? És una mesura de seguretat.
+[00:07:17.000 --> 00:07:22.000]   Bueno, clar. Per exemple, si em pensava que et preguntaves si és digitalitzat, sí.
+[00:07:22.000 --> 00:07:26.000]   Nosaltres tenim els ordinadors, la granja te el seu programa,
+[00:07:26.000 --> 00:07:29.000]   on entrem totes les dades de producció,
+[00:07:29.000 --> 00:07:36.000]   després, evidentment, tenim el tema de la traçabilitat, el tema dels consums de pinsos i tot això,
+[00:07:36.000 --> 00:07:39.000]   això ho tenim digitalitzat, sí.
+-.Pregunta 3.2.-
+[00:07:51.000 --> 00:07:59.000]   Ostres... No ho sé, perquè sempre... La veritat és que no ho sé, eh?
+[00:07:59.000 --> 00:08:04.000]   I et dic, moltes vegades és perquè no coneixem bé les solucions que poden arribar a donar,
+[00:08:04.000 --> 00:08:09.000]   i jo tampoc no sé... Has de buscar una mica l'equilibri,
+[00:08:09.000 --> 00:08:16.000]   el que és en bestiar, has de buscar una mica l'equilibri entre anar, diguéssim, digitalitzat o automatitzat,
+[00:08:16.000 --> 00:08:21.000]   i després ser una cosa que ho puguis vetllar manualment,
+[00:08:21.000 --> 00:08:26.000]   perquè, si no, moltes vegades donem tota la plena confiança a l'automàtic o a la digital,
+[00:08:26.000 --> 00:08:30.000]   i llavors quan falla, no ho veu ningú.
+[00:08:30.000 --> 00:08:35.000]   I això passa. Ja s'ha de vigilar molt.
+[00:08:35.000 --> 00:08:40.000]   Però bueno, jo ja et dic, jo desconec, o sigui, no desconec, no tinc cap inquietud.
+[00:08:40.000 --> 00:08:46.000]   A mesura que van sortint coses, em vas assabentant, i quan prens la decisió, la prens i ja està.
+[00:08:46.000 --> 00:08:50.000]   Però jo, puc dir... No ho sé.
+[00:08:50.000 --> 00:08:56.000]   Per exemple, hi ha granges que diuen que tenen sensors que detecten
+[00:08:56.000 --> 00:09:01.000]   que els porcs poden tindre una malaltia, o no.
+[00:09:01.000 --> 00:09:06.000]   No sé, pel volum de tos que tenen, o pel volum d'aigua que beuen, o...
+[00:09:06.000 --> 00:09:12.000]   Entens? I això... Ja tenen una sèrie de coses digitals, una sèrie de sensors digitals,
+[00:09:12.000 --> 00:09:17.000]   que aquests ajuden a prevenir, però clar, nosaltres no ho tenim.
+[00:09:17.000 --> 00:09:20.000]   Això no ho he valorat. No ho he valorat.
+-.Pregunta 3.3a.-
+[00:09:32.000 --> 00:09:35.000]   La digitalització el que fa és les dades.
+[00:09:35.000 --> 00:09:37.000]   El que fa és donar moltes dades.
+[00:09:37.000 --> 00:09:40.000]   Aquí l'anàlisi de costos és important.
+[00:09:40.000 --> 00:09:44.000]   Perquè pots... anem per aquí.
+[00:09:45.000 --> 00:09:46.000]   Més que res, eh.
+-.Pregunta 3.3b.-
+[00:10:08.000 --> 00:10:19.000]   Al final, el que a vegades et porta a prendre la decisió és veure realment
+[00:10:19.000 --> 00:10:25.000]   que trobes una eficiència o un efecte immediat.
+[00:10:25.000 --> 00:10:29.000]   Que dius "Ostres, no, no, això va bé, fent això s'ha de fer això,
+[00:10:29.000 --> 00:10:32.000]   perquè ho controlem allò, dius, doncs ho fem".
+[00:10:32.000 --> 00:10:35.000]   I moltes vegades depèn de la inversió que has de fer,
+[00:10:35.000 --> 00:10:38.000]   moltes vegades depèn una mica...
+[00:10:38.000 --> 00:10:42.000]   Però bueno, cada vegada està més control de tot, cada vegada...
+[00:10:42.000 --> 00:10:46.000]   Cada vegada es va més cap aquí, també, reconeixent que són...
+[00:10:46.000 --> 00:10:51.000]   que pensa que això és ramaderia, vull dir...
+[00:10:51.000 --> 00:10:57.000]   O sigui, no... clar, són éssers vius que, doncs, a vegades, dos i dos no són quatre.
+[00:10:57.000 --> 00:10:58.000]   Sí.
+[00:10:58.000 --> 00:11:01.000]   Vull dir, és complicat.
+[00:11:10.000 --> 00:11:12.000]   Dius "Ostres, estan bé".
+[00:11:12.000 --> 00:11:14.000]   No, demà no n'estan bé.
+[00:11:14.000 --> 00:11:18.000]   Avui, carai, avui estic molt bé, no sé què, demà no tinc aigua.
+[00:11:18.000 --> 00:11:20.000]   Hòstia, corre. Vull dir, m'entens?
+[00:11:20.000 --> 00:11:21.000]   Sí.
+[00:11:21.000 --> 00:11:25.000]   Perquè hi ha coses que, evidentment, que ho fan fàcil,
+[00:11:25.000 --> 00:11:28.000]   però, per exemple, un exemple que te l'acabo de dir ara,
+[00:11:28.000 --> 00:11:32.000]   un detector, un sensor que et digui quan el dipòsit no tens aigua.
+[00:11:32.000 --> 00:11:35.000]   Hòstia, què et dic amb aigua, no?
+[00:11:35.000 --> 00:11:39.000]   O que la alarma típica que té tothom, que això és per llei,
+[00:11:39.000 --> 00:11:41.000]   que necessites tindre un generador.
+[00:11:41.000 --> 00:11:45.000]   Doncs, potser la llum s'engega al generador i és per llei,
+[00:11:45.000 --> 00:11:46.000]   doncs fantàstic, no?
+[00:11:47.000 --> 00:11:49.000]   Vindria que les connexions funcionin, però tot això
+[00:11:49.000 --> 00:11:52.000]   són prevenen coses que tu, doncs,
+[00:11:52.000 --> 00:11:55.000]   no tens la capacitat de poder-ho fer tot.
+[00:11:55.000 --> 00:11:56.000]   Molt clar.
+[00:11:56.000 --> 00:11:58.000]   O sigui, com..
+-.Pregunta 3.4.-
+[00:12:09.000 --> 00:12:13.000]   No, no, nosaltres tenim un...
+[00:12:13.000 --> 00:12:17.000]   diguéssim, veterinari, com es diu, un consultor,
+[00:12:17.000 --> 00:12:20.000]   un consultor de veterinaris de camp,
+[00:12:20.000 --> 00:12:22.000]   que són els que ens arreglen les malalties
+[00:12:22.000 --> 00:12:26.000]   o són els que orienten en el tema debilitacions i tal.
+[00:12:26.000 --> 00:12:29.000]   I després hi ha els consultors, que és més a nivell d'empresa,
+[00:12:29.000 --> 00:12:32.000]   que fan les direccions comercials,
+[00:12:32.000 --> 00:12:35.000]   quines són les novetats que hi ha al mercat,
+[00:12:35.000 --> 00:12:38.000]   les coses que van sortint, i bueno,
+[00:12:38.000 --> 00:12:41.000]   i després, per exemple, tenim aquesta plataforma,
+[00:12:41.000 --> 00:12:44.000]   que és el SIB, consultors, que nosaltres,
+[00:12:44.000 --> 00:12:47.000]   doncs, ens reorientes en el tema de costos,
+[00:12:47.000 --> 00:12:51.000]   vull dir, aquestes eines juguen amb les que més hi ha.
+-.Pregunta 4.1.-
+[00:13:06.000 --> 00:13:09.000]   Bueno, nosaltres tenim comptadors d'aigua, evidentment,
+[00:13:09.000 --> 00:13:14.000]   a totes les naus, per saber els consums que tenim.
+[00:13:14.000 --> 00:13:17.000]   Hi tenim els controls de temperatura,
+[00:13:17.000 --> 00:13:19.000]   amb comptes de temperatura,
+[00:13:19.000 --> 00:13:22.000]   amb reguladors d'ambient,
+[00:13:22.000 --> 00:13:25.000]   que regulen les ventilacions i les calefaccions.
+[00:13:25.000 --> 00:13:30.000]   Després, el tema de pinsos,
+[00:13:30.000 --> 00:13:36.000]   tenim acotats uns protocols molt ben acotats,
+[00:13:36.000 --> 00:13:39.000]   on nosaltres, quan els porcs van bé,
+[00:13:39.000 --> 00:13:42.000]   es mengen el que hem de menjar, i quan no van bé, no.
+[00:13:42.000 --> 00:13:48.000]   Tothom més o menys sap el peu que es calça,
+[00:13:48.000 --> 00:13:51.000]   i ho tens molt ben acotat,
+[00:13:51.000 --> 00:13:54.000]   i ja veus que quan les coses es desmarquen,
+[00:13:54.000 --> 00:13:56.000]   és per alguna causa, alguna malaltia,
+[00:13:56.000 --> 00:13:59.000]   o algun accident que també passa.
+-.Pregunta 4.2.-
+[00:14:08.000 --> 00:14:12.000]   Sí, sí.
+[00:14:12.000 --> 00:14:16.000]   És monitorització regular del dia a dia.
+[00:14:16.000 --> 00:14:19.000]   Això treballa permanentment.
+[00:14:19.000 --> 00:14:22.000]   Està constantment treballant i regulant les dades.
+[00:14:22.000 --> 00:14:24.000]   I ja està.
+[00:14:24.000 --> 00:14:27.000]   Nosaltres no intervenim aquí.
+[00:14:27.000 --> 00:14:30.000]   Els reguladors de temperatura,
+[00:14:30.000 --> 00:14:34.000]   el dia que entren els garrins,
+[00:14:34.000 --> 00:14:37.000]   a la nau el dia que volem,
+[00:14:37.000 --> 00:14:40.000]   i el dia tal, el dia 45, el dia 50,
+[00:14:40.000 --> 00:14:42.000]   que estan allà, volem que tinguin aquesta temperatura,
+[00:14:42.000 --> 00:14:44.000]   i ells fan les corbes.
+[00:14:44.000 --> 00:14:47.000]   Vull dir, no és una cosa que la vagin canviant.
+[00:14:47.000 --> 00:14:49.000]   I a altres, què et donen?
+[00:14:49.000 --> 00:14:51.000]   Et donen la temperatura, per exemple,
+[00:14:51.000 --> 00:14:54.000]   la mínima de la sala, la màxima de la sala,
+[00:14:54.000 --> 00:14:59.000]   però tampoc funciona i no estàs bé.
+[00:15:05.000 --> 00:15:07.000]   No, no, no.
+-.Pregunta 5.1.-
+[00:15:24.000 --> 00:15:28.000]   El canvi més recent,
+[00:15:28.000 --> 00:15:32.000]   hem incorporat les plaques d'autoconsum a la granja,
+[00:15:32.000 --> 00:15:35.000]   pel tema de consums i costos d'energia,
+[00:15:35.000 --> 00:15:40.000]   un canvi digital,
+[00:15:40.000 --> 00:15:43.000]   evidentment els programes de gestió,
+[00:15:43.000 --> 00:15:48.000]   però jo diria que tampoc no estàs permanentment
+[00:15:48.000 --> 00:15:50.000]   canviant les coses.
+[00:15:50.000 --> 00:15:52.000]   No, no, no.
+[00:15:52.000 --> 00:15:57.000]   No sé com explicar-me en aquest aspecte,
+[00:15:57.000 --> 00:16:00.000]   però no sé què dir-te.
+[00:16:00.000 --> 00:16:03.000]   No sé què dir-te.
+[00:16:03.000 --> 00:16:06.000]   Quan es fan les granges,
+[00:16:06.000 --> 00:16:09.000]   ara sí que vam muntar
+[00:16:09.000 --> 00:16:12.000]   aquestes plaques de fotovoltaiques pel tema de consum
+[00:16:12.000 --> 00:16:15.000]   i perquè vam refrigerar uns engreixos.
+[00:16:15.000 --> 00:16:18.000]   I ja està.
+[00:16:18.000 --> 00:16:21.000]   Vam haver de canviar els reguladors i tot això.
+[00:16:21.000 --> 00:16:24.000]   És un tema digital i que ajuda.
+[00:16:24.000 --> 00:16:27.000]   No està interconnectat.
+[00:16:27.000 --> 00:16:30.000]   Entenc que el digital va connectat a internet.
+[00:16:42.000 --> 00:16:44.000]   No, no.
+[00:16:44.000 --> 00:16:47.000]   L'últim canvi que hem tingut
+[00:16:47.000 --> 00:16:51.000]   és la monitorització de les produccions de fotovoltaiques
+[00:16:51.000 --> 00:16:54.000]   que tenim dels autoconsums.
+-.Pregunta 5.2.-
+[00:17:07.000 --> 00:17:10.000]   De moment, no.
+[00:17:10.000 --> 00:17:13.000]   Però estem oberts a tot.
+[00:17:13.000 --> 00:17:16.000]   Al final les coses que funcionen es van posant.
+[00:17:16.000 --> 00:17:19.000]   Arriba i tot va bé.
+[00:17:19.000 --> 00:17:22.000]   I el que no està bé és que no es pugui utilitzar.
+-.Pregunta 5.3.-
+[00:17:28.000 --> 00:17:31.000]   No.
+[00:17:31.000 --> 00:17:34.000]   També et dic que ho desconec.
+[00:17:34.000 --> 00:17:37.000]   Segurament que n'hi ha...
+[00:17:37.000 --> 00:17:40.000]   Em puc treure una.
+[00:17:40.000 --> 00:17:43.000]   Era un sensor
+[00:17:43.000 --> 00:17:46.000]   que en funció del nivell de tos que tinguin els porcs
+[00:17:46.000 --> 00:17:49.000]   dins de la nau,
+[00:17:49.000 --> 00:17:52.000]   el consum d'aigua,
+[00:17:52.000 --> 00:17:55.000]   prevenim la malaltia.
+[00:17:55.000 --> 00:17:58.000]   I t'avisen que els has de medicar.
+[00:17:58.000 --> 00:18:01.000]   I això és intel·ligència artificial.
+[00:18:01.000 --> 00:18:04.000]   I hi ha gent que...
+[00:18:04.000 --> 00:18:07.000]   Que funciona.
+[00:18:07.000 --> 00:18:10.000]   Però aquí no en conec gaire.
+[00:18:13.000 --> 00:18:16.000]   Sí.
+-.Pregunta 6.1.-
+[00:18:46.000 --> 00:18:49.000]   Jo crec que va tot lligat.
+[00:18:49.000 --> 00:18:52.000]   Evidentment,
+[00:18:52.000 --> 00:18:55.000]   si és legislatiu,
+[00:18:55.000 --> 00:18:58.000]   perquè la llei t'obliga,
+[00:18:58.000 --> 00:19:01.000]   i després econòmicament...
+[00:19:01.000 --> 00:19:04.000]   Si no pots, no pots.
+[00:19:04.000 --> 00:19:07.000]   Però si pots, t'hi llances.
+[00:19:07.000 --> 00:19:10.000]   Perquè si es tema legislatiu...
+[00:19:10.000 --> 00:19:13.000]   I després hi ha temes productius.
+[00:19:13.000 --> 00:19:16.000]   Per exemple,
+[00:19:16.000 --> 00:19:19.000]   canviar la fase del bestiar.
+[00:19:19.000 --> 00:19:22.000]   Que no és digitalitzar.
+[00:19:22.000 --> 00:19:25.000]   Però la presa de decisions
+[00:19:25.000 --> 00:19:28.000]   en aquest cas... Per nosaltres moltes vegades va per aquí
+[00:19:28.000 --> 00:19:31.000]   I dius que es produeixen més bé, millor o pitjor...
+[00:19:31.000 --> 00:19:34.000]   o canviem aquests reguladors, o canviem aquests ventiladors
+[00:19:34.000 --> 00:19:37.000]   perquè són més eficients
+[00:19:37.000 --> 00:19:40.000]   i funcionen millor.
+[00:19:40.000 --> 00:19:43.000]   Digitalment,
+[00:19:43.000 --> 00:19:46.000]   els programes de gestió
+[00:19:46.000 --> 00:19:49.000]   es posen al dia.
+[00:19:49.000 --> 00:19:52.000]   Ells sols ho envien.
+[00:19:52.000 --> 00:19:55.000]   Tinc un contracte amb aquesta gent d’Isagri
+[00:19:55.000 --> 00:19:58.000]   i ens ho fan ells.
+-.Pregunta 6.2a.-
+[00:20:01.000 --> 00:20:04.000]   El tema
+[00:20:04.000 --> 00:20:07.000]   és gestionar
+[00:20:07.000 --> 00:20:10.000]   que això no pari i que funcioni.
+[00:20:10.000 --> 00:20:13.000]   És bastant important.
+[00:20:13.000 --> 00:20:16.000]   No cal que la gent
+[00:20:16.000 --> 00:20:19.000]   posi el bestiar
+[00:20:19.000 --> 00:20:22.000]   o que no falli l'equipament.
+[00:20:22.000 --> 00:20:25.000]   La presa de decisions global.
+-.Pregunta 6.3.-
+[00:20:52.000 --> 00:20:55.000]   Automàticament no.
+[00:20:55.000 --> 00:20:58.000]   No.
+[00:20:58.000 --> 00:21:01.000]   No.
+[00:21:01.000 --> 00:21:04.000]   Digitalment...
+[00:21:04.000 --> 00:21:07.000]   Segurament que...
+[00:21:07.000 --> 00:21:10.000]   No.
+[00:21:10.000 --> 00:21:13.000]   Alguna cosa...
+[00:21:13.000 --> 00:21:16.000]   No hi és.
+[00:21:25.000 --> 00:21:28.000]   No ho tinc.
+[00:21:28.000 --> 00:21:31.000]   Se que hi han sensors als silos i tot això.
+[00:21:31.000 --> 00:21:34.000]   Però no ho tinc.
+-.Pregunta 6.4.-
+[00:21:49.000 --> 00:21:52.000]   Com et deia abans,
+[00:21:52.000 --> 00:21:55.000]   la ignorància de la gent
+[00:21:55.000 --> 00:21:58.000]   és una barrera molt important.
+[00:21:58.000 --> 00:22:01.000]   Jo tinc 50 anys.
+[00:22:01.000 --> 00:22:04.000]   Jo soc d'una generació
+[00:22:04.000 --> 00:22:07.000]   que encara estic enganxat.
+[00:22:07.000 --> 00:22:10.000]   Però la gent de 60 i això, tot els hi va molt gran.
+[00:22:10.000 --> 00:22:13.000]   Amb la gent nova de 30 anys,
+[00:22:13.000 --> 00:22:16.000]   tot això segurament es farà efectiu.
+[00:22:16.000 --> 00:22:19.000]   Gent jove i endavant.
+-.Pregunta 6.5a.-
+[00:22:34.000 --> 00:22:37.000]   No, no.
+[00:22:37.000 --> 00:22:40.000]   Evidentment és una cosa consensuada,
+[00:22:40.000 --> 00:22:43.000]   parlada i molt meditada.
+-.Pregunta 6.5c.-
+[00:22:52.000 --> 00:22:55.000]   Les estratègies són més a llarg termini.
+[00:22:55.000 --> 00:22:58.000]   Faig això i no te un efecte immediat.
+[00:22:58.000 --> 00:23:01.000]   I les tàctiques,
+[00:23:01.000 --> 00:23:04.000]   a veure si funciona.
+[00:23:04.000 --> 00:23:07.000]   A vegades prens decisions
+[00:23:07.000 --> 00:23:10.000]   i dius que fem sempre el mateix
+[00:23:10.000 --> 00:23:13.000]   i no funcionen, canviem a veure si funcionem més bé, això es tàctic.
+[00:23:13.000 --> 00:23:16.000]   I després les estratègies,
+[00:23:16.000 --> 00:23:19.000]   valorar el canvi de bestiar, o dius que això fa 
+[00:23:19.000 --> 00:23:22.000]   molts anys que està instal·lat, o renovar-ho tot.
+[00:23:22.000 --> 00:23:25.000]   Tot això és més estratègic.
+[00:23:25.000 --> 00:23:28.000]   Al final,
+[00:23:28.000 --> 00:23:31.000]   les estratègies
+[00:23:31.000 --> 00:23:34.000]   normalment les penses més.
+[00:23:34.000 --> 00:23:37.000]   Les tàctiques són més d'efecte,
+[00:23:37.000 --> 00:23:40.000]   d’acció reacció i ja està.
+-.Pregunta 6.6.-
+[00:23:55.000 --> 00:23:58.000]   Sí,
+[00:23:58.000 --> 00:24:01.000]   tenim aquest programa de gestió
+[00:24:01.000 --> 00:24:04.000]   de la granja de porcina, de la granja de mares
+[00:24:04.000 --> 00:24:07.000]   I en funció d’això moltes vegades...
+[00:24:07.000 --> 00:24:10.000]   veiem coses que tenen un mal funcionament,
+[00:24:10.000 --> 00:24:13.000]   no funcionen correctament
+[00:24:13.000 --> 00:24:16.000]   i a partir d’allà prenem decisions
+[00:24:16.000 --> 00:24:19.000]   bàsicament del programa
+[00:24:19.000 --> 00:24:22.000]   de gestió del bestiar.
+-.Pregunta 6.7.-
+[00:24:25.000 --> 00:24:28.000]   Molts anys.
+[00:24:28.000 --> 00:24:31.000]   Molts anys, 15 anys.
+-.Pregunta 6.8.-
+[00:24:37.000 --> 00:24:40.000]   No.
+[00:24:40.000 --> 00:24:43.000]   Vam provar aquest i la veritat
+[00:24:43.000 --> 00:24:46.000]   és que va ser un tema cooperatiu
+[00:24:46.000 --> 00:24:49.000]   que va sorgir l'opció de poder ser
+[00:24:49.000 --> 00:24:52.000]   molts socis de la cooperativa d'Artesa
+[00:24:52.000 --> 00:24:55.000]   de fer-se amb aquest programa de gestió
+[00:24:55.000 --> 00:24:58.000]   i des d'aquest tema aquí no ens n'hem sortit mai
+[00:24:58.000 --> 00:25:01.000]   perquè ja el coneixes i més o menys tots són el mateix.
+[00:25:01.000 --> 00:25:04.000]   Fan molt més coses que nosaltres
+[00:25:04.000 --> 00:25:07.000]   i el rendiment que li traiem és molt menor
+[00:25:07.000 --> 00:25:10.000]   però n'estem contents i amb això ens guiem.
+-.Pregunta 6.9.-
+[00:25:19.000 --> 00:25:22.000]   Nosaltres hi confiem.
+[00:25:22.000 --> 00:25:25.000]   Evidentment tot necessita la seva interpretació
+[00:25:25.000 --> 00:25:28.000]   i la nostra interpretació.
+[00:25:28.000 --> 00:25:31.000]   I no és que sigui un programa
+[00:25:31.000 --> 00:25:34.000]   que tothom et diu que l'altre ho compta així
+[00:25:34.000 --> 00:25:37.000]   i aquest ho compta així.
+[00:25:37.000 --> 00:25:40.000]   Però no, quan agafes el toc
+[00:25:40.000 --> 00:25:43.000]   els tirs van per allà.
+-.Pregunta 6.10.-
+[00:25:52.000 --> 00:25:55.000]   No, no.
+[00:25:55.000 --> 00:25:58.000]   Més que res t'interessa
+[00:25:58.000 --> 00:26:01.000]   si has sentit parlar d'això
+[00:26:01.000 --> 00:26:04.000]   o t'han comentat això
+[00:26:04.000 --> 00:26:07.000]   i això ho fas perquè això forma part de la vida.
+[00:26:07.000 --> 00:26:10.000]   I sí, comentes coses
+[00:26:10.000 --> 00:26:13.000]   per veure si un fa això o allò amb temes digitals
+[00:26:13.000 --> 00:26:16.000]   o ho portes així o això.
+[00:26:16.000 --> 00:26:19.000]   Però si et convé
+[00:26:19.000 --> 00:26:22.000]   algú t’ho ensenya i tot, no hi ha problema
+-.Pregunta 6.11a.-
+[00:26:37.000 --> 00:26:40.000]   Ostres, no ho sé.
+[00:26:40.000 --> 00:26:43.000]   Perquè el que ja et dic
+[00:26:43.000 --> 00:26:46.000]   nosaltres aquest programa de gestió
+[00:26:46.000 --> 00:26:49.000]   al final
+[00:26:49.000 --> 00:26:52.000]   I no s'aprofita gaire
+[00:26:52.000 --> 00:26:55.000]   el fem anar a molt poca capacitat.
+[00:26:55.000 --> 00:26:58.000]   I donaria moltes més dades de les que dona
+[00:26:58.000 --> 00:27:01.000]   i al final se llegir el que se llegir i ja està.
+[00:27:01.000 --> 00:27:04.000]   M'imagino que sí que hi ha aplicacions
+[00:27:04.000 --> 00:27:07.000]   que ens donen solucions d'alguna cosa
+[00:27:07.000 --> 00:27:10.000]   però la ignorància és gran
+[00:27:10.000 --> 00:27:13.000]   i no arribes a tot.
+[00:27:13.000 --> 00:27:16.000]   I es a dir, no ho saps
+-.Pregunta 6.11b.-
+[00:27:31.000 --> 00:27:34.000]   Sempre tot això
+[00:27:34.000 --> 00:27:37.000]   ha d'estar compaginat entre
+[00:27:37.000 --> 00:27:40.000]   la universitat que està molt bé que feu totes aquestes recerques
+[00:27:40.000 --> 00:27:43.000]   totes aquestes enquestes i tot això que es tracta d’investigar i és el que li fa falta a la gent
+[00:27:43.000 --> 00:27:46.000]   I evidentment part del sector que ha de dir la seva
+[00:27:46.000 --> 00:27:49.000]   Al final
+[00:27:49.000 --> 00:27:52.000]   si ho fan és per alguna cosa.
+[00:27:52.000 --> 00:27:55.000]   Hi ha algú que té la inquietud.
+[00:27:55.000 --> 00:27:58.000]   Jo, per exemple,
+[00:27:58.000 --> 00:28:01.000]   aquí com que tenim Rotecna aquí a la vora
+[00:28:01.000 --> 00:28:04.000]   i n'erem molt bons clients
+[00:28:04.000 --> 00:28:07.000]   i a vegades aneu allà i et diuen
+[00:28:07.000 --> 00:28:10.000]   "però què creus que et faria falta aquí?
+[00:28:10.000 --> 00:28:13.000]   Ja ho tenim investigat i tal
+[00:28:13.000 --> 00:28:16.000]   i d'aquí un any i mig ho trauré".
+[00:28:16.000 --> 00:28:19.000]   Al final són coses que han d'anar en un pas
+[00:28:19.000 --> 00:28:22.000]   per davant del sector.
+[00:28:22.000 --> 00:28:25.000]   Però sí, d'altres ja ho de ser
+[00:28:25.000 --> 00:28:28.000]   com tothom que aporti solució hi ha de ser.
+-.Pregunta 6.12a.-
+[00:28:43.000 --> 00:28:46.000]   No, tenim com a referent el SIP
+[00:28:46.000 --> 00:28:49.000]   i llavors tenim el nostre consultor extern
+[00:28:49.000 --> 00:28:52.000]   que ell passa una vegada més
+[00:28:52.000 --> 00:28:55.000]   i analitzem dades
+[00:28:55.000 --> 00:28:58.000]   i analitzem les malalties
+[00:28:58.000 --> 00:29:01.000]   i analitzem com funciona i cap on anirem
+[00:29:01.000 --> 00:29:04.000]   i cap a on volem anar.
+-.Pregunta 6.12b.-
+[00:29:16.000 --> 00:29:19.000]   Com ho expliquen, sí.

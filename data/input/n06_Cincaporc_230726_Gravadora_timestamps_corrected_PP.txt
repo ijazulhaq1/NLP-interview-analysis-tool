@@ -1,0 +1,514 @@
+
+-.Pregunta 1.1.-
+[00:00:59.000 --> 00:01:03.000]   -Pinsos Montull, que és una empresa holding
+[00:01:03.000 --> 00:01:05.000]   que té diferents empreses,
+[00:01:05.000 --> 00:01:07.000]   i entre la ramaderia té dues empreses,
+[00:01:07.000 --> 00:01:10.000]   una que és Cincaporc, que és una integradora de porcí,
+[00:01:10.000 --> 00:01:12.000]   que es dedica a la fabricació de pinso
+[00:01:12.000 --> 00:01:16.000]   i a la integració vertical de la producció de porcina.
+[00:01:16.000 --> 00:01:19.000]   Després hi ha la producció de ramaderes Estiche,
+[00:01:19.000 --> 00:01:22.000]   que és propietària de part de les granges
+[00:01:22.000 --> 00:01:24.000]   que estan integrades a Cincaporc,
+[00:01:24.000 --> 00:01:26.000]   que són les granges de Truges,
+[00:01:26.000 --> 00:01:29.000]   i més o menys tots els terços de la producció de mamellons
+[00:01:29.000 --> 00:01:32.000]   a feina pròpia, hi ha unes 200 persones treballant a Estiche.
+[00:01:32.000 --> 00:01:35.000]   Llavors tenim les dues empreses que depenen de Pinso Montull.
+-.Pregunta 1.2.-
+[00:01:38.000 --> 00:01:44.000]   -De l'any... més o menys del 80 al 70, no, 80, doncs sí, més o menys.
+-.Pregunta 1.3a.-
+[00:01:51.000 --> 00:01:54.000]   -A Truges avui en tenim en producció 60.000,
+[00:01:54.000 --> 00:01:59.000]   que més o menys unes 36.000-37.000 estan en granges pròpies
+[00:01:59.000 --> 00:02:02.000]   i la resta ho hem comptat en integració.
+[00:02:02.000 --> 00:02:08.000]   Tenim unes 820.000 places d'engreix i els deslletament associats.
+-.Pregunta 1.3b.-
+[00:02:15.000 --> 00:02:19.000]   -Tenim participació en algunes granges d'algú integrat,
+[00:02:19.000 --> 00:02:22.000]   a través d'Estiche.
+-.Pregunta 2.1.-
+[00:02:29.000 --> 00:02:32.000]   -A les granges pròpies tenim internet
+[00:02:32.000 --> 00:02:35.000]   i als edificis que són de Cincaporc tenim internet.
+[00:02:35.000 --> 00:02:39.000]   Llavors, cada integrat després cadascú fa el que ha de fer.
+-.Pregunta 2.2a.-
+[00:02:44.000 --> 00:02:47.000]   -A Cincaporc o a Estiche.
+[00:02:47.000 --> 00:02:52.000]   -A Cincaporc utilitzem internet personal.
+[00:02:52.000 --> 00:02:57.000]   De les estandards d'una empresa normal, comptabilitat.
+[00:03:00.000 --> 00:03:04.000]   -L'ERP, el programa que gestiona l'empresa, tenim al núvol.
+[00:03:04.000 --> 00:03:07.000]   Llavors, internet per a la gestió de l'empresa,
+[00:03:07.000 --> 00:03:10.000]   després per a la comunicació amb tots els clients
+[00:03:10.000 --> 00:03:13.000]   i després, el que estem fent és una aplicació propia
+[00:03:13.000 --> 00:03:17.000]   per millorar la relació entre l'integrat i Cincaporc.
+[00:03:17.000 --> 00:03:20.000]   Per ara, aquesta aplicació el que pot fer és el veterinari,
+[00:03:20.000 --> 00:03:23.000]   pot fer els informes de visita de la granja
+[00:03:23.000 --> 00:03:28.000]   i el granger, per ara, pot anotar quan un animal és mort
+[00:03:28.000 --> 00:03:30.000]   i demanar el pinso.
+[00:03:30.000 --> 00:03:33.000]   I la idea és que a poc a poc aquesta aplicació pot fer més coses.
+[00:03:37.000 --> 00:03:42.000]   -Està connectat. No és de l'ERP però està connectat per agafar informació.
+[00:03:44.000 --> 00:03:48.000]   -Sí, l'ERP l'estem canviant. Avui tenim un ERP però ja hem contractat un altre ERP
+[00:03:48.000 --> 00:03:52.000]   que teòricament a final d'any estarà operatiu. Llavors està vinculat.
+[00:03:52.000 --> 00:03:56.000]   Perquè l'ERP, aquesta opció, com que el que nosaltres fem és una cosa
+[00:03:56.000 --> 00:03:59.000]   bastant poc estàndard, doncs no ho tenim que fer a mida.
+[00:03:59.000 --> 00:04:02.000]   Llavors, ho fem amb una pàgina web
+[00:04:02.000 --> 00:04:05.000]   que hi està la manera de comunicar-nos amb l'integrat
+[00:04:05.000 --> 00:04:07.000]   i que tinguem més informació.
+[00:04:07.000 --> 00:04:09.000]   I la idea és que cada vegada, anar creixin aquí,
+[00:04:09.000 --> 00:04:10.000]   donant servei a l’integrat.
+[00:04:12.000 --> 00:04:16.000]   -L'ERP avui en tenim un de Econ, es diu, que tenim ara,
+[00:04:16.000 --> 00:04:20.000]   i ara instal·larem el de Microsoft, que es diu, abans es deia Navision.
+[00:04:21.000 --> 00:04:23.000]   -Dynamics, dynamics 365.
+[00:04:23.000 --> 00:04:24.000]   -Sí.
+[00:04:24.000 --> 00:04:26.000]   -Té bastantes empreses del sector que té.
+-.Pregunta 2.2b.-
+[00:04:32.000 --> 00:04:36.000]   -Per exemple, cada perfil de gent té una eina diferent.
+[00:04:36.000 --> 00:04:41.000]   Els visitadors o vacunadors solen tenir un telèfon mòbil
+[00:04:41.000 --> 00:04:44.000]   i els veterinaris o els enginyers tenen mòbil i portàtil.
+[00:04:44.000 --> 00:04:47.000]   Com he dit abans, nosaltres aquí no tenim lloc de feina,
+[00:04:47.000 --> 00:04:50.000]   vull dir, cadascú té un mòbil portàtil i ha d'anar a l'espai.
+-.Pregunta 2.3a.-
+[00:04:56.000 --> 00:04:57.000]   -Això és...
+[00:04:59.000 --> 00:05:03.000]   -Sí, bueno, això ho necessitem ja, no en un futur.
+[00:05:11.000 --> 00:05:14.000]   -No, nosaltres sí que veiem que encara no ho tenim bé,
+[00:05:14.000 --> 00:05:16.000]   però altres empreses del sector ho tenen
+[00:05:16.000 --> 00:05:19.000]   i nosaltres encara no ho tenim bé i no hi ha cap producte
+[00:05:19.000 --> 00:05:22.000]   estàndard en el mercat que estigui per la informació que està
+[00:05:22.000 --> 00:05:25.000]   dintre l'empresa, que ho tingués el ramader, el veterinari,
+[00:05:25.000 --> 00:05:27.000]   el visitador, informes de visita,
+[00:05:27.000 --> 00:05:30.000]   anotar la diferent informació que necessita una granja
+[00:05:30.000 --> 00:05:35.000]   per als consums d'aigua, de matèria prima, de medicaments...
+[00:05:35.000 --> 00:05:37.000]   que estigui tot allà.
+[00:05:37.000 --> 00:05:39.000]   Avui ho tenim, en diverses aplicacions.
+[00:05:39.000 --> 00:05:42.000]   Tenim una aplicació pel tema de les receptes i seguiment
+[00:05:42.000 --> 00:05:46.000]   dels medicaments, que aquesta sí que és l'estàndard
+[00:05:46.000 --> 00:05:49.000]   pel sector d'Espanya, per a les receptes.
+[00:05:49.000 --> 00:05:52.000]   I després també hi ha un programa per a gestió de granges de truges,
+[00:05:52.000 --> 00:05:57.000]   que a poc a poc aquest programa, que és el de Agritec,
+[00:05:57.000 --> 00:06:00.000]   estem fent que la gent la facin anar pel mòbil també.
+[00:06:00.000 --> 00:06:03.000]   Quan hi ha un event a la granja, no ho apunten en paper
+[00:06:03.000 --> 00:06:05.000]   i venen a l'ordinador, sinó directament al mòbil,
+[00:06:05.000 --> 00:06:10.000]   fiquen un part, una cubrició, pel que sigui, ja s’anota en el moment...
+-.Pregunta 3.1.-
+
+[00:06:28.000 --> 00:06:31.000]   Estem en un procés de transformació digital.
+[00:06:31.000 --> 00:06:34.000]   Des de gerència, fa uns anys, es va decidir prendre un camí,
+[00:06:34.000 --> 00:06:37.000]   van contractar una empresa d'assessoria
+[00:06:37.000 --> 00:06:40.000]   i aquesta empresa ha fet un camí per a nosaltres.
+[00:06:40.000 --> 00:06:42.000]   El primer pas era canviar l'ERP,
+[00:06:42.000 --> 00:06:45.000]   perquè estava obsolet pel el que volien fer,
+[00:06:45.000 --> 00:06:48.000]   però hi ha una sèrie d'aplicacions noves,
+[00:06:48.000 --> 00:06:53.000]   que des de fa gairebé un any, per la manera de comunicar-nos dins de l'empresa
+[00:06:53.000 --> 00:06:57.000]   i de com establir tares i fer seguiments i calendaris,
+[00:06:57.000 --> 00:07:01.000]   fem a través de la plataforma de Teams de Microsoft
+[00:07:01.000 --> 00:07:04.000]   i a poc a poc anem en aquest camí,
+[00:07:04.000 --> 00:07:07.000]   informant la gent, buscant apps noves.
+[00:07:07.000 --> 00:07:11.000]   Ara estem amb aquesta gent que també ha de ficar ¿gemaos?
+[00:07:11.000 --> 00:07:13.000]   pel tema del manteniment.
+[00:07:13.000 --> 00:07:16.000]   Estem en un procés de digitalització que teòricament,
+[00:07:16.000 --> 00:07:19.000]   a mitjà de l'any que ve, l'empresa ha de ser bastant diferent
+[00:07:19.000 --> 00:07:21.000]   de com era fa un any.
+[00:07:21.000 --> 00:07:23.000]   Anem a poc a poc, cadascú a seu ritme,
+[00:07:23.000 --> 00:07:26.000]   ara anem tots a l’hora, però anem cap allí.
+-.Pregunta 3.2.-
+[00:07:32.000 --> 00:07:37.000]   Hi ha una cosa que Antonio, el Gerent té molt d'interès en fer
+[00:07:37.000 --> 00:07:39.000]   i encara no hem aconseguit fer,
+[00:07:39.000 --> 00:07:42.000]   és, dins de les feines que hi ha dins d'una granja,
+[00:07:42.000 --> 00:07:44.000]   quines es poden tecnificar.
+[00:07:44.000 --> 00:07:48.000]   Amb Antonio estem invertint diners en poder,
+[00:07:48.000 --> 00:07:53.000]   que amb un mòbil es pugui tenir una predicció de pesos dels porcs
+[00:07:53.000 --> 00:07:56.000]   per poder fer millors cargues a escorxador
+[00:07:56.000 --> 00:08:00.000]   i després, amb aquesta informació o sense aquesta informació,
+[00:08:00.000 --> 00:08:02.000]   fer millor la previsió de ventes.
+[00:08:02.000 --> 00:08:07.000]   Que una aplicació ens pugui predir on tindrem els porcs que carregar
+[00:08:07.000 --> 00:08:11.000]   i que puguem ajudar-los per la venda i el transport,
+[00:08:11.000 --> 00:08:16.000]   organitzar el transport tant de matèria prima com de pinso,
+[00:08:16.000 --> 00:08:19.000]   com de porcs, esclar, tot manual.
+[00:08:19.000 --> 00:08:24.000]   Això ho hem mirat en alguna aplicació però encara no hem trobat res que funcioni.
+[00:08:24.000 --> 00:08:28.000]   Són aspectes que són molt específics del sector nostre
+[00:08:28.000 --> 00:08:31.000]   i avui no hi ha unes solucions tan de la mercat.
+[00:08:31.000 --> 00:08:36.000]   Quins són els principals avantatges que trobeu a la digitalització?
+[00:08:36.000 --> 00:08:44.000]   Els avantatges de la digitalització, el primer és fer la feina més fàcil i millor.
+[00:08:44.000 --> 00:08:48.000]   Al final, el que automatitza processos és millorar la feina que estem fent,
+[00:08:48.000 --> 00:08:54.000]   en com te comuniques, en com fas la feina i no depèn tant de les persones.
+[00:08:54.000 --> 00:08:59.000]   Les principals dificultats que heu trobat en l'adopció d'aquest tipus d'eines?
+[00:08:59.000 --> 00:09:03.000]   Hi ha coses molt específiques del sector que al mercat no estan.
+[00:09:03.000 --> 00:09:08.000]   I per volum no els mereixen la pena.
+[00:09:08.000 --> 00:09:14.000]   Per exemple, Dynamics és una plataforma estàndard per a comptabilitzar recursos humans.
+[00:09:14.000 --> 00:09:17.000]   Està molt bé, però el que és del sector, per entendre-ho,
+[00:09:17.000 --> 00:09:22.000]   després a part de contractar Dynamics, contractes el vertical que té IFR
+[00:09:22.000 --> 00:09:26.000]   que està pensat pel sector porcí, per la ramaderia en general.
+[00:09:26.000 --> 00:09:33.000]   Parles de lots, parles d'animals, parles de criances, parles de l'idioma nostre.
+[00:09:33.000 --> 00:09:37.000]   L'idioma general hi ha molts programes que et poden valdre,
+[00:09:37.000 --> 00:09:41.000]   però que siguin específicament per la nostra, ha de ser un vertical.
+[00:09:41.000 --> 00:09:45.000]   Amb això hi ha una part que està feta, però falten més coses.
+[00:09:45.000 --> 00:09:52.000]   Com us informeu de les novetats del mercat en referència a les eines digitals que van sortint?
+[00:09:52.000 --> 00:09:57.000]   Hi ha un equip d'IT, però moltes vegades arriben per tercers.
+[00:09:57.000 --> 00:10:01.000]   Que jo sàpiga, no hi ha un canal concret.
+[00:10:01.000 --> 00:10:04.000]   Les coses que són genèriques sí que te les vas entenent una mica,
+[00:10:04.000 --> 00:10:09.000]   però les específiques també per volum, quan la gent te sol vindre a presentar coses.
+[00:10:09.000 --> 00:10:12.000]   Si som unes de les 10 empreses més grans del sector,
+[00:10:12.000 --> 00:10:16.000]   si hi ha algú que fa alguna cosa, si ho vol vendre, agafa el llistat i nos ve a vindre dintre de les 10,
+[00:10:16.000 --> 00:10:18.000]   lo que és maquinària
+[00:10:18.000 --> 00:10:22.000]   i tecnologia específica així i el que més general.
+[00:10:22.000 --> 00:10:24.000]   Quan han fet els processos de digitalització,
+[00:10:24.000 --> 00:10:28.000]   si la seva empresa ha fet entrevistes a tots els treballadors per veure què feien,
+[00:10:28.000 --> 00:10:30.000]   avui esteu fent els processos així,
+[00:10:30.000 --> 00:10:33.000]   es pot fer amb aquestes eines, d'aquesta altra forma,
+[00:10:33.000 --> 00:10:36.000]   es pot fer més ràpid i millor.
+-.Pregunta 3.4.-
+[00:10:40.000 --> 00:10:47.000]   Estem al clúster de Porcí i per ara molta activitat al clúster, des del meu punt de vista, no n'hi ha.
+[00:10:47.000 --> 00:10:49.000]   Sí que han fet alguna cosa amb ells,
+[00:10:49.000 --> 00:10:53.000]   tenim un projecte per exemple per fer un bessó digital d'una granja
+[00:10:53.000 --> 00:10:57.000]   pel tema de manteniments, a veure si això funciona o no funciona,
+[00:10:57.000 --> 00:10:59.000]   que a tres tipus d'indústries està fent.
+[00:11:07.000 --> 00:11:11.000]   Fires, en temes de tecnologia hi ha alguna cosa,
+[00:11:11.000 --> 00:11:14.000]   però no, les fires solen ser més de maquinària.
+[00:11:14.000 --> 00:11:18.000]   Normalment hi ha alguna cosa de tecnologia però poc.
+-.Pregunta 4.1.-
+[00:11:30.000 --> 00:11:35.000]   Hi ha molta diferència a professionalització en les diferents fases de la producció.
+[00:11:35.000 --> 00:11:39.000]   Quan les granges de truges solen estar més o menys digitalitzades
+[00:11:39.000 --> 00:11:42.000]   i cada vegada estem millorant com ho fem,
+[00:11:42.000 --> 00:11:47.000]   quan ve la digitalització, l'empresa no només sol contractar productes,
+[00:11:47.000 --> 00:11:49.000]   també han contractat persones,
+[00:11:49.000 --> 00:11:53.000]   i aquestes persones, per exemple, una d'elles és per el tema dels equipaments que tenim
+[00:11:53.000 --> 00:11:55.000]   tant a l'empresa com a les granges.
+[00:11:55.000 --> 00:11:58.000]   I estem millorant molt com estan ficades les xarxes de les granges,
+[00:11:58.000 --> 00:12:01.000]   com estan connectades,
+[00:12:01.000 --> 00:12:05.000]   estem ficant sondes a les granges pròpies, als sitges,
+[00:12:05.000 --> 00:12:08.000]   perquè ara ja tindrem millor control de l'estoc que hi ha,
+[00:12:08.000 --> 00:12:11.000]   i després el que són temperatura, humitat, consums de pinso,
+[00:12:11.000 --> 00:12:14.000]   això les granges de truges ho tenen,
+[00:12:14.000 --> 00:12:16.000]   els d’engreix, allí falta molt.
+[00:12:16.000 --> 00:12:20.000]   Van fer algun projecte amb alguna empresa puntual, però no van ser gaire bons.
+-.Pregunta 4.2.-
+[00:12:30.000 --> 00:12:36.000]   No, les utilitzem poc, les utilitzem més com a mesura d'alarma, diríem.
+[00:12:36.000 --> 00:12:39.000]   Per exemple, ahir vam estar amb la gent que ens porta els tractaments d'aigua
+[00:12:39.000 --> 00:12:41.000]   de les granges de les truges.
+[00:12:41.000 --> 00:12:44.000]   Una de les coses que han marcat més amb ells és, granja per granja,
+[00:12:44.000 --> 00:12:46.000]   quin ha de ser el consum teòric que tenen.
+[00:12:46.000 --> 00:12:50.000]   Llavors, si individualment, quines alarmes nos fiquen?
+[00:12:50.000 --> 00:12:56.000]   Quan queda poc per canviar els productes que fiquem per tractar l'aigua.
+[00:12:56.000 --> 00:13:01.000]   Quan lo consum és, més o menys d'un marge que fiquem.
+[00:13:01.000 --> 00:13:05.000]   Però són alarmes que han sortit per veure que tot estigui correcte.
+[00:13:05.000 --> 00:13:09.000]   Per exemple, en el que respecti temperatura i humitat mateix,
+[00:13:09.000 --> 00:13:11.000]   vull dir que ens arriben les alarmes.
+[00:13:11.000 --> 00:13:13.000]   Hi ha moltes granges de truges, l'alimentació,
+[00:13:13.000 --> 00:13:17.000]   la fem amb màquines electròniques, amb lector de xip,
+[00:13:17.000 --> 00:13:20.000]   i allí sí que no mirem a nivell, podríem mirar,
+[00:13:20.000 --> 00:13:22.000]   però ho mirem a nivell d’empresa, però a granja cada dia,
+[00:13:22.000 --> 00:13:27.000]   que aquest llistat d'animals no compleix el que has marcat tu.
+[00:13:27.000 --> 00:13:31.000]   Que hagi marcat el nivell de menjar el 100% ahir, que portem 3 dies,
+[00:13:31.000 --> 00:13:34.000]   que queda menjar de menys del 50% del que hem marcat nosaltres.
+[00:13:34.000 --> 00:13:38.000]   Així mirem i hem d'anar a treballar individualment a veure què li passa a aquest animal.
+-.Pregunta 4.2.-
+[00:13:55.000 --> 00:13:59.000]   Sí, però també estem centrats a granja, no me truquen a mi, truquen a l’encarregat de granja.
+[00:13:59.000 --> 00:14:04.000]   Tenim com a mesures, assegurar-nos que certes coses bàsiques estiguin fetes bé.
+[00:14:13.000 --> 00:14:18.000]   Avui no estem fent coses i cada vegada hi ha més coses a fer.
+[00:14:18.000 --> 00:14:21.000]   En el cas de les propostes de digitalització,
+[00:14:21.000 --> 00:14:25.000]   el tema de les sondes no està pensat fer res d'un nivell immediat,
+[00:14:25.000 --> 00:14:28.000]   però sí, per exemple, el Power BI o altres coses,
+[00:14:28.000 --> 00:14:31.000]   més anàlisis de dades i donar una mica més de volta a tot,
+[00:14:31.000 --> 00:14:35.000]   de manera automàtica que es facin informes en el BI
+[00:14:35.000 --> 00:14:39.000]   i automàticament el Power Automate ho envia aquí.
+[00:14:43.000 --> 00:14:46.000]   Tenim alguna cosa i ho estem muntant ara.
+[00:14:46.000 --> 00:14:51.000]   Tenim alguna cosa, però encara no està com tindria que estar.
+-.Pregunta 5.1.-
+[00:14:58.000 --> 00:15:02.000]   El tema del procés aquest, no sé quin dels passos podria fer.
+[00:15:02.000 --> 00:15:05.000]   És més el camí que no una cosa individual.
+[00:15:05.000 --> 00:15:10.000]   La visió per part de la gerència de que volia fer una transformació digital
+[00:15:10.000 --> 00:15:13.000]   i és un tendint del procés que té diferents parts
+[00:15:13.000 --> 00:15:16.000]   i que ara en l'aplicació és el que vam quedar.
+[00:15:16.000 --> 00:15:19.000]   S'està muntant l'ERP, estem fent la formació de la gent.
+[00:15:19.000 --> 00:15:21.000]   El setembre també començarem.
+[00:15:21.000 --> 00:15:23.000]   Estem fent la formació de l'ERP.
+[00:15:23.000 --> 00:15:25.000]   A setembre hi haurà coses que vam veure,
+[00:15:25.000 --> 00:15:28.000]   però hem incorporat Teams, hem incorporat altres programes
+[00:15:28.000 --> 00:15:30.000]   que estem treballant.
+[00:15:30.000 --> 00:15:34.000]   Ara farem grups, formacions perquè la gent hi traguem suc,
+[00:15:34.000 --> 00:15:38.000]   perquè veiem que treballant anem avançant,
+[00:15:38.000 --> 00:15:40.000]   però que poden tenir suport allà.
+[00:15:40.000 --> 00:15:43.000]   Formar la gent, posar-nos en comú com volem treballar.
+[00:15:43.000 --> 00:15:45.000]   Estem avançant.
+-.Pregunta 5.2.-
+[00:15:54.000 --> 00:15:58.000]   Sí, ho va començar a mirar el gerent, potser una mica abans,
+[00:15:58.000 --> 00:16:05.000]   i el pla, el vam deure d'acabar, potser al principi de l'hivern passat
+[00:16:05.000 --> 00:16:09.000]   vam acabar el pla i vam començar el procés de mirar diferents ERPs
+[00:16:09.000 --> 00:16:15.000]   i per l'ERP ho vinculem tot perquè ha de ser el que té de tot.
+[00:16:19.000 --> 00:16:22.000]   També una cosa que hem fet ara és, a part de l'ERP,
+[00:16:22.000 --> 00:16:26.000]   tenim bases de dades de moltes coses que tenim fora,
+[00:16:26.000 --> 00:16:30.000]   en un servidor, per poder fer-nos altres coses.
+[00:16:30.000 --> 00:16:32.000]   Per exemple, el programa MBI, o altres programes,
+[00:16:32.000 --> 00:16:36.000]   que és el nexe de unió entre els programes perquè es pugui agafar
+[00:16:36.000 --> 00:16:42.000]   i fer les receptes, agafa això d'aquí i deixa això en un punt d'intercanvi.
+-.Pregunta 5.3.-
+[00:17:11.000 --> 00:17:15.000]   A mi hi ha una cosa que em va sorprendre, però entenc que no ha funcionat,
+[00:17:15.000 --> 00:17:18.000]   perquè ho vaig veure una fira a Alemanya i no ho he tocat mai més,
+[00:17:18.000 --> 00:17:26.000]   que era el tema del món del vacu, per saber que un animal està en cel,
+[00:17:26.000 --> 00:17:31.000]   porten un podòmetre i depèn de com es mou l'animal,
+[00:17:31.000 --> 00:17:34.000]   diuen "aquest és el moment que està ovulant aquest animal,
+[00:17:34.000 --> 00:17:38.000]   llavors has de fer una inseminació artificial, dintre de tantes hores".
+[00:17:38.000 --> 00:17:43.000]   Això per si, vaig veure una empresa canadenca que ho proposava fer
+[00:17:43.000 --> 00:17:48.000]   amb unes càmeres que crec que era vinculada a temperatura i moviment
+[00:17:48.000 --> 00:17:55.000]   i segons ells amb això ja no feia falta fer la "recela", que és una component,
+[00:17:55.000 --> 00:18:01.000]   que és individual, perquè dues persones quan entenen que és el moment
+[00:18:01.000 --> 00:18:06.000]   és una cosa objectiva d'aquella persona i nosaltres fent la mateixa feina
+[00:18:06.000 --> 00:18:10.000]   amb els mateixos animals, tens diferències molt grans de rendiment.
+[00:18:10.000 --> 00:18:14.000]   I amb la mateixa persona, vull dir que dir que és que veu el món gris,
+[00:18:14.000 --> 00:18:18.000]   doncs és gris. I això ho vaig veure però no ho he tornat a veure més,
+[00:18:18.000 --> 00:18:21.000]   suposo que no haurà funcionat.
+[00:18:21.000 --> 00:18:25.000]   És una cosa curiosa que això sigui intel·ligència artificials.
+[00:18:29.000 --> 00:18:34.000]   - Sí, en aquell moment aquella gent, el comercial va comentar que hi havia
+[00:18:34.000 --> 00:18:39.000]   diverses granges a Canadà i alguns a Bèlgica que ho estaven fent,
+[00:18:39.000 --> 00:18:43.000]   però mai més se supó.
+[00:18:50.000 --> 00:18:55.000]   - I sobretot en temes de previsió de pesos, creixements, aquí és on estan...
+[00:18:55.000 --> 00:18:58.000]   Al final, els calés dintre de la producció són els engreixos,
+[00:18:58.000 --> 00:19:01.000]   i els engreixos és el que més obvi que tenim.
+[00:19:01.000 --> 00:19:05.000]   És on s'ha de fer coses que crec que s'han de fer el dia de demà,
+[00:19:05.000 --> 00:19:09.000]   sensors d'aigua i d'alimentació per veure que els animals
+[00:19:09.000 --> 00:19:12.000]   estan dintre dels paràmetres que han de ser,
+[00:19:12.000 --> 00:19:15.000]   que són l'agricultura que aquí ens estan fent ja,
+[00:19:15.000 --> 00:19:18.000]   hi ha alarmes, hi ha veterinària...
+[00:19:18.000 --> 00:19:21.000]   Per exemple, ara estem en un projecte en un laboratori,
+[00:19:21.000 --> 00:19:24.000]   que ara molts laboratoris de productes de medicaments,
+[00:19:24.000 --> 00:19:27.000]   com els antibiòtics, no en vendran,
+[00:19:27.000 --> 00:19:32.000]   molts han invertit molt en vacunes,
+[00:19:32.000 --> 00:19:35.000]   però també estan invertint en tecnologia.
+[00:19:35.000 --> 00:19:38.000]   Una cosa que és Behringer, ha tret un aparell
+[00:19:38.000 --> 00:19:41.000]   que medint la respiració dels animals,
+[00:19:41.000 --> 00:19:44.000]   veu abans que una persona que un animal estarà mal.
+[00:19:44.000 --> 00:19:47.000]   Són temes que sempre són interessants,
+[00:19:47.000 --> 00:19:50.000]   hem ficat diverses granges, inclús veiem,
+[00:19:50.000 --> 00:19:53.000]   l'altre dia m'ensenyava un veterinari content un cas,
+[00:19:53.000 --> 00:19:56.000]   una granja que veia que estava pitjorant,
+[00:19:56.000 --> 00:19:59.000]   que havia facilitat el medicament als animals
+[00:19:59.000 --> 00:20:02.000]   quan encara visualment no veies gran cosa,
+[00:20:02.000 --> 00:20:05.000]   i la milloria que havies tingut i el temps que havies estat millor.
+[00:20:05.000 --> 00:20:08.000]   Ara estàvem bé, mira aquí va entrar una grip,
+[00:20:08.000 --> 00:20:11.000]   jo he sentit que primer va tocar aquí,
+[00:20:11.000 --> 00:20:14.000]   però un dia i mig abans ja es veia.
+[00:20:14.000 --> 00:20:17.000]   Si l'animal el mediques abans que tingués símptomes,
+[00:20:17.000 --> 00:20:20.000]   ni te tants dies mal,
+[00:20:20.000 --> 00:20:23.000]   i es recuperava abans.
+[00:20:23.000 --> 00:20:26.000]   Són per prevenir que es podran anar fent
+[00:20:26.000 --> 00:20:29.000]   i a poc a poc hi haurà tecnologia,
+[00:20:29.000 --> 00:20:32.000]   hi haurà moltes coses.
+-.Pregunta 6.1.-
+[00:20:50.000 --> 00:20:53.000]   Tots són importants.
+[00:20:53.000 --> 00:20:56.000]   El primer és complir la llei.
+[00:20:56.000 --> 00:20:59.000]   Si volem prendre decisions de coses que
+[00:20:59.000 --> 00:21:02.000]   nos porten a incomplir la llei, tenen poc sentit.
+[00:21:02.000 --> 00:21:05.000]   El criteri econòmic és el tema administratiu,
+[00:21:05.000 --> 00:21:08.000]   és un tema econòmic.
+[00:21:08.000 --> 00:21:11.000]   Quan fem inversions, sempre és pensant
+[00:21:11.000 --> 00:21:14.000]   quan recuperar aquesta inversió o quan aportarà aquesta inversió.
+[00:21:14.000 --> 00:21:17.000]   Jo crec que no nosaltres, sinó l'empresa en general,
+[00:21:17.000 --> 00:21:20.000]   que estem invertint més en la gent,
+[00:21:20.000 --> 00:21:23.000]   perquè el món ha canviat i la gent ha d'estar
+[00:21:23.000 --> 00:21:26.000]   contenta de com està, si no,
+[00:21:26.000 --> 00:21:29.000]   tindrem problemes.
+-.Pregunta 6.2.-
+[00:21:38.000 --> 00:21:41.000]   Dins de l'estructura,
+[00:21:41.000 --> 00:21:44.000]   el lloc principal que afecta molt a l'empresa
+[00:21:44.000 --> 00:21:47.000]   és el consell de direcció,
+[00:21:47.000 --> 00:21:50.000]   que allí te un pla estratègic,
+[00:21:50.000 --> 00:21:53.000]   hi ha un director general i jo estic al càrrec
+[00:21:53.000 --> 00:21:56.000]   de la part de la producció.
+[00:21:56.000 --> 00:21:59.000]   Les coses que depenen de mi
+[00:21:59.000 --> 00:22:02.000]   hi ha una sèrie de coses que les decideixo jo de forma autònoma
+[00:22:02.000 --> 00:22:05.000]   i d’altres que tinc que ficar-me en contacte amb la direcció general per si es poden fer o no,
+[00:22:05.000 --> 00:22:08.000]   però al final el camí, el marca,
+[00:22:08.000 --> 00:22:11.000]   el consell de direcció.
+-.Pregunta 6.3.-
+[00:22:17.000 --> 00:22:20.000]   Que jo m'hi vingui al cap, no.
+[00:22:29.000 --> 00:22:32.000]   Que m'hi vingui al cap,
+[00:22:32.000 --> 00:22:35.000]   no hi ha res que es prengui.
+[00:22:41.000 --> 00:22:44.000]   Tenim la idea d'automatitzar feines.
+[00:22:44.000 --> 00:22:47.000]   Per exemple, quan s'acaba una criança,
+[00:22:47.000 --> 00:22:50.000]   que arriben els números de la criança
+[00:22:50.000 --> 00:22:53.000]   al veterinari, al visitador, al granger.
+[00:22:53.000 --> 00:22:56.000]   Les coses que està fent una persona
+[00:22:56.000 --> 00:22:59.000]   i no té per què fer-ho.
+[00:22:59.000 --> 00:23:02.000]   Però no és una presa de decisions,
+[00:23:02.000 --> 00:23:05.000]   és una automatització de procés.
+[00:23:05.000 --> 00:23:08.000]   Presa de decisió fins on jo sé, per ara no.
+-.Pregunta 6.4.-
+[00:23:14.000 --> 00:23:17.000]   Ha de ser una cosa molt concreta
+[00:23:17.000 --> 00:23:20.000]   que es pugui parametritzar molt bé.
+[00:23:20.000 --> 00:23:23.000]   Decisions que tenen poc calades
+[00:23:23.000 --> 00:23:26.000]   es poden fer quan se vulgui,
+[00:23:26.000 --> 00:23:29.000]   però hi ha coses que el que afecta a la gent
+[00:23:29.000 --> 00:23:32.000]   no pots...
+[00:23:32.000 --> 00:23:35.000]   Almenys que hi hagi una persona
+[00:23:35.000 --> 00:23:38.000]   que li doni l'aprovat.
+-.Pregunta 6.5c.-
+[00:23:53.000 --> 00:23:56.000]   Hi ha un pla estratègic
+[00:23:56.000 --> 00:23:59.000]   que és on hi ha la columna vertebral
+[00:23:59.000 --> 00:24:02.000]   del que volem fer.
+[00:24:02.000 --> 00:24:05.000]   I després les tàctiques del dia a dia.
+[00:24:05.000 --> 00:24:08.000]   Quan trobes una oportunitat
+[00:24:08.000 --> 00:24:11.000]   que és ara decidir si es compra això
+[00:24:11.000 --> 00:24:14.000]   o no, es la persona a que li toca
+[00:24:14.000 --> 00:24:17.000]   perquè és la persona la que compra
+[00:24:17.000 --> 00:24:20.000]   les matèries primes, doncs a vegades
+[00:24:20.000 --> 00:24:23.000]   per què compres avui amb aquest preu
+[00:24:23.000 --> 00:24:26.000]   i no demà un altre?
+[00:24:26.000 --> 00:24:29.000]   Hi ha una base d'experiència,
+[00:24:29.000 --> 00:24:32.000]   d'interpretació del que està passant,
+[00:24:32.000 --> 00:24:35.000]   d'instint...
+[00:24:35.000 --> 00:24:38.000]   En una empresa familiar
+[00:24:38.000 --> 00:24:41.000]   hi ha altres empreses que tenen límits més marcats, potser diuen...
+[00:24:41.000 --> 00:24:44.000]   escolta, hi ha x volum, actua tu i a partir de x volum t’ho ha de aprovar... 
+[00:24:44.000 --> 00:24:47.000]   qui sigui.
+[00:24:47.000 --> 00:24:50.000]   En altres casos,
+[00:24:50.000 --> 00:24:53.000]   la gent que compra aquell aspecte,
+[00:24:53.000 --> 00:24:56.000]   no.
+[00:24:56.000 --> 00:24:59.000]   Hi ha gent que té capacitat
+[00:24:59.000 --> 00:25:02.000]   de fer coses.
+[00:25:02.000 --> 00:25:05.000]   Un veterinari d’una granja pot fer
+[00:25:05.000 --> 00:25:08.000]   el que cregui per salvar un animal, i desprès la compra de matèries primeres, o també els medicaments depèn de mi
+[00:25:08.000 --> 00:25:11.000]   Jo ho tinc gairebé delegat un 95%, jo compro 5 coses, desprès el resto, El company que ho té delegat
+[00:25:11.000 --> 00:25:14.000]   ell sap que m’ha d'informar d’una sèrie de coses
+[00:25:14.000 --> 00:25:17.000]   i cada setmana tinc una reunió amb ell, i cada setmana, doncs mira, això, allò, ho vig així, ho veig aixà 
+[00:25:17.000 --> 00:25:20.000]   I la majoria de casos
+[00:25:20.000 --> 00:25:23.000]   li dono la raó perquè
+[00:25:23.000 --> 00:25:26.000]   qui està al dia a dia, és ell.
+[00:25:26.000 --> 00:25:29.000]   Les coses que, es tenen de fer vacunes
+[00:25:29.000 --> 00:25:32.000]   o són anuals, si que llavors soc jo
+[00:25:32.000 --> 00:25:35.000]   pro la resta, és responsabilitat meva pro ho tinc delegat i ho vaig seguint.
+-.Pregunta 6.6.-
+[00:25:41.000 --> 00:25:44.000]   Depèn de quin aspecte.
+[00:25:44.000 --> 00:25:47.000]   Nosaltres està lo que és producció de truges, el programa que tenim de gestió
+[00:25:47.000 --> 00:25:50.000]   és l'AgriTec (el porcitec).
+[00:25:50.000 --> 00:25:53.000]   És un molt bon programa
+[00:25:53.000 --> 00:25:56.000]   i encara no estem traient el rendiment
+[00:25:56.000 --> 00:25:59.000]   que li podríem treure.
+[00:25:59.000 --> 00:26:02.000]   Per analitzar dades de producció, l’ERP que tenim ara no val
+[00:26:02.000 --> 00:26:05.000]   tenim una multitud d'excels
+[00:26:05.000 --> 00:26:08.000]   per moure-nos.
+[00:26:08.000 --> 00:26:11.000]   Amb el transport el mateix, tenim diferents excels que vas...
+[00:26:11.000 --> 00:26:14.000]   Jo tinc dues pantalles
+[00:26:14.000 --> 00:26:17.000]   a l’ordenador i vaig col·loquen coses.
+[00:26:20.000 --> 00:26:23.000]   Cada vegada tinc fulles menys enormes
+[00:26:23.000 --> 00:26:26.000]   però més i vaig movent coses d’un lloc a un altre.
+[00:26:26.000 --> 00:26:29.000]   Moltes d'aquestes coses
+[00:26:29.000 --> 00:26:32.000]   es poden fer a través del ERP.
+[00:26:32.000 --> 00:26:35.000]   Hi ha coses molt específiques que no,
+[00:26:35.000 --> 00:26:38.000]   però el que és més general i del sector
+[00:26:38.000 --> 00:26:41.000]   entenc que ha d’ajudar bastant.
+-.Pregunta 6.7.-
+[00:26:47.000 --> 00:26:50.000]   Des que vam començar a treballar
+[00:26:50.000 --> 00:26:53.000]   i al final són eines indispensables.
+[00:26:53.000 --> 00:26:56.000]   El sistema de les truges el vam canviar
+[00:26:56.000 --> 00:26:59.000]   fa uns dos o tres anys.
+[00:26:59.000 --> 00:27:02.000]   Abans teníem el que venia de l’Inter de IFR
+[00:27:02.000 --> 00:27:05.000]   i ara vam canviar aquest, ara fa un temps
+[00:27:05.000 --> 00:27:08.000]   I desprès, el que són ofimàtiques fa temps.
+[00:27:08.000 --> 00:27:11.000]   El que tenim ara és molt poc intuïtiu
+[00:27:11.000 --> 00:27:14.000]   però tinc una xuleta en les 15 coses
+[00:27:14.000 --> 00:27:17.000]   que necessito fer per no molestar els companys
+[00:27:17.000 --> 00:27:20.000]   i passo un, dos o tres.
+[00:27:20.000 --> 00:27:23.000]   La gent que ho fa cada dia
+[00:27:23.000 --> 00:27:26.000]   ja ho sap de memòria
+[00:27:26.000 --> 00:27:29.000]   i jo que ho miro tres vegades l'any, doncs tinc que fer anar la xuleta.
+-.Pregunta 6.8.-
+[00:27:35.000 --> 00:27:38.000]   De quin aspecte?
+[00:27:41.000 --> 00:27:44.000]   No, hi ha plataformes que crec que...
+[00:27:44.000 --> 00:27:47.000]   En com se relaciona l'empresa, l'integrat,
+[00:27:47.000 --> 00:27:50.000]   hi ha una preocupació general
+[00:27:50.000 --> 00:27:53.000]   de les empreses d'integració.
+[00:27:53.000 --> 00:27:56.000]   La gent que té un volum més petit
+[00:27:56.000 --> 00:27:59.000]   potser no, perquè si estigués en una comarca
+[00:27:59.000 --> 00:28:02.000]   el propietari és que als grangers
+[00:28:02.000 --> 00:28:05.000]   els veu el bar cada dia.
+[00:28:05.000 --> 00:28:08.000]   Aquesta manca de comunicació no la tenen.
+[00:28:08.000 --> 00:28:11.000]   El que és d'integrador, el que tenim
+[00:28:11.000 --> 00:28:14.000]   al mercat avui, que feia aquestes funcions, no hi ha res concret
+[00:28:14.000 --> 00:28:17.000]   però sí que hi ha una empresa de Saragossa
+[00:28:17.000 --> 00:28:20.000]   que va treure un producte que es podria
+[00:28:20.000 --> 00:28:23.000]   més o menys adaptar a això,
+[00:28:23.000 --> 00:28:26.000]   però les empreses tenen aplicacions propies.
+[00:28:26.000 --> 00:28:29.000]   Mazana, Costa, Vallcompanys...
+[00:28:29.000 --> 00:28:32.000]   Cadascú marca com veu l'empresa.
+[00:28:32.000 --> 00:28:35.000]   Per exemple, Vallcompanys només és
+[00:28:35.000 --> 00:28:38.000]   pels treballadors d'ells.
+[00:28:38.000 --> 00:28:41.000]   El de Costa gairebé és més pels integrats.
+[00:28:41.000 --> 00:28:44.000]   Aquest sí que és un punt clau
+[00:28:44.000 --> 00:28:47.000]   que ens falta a tothom.
+[00:28:47.000 --> 00:28:50.000]   Una solució per reduir la distància
+[00:28:50.000 --> 00:28:53.000]   entre les dues parts i funcionalitats.
+[00:28:53.000 --> 00:28:56.000]   Una persona que demana pinso
+[00:28:56.000 --> 00:28:59.000]   fa que abans hi hagués dues persones
+[00:28:59.000 --> 00:29:02.000]   per fer això i ara hi ha una que està
+[00:29:02.000 --> 00:29:05.000]   durant tot el dia que...
+[00:29:05.000 --> 00:29:08.000]   mira, hi ha tants comandes, miro que no hi hagi cap fallo i s’ha acabat
+[00:29:08.000 --> 00:29:11.000]   perquè ara la gent demana pinso
+[00:29:11.000 --> 00:29:14.000]   no demana un tipus de pinso.
+[00:29:14.000 --> 00:29:17.000]   Al programa hi ha un pressupost de pinso
+[00:29:17.000 --> 00:29:20.000]   i automàticament el programa agafa el que toca.
+[00:29:20.000 --> 00:29:23.000]   Llavors, només hi ha una persona
+[00:29:23.000 --> 00:29:26.000]   que revisa que no hi ha hagut algun error.
+-.Pregunta 6.9.-
+[00:29:50.000 --> 00:29:53.000]   -Almenys una validació, entenc jo
+[00:29:53.000 --> 00:29:56.000]   que requereix perquè fem altres coses.
+-.Pregunta 6.10.-
+[00:30:02.000 --> 00:30:05.000]   Crec que no gaire, crec que ens basem més en l'empresa que gerència ha decidit
+[00:30:05.000 --> 00:30:08.000]   que vol que ens ajudi en aquest procés.
+[00:30:08.000 --> 00:30:11.000]   Que són gent que aquest procés l'han fet a moltes empreses.
+[00:30:11.000 --> 00:30:14.000]   Per exemple, quan hem fet coses
+[00:30:14.000 --> 00:30:17.000]   he preguntat a la gent del sector
+[00:30:17.000 --> 00:30:20.000]   què estan fent.
+[00:30:20.000 --> 00:30:23.000]   Quan van mirar l'ERP,
+[00:30:23.000 --> 00:30:26.000]   vam mirar les propostes que teníem
+[00:30:26.000 --> 00:30:29.000]   i cada proposta la tenien diferents clients
+[00:30:29.000 --> 00:30:32.000]   dintre del sector, doncs aquesta gent, jo hi parlava i m’explicaven quina experiència tenien
+[00:30:32.000 --> 00:30:35.000]   -Més que buscar els dies,
+[00:30:35.000 --> 00:30:38.000]   comprovar-los jo.
+[00:30:38.000 --> 00:30:41.000]   Ahir van estar dos companys veterinaris
+[00:30:41.000 --> 00:30:44.000]   amb un altre veterinari
+[00:30:44.000 --> 00:30:47.000]   i una altra empresa
+[00:30:47.000 --> 00:30:50.000]   fent el programa de truges
+[00:30:50.000 --> 00:30:53.000]   que creiem que li podem treure més suc
+[00:30:53.000 --> 00:30:56.000]   i veure què estan fent ells i que estem fent nosaltres, més es compartir que no...
+-.Pregunta 6.11b.-
+[00:30:59.000 --> 00:31:02.000]   El tema és que de moment, per volum en...
+[00:31:02.000 --> 00:31:05.000]   Porcí n'hi ha a tot el món,
+[00:31:05.000 --> 00:31:08.000]   però porcí com es fa a Espanya,
+[00:31:08.000 --> 00:31:11.000]   als Estats Units,
+[00:31:11.000 --> 00:31:14.000]   i te diria que bastant diferent,
+[00:31:14.000 --> 00:31:17.000]   però podria assemblar-se una mica,
+[00:31:17.000 --> 00:31:20.000]   però al resta d’Europa, empreses integradores, no ni ha.
+[00:31:20.000 --> 00:31:23.000]   És molt diferent el que necessita una persona
+[00:31:23.000 --> 00:31:26.000]   que és un propietari d'una granja a França
+[00:31:26.000 --> 00:31:29.000]   que tenir una empresa integradora.
+[00:31:29.000 --> 00:31:32.000]   És un sector petit
+[00:31:32.000 --> 00:31:35.000]   que hi ha prou volum
+[00:31:35.000 --> 00:31:38.000]   i que estiguem que vulguem aquest producte.
+[00:31:38.000 --> 00:31:41.000]   La inquietud que tinc de com comunicar-me l'integrat
+[00:31:41.000 --> 00:31:44.000]   pot ser PremierPigs lo mateix.
+[00:31:44.000 --> 00:31:47.000]   Si hi ha pocs clients,
+[00:31:47.000 --> 00:31:50.000]   i els pocs clients que hi ha, no volen el mateix.
+[00:31:50.000 --> 00:31:53.000]   El problema que deia, que crec que no està malament, pro si volen una cosa més específica nostra...
+[00:31:53.000 --> 00:31:56.000]   aquí probablement he contractat
+[00:31:56.000 --> 00:31:59.000]   quarter i PremierPigs.
+[00:31:59.000 --> 00:32:02.000]   Però suposo que per amb ells ja cobreixes però...
+[00:32:02.000 --> 00:32:05.000]   per a cadascú, que sigui és exactament el que tu vols,
+[00:32:05.000 --> 00:32:08.000]   què prefereixes, agafar una cosa estàndard
+[00:32:08.000 --> 00:32:11.000]   que ja està al mercat, que estigui al 70% o fer-ho tu?
+[00:32:11.000 --> 00:32:14.000]   Cadascú ho contestarà d'una manera diferent.
+[00:32:20.000 --> 00:32:23.000]   I a la universitat, el problema que hi va haver en els seu moment amb l'IRTA...
+[00:32:23.000 --> 00:32:26.000]   IRTA va treure un programa que està super bé,
+[00:32:26.000 --> 00:32:29.000]   però el problema que té a vegades
+[00:32:29.000 --> 00:32:32.000]   és que es posa l’administració pel mig és que, potser la voluntat de la persona
+[00:32:32.000 --> 00:32:35.000]   que estigui avui a la universitat
+[00:32:35.000 --> 00:32:38.000]   i serà i tirarà cap endavant 
+[00:32:38.000 --> 00:32:41.000]   i haurà finançament, hi haurà un projecte que farà que estigui molt bé
+[00:32:41.000 --> 00:32:44.000]   Però el que costa molt, a vegades, és mantenir.
+-.Pregunta 6.12a.-
+[00:32:53.000 --> 00:32:56.000]   -Estem en això.
+[00:32:56.000 --> 00:32:59.000]   Quan et comentava el tema del BI, això ho hem externalitzat en empreses
+[00:32:59.000 --> 00:33:02.000]   que ens estan fent els quadres de comandament
+[00:33:02.000 --> 00:33:05.000]   com nosaltres volem,
+[00:33:05.000 --> 00:33:08.000]   també escoltant-los a ells
+[00:33:08.000 --> 00:33:11.000]   i el que diu cadascú,
+[00:33:11.000 --> 00:33:14.000]   i desprès ells veuen si han de fer això o més o menys...
+-.Pregunta 6.12b.-
+[00:33:17.000 --> 00:33:20.000]   Jo en concret no, però tenim una empresa
+[00:33:20.000 --> 00:33:23.000]   de I+D que té més o menys el tema de estadística
+[00:33:23.000 --> 00:33:26.000]   i hem invertit en formació en aquest aspecte
+[00:33:26.000 --> 00:33:29.000]   i entenc que en sabrà.

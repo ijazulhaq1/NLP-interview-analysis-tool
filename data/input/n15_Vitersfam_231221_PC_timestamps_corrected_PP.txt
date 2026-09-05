@@ -1,0 +1,674 @@
+-.Pregunta 1.1.-
+[00:01:48.580 --> 00:01:55.860]   -Nosaltres ens dediquem a la gestió de granges de mares de porcí,
+[00:01:55.860 --> 00:02:04.580]   i estem integrats amb una empresa integradora, una cooperativa,
+[00:02:04.580 --> 00:02:07.780]   de la zona de la província de Sòria,
+[00:02:07.780 --> 00:02:14.220]   i llavors, com a integrats, ens dediquem a la producció,
+[00:02:14.220 --> 00:02:21.740]   en aquest cas, a la producció de garrins,
+[00:02:21.740 --> 00:02:27.460]   des de la inseminació de les mares fins que tenen uns 20 quilos,
+[00:02:27.460 --> 00:02:30.180]   que llavors ja surten i van a altres granges.
+[00:02:30.180 --> 00:02:32.860]   Tenim quatre granges, necessitem quatre granges,
+[00:02:32.860 --> 00:02:38.020]   llavors, hi ha petites diferències entre elles, que si vols podreu entrar més en detall.
+-.Pregunta 1.2.-
+[00:02:43.220 --> 00:02:50.500]   -Nosaltres portem a Peters, com a empresa, des del 2018,
+[00:02:50.500 --> 00:02:56.940]   per tant, uns cinc anys, però hem tingut un creixement,
+[00:02:56.940 --> 00:03:00.860]   és a dir, vam començar amb una granja, i ara estem amb quatre,
+[00:03:00.860 --> 00:03:06.500]   una granja de mares de 3.000, hem perdut una mica menys ja, 2.700 o 2.800,
+[00:03:06.500 --> 00:03:10.500]   i ara, doncs, quatre més o menys d'aquest mida.
+[00:03:10.500 --> 00:03:17.460]  -Tot i això, nosaltres estem dins d'un grup,
+[00:03:17.460 --> 00:03:26.940]   on es porta una altra granja molt antiga, que hi ha una experiència darrere d'uns 20 anys, més o menys.
+[00:03:26.940 --> 00:03:31.700]   -Bé, sí que Peters és una empresa nova,
+[00:03:31.700 --> 00:03:37.220]   i aquestes granges són noves, però sí que dins del grup, doncs, portem anys d'experiència.
+[00:03:37.220 --> 00:03:41.100]   -Hi ha temps. 
+-.Pregunta 1.3.-
+[00:03:44.540 --> 00:03:53.300]   -Sí, sí, això, doncs, són quatre granges de mares, totes, més o menys de cada una de les 2.700 mares,
+[00:03:53.300 --> 00:04:01.820]   i ara, en volum d'empleats, més o menys som un equip de 75 persones.
+[00:04:08.020 --> 00:04:12.820]   -Correcte, sí, sí.
+-.Pregunta 2.1.-
+[00:04:17.780 --> 00:04:30.540]   -Sí, sí que en disposem, perquè és fonamental. En dues de les granges tenim internet i no tenim cobertura,
+[00:04:30.540 --> 00:04:38.140]   però sí, és veritat que ens costa molt, hem hagut de posar diferents antenes o repetidors perquè funcioni,
+[00:04:38.140 --> 00:04:45.300]   però la veritat és que sí.
+-.Pregunta 2.2.-
+[00:04:49.300 --> 00:04:56.180]   -Bé, el internet el necessitem, primer, per comunicar-nos, és a dir, correus electrònics,
+[00:04:56.180 --> 00:05:03.580]   Whatsapp, avui en dia, tant amb treballadors com amb gent, i llavors tenim diferents sistemes instal·lats
+[00:05:03.580 --> 00:05:12.660]   que necessiten internet, que és el que m'aniràs preguntant, però així per sobre, alarmes,
+[00:05:12.660 --> 00:05:22.460]   connexions de calderes, per menjar, tenim aerotèrmica també,
+[00:05:22.460 --> 00:05:27.740]   tenim diferents sistemes que estan connectats a internet amb les sitges també de la història,
+[00:05:27.740 --> 00:05:33.900]   que és el que m'aniràs preguntant. 
+[00:05:33.900 --> 00:05:42.620]   -Sí, en una d'elles tenim un sistema d'aquests de,
+[00:05:42.620 --> 00:05:48.060]   entenc que tu ja estàs molt posat en el sector porcí, no?
+[00:05:48.060 --> 00:05:59.380]   A la zona de gestació confirmada tenim un sistema de menjadores automàtiques
+[00:05:59.380 --> 00:06:08.140]   on cada truja, fins i tot un xip, entra dins d'un espai una menjadora físicament,
+[00:06:08.140 --> 00:06:12.100]   llavors se li obren o tanquen les portes en funció del que ha menjat o no ha menjat o el que li toca,
+[00:06:12.100 --> 00:06:18.780]   tots aquests sistemes estan automatitzats i connectats per internet amb diversos ordinadors
+[00:06:18.780 --> 00:06:24.620]   que ens permeten llavors treure dades de quantitats, quines trujes han menjat, quines no,
+[00:06:24.620 --> 00:06:33.060]   anar-les a buscar i acompanyar-les per veure si tenen algun problema, etcètera.
+-.Pregunta 2.3a.-
+[00:06:39.300 --> 00:06:42.900]   -Sí, totalment. M'estranya que algú no en tingui.
+-.Pregunta 2.3b.-
+[00:06:49.980 --> 00:06:54.420]   -Jo sempre parlo de... Bé, jo conec les granges de mares,
+[00:06:54.420 --> 00:07:00.580]   doncs òbviament suposo que els engreixos, bé, sobretot aquí a Catalunya jo em veig a vegades de molt precaris,
+[00:07:00.580 --> 00:07:03.980]   mares costa més, però hi ha que també...
+[00:07:03.980 --> 00:07:11.740]   -Bé, suposo que nosaltres, la majoria de l'equip,
+[00:07:11.740 --> 00:07:18.060]   sobretot en posicions una mica més importants, ja és gent jove, entre cometes, jo què sé,
+[00:07:18.060 --> 00:07:22.700]   20-30 anys, vintena i trentena,
+[00:07:22.700 --> 00:07:27.180]   llavors suposo que ja es dona com per suposat per un tema generacional,
+[00:07:27.180 --> 00:07:33.100]   però bé, és veritat que si hi hagués més cobertura tot seria més fàcil,
+[00:07:33.100 --> 00:07:36.940]   tot i que la veritat és que espavilar-se per aconseguir,
+[00:07:36.940 --> 00:07:42.940]   depèn, no vull generalitzar, però estem a llocs molt aïllats de la província de Sòria,
+[00:07:42.940 --> 00:07:49.220]   i bé, sempre aconseguir alguna cobertura amb algun tipus d'antena
+[00:07:49.220 --> 00:07:55.260]   que pots trobar per Amazon o pots estalviar-te l'industrial, els professionals del sector,
+[00:07:55.260 --> 00:07:57.260]   sempre pots aconseguir alguna cosa.
+[00:07:57.260 --> 00:08:01.380]   -Molt bé. -Però bé, aquí ja no sé, s'hauria de contestar.
+-.Pregunta 3.1.-
+[00:08:14.780 --> 00:08:24.780]   -Jo crec que sí, inclús a vegades massa,
+[00:08:24.780 --> 00:08:28.780]   en el sentit que tots aquests sistemes,
+[00:08:28.780 --> 00:08:35.140]   la majoria, o sigui, ja hi ha moltes empreses o innovadores
+[00:08:35.140 --> 00:08:40.540]   que van entrant a agafar sistemes i demés,
+[00:08:40.540 --> 00:08:44.940]   però és que molts d'aquests sistemes per digitalitzar una mica més els processos
+[00:08:44.940 --> 00:08:48.220]   i optimitzar certs punts de la producció,
+[00:08:48.220 --> 00:08:54.140]   és veritat que sempre requereixen d'unes condicions
+[00:08:54.140 --> 00:08:56.860]   molt òptimes perquè funcionin,
+[00:08:56.860 --> 00:09:02.380]   i a vegades d'un personal extremadament qualificat, penso jo,
+[00:09:02.380 --> 00:09:06.740]   perquè portin un manteniment o un control o un seguiment.
+[00:09:06.740 --> 00:09:12.900]   És veritat que ens hem trobat amb diferents sistemes
+[00:09:12.900 --> 00:09:15.900]   que al final són molt difícils d'implementar
+[00:09:15.900 --> 00:09:19.660]   perquè, primer, tot i que tenim internet,
+[00:09:19.660 --> 00:09:23.260]   hi ha talls, hi ha salts, la cobertura no és molt bona,
+[00:09:23.260 --> 00:09:27.700]   llavors això moltes vegades està més pensat
+[00:09:27.700 --> 00:09:30.700]   per a un ofici al centre de Madrid o de Barcelona,
+[00:09:30.700 --> 00:09:35.220]   on tot és molt continu, molt lineal, i tot va molt bé.
+[00:09:35.220 --> 00:09:39.220]   I també a vegades ens trobem que al final a les granges,
+[00:09:39.220 --> 00:09:43.220]   primer, hi ha uns ambients complicats pels temes dels sensors,
+[00:09:43.220 --> 00:09:49.220]   i segon, al final, la mà d'obra normalment
+[00:09:49.220 --> 00:09:53.220]   no vull generalitzar, però que hi ha a les granges,
+[00:09:53.220 --> 00:09:57.220]   no està suficientment qualificada
+[00:09:57.220 --> 00:10:03.220]   perquè pugui portar un manteniment o solucionar certs problemes.
+[00:10:03.220 --> 00:10:08.220]   I sí, òbviament podries trobar gent molt qualificada
+[00:10:08.220 --> 00:10:11.220]   perquè fes aquestes feines, però llavors has d'acceptar
+[00:10:11.220 --> 00:10:15.220]   que sigui gent que vulgui estar o viure
+[00:10:15.220 --> 00:10:19.220]   en llocs remots d'Espanya i rurals,
+[00:10:19.220 --> 00:10:23.220]   i a la vegada prefereixi estar treballant
+[00:10:23.220 --> 00:10:27.220]   parlant una mica malament al mig de la merda
+[00:10:27.220 --> 00:10:31.220]   en comptes de competir amb una feina que li donarien
+[00:10:31.220 --> 00:10:35.220]   potser en una oficina o en una fàbrica a la gran ciutat.
+[00:10:35.220 --> 00:10:39.220]   Llavors, a vegades de poc serveix grans equips
+[00:10:39.220 --> 00:10:41.220]   que necessitin d'aquest tipus de personal
+[00:10:41.220 --> 00:10:46.220]   que tampoc costarà molt atraure'ls cap al nostre sector.
+[00:10:52.220 --> 00:10:55.220]   Clar, han de ser una mica realistes també, no?
+[00:11:09.220 --> 00:11:12.220]   Sí, a veure, a mi potser em agafaràs una mica
+[00:11:12.220 --> 00:11:16.220]   perquè, els que estan més posats al detall
+[00:11:16.220 --> 00:11:19.220]   són les persones que tinc de manteniment, o de producció.
+[00:11:19.220 --> 00:11:27.220]   Però bueno, nosaltres al final tenim des de càmeres de seguretat
+[00:11:27.220 --> 00:11:31.220]   a tenir controls d'accessos, per començar per lo més senzill,
+[00:11:31.220 --> 00:11:35.220]   hi ha controls d'accessos per codis o empremtes o reconeixement facial,
+[00:11:35.220 --> 00:11:38.220]   depèn de cada granja, que ho hem anat canviant.
+[00:11:38.220 --> 00:11:46.220]   Llavors tenim uns sensors que controlen l'aigua que ens entra del pou
+[00:11:46.220 --> 00:11:49.220]   per saber si tenim algun problema o no.
+[00:11:49.220 --> 00:11:52.220]   No sé si vas per aquí, vaig fent.
+[00:11:52.220 --> 00:11:58.220]   Llavors també tenim diferents dipòsits que també ens permeten saber
+[00:11:58.220 --> 00:12:04.220]   en remot la capacitat que tenen perquè no ens quedem mai sense aigua.
+[00:12:04.220 --> 00:12:10.220]   Llavors també tenim automatitzats els sistemes de climatització i ventilació,
+[00:12:10.220 --> 00:12:16.220]   tant fem calderes per climatitzar, tenim també puritèrmia,
+[00:12:16.220 --> 00:12:21.220]   tenim tot un programa que ens permet saber les temperatures
+[00:12:21.220 --> 00:12:24.220]   i com funciona, si està funcionant bé.
+[00:12:24.220 --> 00:12:31.220]   Llavors també, el que és la ventilació,
+[00:12:31.220 --> 00:12:35.220]   també tenim una sèrie de programes que ens permeten controlar
+[00:12:35.220 --> 00:12:38.220]   i regular els ambients de les sales.
+[00:12:38.220 --> 00:12:42.220]   I llavors, el que et comentava del menjar,
+[00:12:42.220 --> 00:12:48.220]   també tenim diferents sistemes, cada nau, automatitzada l'alimentació.
+[00:12:48.220 --> 00:12:52.220]   Segur que em deixeu alguna cosa o així,
+[00:12:52.220 --> 00:12:59.220]   però intentem tenir bastant tot el procés controlat.
+-.Pregunta 3.2.-
+[00:13:07.220 --> 00:13:10.220]   M'ha deixat una, també tenim un sistema d'aquests de control
+[00:13:10.220 --> 00:13:15.220]   del pinso que hi ha dins de la sitja per saber la capacitat que té.
+[00:13:18.220 --> 00:13:21.220]   Jo crec que sí, és aquesta la sitja electrònica.
+[00:13:21.220 --> 00:13:23.220]   La sitja electrònica, bueno sí.
+[00:13:23.220 --> 00:13:27.220]   Em sembla que va per un làser, sí, ara l'has enganxat.
+[00:13:27.220 --> 00:13:31.220]   No sé si va amb làser o amb unes ones, diguem.
+[00:13:34.220 --> 00:13:38.220]   Sí, no, no, no és pas per pes.
+[00:13:38.220 --> 00:13:42.220]   No, perquè no hi ha pas colzes sota dels peus.
+[00:13:42.220 --> 00:13:46.220]   És un sistema que està posat a dalt, llavors serà un sistema així.
+[00:13:46.220 --> 00:13:48.220]   Quina pregunta m'havies fet?
+[00:13:48.220 --> 00:13:51.220]   Quins sistemes augmentaríem per...
+[00:13:51.220 --> 00:13:59.220]   No ho sé, no sé fins a quin punt és digitalitzar o és més mecanitzar,
+[00:13:59.220 --> 00:14:05.220]   però bueno, per sistemes de netejar, no sé si això ho consideres com una digitalització o no.
+[00:14:16.220 --> 00:14:25.220]   Sí, no ho sé, ara mateix com a projecte no tenim que sigui 100% digital,
+[00:14:25.220 --> 00:14:29.220]   però bueno, sí que s'està parlant també una mica de...
+[00:14:29.220 --> 00:14:34.220]   no ho tenim implementat, però sistemes que permetin saber...
+[00:14:34.220 --> 00:14:38.220]   són sistemes que s'apliquen a l'automoció, pel que m'han dit,
+[00:14:38.220 --> 00:14:44.220]   que permetin saber una mica les persones quins fluxos tenen
+[00:14:44.220 --> 00:14:50.220]   dins de moviments, dins dels espais, per controlar una mica millor la bioseguretat.
+[00:14:50.220 --> 00:14:55.220]   En el sentit de, si primer pots estar a unes sales que hi pot haver diarrea o no,
+[00:14:55.220 --> 00:15:00.220]   controlar una mica els fluxos de les persones, que això es pot digitalitzar.
+[00:15:00.220 --> 00:15:05.220]   Bueno, les persones porten com un dispositiu, el que ens han informat,
+[00:15:05.220 --> 00:15:12.220]   i quan passen per certs punts queda registrat l'hora i el moment i l'usuari,
+[00:15:12.220 --> 00:15:15.220]   llavors pots controlar una mica els temes de bioseguretat,
+[00:15:15.220 --> 00:15:18.220]   però bueno, és una cosa que s'està parlant,
+[00:15:18.220 --> 00:15:22.220]   però bueno, ja saps que tot és complicat d'implementar.
+[00:15:22.220 --> 00:15:27.220]   Bé, això, s'està parlant d'això, que bueno, podria arribar a ser interessant.
+[00:15:27.220 --> 00:15:32.220]   També, bueno, ara les visites externes les apuntàvem en un paper,
+[00:15:32.220 --> 00:15:37.220]   ara ja, bueno, s'està registrant com amb una tablet,
+[00:15:37.220 --> 00:15:41.220]   ja et fa com un petit qüestionari per saber on has estat.
+[00:15:41.220 --> 00:15:46.220]   Llavors també potser ens agradaria intentar digitalitzar tot el tema de documentació,
+[00:15:46.220 --> 00:15:51.220]   per exemple, documentació de prevenció de riscos per...
+[00:15:51.220 --> 00:15:55.220]   És un tema que a vegades està poc desenvolupat a les granges
+[00:15:55.220 --> 00:15:58.220]   i la resta d'empreses són molt més serioses amb això.
+[00:15:58.220 --> 00:16:01.220]   Nosaltres intentem fer-ho, però jo què sé, si ve d'una empresa externa,
+[00:16:01.220 --> 00:16:07.220]   que ja rebi i pugui firmar tota la documentació de riscos laborals
+[00:16:07.220 --> 00:16:09.220]   abans d'accedir a un centre de treball,
+[00:16:09.220 --> 00:16:16.220]   o bueno, això és una cosa que també ens agradaria poder digitalitzar, no ho sé.
+[00:16:16.220 --> 00:16:22.220]   Bé, més en producció, producció, més aviat, com et comentava abans,
+[00:16:22.220 --> 00:16:30.220]   estem intentant simplificar molt les coses perquè al final ens trobem en la mà d'obra que ens trobem
+[00:16:30.220 --> 00:16:35.220]   i de vegades, quan hi ha sistemes més complexos,
+[00:16:35.220 --> 00:16:41.220]   hem de vegades més restringir perquè no es desconfigurin temes i de més
+[00:16:41.220 --> 00:16:44.220]   que no pas treure-li el màxim rendiment.
+-.Pregunta 3.3a.-
+[00:16:51.220 --> 00:16:56.220]   Bueno, l'avantatge principal és que llavors quan pots prendre una decisió
+[00:16:56.220 --> 00:17:02.220]   tens la informació real i no et bases en suposicions i en preguntes
+[00:17:02.220 --> 00:17:06.220]   i no hi ha el truc del telèfon que et puguin anar derivant.
+[00:17:06.220 --> 00:17:10.220]   És a dir, un exemple molt fàcil que a vegades sento que diuen molta gent,
+[00:17:10.220 --> 00:17:15.220]   doncs és "baixo la temperatura d'aquesta sala perquè sembla que tinc fred".
+[00:17:15.220 --> 00:17:19.220]   Quina temperatura hi ha? Petites.
+[00:17:19.220 --> 00:17:22.220]   Això és una decisió molt petita i molt local,
+[00:17:22.220 --> 00:17:26.220]   llavors pots prendre decisions molt més globals quan més informació tinguis.
+[00:17:26.220 --> 00:17:28.220]   Bàsicament és aquesta.
+[00:17:28.220 --> 00:17:34.220]   És a dir, prendre decisions en base a informació real i exacta i objectiva.
+-.Pregunta 3.3b.-
+[00:17:40.220 --> 00:17:48.220]   El que t'he dit, una és la ubicació, l'entorn, la continuïtat,
+[00:17:48.220 --> 00:17:54.220]   la qualitat de el internet i l'ambient,
+[00:17:54.220 --> 00:17:58.220]   de donar molta aigua per netejar a pressió,
+[00:17:58.220 --> 00:18:03.220]   de l'ambient corrosiu, corrosiu no sé quina és la paraula,
+[00:18:03.220 --> 00:18:07.220]   però que hi pot haver dintre de les instal·lacions,
+[00:18:07.220 --> 00:18:10.220]   i per segona, el personal.
+[00:18:10.220 --> 00:18:16.220]   És a dir, la tecnologia requereix persones molt qualificades
+[00:18:16.220 --> 00:18:21.220]   perquè la mantinguin en el seu estat òptim  de funcionament,
+[00:18:21.220 --> 00:18:25.220]   perquè si un sensor falla ja no serveix per res,
+[00:18:25.220 --> 00:18:28.220]   o sigui, s'ha d'arreglar.
+[00:18:28.220 --> 00:18:36.220]   Llavors al final les granges és un sistema,
+[00:18:36.220 --> 00:18:42.220]   és una indústria, un sistema de producció que és 365 dies l'any,
+[00:18:42.220 --> 00:18:46.220]   24 hores al dia, perquè són animals vius,
+[00:18:46.220 --> 00:18:50.220]   i les coses han de funcionar no de dilluns a divendres,
+[00:18:50.220 --> 00:18:54.220]   de nou a cinc, sinó que han de funcionar sempre,
+[00:18:54.220 --> 00:18:59.220]   tots els dies, el dia de Nadal, a la nit, els divendres a la nit,
+[00:18:59.220 --> 00:19:03.220]   llavors clar, aconseguir que això funcioni sempre,
+[00:19:03.220 --> 00:19:07.220]   i és en continu, és a dir, tots els processos,
+[00:19:07.220 --> 00:19:12.220]   tot el que no has fet avui, demà ja no ho hauràs fet,
+[00:19:12.220 --> 00:19:15.220]   no et pots guardar feina per fer més endavant,
+[00:19:15.220 --> 00:19:18.220]   tu ho has de fer cada dia, no, amb els animals,
+[00:19:18.220 --> 00:19:21.220]   llavors això fa que sigui complex.
+-.Pregunta 3.4.-
+[00:19:32.220 --> 00:19:36.220]   La veritat és que jo, en aquest cas,
+[00:19:36.220 --> 00:19:40.220]   segurament hauria de buscar-me més la vida
+[00:19:40.220 --> 00:19:44.220]   perquè no estic gaire connectat, però ara mateix
+[00:19:44.220 --> 00:19:47.220]   és boca orella parlant amb gent del sector,
+[00:19:47.220 --> 00:19:50.220]   no estic gaire posat en xarxes.
+[00:19:50.220 --> 00:19:54.220]   Sí que, bé, penso que potser funciona bastant
+[00:19:54.220 --> 00:19:57.220]   com per congressos o esdeveniments que es facin,
+[00:19:57.220 --> 00:20:01.220]   sí, exacte, esdeveniments, congressos i tal.
+[00:20:01.220 --> 00:20:05.220]   És una mica per aquí, i sobretot boca orella
+[00:20:05.220 --> 00:20:07.220]   parlant amb gent.
+[00:20:11.220 --> 00:20:13.220]   Sí, sí, o parlant amb veterinaris,
+[00:20:13.220 --> 00:20:16.220]   canvi d'això en aquell lloc, els han dit allò, allò altre,
+[00:20:16.220 --> 00:20:18.220]   parlant amb visitadors, veterinaris,
+[00:20:18.220 --> 00:20:21.220]   o altres persones del sector.
+-.Pregunta 4.1.-
+[00:20:31.220 --> 00:20:33.220]   Ja m'has dit alguns quants, però no sé si...
+[00:20:33.220 --> 00:20:35.220]   Sí, ara et pillaràs una mica aquí,
+[00:20:35.220 --> 00:20:41.220]   però, bé, tenim aquests sensors per les sitges,
+[00:20:41.220 --> 00:20:43.220]   per saber la capacitat.
+[00:20:43.220 --> 00:20:45.220]   Tenim sensors per saber l'aigua
+[00:20:45.220 --> 00:20:50.220]   que hi ha en un dipòsit, com el flux que passa.
+[00:20:50.220 --> 00:20:54.220]   Tenim sensors per la ventilació,
+[00:20:54.220 --> 00:20:56.220]   que suposo que són de temperatura.
+[00:20:56.220 --> 00:20:58.220]   No en tenim nosaltres,
+[00:20:58.220 --> 00:21:01.220]   d'altres paràmetres ambientals,
+[00:21:01.220 --> 00:21:03.220]   com CO2 i tal, crec.
+[00:21:03.220 --> 00:21:08.220]   Llavors tenim xips de les truges que es llegeixen,
+[00:21:08.220 --> 00:21:10.220]   o sigui, per detectar individus.
+[00:21:10.220 --> 00:21:14.220]   Llavors hi ha sensors d'aquests de fitxatges,
+[00:21:14.220 --> 00:21:16.220]   de personal, de codi,
+[00:21:16.220 --> 00:21:19.220]   o de lectura facial i dactilar.
+[00:21:19.220 --> 00:21:21.220]   Com això, ara em sembla que,
+[00:21:21.220 --> 00:21:23.220]   no sé si anirem cap enrere,
+[00:21:23.220 --> 00:21:26.220]   perquè sobre el tema de la privacitat de...
+[00:21:26.220 --> 00:21:28.220]   de protecció de dades i tal,
+[00:21:28.220 --> 00:21:31.220]   em sembla que haurem de començar a anar una mica enrere.
+[00:21:31.220 --> 00:21:33.220]   Però, bé, ja estava parlant l'altre dia
+[00:21:33.220 --> 00:21:35.220]   amb una companya que m'estava dient
+[00:21:35.220 --> 00:21:37.220]   que ho has de justificar molt bé
+[00:21:37.220 --> 00:21:39.220]   per agafar la càrrega del fum.
+[00:21:48.220 --> 00:21:49.220]   Sí, sí, sí.
+[00:21:51.220 --> 00:21:53.220]   Llavors, per la puritèrmia,
+[00:21:53.220 --> 00:21:56.220]   segur que tenim altres sensors, però que desconec.
+[00:21:56.220 --> 00:21:59.220]   Igual que la caldera,
+[00:21:59.220 --> 00:22:01.220]   tenim també, això t'he dit,
+[00:22:01.220 --> 00:22:04.220]   tenim forns incineradores
+[00:22:04.220 --> 00:22:06.220]   per registrar els cadàvers.
+[00:22:06.220 --> 00:22:09.220]   Llavors, allà també sí que hi ha sensors a dins,
+[00:22:09.220 --> 00:22:12.220]   però no per calcular la flama
+[00:22:12.220 --> 00:22:14.220]   i la temperatura i tal.
+[00:22:15.220 --> 00:22:18.220]   No ho sé.
+[00:22:18.220 --> 00:22:20.220]   Més o menys, t'he anat dient.
+-.Pregunta 4.2.-
+[00:22:32.220 --> 00:22:36.220]   Proporcionen dades i llavors nosaltres
+[00:22:36.220 --> 00:22:39.220]   sempre registrem i extrèiem aquestes dades
+[00:22:39.220 --> 00:22:41.220]   per fer anàlisis.
+[00:22:41.220 --> 00:22:47.220]   Primer, per llei ja ens en demanen,
+[00:22:47.220 --> 00:22:49.220]   perquè en el tema de les incineradores
+[00:22:49.220 --> 00:22:51.220]   ja ens en demanen un cop a l'any.
+[00:22:51.220 --> 00:22:53.220]   Tot el registre, quan han vingut inspeccions,
+[00:22:53.220 --> 00:22:55.220]   també tenen un PEN
+[00:22:55.220 --> 00:22:57.220]   que has de treure i et poden analitzar,
+[00:22:57.220 --> 00:22:59.220]   però això només ho fem per complir
+[00:22:59.220 --> 00:23:01.220]   legalment amb el que ens demanen.
+[00:23:01.220 --> 00:23:03.220]   Són emissions,
+[00:23:03.220 --> 00:23:06.220]   que ens demanen les emissions anuals
+[00:23:06.220 --> 00:23:08.220]   que tenim.
+[00:23:08.220 --> 00:23:10.220]   I llavors sí que per l'aigua
+[00:23:10.220 --> 00:23:12.220]   sí que portem molt de control
+[00:23:12.220 --> 00:23:15.220]   perquè no ens quedéssim mai sense aigua.
+[00:23:15.220 --> 00:23:17.220]   A més, pel pinso també,
+[00:23:17.220 --> 00:23:19.220]   per gestionar sempre que quedin buits,
+[00:23:19.220 --> 00:23:21.220]   intentar que hi hagi molta rotació
+[00:23:21.220 --> 00:23:23.220]   i no quedi pinso.
+[00:23:23.220 --> 00:23:26.220]   S'ha d'intentar buidar sempre molt les sitges,
+[00:23:26.220 --> 00:23:28.220]   inclús de tant en tant els desinfectem,
+[00:23:28.220 --> 00:23:31.220]   llavors perquè hi hagi un rodatge de tots
+[00:23:31.220 --> 00:23:34.220]   i intentar buidar-los al 100%.
+[00:23:34.220 --> 00:23:36.220]   No sé si us referiu una mica a això
+[00:23:36.220 --> 00:23:38.220]   quan tractem dades i demés.
+-.Pregunta 4.3.-
+[00:23:43.220 --> 00:23:45.220]   Depèn.
+[00:23:45.220 --> 00:23:47.220]   Anualment sempre.
+[00:23:47.220 --> 00:23:51.220]   I llavors, normalment,
+[00:23:51.220 --> 00:23:54.220]   com trimestralment,
+[00:23:54.220 --> 00:23:58.220]   l'aigua sí que es fa a diari.
+[00:23:58.220 --> 00:24:02.220]   A diari, perquè ens preocupa molt.
+[00:24:02.220 --> 00:24:05.220]   I com que funcionem en pous,
+[00:24:05.220 --> 00:24:07.220]   doncs...
+[00:24:07.220 --> 00:24:09.220]   No ens podem permetre el luxe
+[00:24:09.220 --> 00:24:11.220]   d'un dia quedar-nos sense aigua.
+[00:24:11.220 --> 00:24:14.220]   A més, hem tingut algun espant algun estiu,
+[00:24:14.220 --> 00:24:16.220]   en una granja,
+[00:24:16.220 --> 00:24:18.220]   llavors...
+[00:24:18.220 --> 00:24:20.220]   L'aigua sí que és una cosa
+[00:24:20.220 --> 00:24:22.220]   que es controla molt a diari.
+[00:24:22.220 --> 00:24:24.220]   Estic pensant, eh?
+[00:24:24.220 --> 00:24:27.220]   Perquè es porten més registres a diari,
+[00:24:27.220 --> 00:24:30.220]   però es barregen amb coses de producció.
+[00:24:30.220 --> 00:24:32.220]   Que sigui així com de sensors...
+[00:24:35.220 --> 00:24:37.220]   Bueno, sí, les temperatures sí,
+[00:24:37.220 --> 00:24:39.220]   però ho porten més els operaris.
+[00:24:39.220 --> 00:24:41.220]   Generalment no és com un tractament tant,
+[00:24:41.220 --> 00:24:44.220]   de dir, de base de dades, d'analitzar...
+[00:24:44.220 --> 00:24:46.220]   Saps què vull dir o no?
+[00:24:46.220 --> 00:24:48.220]   A diari, llavors...
+[00:24:48.220 --> 00:24:50.220]   Trimestralment sí que totes...
+[00:24:50.220 --> 00:24:53.220]   totes es gestionen en aquestes dades.
+[00:24:53.220 --> 00:24:55.220]   Et dic trimestralment una mica així,
+[00:24:55.220 --> 00:24:57.220]   a voltar, més o menys.
+[00:24:57.220 --> 00:24:59.220]   Està bé, sí, més o menys.
+-.Pregunta 5.1.-
+[00:25:12.220 --> 00:25:14.220]   L'últim canvi que hem anat fent
+[00:25:14.220 --> 00:25:16.220]   és això de les sitges.
+[00:25:16.220 --> 00:25:19.220]   Bueno, llavors...
+[00:25:19.220 --> 00:25:21.220]   Digitalitzacions.
+[00:25:21.220 --> 00:25:23.220]   Sí que ens han explicat
+[00:25:23.220 --> 00:25:25.220]   que tenim plaques solars,
+[00:25:25.220 --> 00:25:27.220]   que també tenim dades.
+[00:25:27.220 --> 00:25:30.220]   En una de les exposicions es va posar fa poc.
+[00:25:30.220 --> 00:25:32.220]   Plaques i llavors això.
+[00:25:32.220 --> 00:25:34.220]   I...
+[00:25:34.220 --> 00:25:37.220]   I això. Aquests han sigut els últims que hem fet.
+-.Pregunta 5.2.-
+[00:25:42.220 --> 00:25:44.220]   Per fer com...
+[00:25:44.220 --> 00:25:46.220]   Com...
+[00:25:46.220 --> 00:25:48.220]   El que estem implementant ara
+[00:25:48.220 --> 00:25:50.220]   per fer, que s'està fent ja,
+[00:25:50.220 --> 00:25:52.220]   que no entri com a fet,
+[00:25:52.220 --> 00:25:54.220]   però s'està fent ja és el tema aquest
+[00:25:54.220 --> 00:25:56.220]   de gestió de les visites externes
+[00:25:56.220 --> 00:25:58.220]   amb una Tablet i amb la documentació
+[00:25:58.220 --> 00:26:00.220]   per tenir una traçabilitat, llavors,
+[00:26:00.220 --> 00:26:02.220]   de qui ha accedit. I per tema de vídeo seguretat 
+[00:26:02.220 --> 00:26:04.220]   Portar un control.
+[00:26:04.220 --> 00:26:06.220]   Aquest és el que s'està implementant ara mateix.
+[00:26:06.220 --> 00:26:08.220]   I el que s'està estudiant
+[00:26:08.220 --> 00:26:11.220]   és això que t'he comentat dels fluxos de les persones.
+[00:26:11.220 --> 00:26:13.220]   De la bioseguretat.
+[00:26:13.220 --> 00:26:15.220]   De la bioseguretat i una mica
+[00:26:15.220 --> 00:26:17.220]   també optimització dels processos
+[00:26:17.220 --> 00:26:19.220]   per si, perquè ara a vegades
+[00:26:19.220 --> 00:26:21.220]   sí que per decidir si
+[00:26:21.220 --> 00:26:23.220]   hi ha dues persones traient el deslletament
+[00:26:23.220 --> 00:26:25.220]   o n'hi ha tres, o a parts n'hi ha...
+[00:26:25.220 --> 00:26:27.220]   Ens basem una mica en opinions
+[00:26:27.220 --> 00:26:29.220]   i en l'experiència dels visitadors,
+[00:26:29.220 --> 00:26:31.220]   veterinaris i la integradora,
+[00:26:31.220 --> 00:26:33.220]   que potser això als fluxos ens ajudaria
+[00:26:33.220 --> 00:26:35.220]   a saber quantes hores dediquem
+[00:26:35.220 --> 00:26:37.220]   i quantes persones a cada zona
+[00:26:37.220 --> 00:26:39.220]   i això potser ens podria repensar una mica
+[00:26:39.220 --> 00:26:41.220]   com estructurem l'equip de treball
+[00:26:41.220 --> 00:26:43.220]   en número, en horaris, etc.
+[00:26:43.220 --> 00:26:45.220]   Llavors, el que et deia
+[00:26:45.220 --> 00:26:47.220]   de prendre decisions
+[00:26:47.220 --> 00:26:49.220]   però si tens aquestes informacions
+[00:26:49.220 --> 00:26:51.220]   et pot fer veure coses que ara no estàs veient.
+[00:26:51.220 --> 00:26:53.220]   Això no esta confirmat.
+[00:26:53.220 --> 00:26:55.220]   Això és una cosa que estem pensant
+[00:26:55.220 --> 00:26:57.220]   perquè també és complex
+[00:26:57.220 --> 00:26:59.220]   el que és com encaixa
+[00:26:59.220 --> 00:27:01.220]   el personal amb això,
+[00:27:01.220 --> 00:27:03.220]   que ho hem de monitoritzar,
+[00:27:03.220 --> 00:27:05.220]   és complicat.
+[00:27:05.220 --> 00:27:07.220]   S'ha d'estudiar bé i...
+-.Pregunta 5.3.-
+[00:27:29.220 --> 00:27:31.220]   No en conec, no.
+-.Pregunta 6.1.-
+[00:27:51.220 --> 00:28:03.220]   A veure, jo crec que és a nivell de producció,
+[00:28:03.220 --> 00:28:11.220]   o sigui, realment, si ens farà treballar,
+[00:28:11.220 --> 00:28:13.220]   o sigui, produir més,
+[00:28:13.220 --> 00:28:15.220]   o optimitzar processos,
+[00:28:15.220 --> 00:28:17.220]   entén-me,
+[00:28:17.220 --> 00:28:19.220]   o reduir el temps de treball,
+[00:28:19.220 --> 00:28:21.220]   o de més, aquest és el principal.
+[00:28:21.220 --> 00:28:23.220]   Segurament també l'econòmic,
+[00:28:23.220 --> 00:28:25.220]   perquè si tu al final no pots rentabilitzar
+[00:28:25.220 --> 00:28:27.220]   i no té gaire sentit,
+[00:28:27.220 --> 00:28:29.220]   llavors aquest jo crec que serien
+[00:28:29.220 --> 00:28:33.220]   els dos factors principals.
+[00:28:33.220 --> 00:28:35.220]   En quant a això,
+[00:28:35.220 --> 00:28:37.220]   a vegades també quan prenem decisions,
+[00:28:37.220 --> 00:28:39.220]   a vegades també són perquè
+[00:28:39.220 --> 00:28:41.220]   ha sortit una nova llei
+[00:28:41.220 --> 00:28:43.220]   o ha sortit i al final
+[00:28:43.220 --> 00:28:45.220]   hem d'acabar complint,
+[00:28:45.220 --> 00:28:47.220]   al final també ho has de fer perquè sí.
+[00:28:47.220 --> 00:28:49.220]   Quan pots decidir,
+[00:28:49.220 --> 00:28:51.220]   jo crec que serien una mica aquests dos.
+[00:28:51.220 --> 00:28:57.220]   I realment, si és realista
+[00:28:57.220 --> 00:28:59.220]   i es pot implementar,
+[00:28:59.220 --> 00:29:01.220]   si veiem que podria millorar
+[00:29:01.220 --> 00:29:03.220]   més o menys l'econòmic,
+[00:29:03.220 --> 00:29:05.220]   però després és que no tindríem
+[00:29:05.220 --> 00:29:07.220]   ningú que ho pogués treballar
+[00:29:07.220 --> 00:29:09.220]   amb això o així,
+[00:29:09.220 --> 00:29:11.220]   i el que t'està explicant
+[00:29:11.220 --> 00:29:13.220]   de les dificultats que tenim,
+[00:29:13.220 --> 00:29:15.220]   doncs, òbviament, tampoc ens ho plantegem.
+-.Pregunta 6.2a.-
+[00:29:19.220 --> 00:29:23.220]   Jo, doncs,
+[00:29:23.220 --> 00:29:25.220]   soc el principal responsable,
+[00:29:25.220 --> 00:29:27.220]   és a dir,
+[00:29:27.220 --> 00:29:29.220]   porto la gestió
+[00:29:29.220 --> 00:29:31.220]   de, total,
+[00:29:31.220 --> 00:29:33.220]   o sigui, no sé, quin títol li has de posar,
+[00:29:33.220 --> 00:29:35.220]   jo soc el administrador de l'empresa,
+[00:29:35.220 --> 00:29:37.220]   però si és CEO
+[00:29:37.220 --> 00:29:39.220]   o no sé quins noms ara es posen,
+[00:29:39.220 --> 00:29:41.220]   però
+[00:29:41.220 --> 00:29:43.220]   al final jo
+[00:29:43.220 --> 00:29:45.220]   em coordino amb el responsable
+[00:29:45.220 --> 00:29:47.220]   de producció i amb els encarregats
+[00:29:47.220 --> 00:29:49.220]   de les granges, amb les persones de manteniment,
+[00:29:49.220 --> 00:29:51.220]   les persones de recursos humans, comptabilitat,
+[00:29:51.220 --> 00:29:53.220]   llavors, per fer que tot funcioni.
+-.Pregunta 6.2b.-
+[00:30:01.220 --> 00:30:03.220]   Sí, nosaltres sempre que prenem decisions,
+[00:30:03.220 --> 00:30:05.220]   com que tenim aquest sistema de negoci
+[00:30:05.220 --> 00:30:07.220]   molt vinculat a l'integradora,
+[00:30:07.220 --> 00:30:09.220]   al final sempre hem de consensuar amb ells
+[00:30:09.220 --> 00:30:11.220]   tot el que
+[00:30:11.220 --> 00:30:13.220]   ens en fan la majoria.
+[00:30:13.220 --> 00:30:15.220]   Pràcticament sempre
+[00:30:15.220 --> 00:30:17.220]   amb ells
+[00:30:17.220 --> 00:30:19.220]   les decisions que volem
+[00:30:19.220 --> 00:30:21.220]   prendre, llavors al final
+[00:30:21.220 --> 00:30:23.220]   les fem reunions amb diferents persones
+[00:30:23.220 --> 00:30:25.220]   en diferents àmbits, depenent del tema
+[00:30:25.220 --> 00:30:27.220]   que anem a tractar,
+[00:30:27.220 --> 00:30:29.220]   doncs ens ajuntem amb persones
+[00:30:29.220 --> 00:30:31.220]   especialistes en manteniment
+[00:30:31.220 --> 00:30:33.220]   o temes més digitals,
+[00:30:33.220 --> 00:30:35.220]   que ens donen la seva opinió
+[00:30:35.220 --> 00:30:37.220]   amb l'empresa
+[00:30:37.220 --> 00:30:39.220]   que, empreses proveïdores,
+[00:30:39.220 --> 00:30:41.220]   i al final
+[00:30:41.220 --> 00:30:43.220]   entre tots
+[00:30:43.220 --> 00:30:45.220]   arribem
+[00:30:45.220 --> 00:30:47.220]   a un debat, arribem a una decisió.
+-.Pregunta 6.3.-
+[00:31:09.220 --> 00:31:11.220]   Sí, sí, ja t'entenc.
+[00:31:11.220 --> 00:31:17.220]   Jo crec que, sí,
+[00:31:17.220 --> 00:31:19.220]   les ventilacions sí,
+[00:31:19.220 --> 00:31:21.220]   però
+[00:31:21.220 --> 00:31:23.220]   el pinso no, amb el manual
+[00:31:23.220 --> 00:31:25.220]   no està...
+[00:31:25.220 --> 00:31:27.220]   o sigui, hi ha
+[00:31:27.220 --> 00:31:29.220]   confirmació sempre final.
+[00:31:35.220 --> 00:31:37.220]   Bé, sí,
+[00:31:37.220 --> 00:31:39.220]   però calefaccions també són automàtiques
+[00:31:39.220 --> 00:31:41.220]   perquè al final demanes
+[00:31:41.220 --> 00:31:43.220]   i funciona o no.
+[00:31:43.220 --> 00:31:45.220]   Sí, segur que ventilació
+[00:31:45.220 --> 00:31:47.220]   i calefacció.
+[00:31:49.220 --> 00:31:51.220]   Ai, perdona, i també la gestió de l'aigua,
+[00:31:51.220 --> 00:31:53.220]   és a dir, l'aigua
+[00:31:53.220 --> 00:31:57.220]   tenim un pou
+[00:31:57.220 --> 00:31:59.220]   amb una bomba que va traient aigua
+[00:31:59.220 --> 00:32:01.220]   emplena uns dipòsits i en funció del
+[00:32:01.220 --> 00:32:03.220]   si està més plens o menys para
+[00:32:03.220 --> 00:32:05.220]   o no per estar sempre
+[00:32:05.220 --> 00:32:07.220]   en un percentatge.
+[00:32:11.220 --> 00:32:13.220]   Sí, però si el procés és automatitzat
+[00:32:13.220 --> 00:32:15.220]   més així com en deies tu,
+[00:32:15.220 --> 00:32:17.220]   doncs directament la fàbrica de pinso
+[00:32:17.220 --> 00:32:19.220]   vegi l'estel que tenim de pinso dins
+[00:32:19.220 --> 00:32:21.220]   i ja pugui enviar un camió o, per exemple,
+[00:32:21.220 --> 00:32:23.220]   el gas, hi ha un sensor dins del dipòsit
+[00:32:23.220 --> 00:32:25.220]   que, això per exemple ens ho han proposat
+[00:32:25.220 --> 00:32:27.220]   de gas i no ho hem fet, és una cosa que
+[00:32:27.220 --> 00:32:29.220]   ara fa més que pensar
+[00:32:29.220 --> 00:32:31.220]   que fa poc que l'empresa
+[00:32:31.220 --> 00:32:33.220]   ens subministra el gas van dir que, dins del tanc, si volia
+[00:32:33.220 --> 00:32:35.220]   ens podia posar un sensor i ja ens enviaria
+[00:32:35.220 --> 00:32:37.220]   els camions sense haver de
+[00:32:37.220 --> 00:32:39.220]   mirar-ho, doncs mira, és una cosa que podem
+[00:32:39.220 --> 00:32:41.220]   doncs podríem fer
+[00:32:41.220 --> 00:32:43.220]   però això no ho tenim mare,
+[00:32:43.220 --> 00:32:45.220]   sempre acabem supervisant-ho.
+-.Pregunta 6.4.-
+[00:32:51.220 --> 00:32:53.220]   Desconfiança. Desconfiança
+[00:32:53.220 --> 00:32:55.220]   pel que et deia, que al final
+[00:32:55.220 --> 00:32:57.220]   les granges són 365 dies
+[00:32:57.220 --> 00:32:59.220]   l'any
+[00:32:59.220 --> 00:33:01.220]   i 24 hores
+[00:33:01.220 --> 00:33:03.220]   i les coses s’espatllen
+[00:33:03.220 --> 00:33:05.220]   els divendres a la tarda sempre
+[00:33:05.220 --> 00:33:07.220]   i llavors
+[00:33:07.220 --> 00:33:09.220]   quan tens sistemes d'aquests
+[00:33:09.220 --> 00:33:11.220]   i ningú se'n dona compte
+[00:33:11.220 --> 00:33:13.220]   doncs jo què sé,
+[00:33:13.220 --> 00:33:15.220]   la fàbrica de pinso no treballa
+[00:33:15.220 --> 00:33:17.220]   tots els dies, saps què vull dir no?
+[00:33:17.220 --> 00:33:19.220]   Tots els dies de l'any
+[00:33:19.220 --> 00:33:21.220]   o l'empresa de gas.
+[00:33:21.220 --> 00:33:23.220]   Ens trobem
+[00:33:23.220 --> 00:33:25.220]   que moltes vegades
+[00:33:25.220 --> 00:33:27.220]   això està molt pensat perquè les coses
+[00:33:27.220 --> 00:33:29.220]   passin sempre de dilluns a divendres
+[00:33:29.220 --> 00:33:31.220]   de nou a cinc.
+[00:33:31.220 --> 00:33:33.220]   Saps què et vull dir?
+[00:33:33.220 --> 00:33:35.220]   Perquè en aquests horaris
+[00:33:35.220 --> 00:33:37.220]   quan falla sempre hi ha
+[00:33:37.220 --> 00:33:39.220]   algú disponible i pendent per arreglar-ho.
+[00:33:39.220 --> 00:33:41.220]   Però en un sector com el nostre
+[00:33:41.220 --> 00:33:43.220]   que és de cada dia
+[00:33:43.220 --> 00:33:45.220]   totes les hores, doncs no...
+[00:33:45.220 --> 00:33:47.220]   És desconfiança.
+-.Pregunta 6.6.-
+[00:33:55.220 --> 00:33:57.220]   Uf, aquí m'enganxes una mica
+[00:33:57.220 --> 00:33:59.220]   perquè jo no els porto en el meu dia a dia.
+[00:33:59.220 --> 00:34:01.220]   Però sé que
+[00:34:01.220 --> 00:34:03.220]   sé que sobretot
+[00:34:03.220 --> 00:34:05.220]   els d'alimentació
+[00:34:05.220 --> 00:34:07.220]   perquè poden treure moltes dades
+[00:34:07.220 --> 00:34:09.220]   de consum dels animals i detectar
+[00:34:09.220 --> 00:34:11.220]   el veterinari
+[00:34:11.220 --> 00:34:13.220]   si hi ha algun problema
+[00:34:13.220 --> 00:34:15.220]   l'estat corporal
+[00:34:15.220 --> 00:34:17.220]   el que mengen o...
+[00:34:17.220 --> 00:34:19.220]   Això és bastant útil
+[00:34:19.220 --> 00:34:21.220]   i parlen sovint.
+-.Pregunta 6.7.-
+[00:34:23.220 --> 00:34:25.220]   Des de que vam començar.
+-.Pregunta 6.8.-
+[00:34:37.220 --> 00:34:43.220]   No et sabria dir ara.
+[00:34:43.220 --> 00:34:45.220]   M'enganxo una mica així.
+[00:34:45.220 --> 00:34:47.220]   No, no el sabria dir.
+-.Pregunta 6.9.-
+[00:34:57.220 --> 00:35:01.220]   Sempre
+[00:35:01.220 --> 00:35:03.220]   requereixen interpretació
+[00:35:03.220 --> 00:35:05.220]   si ens trobem.
+[00:35:05.220 --> 00:35:07.220]   I una mica...
+[00:35:07.220 --> 00:35:09.220]   Nosaltres al final
+[00:35:09.220 --> 00:35:11.220]   l'experiència quan hem provat bastantes coses
+[00:35:11.220 --> 00:35:13.220]   i tenim bastantes coses
+[00:35:13.220 --> 00:35:15.220]   comparat amb la majoria
+[00:35:15.220 --> 00:35:17.220]   això ho diràs tu quan vas fent entrevistes
+[00:35:17.220 --> 00:35:19.220]   però pel que parlo
+[00:35:19.220 --> 00:35:21.220]   estem bastant digitalitzats
+[00:35:21.220 --> 00:35:23.220]   i som bastant innovadors amb el que fem
+[00:35:23.220 --> 00:35:25.220]   però
+[00:35:25.220 --> 00:35:27.220]   sempre
+[00:35:27.220 --> 00:35:29.220]   et trobes molt
+[00:35:29.220 --> 00:35:31.220]   amb que això ve d'Alemanya
+[00:35:31.220 --> 00:35:33.220]   això ve d'Àustria
+[00:35:33.220 --> 00:35:35.220]   això és una empresa holandesa
+[00:35:35.220 --> 00:35:37.220]   i llavors costa bastant
+[00:35:37.220 --> 00:35:39.220]   quan hi ha problemes
+[00:35:39.220 --> 00:35:41.220]   trobar solucions
+[00:35:41.220 --> 00:35:43.220]   sensors a vegades descatalogats
+[00:35:43.220 --> 00:35:47.220]   tenim un sistema d'unes PDAs
+[00:35:47.220 --> 00:35:49.220]   també i tal
+[00:35:49.220 --> 00:35:51.220]   per llegir els xips dels animals
+[00:35:51.220 --> 00:35:53.220]   perquè si ara estem amb un problema
+[00:35:53.220 --> 00:35:55.220]   ja no el fan
+[00:35:55.220 --> 00:35:57.220]   tancar-se aquí i tal
+[00:35:57.220 --> 00:35:59.220]   és una cosa molt específica
+[00:35:59.220 --> 00:36:01.220]   llavors els principals problemes
+[00:36:01.220 --> 00:36:03.220]   són els que et vaig dient
+[00:36:03.220 --> 00:36:05.220]   que al final
+[00:36:05.220 --> 00:36:07.220]   les granges
+[00:36:07.220 --> 00:36:09.220]   és molt especial
+[00:36:09.220 --> 00:36:11.220]   i la tecnologia moltes vegades no està pensada
+[00:36:11.220 --> 00:36:13.220]   per ambients com aquests
+[00:36:13.220 --> 00:36:15.220]   i per horaris i llocs com aquests
+-.Pregunta 6.10.-
+[00:36:35.220 --> 00:36:37.220]   sí, és
+[00:36:37.220 --> 00:36:39.220]   en el que més
+[00:36:39.220 --> 00:36:41.220]   és en el que més
+[00:36:41.220 --> 00:36:43.220]   en el que més ens fiem
+[00:36:43.220 --> 00:36:45.220]   normalment
+[00:36:45.220 --> 00:36:47.220]   quan volem fer alguna cosa
+[00:36:47.220 --> 00:36:49.220]   intentem anar-ho a veure
+[00:36:49.220 --> 00:36:51.220]   a una altra granja que ja estigui muntada
+[00:36:51.220 --> 00:36:53.220]   i preguntar quins problemes han tingut
+[00:36:53.220 --> 00:36:57.220]   la decisió final
+[00:36:57.220 --> 00:36:59.220]   el que fa decantar
+[00:36:59.220 --> 00:37:01.220]   la balança és això
+[00:37:01.220 --> 00:37:03.220]   si al final veus que
+[00:37:03.220 --> 00:37:05.220]   una persona de confiança del sector
+[00:37:05.220 --> 00:37:07.220]   ho està fent servir
+[00:37:07.220 --> 00:37:09.220]   i et pot donar la seva opinió
+[00:37:09.220 --> 00:37:11.220]   és el que normalment ens acaba decantant
+[00:37:11.220 --> 00:37:13.220]   si ens agrada ja ens ho estem mirant
+-.Pregunta 6.11a.-
+[00:37:31.220 --> 00:37:33.220]   jo això ho veig com molt allunyat
+[00:37:33.220 --> 00:37:35.220]   del nostre sector
+[00:37:35.220 --> 00:37:37.220]   més que res per l'equip
+[00:37:37.220 --> 00:37:39.220]   és una cosa que ja t'he dit
+[00:37:39.220 --> 00:37:41.220]   això és un "handicap" bastant gran
+[00:37:41.220 --> 00:37:43.220]   no perquè
+[00:37:43.220 --> 00:37:47.220]   no perquè no ho puguin fer
+[00:37:47.220 --> 00:37:49.220]   sinó perquè
+[00:37:49.220 --> 00:37:51.220]   el que ens trobem és que persones interessades
+[00:37:51.220 --> 00:37:53.220]   o capacitades
+[00:37:53.220 --> 00:37:55.220]   per interpretar
+[00:37:55.220 --> 00:37:57.220]   i treballar amb equips d'aquesta manera
+[00:37:57.220 --> 00:38:03.220]   se n'aniran a altres sectors
+[00:38:03.220 --> 00:38:05.220]   que no hagin de treballar
+[00:38:05.220 --> 00:38:07.220]   tots els dies de l'any
+[00:38:07.220 --> 00:38:09.220]   i no estiguin en llocs remots
+[00:38:09.220 --> 00:38:11.220]   rurals remots
+[00:38:11.220 --> 00:38:13.220]   i treballar amb animals
+[00:38:13.220 --> 00:38:15.220]   o el que et deia
+[00:38:15.220 --> 00:38:17.220]   parlant una mica malament
+[00:38:17.220 --> 00:38:19.220]   merda, olors, etc.
+[00:38:19.220 --> 00:38:21.220]   no si m'estic explicant
+[00:38:21.220 --> 00:38:23.220]   una persona que tingui unes capacitats
+[00:38:23.220 --> 00:38:25.220]   o tal, o pugui anar més enllà
+[00:38:25.220 --> 00:38:27.220]   sigui innovadora
+[00:38:27.220 --> 00:38:29.220]   i s'hagi format en això
+[00:38:29.220 --> 00:38:31.220]   o li interessi tan sols això
+[00:38:31.220 --> 00:38:33.220]   si té alternatives per triar
+[00:38:33.220 --> 00:38:35.220]   costa
+[00:38:35.220 --> 00:38:37.220]   d’atreure'ls cap aquí
+[00:38:37.220 --> 00:38:39.220]   aquest és el primer problema
+[00:38:39.220 --> 00:38:41.220]   i un altre problema
+[00:38:41.220 --> 00:38:43.220]   que no sé si va bé per aquí
+[00:38:43.220 --> 00:38:45.220]   és que normalment ens trobem
+[00:38:45.220 --> 00:38:47.220]   que aquestes eines o softwares
+[00:38:47.220 --> 00:38:49.220]   no són compatibles entre elles
+[00:38:49.220 --> 00:38:51.220]   i això ens produeix
+[00:38:51.220 --> 00:38:53.220]   moltes vegades
+[00:38:53.220 --> 00:38:55.220]   a vegades duplicar processos
+[00:38:55.220 --> 00:38:57.220]   de picar dades
+[00:38:57.220 --> 00:38:59.220]   o de registrar dades
+[00:38:59.220 --> 00:39:01.220]   perquè normalment aquestes dades
+[00:39:01.220 --> 00:39:03.220]   són bastant tancades entre elles
+[00:39:03.220 --> 00:39:05.220]   o costa
+[00:39:05.220 --> 00:39:07.220]   que entre elles s'enllacin
+[00:39:07.220 --> 00:39:11.220]   i no sé si m'estic explicant
+[00:39:11.220 --> 00:39:13.220]   com unificar dades d'alguna manera
+[00:39:13.220 --> 00:39:15.220]   o poder transportar dades d'un lloc a l'altre
+[00:39:15.220 --> 00:39:17.220]   per treballar-les
+[00:39:17.220 --> 00:39:19.220]   això és una cosa que
+[00:39:19.220 --> 00:39:21.220]   li faltaria bastant, o sigui que es podria millorar
+[00:39:21.220 --> 00:39:23.220]   molt, molt, seria molt d'ajuda
+-.Pregunta 6.11b.-
+[00:39:33.220 --> 00:39:37.220]   Home, jo crec que
+[00:39:37.220 --> 00:39:39.220]   ho hauria de desenvolupar
+[00:39:39.220 --> 00:39:41.220]   el que cobra perquè li compres
+[00:39:41.220 --> 00:39:43.220]   aquest producte o sigui a les empreses privades
+[00:39:43.220 --> 00:39:45.220]   al final, o sigui, tu si
+[00:39:45.220 --> 00:39:47.220]   si vols ser competitiu
+[00:39:47.220 --> 00:39:49.220]   però si ofereixes al final
+[00:39:49.220 --> 00:39:51.220]   més avantatges que l'altre
+[00:39:51.220 --> 00:39:53.220]   perquè
+[00:39:53.220 --> 00:39:55.220]   jo ho veig així, o sigui, jo veig que si tu
+[00:39:55.220 --> 00:39:57.220]   t'obres a tothom i tal, doncs
+[00:39:57.220 --> 00:39:59.220]   és un atractiu més perquè
+[00:39:59.220 --> 00:40:01.220]   et comprin el teu producte
+[00:40:01.220 --> 00:40:03.220]   i no un altre. Ara, doncs
+[00:40:03.220 --> 00:40:05.220]   suposo que això té una doble
+[00:40:05.220 --> 00:40:07.220]   que potser et poden copiar
+[00:40:07.220 --> 00:40:09.220]   però això no ho entenc
+[00:40:09.220 --> 00:40:11.220]   però potser si estàs molt obert
+[00:40:11.220 --> 00:40:13.220]   és més fàcil que
+[00:40:13.220 --> 00:40:15.220]   l'altra gent, doncs
+[00:40:15.220 --> 00:40:17.220]   et copiï, suposo, no ho sé
+[00:40:19.220 --> 00:40:21.220]   però sí, sí, al final
+[00:40:21.220 --> 00:40:23.220]   crec que s'hauria d'acabar desenvolupant
+[00:40:23.220 --> 00:40:25.220]   el que
+[00:40:25.220 --> 00:40:27.220]   ven el producte, no ho sé
+-.Pregunta 6.12a.-
+[00:40:33.220 --> 00:40:37.220]   Per a l'anàlisi de dades
+[00:40:37.220 --> 00:40:39.220]   treballem amb la gent de SIP
+-.Pregunta 6.12b.-
+[00:40:47.220 --> 00:40:49.220]   No, no conec
+[00:40:49.220 --> 00:40:51.220]   el sistema que fan servir jo personalment
+[00:40:51.220 --> 00:40:55.220]   simplement
+[00:40:55.220 --> 00:40:57.220]   veiem les reunions anuals que fan
+[00:40:57.220 --> 00:40:59.220]   i...
