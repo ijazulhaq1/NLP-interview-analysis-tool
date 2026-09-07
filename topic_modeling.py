@@ -1,3 +1,5 @@
+import ml_backend  # noqa: F401 (import FIRST -- sets USE_TF=0/etc. before bertopic/sentence_transformers below, which import transformers transitively; see ml_backend.py)
+
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from typing import Dict, List, Union, Optional, Tuple

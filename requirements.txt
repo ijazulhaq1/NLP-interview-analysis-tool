@@ -6,11 +6,59 @@ pandas==1.5.3  # Downgraded to work with numpy 1.20.3
 flask==2.3.2
 
 # NLP/ML specific
+# transformers==4.33.2 / torch==2.0.1 are unchanged from the previous
+# revision and are already NLLB-compatible -- transformers has shipped
+# NllbTokenizer/NllbTokenizerFast since ~4.28, well before this pin.
+# preprocess_v2.py's NLLBTranslator only depends on AutoTokenizer /
+# AutoModelForSeq2SeqLM and a version-tolerant compatibility shim for
+# resolving the target-language token id (see NLLBTranslator.
+# _forced_bos_token_id), specifically so this pin does not need to move
+# for the Step 2 NLLB redesign.
 transformers==4.33.2
 torch==2.0.1
+# NLLB's tokenizer is SentencePiece-based (facebook/nllb-200-distilled-600M
+# ships a .model SentencePiece file). Some transformers installs already
+# pull this in transitively via the `sentencepiece` extra, but the whole
+# active Step 2 path now depends on it directly for tokenization -- pinning
+# it explicitly here makes that dependency reproducible rather than
+# accidental.
+sentencepiece==0.1.99
+# Step 2's active path (preprocess_v2.py) no longer uses this -- NLLB is
+# a local model, not a translation API. Left in place only because
+# preprocessing.py still imports GoogleTranslator at module level for its
+# legacy, no-longer-called translate_to_catalan()/translate_to_english()/
+# translate_to_spanish() methods; safe to remove once those are deleted.
 deep-translator==1.11.4
+langdetect==1.0.9  # used by preprocessing.py (Preprocessor.detect_language) AND by preprocess_v2.py's language detection + translation-output-language checks
 language-tool-python==2.7
 wordcloud==1.9.2
+# Required by preprocess_v2.py's SemanticSimilarityScorer (semantic-
+# preservation and round-trip translation-quality diagnostics) and by
+# topic_modeling.py's BERTopic embeddings. 2.2.2 is a version broadly
+# compatible with transformers==4.33.2/torch==2.0.1; was missing from
+# this file entirely before this revision even though topic_modeling.py
+# already depended on it.
+sentence-transformers==2.2.2
+# REQUIRED, do not remove: sentence-transformers==2.2.2 imports
+# `cached_download` from huggingface_hub, a function newer huggingface_hub
+# releases removed entirely -- installing this project's dependencies
+# without pinning huggingface_hub reproduces exactly the failure this
+# project already hit and fixed once before:
+#   ImportError: cannot import name 'cached_download' from 'huggingface_hub'
+# 0.16.4 still has that function, so SentenceTransformer's own imports
+# (and therefore preprocess_v2.py's SemanticSimilarityScorer and
+# topic_modeling.py's BERTopic embeddings) load correctly.
+huggingface-hub==0.16.4
+
+# Topic modelling (topic_modeling.py / visualization.py) -- discovered
+# missing from this file while verifying `import terminal` end-to-end for
+# this revision; unrelated to the Step 2 NLLB redesign itself, but the
+# project did not actually install cleanly from this file without them.
+bertopic==0.16.0
+umap-learn==0.5.5
+hdbscan==0.8.33
+seaborn==0.12.2
+tqdm==4.66.1
 
 # Visualization
 matplotlib==3.7.2

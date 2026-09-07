@@ -1,3 +1,5 @@
+import ml_backend  # noqa: F401 (import FIRST -- sets USE_TF=0/etc. before torch/transformers below; see ml_backend.py)
+
 import os
 import json
 import torch

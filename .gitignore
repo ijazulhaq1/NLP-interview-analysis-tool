@@ -1,0 +1,5 @@
+
+# Runtime/cache files
+__pycache__/
+*.pyc
+data/cache/nllb_translation_cache_v1.json

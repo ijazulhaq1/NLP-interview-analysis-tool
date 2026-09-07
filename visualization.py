@@ -1,3 +1,5 @@
+import ml_backend  # noqa: F401 (import FIRST -- sets USE_TF=0/etc. before bertopic below, which imports transformers transitively; see ml_backend.py)
+
 import os
 import numpy as np
 import pandas as pd
