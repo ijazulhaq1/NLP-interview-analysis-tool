@@ -1,0 +1,1582 @@
+{
+    "generated_at": "2026-09-15T16:10:25.158656+00:00",
+    "input_response_count": 950,
+    "output_response_count": 950,
+    "output_sentence_count": 6396,
+    "per_interview_language": {
+        "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 25,
+                "es": 0
+            },
+            "considered_responses": 25,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 30,
+                "es": 0
+            },
+            "considered_responses": 30,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n03_230721_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 27,
+                "es": 0
+            },
+            "considered_responses": 27,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n04_230721_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 33,
+                "es": 0
+            },
+            "considered_responses": 33,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 36,
+                "es": 0
+            },
+            "considered_responses": 36,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 29,
+                "es": 0
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 22,
+                "es": 0
+            },
+            "considered_responses": 22,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 36,
+                "es": 0
+            },
+            "considered_responses": 36,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 31,
+                "es": 0
+            },
+            "considered_responses": 31,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 35,
+                "es": 0
+            },
+            "considered_responses": 35,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n11_AardborstSpain_231013_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "es",
+            "votes": {
+                "ca": 0,
+                "es": 33
+            },
+            "considered_responses": 33,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 21,
+                "es": 0
+            },
+            "considered_responses": 21,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n13_saura_231023_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 30,
+                "es": 0
+            },
+            "considered_responses": 30,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 22,
+                "es": 1
+            },
+            "considered_responses": 23,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 29,
+                "es": 0
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 31,
+                "es": 0
+            },
+            "considered_responses": 31,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 15,
+                "es": 0
+            },
+            "considered_responses": 15,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n18_Matges_231227_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 16,
+                "es": 0
+            },
+            "considered_responses": 16,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n19_Igramsa_240104_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 29,
+                "es": 0
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 25,
+                "es": 0
+            },
+            "considered_responses": 25,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n22_Andrimner_240108_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "es",
+            "votes": {
+                "ca": 0,
+                "es": 29
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 30,
+                "es": 0
+            },
+            "considered_responses": 30,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 32,
+                "es": 0
+            },
+            "considered_responses": 32,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 29,
+                "es": 0
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 29,
+                "es": 0
+            },
+            "considered_responses": 29,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 27,
+                "es": 0
+            },
+            "considered_responses": 27,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n28_IntegracionsPorcinos_240125_Pc_timestamps_corrected_PP.txt": {
+            "primary_language": "es",
+            "votes": {
+                "ca": 0,
+                "es": 26
+            },
+            "considered_responses": 26,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 19,
+                "es": 0
+            },
+            "considered_responses": 19,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 30,
+                "es": 0
+            },
+            "considered_responses": 30,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        },
+        "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt": {
+            "primary_language": "ca",
+            "votes": {
+                "ca": 35,
+                "es": 0
+            },
+            "considered_responses": 35,
+            "unexpected_english_responses": [],
+            "fallback_used": false,
+            "tie_broken": false
+        }
+    },
+    "interview_primary_language_counts": {
+        "ca": 27,
+        "es": 3
+    },
+    "language_detection_method_counts": {
+        "direct": 842,
+        "interview_fallback_short": 105,
+        "interview_fallback_unsupported_language": 3
+    },
+    "unexpected_english_response_count": 0,
+    "unexpected_english_response_ids": [],
+    "warnings": [
+        {
+            "id": "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.6",
+            "stage": "response_language_detection",
+            "status": "REVIEW",
+            "reason": "live_detector_disagrees_with_frozen_language",
+            "live_detected_language": "ca",
+            "frozen_language": "es"
+        },
+        {
+            "id": "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::1.2",
+            "stage": "response_language_detection",
+            "status": "REVIEW",
+            "reason": "live_detector_disagrees_with_frozen_language",
+            "live_detected_language": "ca",
+            "frozen_language": "es"
+        },
+        {
+            "id": "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::4.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.5b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n03_230721_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n04_230721_Mobil_timestamps_corrected_PP.txt::1.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n04_230721_Mobil_timestamps_corrected_PP.txt::5.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n04_230721_Mobil_timestamps_corrected_PP.txt::6.8",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.2a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "degenerate_output"
+        },
+        {
+            "id": "n11_AardborstSpain_231013_Mobil_timestamps_corrected_PP.txt::2.1",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::1.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::5.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.12a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.1a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.2a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.2a",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.12",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.2b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.5a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::5.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.12b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::2.2b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.1a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.4",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::5.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.6",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.9",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::4.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n19_Igramsa_240104_timestamps_corrected_PP.txt::1.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n19_Igramsa_240104_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::3.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::6.12",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n22_Andrimner_240108_Pc_timestamps_corrected_PP.txt::5.3",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n22_Andrimner_240108_Pc_timestamps_corrected_PP.txt::6.10",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::1.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::2.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.2a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.2a",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.5a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::1.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.2b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::4.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.10",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::3.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::5.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.2a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.2a",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.7",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::1.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::3.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.3",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.1",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5c",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.6",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.8",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.8",
+            "stage": "topic_text_clean",
+            "status": "WARNING",
+            "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal"
+        },
+        {
+            "id": "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.12",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.2",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::2.3a",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        },
+        {
+            "id": "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::6.12b",
+            "stage": "translation_quality",
+            "status": "WARNING",
+            "reason": "target_language_mismatch"
+        }
+    ],
+    "warning_count": 95,
+    "fatal_errors": [],
+    "fatal_error_count": 0,
+    "excluded": [],
+    "excluded_count": 0,
+    "unmapped_sentences": [],
+    "duplicate_response_id_count": 0,
+    "duplicate_sentence_id_count": 0,
+    "cache_stats": {
+        "entries": 5646,
+        "hits_this_run": 5967,
+        "misses_this_run": 0,
+        "writes_this_run": 0
+    },
+    "primary_cache_coverage": {
+        "expected_catalan_sentence_units": 5792,
+        "covered": 5792,
+        "missing": 0,
+        "missing_sentence_ids": [],
+        "missing_sentence_id_count": 0,
+        "safe_to_reuse_primary_cache": true
+    },
+    "silent_loss_check": {
+        "input_response_count": 950,
+        "accounted_for_response_count": 950,
+        "unmapped_sentence_count": 0,
+        "fatal_error_count": 0,
+        "sentence_count_invariant": {
+            "expected": 6396,
+            "actual": 6396,
+            "match": true,
+            "sentence_id_set_match": true,
+            "missing_sentence_id_count": 0,
+            "missing_sentence_ids": [],
+            "unexpected_sentence_id_count": 0,
+            "unexpected_sentence_ids": []
+        },
+        "silent_loss_detected": false
+    },
+    "sentence_count_invariant": {
+        "expected": 6396,
+        "actual": 6396,
+        "match": true,
+        "sentence_id_set_match": true,
+        "missing_sentence_id_count": 0,
+        "missing_sentence_ids": [],
+        "unexpected_sentence_id_count": 0,
+        "unexpected_sentence_ids": []
+    },
+    "translation_aborted_early": false,
+    "abort_reason": null,
+    "translation_required_count": 851,
+    "translation_successful_count": 851,
+    "translation_failed_count": 0,
+    "translation_partial_failure_count": 0,
+    "missing_text_es_count": 0,
+    "missing_topic_text_es_raw_count": 0,
+    "topic_text_es_clean_empty_count": 7,
+    "topic_text_es_clean_empty_ids": [
+        "n11_AardborstSpain_231013_Mobil_timestamps_corrected_PP.txt::2.1",
+        "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.2a",
+        "n22_Andrimner_240108_Pc_timestamps_corrected_PP.txt::5.3",
+        "n22_Andrimner_240108_Pc_timestamps_corrected_PP.txt::6.10",
+        "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.2a",
+        "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.2a",
+        "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.8"
+    ],
+    "expected_topic_model_document_count": 943,
+    "sentence_translation_summary": {
+        "total_sentences": 6396,
+        "by_sentence_status": {
+            "CACHE_HIT": 5755,
+            "REPETITION_REPAIRED": 37,
+            "SOURCE_ES": 604
+        },
+        "by_translation_provenance": {
+            "CACHE_HIT": 5755,
+            "REPETITION_REPAIRED": 37,
+            "SOURCE_ES": 604
+        },
+        "hard_split_sentence_pieces": 0,
+        "responses_with_partial_translation_failure_count": 0,
+        "responses_with_partial_translation_failure_ids": [],
+        "flagged_sentence_count": 0,
+        "flagged_sentence_ids": [],
+        "sentence_length_ratio_outlier_count": 151,
+        "sentence_length_ratio_outlier_ids": [
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::2.1::s006",
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::2.3::s000",
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::4.2::s000",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::1.3a::s001",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::1.3b::s000",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::2.1::s000",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::2.1::s001",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::2.1::s006",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::2.2a::s005",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::4.2::s000",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::5.1::s002",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.5c::s000",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.12a::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::1.1::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::2.1::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::2.3::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::3.1::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::3.2::s000",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::4.3::s006",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::6.2b::s003",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::5.3::s001",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.5c::s000",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.9::s020",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.12a::s000",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.12b::s000",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::4.2::s000",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::5.3::s000",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::6.12a::s005",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::6.12a::s007",
+            "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt::2.2a::s017",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.3b::s000",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.1::s000",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.3a::s000",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::3.1::s001",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::3.4::s002",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::5.1::s004",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::5.3::s002",
+            "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::1.3b::s002",
+            "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::6.3::s001",
+            "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::6.12b::s000",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.1::s000",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::5.3::s014",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.3::s007",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.4::s009",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.4::s014",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.5a::s002",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.5c::s002",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.5c::s005",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.6::s008",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.8::s012",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.12b::s011",
+            "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::2.1::s000",
+            "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::4.2::s003",
+            "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::6.9::s012",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::2.1::s000",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::3.4::s000",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::4.2::s014",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::5.1::s016",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::5.1::s017",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.8::s002",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.12a::s000",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::2.3a::s003",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.3a::s001",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.3b::s005",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.4::s000",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::5.3::s009",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.3::s024",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.5b::s003",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.12::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3b::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.1::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.2a::s007",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.3b::s004",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.1a::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.1a::s002",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.4::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.4::s004",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.4::s005",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::4.2::s003",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::5.3::s003",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.1::s005",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.12a::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.12b::s000",
+            "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::5.1::s005",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::3.3b::s006",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::3.3b::s013",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.3::s000",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.3::s009",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.3::s001",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.3::s002",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.3::s005",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.8::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.2::s001",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1a::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1a::s001",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::5.1::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.3::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.7::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.11b::s001",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::2.1::s000",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::2.3::s004",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::3.1::s003",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.2::s000",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::6.2a::s002",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::5.2::s011",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.2b::s000",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12a::s000",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12b::s000",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::1.3a::s002",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::2.3a::s000",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::1.3b::s000",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::2.3a::s000",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s000",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s025",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s033",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s036",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s042",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.4::s045",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::4.2::s050",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::4.2::s051",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.6::s005",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.9::s000",
+            "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::1.2::s002",
+            "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::4.2::s011",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::4.2::s000",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::5.1::s000",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::5.2::s000",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.2a::s001",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.3::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::2.2b::s004",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::2.3b::s006",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::4.1::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::4.1::s013",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::4.2::s001",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.3::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.7::s001",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.8::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.12::s000",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::2.1::s001",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::2.1::s008",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::2.2::s000",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.3::s000",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.12::s002",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::2.3a::s000",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::3.1b::s003",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::3.2::s003",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::3.3b::s004",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::3.4::s000",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::4.1::s014",
+            "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::6.9::s002",
+            "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::6.12::s000"
+        ],
+        "sentence_language_mismatch_count": 27,
+        "sentence_language_mismatch_ids": [
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::2.3::s008",
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::3.3a::s005",
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::6.10::s009",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::1.2::s003",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.3::s006",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.12a::s004",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::5.3::s001",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::6.4::s011",
+            "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::5.3::s006",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::3.1::s024",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.11a::s015",
+            "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::6.11a::s000",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::1.3b::s002",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::3.1b::s004",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.1::s002",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::4.1::s006",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::2.3b::s004",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.7::s003",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.2::s005",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.3b::s008",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.2b::s024",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.2a::s006",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::2.3b::s023",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::3.4::s008",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.9::s011",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.11b::s037",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::6.3::s004"
+        ],
+        "repetition_fallback_retry_attempted_count": 37,
+        "repetition_fallback_retry_resolved_count": 37,
+        "repetition_fallback_retry_resolved_ids": [
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::3.3b::s014",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.11a::s000",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.5c::s007",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.9::s000",
+            "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::3.1::s000",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::5.1::s005",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::5.2::s004",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::6.8::s000",
+            "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::6.2b::s003",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::3.1::s012",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.3::s012",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::4.2::s000",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::4.2::s000",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::4.2::s010",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.1::s001",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.1::s010",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.5a::s000",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.10::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.3b::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1b::s009",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::5.2::s000",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::5.2::s001",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.2::s001",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::2.3::s000",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.11a::s003",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::1.3b::s001",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::3.1::s000",
+            "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::5.1::s007",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::1.3b::s000",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.3::s005",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::1.1::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::1.2::s001",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::5.3::s000",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.5c::s003",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.1::s003",
+            "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::6.1::s006",
+            "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::6.3::s002"
+        ],
+        "repetition_fallback_retry_unresolved_count": 0,
+        "repetition_fallback_retry_unresolved_ids": []
+    },
+    "translation_quality_summary": {
+        "similarity_model_available": true,
+        "similarity_model_unavailable_reason": null,
+        "language_mismatch_count": 1,
+        "language_mismatch_ids": [
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.3"
+        ],
+        "source_language_mismatch_count": 2,
+        "source_language_mismatch_ids": [
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.6",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::1.2"
+        ],
+        "short_text_language_not_assessed_count": 84,
+        "short_text_language_not_assessed_ids": [
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::6.7",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::4.2",
+            "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.5b",
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::1.1",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::5.3",
+            "n04_230721_Mobil_timestamps_corrected_PP.txt::6.8",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.2",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.1",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.3a",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::1.2",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::2.1",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::5.2",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.3",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.12a",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.1a",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.2a",
+            "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.12",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.1",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3a",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.2b",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.5a",
+            "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::5.3",
+            "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::6.7",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.7",
+            "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.12b",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.1",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.2",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.3a",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::2.2b",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.1a",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.4",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1a",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::5.2",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.1",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.6",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.7",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.9",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::4.2",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.1",
+            "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.3",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::1.2",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::1.3b",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12a",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12b",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::3.1",
+            "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::6.12",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::1.1",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::2.1",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.2a",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.5a",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.7",
+            "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::1.1",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.2b",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.3a",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::4.2",
+            "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.10",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::3.2",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::5.3",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.2a",
+            "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.7",
+            "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::1.3b",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::1.3a",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::3.2",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.2",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.3",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.1",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5a",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5b",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5c",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.6",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.8",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.12",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.2",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::2.3a",
+            "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::6.12b"
+        ],
+        "degenerate_output_count": 1,
+        "degenerate_output_ids": [
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.2a"
+        ],
+        "short_text_identical_output_count": 0,
+        "short_text_identical_output_ids": [],
+        "length_ratio_outlier_count": 15,
+        "length_ratio_outlier_ids": [
+            "n03_230721_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::1.3b",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.1",
+            "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.3a",
+            "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::2.1",
+            "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.12a",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::1.3b",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.1",
+            "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.1a",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::4.1a",
+            "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.7",
+            "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.12b",
+            "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.9",
+            "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.3"
+        ],
+        "length_diagnostics": {
+            "char_ratio": {
+                "count": 851,
+                "mean": 1.1269485564512989,
+                "median": 1.0282317979197622,
+                "stdev": 0.5601035958824501,
+                "p05": 0.9491244388724875,
+                "p25": 0.9983279155098568,
+                "min": 0.3301075268817204,
+                "count_below_informational_bound": 1,
+                "informational_bound": 0.5
+            },
+            "token_ratio": {
+                "count": 851,
+                "mean": 1.1016435645798512,
+                "median": 1.0,
+                "stdev": 0.425565857105418,
+                "p05": 0.9103006189213085,
+                "p25": 0.9706220783890687,
+                "min": 0.33532934131736525,
+                "count_below_informational_bound": 1,
+                "informational_bound": 0.5
+            }
+        },
+        "semantic_preservation": {
+            "count": 851,
+            "mean": 0.9378684938444234,
+            "median": 0.9549621343612671,
+            "stdev": 0.05871847081196999,
+            "p05": 0.8288489580154419,
+            "p25": 0.9237232506275177,
+            "min": 0.38167130947113037,
+            "count_below_informational_bound": 1,
+            "informational_bound": 0.5
+        },
+        "roundtrip": {
+            "sample_size": 100,
+            "sampled_response_ids": [
+                "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::1.1",
+                "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::3.2",
+                "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::6.4",
+                "n01_Garrabou_230719_Mobil_timestamps_corrected_PP.txt::6.11b",
+                "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::2.3",
+                "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::4.2",
+                "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.7",
+                "n02_Leridana_230720_Gravadora_timestamps_corrected_PP.txt::6.2b",
+                "n03_230721_Gravadora_timestamps_corrected_PP.txt::3.1",
+                "n03_230721_Gravadora_timestamps_corrected_PP.txt::5.3",
+                "n03_230721_Gravadora_timestamps_corrected_PP.txt::6.10",
+                "n04_230721_Mobil_timestamps_corrected_PP.txt::2.2a",
+                "n04_230721_Mobil_timestamps_corrected_PP.txt::4.2",
+                "n04_230721_Mobil_timestamps_corrected_PP.txt::6.3",
+                "n04_230721_Mobil_timestamps_corrected_PP.txt::6.10",
+                "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::1.3b",
+                "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::3.2b",
+                "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::6.2a",
+                "n05_Yak_230725_Mobil_timestamps_corrected_PP.txt::6.9",
+                "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt::1.2",
+                "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt::3.4",
+                "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt::6.3",
+                "n06_Cincaporc_230726_Gravadora_timestamps_corrected_PP.txt::6.12a",
+                "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::2.2b",
+                "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::4.3",
+                "n07_lloret_230726_Mobil_timestamps_corrected_PP.txt::6.8",
+                "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::2.2b",
+                "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::4.1",
+                "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::6.3",
+                "n08_Friselva_230727_Gravadora_timestamps_corrected_PP.txt::6.11a",
+                "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::2.2a",
+                "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::4.2",
+                "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.4",
+                "n09_Miquelo_230925_Gravadora_timestamps_corrected_PP.txt::6.11a",
+                "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::2.2a",
+                "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::3.3b",
+                "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::6.3",
+                "n10_Artigas_231006_Gravadora_timestamps_corrected_PP.txt::6.10",
+                "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::2.2",
+                "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::4.1",
+                "n12_RBS_231013_Mobil_timestamps_corrected_PP.txt::6.5",
+                "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::1.3b",
+                "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::3.3a",
+                "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.1",
+                "n13_saura_231023_Mobil_timestamps_corrected_PP.txt::6.9",
+                "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::2.1",
+                "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::3.3b",
+                "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.2a",
+                "n14_Daniel_231218_Gravadora_timestamps_corrected_PP.txt::6.12a",
+                "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::2.3b",
+                "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::5.1",
+                "n15_Vitersfam_231221_PC_timestamps_corrected_PP.txt::6.7",
+                "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::1.1",
+                "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::3.2",
+                "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::5.3",
+                "n16_ElsPlanells(puig-porc)_231227_Mobil_timestamps_corrected_PP.txt::6.8",
+                "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::1.2",
+                "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::3.1b",
+                "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.1",
+                "n17_RamaderiaSegre_221223_Mobil_timestamps_corrected_PP.txt::6.12b",
+                "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::2.3",
+                "n18_Matges_231227_Pc_timestamps_corrected_PP.txt::5.3",
+                "n19_Igramsa_240104_timestamps_corrected_PP.txt::1.3a",
+                "n19_Igramsa_240104_timestamps_corrected_PP.txt::3.2",
+                "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.1",
+                "n19_Igramsa_240104_timestamps_corrected_PP.txt::6.9",
+                "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::2.1",
+                "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::4.2",
+                "n21_TorretaPecuaria_240104_timestamps_corrected_PP.txt::6.4",
+                "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::1.2",
+                "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::3.1",
+                "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::5.3",
+                "n23_Marcal_240117_Pc_timestamps_corrected_PP.txt::6.6",
+                "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::1.1",
+                "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::3.1a",
+                "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::5.2",
+                "n24_PlaBallester_240116_Gravadora_timestamps_corrected_PP.txt::6.5c",
+                "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::1.2",
+                "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::2.3c",
+                "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::5.1",
+                "n25_Vilatorne_240207_Pc_timestamps_corrected_PP.txt::6.5c",
+                "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::1.2",
+                "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::3.1",
+                "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::5.3",
+                "n26_Felbert_240119_Pc_timestamps_corrected_PP.txt::6.6",
+                "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::1.2",
+                "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::3.2",
+                "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::6.3",
+                "n27_JosepFont_240123_Pc_timestamps_corrected_PP.txt::6.11",
+                "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::3.1",
+                "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::5.2",
+                "n29_FinquesMontclar_240208_Gravadora_timestamps_corrected_PP.txt::6.5c",
+                "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::1.1",
+                "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::3.1b",
+                "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::5.2",
+                "n31_RamaderiesEroles_240214_Gravadora_timestamps_corrected_PP.txt::6.7",
+                "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::1.1",
+                "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::3.3a",
+                "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::5.3",
+                "n32_Cetosa_240213_Gravadora_timestamps_corrected_PP.txt::6.5c"
+            ],
+            "similarity": {
+                "count": 100,
+                "mean": 0.9323727267980576,
+                "median": 0.9602741897106171,
+                "stdev": 0.06678526871510702,
+                "p05": 0.779561522603035,
+                "p25": 0.9139818549156189,
+                "min": 0.7560362219810486,
+                "count_below_informational_bound": 0,
+                "informational_bound": 0.5
+            }
+        }
+    },
+    "structural_validity": true,
+    "translation_completeness_validity": true,
+    "translation_output_validity": true,
+    "translation_sanity_status": "REVIEW",
+    "STEP2_VALID": true,
+    "model_info": {
+        "model_name": "facebook/nllb-200-distilled-600M",
+        "requested_device": "mps",
+        "actual_device": "mps",
+        "device_fallback": false,
+        "fallback_reason": null,
+        "generation_params": {
+            "num_beams": 4,
+            "max_length": 512,
+            "do_sample": false
+        },
+        "generation_version": "nllb600M-beams4-maxlen512-chunked-v2",
+        "batch_size": 1
+    },
+    "software_versions": {
+        "python": "3.9.25",
+        "torch": "2.0.1",
+        "transformers": "4.33.2",
+        "sentence_transformers": "2.2.2",
+        "langdetect": "1.0.9",
+        "spacy": "3.7.2",
+        "ca_core_news_sm": "3.7.0",
+        "es_core_news_sm": "3.7.0"
+    },
+    "ml_backend": "pytorch",
+    "tensorflow_used": false,
+    "ml_backend_info": {
+        "ml_backend": "pytorch",
+        "pytorch_available": true,
+        "pytorch_version": "2.0.1",
+        "tensorflow_installed": false,
+        "tensorflow_used": false,
+        "env": {
+            "USE_TF": "0",
+            "USE_FLAX": "0",
+            "USE_TORCH": "1",
+            "TRANSFORMERS_NO_TF": "1"
+        }
+    },
+    "device": "mps",
+    "batch_size": 1,
+    "runtime_architecture": "arm64",
+    "elapsed_seconds": 87.092,
+    "cache_hits": 5967,
+    "fresh_translations": 0,
+    "retried_ok_translations": 0,
+    "repetition_repaired_translations": 37,
+    "failed_translations": 0,
+    "translation_chunks": 0,
+    "runtime_info": {
+        "device": "mps",
+        "batch_size": 1,
+        "runtime_architecture": "arm64",
+        "running_under_rosetta": null,
+        "rosetta_warning": null,
+        "elapsed_seconds": 87.092,
+        "cache_hits": 5967,
+        "cache_hit_translations": 5755,
+        "fresh_translations": 0,
+        "retried_ok_translations": 0,
+        "repetition_repaired_translations": 37,
+        "failed_translations": 0,
+        "translation_chunks": 0
+    }
+}

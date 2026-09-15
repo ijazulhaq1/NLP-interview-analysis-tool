@@ -1,4 +1,4 @@
-# Step 2 — frozen NLLB redesign (rev. 9, patched after a sixth external code review)
+# Step 2 — frozen NLLB redesign (rev. 12 -- see "Round 7" through "Round 9" below for the source-side sentence redesign, incremental progress reporting, and this round's frozen-file/quality-gating/memory-safety hardening)
 
 This replaces the Google-Translate-backed reliability fix (rev. 1-3, see
 `STEP2_RELIABILITY_CHANGES.md` for that now-retired history) with a local
@@ -1014,7 +1014,19 @@ integration point. It:
    `step2_bridge_metadata.json` (schema version + `step2_valid: true`,
    plus -- added after the third external review -- `input_sha256` of
    `data/input/interviews.json`, `nllb_model_name`, and
-   `nllb_generation_version`) alongside them.
+   `nllb_generation_version`) alongside them. **`nllb_generation_version`
+   here is, and remains as of Round 12, the single corpus-wide PRIMARY
+   `GENERATION_VERSION` only** (`translator.model_info()` is a fixed
+   property of the translator, not computed per sentence) -- it does
+   **not** flip to `RETRY_GENERATION_VERSION` for a corpus that contains
+   one or more successfully-repaired sentences. This sidecar field exists
+   to gate corpus freshness (see `_step2_bridge_is_fresh()` below), not to
+   carry exhaustive generation provenance, so this is not a bug; the
+   ambiguity that would otherwise create -- "was this whole corpus really
+   generated under exactly the version this sidecar names?" -- is what
+   Round 12's per-sentence `sentence_quality.repetition_fallback_retry.
+   selected_generation_version` field (in `preprocessed_sentences_v2.json`,
+   not in this sidecar) actually resolves, sentence by sentence.
 
 `_analyze_topics()` and `_analyze_sentiment()` check for those three
 bridge files before running anything, and call back into
@@ -1057,16 +1069,25 @@ option 3 the same way.
 
 ## Translation-quality diagnostics (reference-free, reported as distributions)
 
-Two of these (target-language, degenerate-output) can gate `STEP2_VALID`
-for **sufficiently long** text -- see the validity model below. Length
-diagnostics and the two similarity-based diagnostics never gate on their
-own. They are:
+**As of Round 11**, only ONE of these (degenerate-output) can gate
+`STEP2_VALID`, and only for **sufficiently long** text -- see the validity
+model below. The target-language check, length diagnostics, and the two
+similarity-based diagnostics never gate on their own; target-language
+mismatch gated `STEP2_VALID` (for sufficiently long text) from the second
+external review through Round 10, but was demoted to diagnostic/REVIEW-
+only at every length in Round 11, once real-corpus evidence showed it
+never caught a genuine failure that degenerate-output detection didn't
+already independently catch. They are:
 
 - **Target-language check** (`check_target_language`): langdetect on the
-  *output* of translation. Catches the most catastrophic local-model
-  failure mode -- echoing the source language back, or drifting into a
-  third language. **Length-gated** (added after the third external
-  review): text below `_is_sufficiently_long` (the same
+  *output* of translation. Was intended to catch the most catastrophic
+  local-model failure mode -- echoing the source language back, or
+  drifting into a third language -- but on this corpus's real informal,
+  often-short transcribed speech, `langdetect` itself turned out to be
+  the dominant source of false positives (Round 10/11), so its result is
+  now diagnostic/REVIEW-only, never fatal, at every length. **Length-
+  gated** (added after the third external review, unchanged by the
+  fatality change): text below `_is_sufficiently_long` (the same
   `MIN_CHARS_FOR_DIRECT_DETECTION` / `MIN_WORDS_FOR_DIRECT_DETECTION`
   threshold this module already used for response-level source-language
   detection) is **not assessed at all** -- `langdetect` on a single word or
@@ -1074,18 +1095,29 @@ own. They are:
   this corpus has 46 real responses of 3 words or fewer. Returns
   `passed: None`, `status: "NOT_ASSESSED_SHORT_TEXT"` rather than guessing;
   `passed` is only ever `True`/`False` for text long enough to judge.
+  Reported at both response grain (`language_mismatch_count`/`_ids`) and,
+  since Round 11, sentence grain (`sentence_language_mismatch_count`/
+  `_ids`).
 - **Degenerate-output check** (`check_degenerate_output`): flags empty
   output (any length, always fatal), n-gram repetition loops (any length,
-  always fatal; a 3-gram repeated 4+ times is flagged), and output
-  identical to a (different-language) source. **The identical-to-source
-  check is length-gated** (added after the third external review): still
-  computed and reported (`is_identical_to_source`) at every length, but
-  only counted as fatal (`is_identical_to_source_fatal`, and therefore
-  `flagged`) when the text is long enough that identity is genuinely
-  suspicious -- short Catalan/Spanish text (a single word, acronym,
-  number, or proper noun) is frequently and CORRECTLY identical across
-  both languages ("Sí." -> "Sí."), and treating every such case as
-  degenerate would invalidate correct translations.
+  always fatal; a 3-gram repeated 6+ times is flagged -- raised from 4 in
+  Round 11), and output identical to a (different-language) source. **As
+  of Round 12**, a sentence whose primary translation this check flags for
+  repetition gets one automatic fallback retry under different decoding
+  settings (see Round 12's own section below); if the retry's own result
+  from this same function comes back clean, that clean result -- not the
+  original flagged one -- is what's recorded here and what `flagged`
+  reflects for that sentence. **The
+  identical-to-source check is length-gated** (added after the third
+  external review): still computed and reported (`is_identical_to_
+  source`) at every length, but only counted as fatal (`is_identical_to_
+  source_fatal`, and therefore `flagged`) when the text is long enough
+  that identity is genuinely suspicious -- short Catalan/Spanish text (a
+  single word, acronym, number, or proper noun) is frequently and
+  CORRECTLY identical across both languages ("Sí." -> "Sí."), and treating
+  every such case as degenerate would invalidate correct translations.
+  **As of Round 11, this is the ONLY sentence-level FATAL quality
+  signal** -- see the validity model below.
 - **Length diagnostics** (`compute_length_diagnostics`): char/token ratio
   between source and translation; ratios outside `[0.4, 3.0]` are flagged
   as outliers (informational, never gates).
@@ -1134,37 +1166,42 @@ STEP2_VALID = (
   no missing `text_es` / `topic_text_es_raw` for a non-excluded response.
   Also fatal -- a translation that never happened is not usable input to
   Stage 3/5, whatever the reason.
-- `translation_output_validity` (added in the second review round):
-  `language_mismatch_count == 0 and degenerate_output_count == 0`. Also
-  fatal -- a translation that "completed" but landed in the wrong language,
-  or is empty/identical-to-source/repetitive, did not actually produce a
-  usable Spanish-standardized response, even though nothing raised an
-  exception. **Length-gated as of the third review round**: both counts
-  now exclude the short-text cases explained in "Translation-quality
-  diagnostics" above (a not-assessed language check, or a short identical
-  output) -- those surface as informational, REVIEW-only counts instead,
-  never as `language_mismatch_count` / `degenerate_output_count` itself.
+- `translation_output_validity` (added in the second review round; the
+  definition below is the **current, Round 11** one -- see Round 9 and
+  Round 11's own sections for how it got here): `sentence_flagged_count
+  == 0`, where a sentence is `FLAGGED` exactly when its own
+  `check_degenerate_output()` result fires (empty output, a long output
+  identical to its source, or n-gram repetition) -- computed once per
+  sentence, at the same grain as the frozen sentence IDs themselves (Round
+  9). `check_target_language()`'s result does **not** contribute to this
+  condition, at any length, as of Round 11 -- see "Translation-quality
+  diagnostics" above for why. Also fatal in the sense that a corpus with
+  even one such sentence is not usable input to Stage 3/5, whatever the
+  reason.
 
 `translation_sanity_status` has **three** states, matching which tier (if
 any) actually failed:
 
-- `"FAIL"` -- `translation_output_validity` is False: a genuinely serious,
-  now-fatal failure (wrong target language, or a degenerate/repetitive/
-  pathological output, on text long enough to judge). This blocks
+- `"FAIL"` -- `translation_output_validity` is False: at least one
+  sentence's own output is genuinely degenerate (empty, identical to a
+  long source, or a repetition/pathological-collapse loop). This blocks
   `STEP2_VALID`.
 - `"REVIEW"` -- `translation_output_validity` is True, but a **purely
-  diagnostic, non-gating** signal fired: a length-ratio outlier, a
-  semantic-similarity score under the informational bound, a short output
-  not assessed for target language, and/or a short output identical to
-  its source. Interview responses genuinely vary in how much
-  Catalan/Spanish phrasing compresses or expands, similarity scores from a
-  general-purpose embedding model are a noisy proxy not ground truth, and
-  this corpus's 46 real responses of 3 words or fewer are exactly the case
-  where language detection and identity checks are least reliable --
-  gating on any of these would produce false negatives that block an
-  otherwise-good run over unusually short or phrased (but correctly
-  translated) responses. Worth a human glance; never a reason to
-  invalidate the corpus on its own.
+  diagnostic, non-gating** signal fired: a length-ratio outlier (response-
+  or sentence-grain), a semantic-similarity score under the informational
+  bound, a short output not assessed for target language, a short output
+  identical to its source, or (any length, as of Round 11) a target-
+  language mismatch (response- or sentence-grain). Interview responses
+  genuinely vary in how much Catalan/Spanish phrasing compresses or
+  expands, similarity scores from a general-purpose embedding model are a
+  noisy proxy not ground truth, and a full manual review of the first real
+  corpus run's language-mismatch flags found `langdetect` itself -- not
+  the translations -- was the dominant source of false positives at every
+  length tried, not just short text. Gating `STEP2_VALID` on any of these
+  would produce false negatives that block an otherwise-good run over
+  unusually short, phrased, or (per `langdetect`) misjudged but correctly
+  translated responses. Worth a human glance; never a reason to invalidate
+  the corpus on its own.
 - `"PASS"` -- nothing flagged.
 
 Three real, distinct outcomes this design produces:
@@ -1195,6 +1232,26 @@ STEP2_VALID                          False
 
 ## Cache
 
+**Note on the filename below, caught during Round 12's external review:**
+this section predates the Round 7 redesign and was never updated when
+Round 7 split translation caching onto its own new path. The file the
+real production run (`main()` / `python preprocess_v2.py`) actually reads
+and writes today is `data/cache/nllb_sentence_translation_cache_v1.json`
+(`SENTENCE_CACHE_PATH`) -- see Round 7's own section, point 7 ("Separate
+cache, old evidence untouched"), for exactly why that split happened. The
+plain `data/cache/nllb_translation_cache_v1.json` (`CACHE_PATH`) named
+throughout the rest of this section is the PRE-Round-7 whole-response/
+chunk-level cache -- it still exists as a constant in the code and is
+never read or written by the current sentence-level pipeline; it is kept
+only so the six-hour evidence run that surfaced the target-side-splitting
+problem (`evidence/round7_full_corpus_run_2026-09-07/`) stays
+byte-for-byte auditable. Everything else below this note -- the cache-key
+design, the Round 12 two-namespace addition -- applies identically to
+`SENTENCE_CACHE_PATH`; only the filename in the surrounding prose is
+stale. Restoring a real corpus's existing warm cache (see "Execution
+sequence for the next real run" below) means restoring THIS file,
+`nllb_sentence_translation_cache_v1.json`, not the older one.
+
 New cache file: `data/cache/nllb_translation_cache_v1.json` -- **not** a
 continuation of the old Google-Translate-backed
 `data/output/translation_cache_v2.json`, which is never read by this
@@ -1207,6 +1264,28 @@ version string (`GENERATION_VERSION`) in addition to
   under the old settings.
 - Nothing from the old Google-Translate cache can ever be served as an
   NLLB result, or vice versa, even if the two files were merged by hand.
+
+**As of Round 12, this one file holds two independent, coexisting
+generation-version namespaces, not one.** Every primary translation is
+still keyed under `GENERATION_VERSION`, exactly as above. A sentence whose
+primary translation is confirmed as a repetition loop additionally gets
+one fallback-retry entry keyed under `RETRY_GENERATION_VERSION` (a
+different string, so it can never collide with or be served as a primary
+result) -- see Round 12's own section above for the mechanism
+(`attempt_repetition_fallback_retry()`). Both namespaces are read and
+written through the exact same `TranslationCache` instance, `get()`/
+`set()` calls, and `save()` (atomic write, unchanged) -- there is no
+second cache file and no special-cased persistence path for retries. One
+consequence worth knowing when reading a run's printed cache statistics:
+`TranslationCache.get()` increments the same `hits_this_run`/
+`misses_this_run` counters regardless of which namespace it was called
+for, so the corpus-wide `cache_stats` in a validation report is a
+**blended total across primary lookups and any retry lookups**, not
+primary-only. This is intentional (both are genuinely cache activity) but
+means `cache_stats` alone cannot tell you how many of those hits/misses
+were retries -- for that, read the `repetition_fallback_retry_*` fields
+in `sentence_translation_summary` (Round 12), which report retry activity
+on its own, separately from the blended total.
 
 ## What was removed
 
@@ -1224,6 +1303,1092 @@ had Spanish spaCy resources loaded.
 Per-sentence language detection/routing (`determine_sentence_language()`
 and its code-switch diagnostic) is also removed -- see "Frozen
 methodology" above for why.
+
+## Round 7 -- source-side sentence segmentation + one-sentence-per-translation
+
+The sixth-review architecture above translated at the whole-response
+(chunk) level and then re-split the *Spanish output* into sentences for
+downstream analysis (`preprocessed_sentences_v2.json`). A real full-corpus
+run against this architecture (kept, unmodified, in
+`evidence/round7_full_corpus_run_2026-09-07/` for exactly this reason)
+came back `STEP2_VALID = False` -- 8 language mismatches, 25
+degenerate-output flags -- and manual inspection of the flagged cases
+showed the deeper problem wasn't just those 33 flags: translating at the
+chunk/response level and then guessing sentence boundaries afterward, in
+the *translated* text, let NLLB merge or omit content across what should
+have been a sentence boundary, with no way to attribute a downstream
+sentence back to a single, specific source sentence. Re-splitting Spanish
+output can never fix that -- the information about where one source
+sentence ended and the next began was already lost by the time NLLB saw
+the text.
+
+The fix moves sentence segmentation to the *source* side, before any
+translation happens, and makes translation operate one frozen source
+sentence at a time:
+
+1. **`segment_source_sentences(text, lang, preprocessor)`** --
+   `split_sentences_strict()` (spaCy sentence boundaries) followed by
+   `merge_ellipsis_continuations()`, a narrow, iterative repair for one
+   confirmed artifact: a speaker trailing off mid-clause ("...") that
+   spaCy treats as a sentence boundary, with the lowercase continuation
+   split off as its own fragment. Audited against the real corpus
+   (`segmentation_audit.py` / `segmentation_audit_v2.py` in the evidence
+   folder): 6,434 raw source-side sentences, 38 genuine ellipsis-
+   continuation cases (all read in full, including the two multi-fragment
+   chains; zero false merges across an actual speaker-turn change), 6,396
+   sentences and zero remaining ellipsis-continuation flags after the
+   merge.
+2. **Frozen sentence IDs.** `freeze_sentence_segmentation.py` runs
+   `segment_source_sentences()` once across all 950 real responses and
+   writes `data/frozen_source_sentence_segmentation_v1.json`: 950
+   responses, 6,396 sentences, `response_id::sNNN` IDs, 0 duplicate IDs,
+   38 merges (exactly matching the audit), and 0 reconstruction
+   mismatches (every response's frozen sentences, rejoined, reproduce the
+   same lexical content as the original raw text -- checked
+   programmatically). `response_id::sNNN` is now the permanent analytical
+   sentence ID; re-running the freeze against a changed segmentation
+   function produces a new file, it never silently overwrites this one's
+   meaning.
+3. **One frozen sentence = one translation unit.**
+   `translate_frozen_sentences_batched()` replaces `translate_responses_
+   batched()` as the primary ca->es path (that function and
+   `_split_into_translation_chunks()` are kept, unchanged, only for the
+   secondary es->ca round-trip diagnostic sample). Spanish source
+   sentences are copied unchanged (`SOURCE_ES`, never sent to NLLB).
+   Catalan source sentences are batched across the *entire corpus* (not
+   per-response) through `translate_texts_batched()` -- the same
+   generation-parameters-in-cache-key, consecutive-batch-failure-abort
+   machinery as before, just at sentence instead of chunk granularity.
+   Failed sentences get one automatic retry pass in a fresh batch (a
+   retry-pass failure is logged and left `FAILED`, never re-raised as an
+   abort). Status per sentence: `SOURCE_ES / CACHE_HIT / FRESH_OK /
+   RETRY_OK / FLAGGED / FAILED` -- `FLAGGED` overlays a successful
+   translation whose sentence-level `check_target_language` /
+   `check_degenerate_output` diagnostics fired, without discarding the
+   translation itself; the mechanical outcome (did NLLB produce usable
+   text, and from where) is tracked separately as `translation_
+   provenance` so a flagged-but-successful sentence is never miscounted
+   as a failure.
+4. **Per-sentence atomicity.** A failed sentence no longer erases its
+   whole response. `text_es` is rebuilt only from the ordered, successful
+   sentence translations (`" ".join(...)`, in `sentence_index` order);
+   `text_es_status` becomes an aggregate of the response's own sentences:
+   `IDENTITY_COPY` (all-Spanish), `CACHE_HIT` (100% cache), `TRANSLATED`
+   (a normal mix of fresh/retried/cached), `PARTIAL_TRANSLATION_FAILURE`
+   (some but not all sentences failed -- the response still carries real,
+   usable partial text_es and still gets response-level quality
+   diagnostics run against it), or `WARNING_TRANSLATION_FAILED` (every
+   sentence failed, or there were no sentences at all).
+5. **No target-side re-splitting.** The old `split_sentences_strict(text_es, "es")`
+   pass over translated output is gone entirely.
+   `sentences_out` is now built directly and only from the frozen
+   sentence structure -- one record per frozen `sentence_id`, carrying
+   that ID, its `text_source`, its `text_es`, `sentence_status`,
+   `translation_provenance`, and the frozen `response_id`/`interview_id`/
+   `question_id`/`sentence_index` it belongs to. Downstream sentence-level
+   analyses read these frozen IDs directly instead of re-deriving
+   sentence boundaries from Spanish text.
+6. **New validation invariant, strictly stronger than a sentence count.**
+   `report["sentence_count_invariant"] = {"expected", "actual", "match"}`
+   compares the number of frozen sentences fed into a run against the
+   number of sentence records `process()` actually produced, folded into
+   `structural_validity`/`silent_loss`. This is deliberately not "did we
+   get 6,396 Spanish sentences by splitting Spanish" (a count that could
+   coincidentally match while individual sentences drifted from their
+   source) -- every downstream record also carries its own frozen
+   `sentence_id`, so the real check is exact ID-set equality between the
+   frozen file and `sentences_out`, not just equal cardinality. Verified
+   end-to-end (real 950-response corpus, real frozen file, deterministic
+   stub translator so it runs in seconds): `sentence_count_invariant ==
+   {"expected": 6396, "actual": 6396, "match": True}`, frozen ID set ==
+   downstream ID set exactly, 0 fatal errors, `structural_validity ==
+   True`, 950/950 responses produced.
+7. **Separate cache, old evidence untouched.** Translation now caches
+   under a new path, `data/cache/nllb_sentence_translation_cache_v1.json`
+   (`SENTENCE_CACHE_PATH`) -- distinct from the pre-Round-7
+   `data/cache/nllb_translation_cache_v1.json` (`CACHE_PATH`, kept, never
+   read or written by this path). Nothing under `evidence/round7_full_
+   corpus_run_2026-09-07/` was touched: that six-hour run is what
+   surfaced the target-side-splitting problem in the first place, and
+   stays on disk, byte-for-byte as it ran, as the auditable record of why
+   this redesign happened.
+8. **`main()` requires the frozen file.** The `python preprocess_v2.py`
+   CLI entry point now hard-fails (before doing any work) if
+   `data/frozen_source_sentence_segmentation_v1.json` is missing, loads
+   it, and passes it into `process(frozen_segmentation=...)` as the
+   authoritative sentence structure for the full-corpus run -- a
+   response missing from the frozen file, or whose frozen
+   `source_language` no longer matches what's freshly detected for it, is
+   a FATAL error, not a silent fallback. `terminal.py`'s interactive
+   `_create_processed_versions()` deliberately does **not** auto-load the
+   frozen file: it can legitimately run against a filtered subset or
+   synthetic data (`_select_questions()`, or a caller's own test
+   fixtures) that would never match a frozen file keyed to the full
+   950-response corpus, so it computes segmentation live via the exact
+   same `segment_source_sentences()` function the frozen file itself was
+   built from -- byte-identical whenever the input actually is the full
+   corpus (0 reconstruction mismatches, confirmed above).
+
+`test_preprocess_v2_reliability.py` was re-run in full against this
+redesign (**265/265 checks passing** -- superseding the "232 checks"
+count in the Tests section below, which predates Round 7). A handful of
+existing tests encoded the retired chunk-level architecture directly
+(`response["translation_chunk_count"]`, an exact-string identity-copy
+comparison, and two stub corpora that relied on the old naive test
+splitter's period-eating quirk producing exactly one sentence) and were
+updated to assert the equivalent invariant under the new architecture
+rather than weakened; none of the updates touch `preprocess_v2.py`'s
+actual translation, validation, or status logic.
+
+## Round 8 -- incremental NLLB progress reporting
+
+A real full-corpus run under the Round 7 architecture reported `0/5792`
+in its progress bar for a long time while real translation work was
+demonstrably happening underneath it (cache growing, CPU/GPU active),
+then jumped straight to 100% once the whole run finished. On an hours-long
+run this makes it impossible to tell a genuinely stuck process from a
+slow-but-progressing one -- exactly the ambiguity the fifth review's
+progress bar was built to remove in the first place, just reintroduced one
+level down by the Round 7 redesign.
+
+**Root cause.** `translate_frozen_sentences_batched()`'s first pass called
+`translate_texts_batched()` once for the *entire* corpus-wide list of
+cache-miss sentences, and only iterated the per-sentence progress-tick
+loop *after* that whole call returned. `translate_texts_batched()` itself
+does accept a `progress_callback`, but Round 7's caller never wired
+anything into it -- so every sentence's tick was deferred to one bulk loop
+at the very end, correct in its final count but with nothing visible while
+it ran.
+
+**Fix**, keeping the sentence-level translation architecture and the
+frozen 6,396-sentence structure completely unchanged -- this was a
+reporting-plumbing fix, not a translation-logic change:
+
+- Progress signaling and result-data assembly are split into two separate
+  concerns (`_tick_progress` vs. `_record`), so a tick can fire the moment
+  a sentence's outcome is known, independent of when its full result
+  record gets built.
+- Per-sentence ticking is idempotent -- each sentence_id is guaranteed to
+  advance the progress count exactly once, however it resolves (cache hit,
+  first-pass success, retry-pass success, or permanent failure).
+- `_on_first_pass_piece_done` / `_on_retry_piece_done` callbacks are wired
+  into `translate_texts_batched`'s existing `progress_callback` parameter
+  (already there, just previously unused by this caller), so both the
+  first pass and the retry pass now tick live, per completed batch, as
+  translation actually happens.
+- An end-of-function reconciliation loop guarantees every sentence gets
+  ticked exactly once even if the retry pass itself aborts internally
+  (e.g. via the existing consecutive-batch-failure guard raising
+  `NLLBTranslationError` mid-retry) -- a retried sentence that never got a
+  chance to succeed or fail explicitly still ends up counted as `FAILED`,
+  never silently dropped from the progress total.
+- Cache hits now advance progress immediately (previously they were also
+  deferred to the end-of-call bulk loop); fresh translations advance
+  per-batch, not per-whole-corpus-call; retries are counted and reported
+  separately (`retried_ok`) from first-pass successes (`fresh`).
+
+**New tests (44-50 -- Round 7's own regression suite already reached
+Test 46; Tests 47-50 are new in this round):**
+Test 47 proves progress ticks are genuinely incremental during a live run
+(one `progress_hook` call per sentence, not one bulk call at the end),
+that the first tick fires with a partial count, that a cache hit produces
+the very first tick, and that final tallies (`cache_hits`/`fresh`/
+`retried_ok`/`failed`) are correct for a mixed cache-hit/fresh/retry-
+recovered/Spanish-passthrough scenario. Test 48 proves a retry pass that
+fails permanently still reaches the correct final count, with every
+affected sentence correctly `FAILED`. Test 49 proves a retry pass that
+itself trips the consecutive-batch-failure abort recovers cleanly --
+the run completes without raising, every sentence (including one never
+actually attempted before the internal abort) is still accounted for
+exactly once, and no sentence is ever ticked twice. Test 50 re-runs
+`translate_frozen_sentences_batched()` directly against the real, on-disk
+6,396-sentence frozen file with a fast deterministic stand-in translator,
+confirming the fix holds at real corpus scale: exactly one record per
+frozen sentence ID, progress reaching exactly the true Catalan-sentence
+total, and thousands of separate incremental ticks (not one).
+
+`test_preprocess_v2_reliability.py`: **295/295 checks passing** after this
+round -- superseding the "265/265" count above. Nothing about the
+translation architecture, the frozen sentence structure, cache resumption,
+or `STEP2_VALID` gating changed; this round is entirely about making
+in-progress work visible while it happens.
+
+## Round 9 -- exact frozen-file/ID-set validation, sentence-level quality gating, and memory-safety fixes
+
+A further review of the Round 8 delivery -- reading `preprocess_v2.py` in
+full against the frozen-file/validity/memory-load machinery specifically
+-- found four issues considered necessary before the next real corpus run,
+plus two further hardening fixes prompted by this project's own prior
+Mac memory-crash history (see "Fixes from the fifth external review"
+above). All six are implemented in this round, plus three points that
+were confirmed already accurately documented and needed no code change.
+
+1. **Exact frozen-file <-> input validation (new hard pre-run gate).**
+   `main()`'s per-response frozen lookup (`missing_from_frozen_
+   segmentation` / `frozen_segmentation_source_language_mismatch`) only
+   ever iterates the *current* corpus's responses, so it can never notice
+   a response that quietly disappeared from the frozen file entirely, or
+   one whose recorded text silently drifted while its ID and detected
+   language happened to stay the same -- the frozen file could go stale
+   for the corpus as a whole without any single per-response check ever
+   firing. **Fixed** with a new hard gate, checked before any model load:
+   - `_hash_file(path)` (mirrors `terminal.py`'s existing `_hash_file` --
+     SHA-256, 1MB chunks, raw bytes -- duplicated into `preprocess_v2.py`
+     since `terminal.py` imports `preprocess_v2`, not the reverse).
+   - `FROZEN_SEGMENTATION_SCHEMA_VERSION = 2`. `freeze_sentence_
+     segmentation.py` now writes `schema_version` and `input_sha256`
+     (the current corpus file's hash at freeze time) as new top-level
+     fields; the `responses` content itself, and every existing top-level
+     field, is completely unchanged -- confirmed by regenerating the real
+     6,396-sentence frozen file and diffing it against the pre-Round-9
+     version: `responses`, `ellipsis_continuation_merges`,
+     `response_count`, `total_sentence_count`, `generated_from`, and
+     `segmentation_function` are all byte-for-byte identical; only
+     `schema_version` (1 -> 2) and the new `input_sha256` field differ.
+   - `validate_frozen_segmentation_against_input(frozen_file, raw_data,
+     input_file_path)`: five checks, in order -- schema currency (an
+     older file predates `input_sha256` and can't be verified at all, so
+     this check short-circuits everything else), the frozen file's own
+     declared `response_count`/`total_sentence_count` against what's
+     actually inside it (self-consistency), `input_sha256` recomputed
+     from the current on-disk input file against what the frozen file
+     recorded, response-ID-set equality in *both* directions (a current
+     response missing from the frozen file, and a frozen response no
+     longer in the current corpus -- the latter being exactly the case
+     the per-response lookup can never catch by itself), and per-response
+     `original_text` equality for every ID present in both. Returns a
+     list of human-readable problems (never raises); `main()` now loads
+     the frozen file and calls this **before** `run_preflight()` (i.e.
+     before any model load), logs every problem, and refuses to run if
+     the list is non-empty.
+2. **Exact sentence-ID-set validation in `sentence_count_invariant`, not
+   just cardinality.** The existing invariant only ever compared
+   `expected_sentence_count == actual` -- two numbers matching by
+   coincidence would still pass even if, say, one frozen sentence ID were
+   silently dropped from `sentences_out` while a duplicate of another one
+   were produced instead. **Fixed**: `sentence_count_invariant` now also
+   carries `sentence_id_set_match`, `missing_sentence_id_count`/
+   `missing_sentence_ids` (frozen, never produced), and
+   `unexpected_sentence_id_count`/`unexpected_sentence_ids` (produced,
+   not frozen) -- `match` now requires *both* the count and the exact set
+   to agree, and is folded into the existing `silent_loss`/
+   `structural_validity` computation exactly as the count-only version
+   was. `print_validation_report()` prints the new fields alongside the
+   existing count line. Test 52 proves the two checks are genuinely
+   complementary, not redundant: a corrupted frozen file with a duplicate
+   sentence ID within one response produces a case where the *set* of IDs
+   still matches (a duplicate collapses to an equal set) but the
+   *cardinality* does not -- proving `sentence_id_set_match` alone would
+   have missed a real problem, and that the combined `match` check
+   catches it correctly (`structural_validity=False`,
+   `STEP2_VALID=False`).
+3. **Sentence-level quality gating, replacing the response-level-only
+   gate.** `translation_output_validity` was still computed from
+   *response-level* diagnostics run on the reconstructed (joined)
+   `text_es` -- even though Round 7 moved translation itself to
+   sentence-level granularity, the validity gate never followed. This
+   reopens exactly the false-positive failure mode the third and sixth
+   reviews already fixed once, at a different grain: several
+   individually-fine sentences, each too short to trip its own
+   per-sentence repetition threshold, can still concatenate into a
+   RECONSTRUCTED response whose full text happens to repeat a short
+   phrase often enough to trip the *response-level* repetition check --
+   even though nothing was actually wrong with any single sentence.
+   **Fixed**:
+   ```python
+   translation_output_validity = sentence_flagged_count == 0
+   ```
+   `sentence_flagged_count` is `sentence_translation_summary`'s corpus-wide
+   count of sentences whose *own* `sentence_status == "FLAGGED"` (set in
+   Pass 2, from that sentence's own `check_target_language`/
+   `check_degenerate_output` results -- unchanged from Round 7). The
+   response-level `language_mismatch_count`/`degenerate_output_count`
+   (still computed, in Pass 3, on the reconstructed text -- unchanged)
+   are demoted to the same REVIEW-only tier as length-ratio outliers and
+   low similarity: they push `translation_sanity_status` to `"REVIEW"`
+   but never gate `STEP2_VALID` on their own anymore.
+   `print_validation_report()` now prints "FLAGGED sentences (fatal --
+   gates STEP2_VALID)" as its own line, with the response-level counts
+   relabeled "Response-level diagnostics (review-only)".
+   Test 53 is the direct regression test: four distinct, individually
+   unflagged sentences that each translate to the same short phrase
+   trip the response-level repetition check on the reconstruction
+   (`degenerate_output_count == 1`) but leave `translation_output_
+   validity=True`, `translation_sanity_status="REVIEW"`, and
+   `STEP2_VALID=True` -- proving this specific false-positive shape no
+   longer fails the run. Test 54 is the mirror case, proving the fix
+   didn't overcorrect into a majority-vote or an average: one genuinely
+   bad sentence (wrong-language output), sitting between two good ones in
+   the very same response, still correctly fails `translation_output_
+   validity` and `STEP2_VALID` on its own -- not diluted or averaged away
+   by its good neighbors.
+4. **Per-sentence length diagnostics (diagnostic-only, new in the
+   sentence-level report).** A response-level length ratio can
+   statistically absorb one sentence collapsing to a fraction of its
+   source length while the rest of the response compensates -- an 8-word
+   source sentence translated to one word would barely move a whole
+   response's aggregate ratio. **Fixed**: `compute_length_diagnostics()`
+   (already existed, response-level) is now also run per-sentence in Pass
+   2, stored at `sentences_out[...]["quality"]["length_diagnostics"]`, and
+   rolled up corpus-wide as `sentence_translation_summary["sentence_
+   length_ratio_outlier_count"]`/`"_ids"`. Deliberately **not** part of
+   the `FLAGGED`/fatal-quality condition -- source<->target length
+   legitimately varies a lot sentence-to-sentence (a short
+   acknowledgement, an elided clause), so an arbitrary per-sentence
+   threshold would reproduce the same kind of false positive the second
+   and third reviews already found and fixed for length ratios and short
+   text. Test 55 confirms a drastically-shortened sentence is correctly
+   identified as an outlier by ID, that a normally-proportioned neighbor
+   sentence in the same response is not, and that the outlier sentence's
+   own `sentence_status` stays `FRESH_OK` (not `FLAGGED`) -- diagnostic
+   only, surfaced via `REVIEW`, never gating.
+5. **A single NLLB model load, not two.** `run_preflight()` already
+   constructs a real `NLLBTranslator` (a full ~600M-parameter model load,
+   confirmed by an actual translation call) purely to verify the
+   environment; `main()` used to throw that one away and construct a
+   SECOND `NLLBTranslator` immediately afterward for the actual corpus
+   run -- loading the model twice, back-to-back, before doing any real
+   work, on the exact low-memory Mac that had already crashed once under
+   memory pressure (see "Fixes from the fifth external review"). **Fixed**:
+   `run_preflight()` now stores the constructed translator at
+   `result["translator"]`, but only on the success path (an exception
+   during construction never sets it, so a caller can never mistakenly
+   reuse a translator from a failed or partial preflight); `main()` now
+   does `translator = preflight_result["translator"]` instead of
+   constructing a new one. `run_smoke_test()` (a separate, independent
+   `--smoke-test` mode with its own tiny synthetic corpus, never invoked
+   together with the real run in the same process) still constructs its
+   own translator -- that is a different mode entirely, not part of this
+   fix. Test 56 confirms `run_preflight()` returns the translator on
+   success and omits it on failure, and statically confirms (via
+   `inspect.getsource`) that `main()`'s own source never constructs an
+   `NLLBTranslator` directly and does reuse `preflight_result["translator"]`
+   -- a regression guard against a future refactor silently reintroducing
+   the double load.
+6. **`SemanticSimilarityScorer` made genuinely lazy.** Its own docstring
+   already claimed to load "lazily and only if actually needed," but
+   `__init__` unconditionally constructed the real `SentenceTransformer`
+   regardless -- so every run paid the embedding-model load cost even
+   when the corpus had nothing for it to score (e.g. an all-Spanish-
+   original corpus needs no Catalan<->Spanish similarity at all), again a
+   real concern given this project's prior Mac memory-crash history.
+   **Fixed**: `__init__` now does nothing but set attributes.
+   `_ensure_loaded()` performs the (at-most-once) real construction
+   attempt, called from the `available` property -- which remains the
+   correct trigger at its existing real-use call sites (`similarity_pairs
+   and similarity_scorer.available`, short-circuited so an empty-pairs run
+   never reaches it) -- and a new `load_attempted` property lets other
+   code inspect whether a load was ever tried *without* forcing one.
+   This mattered concretely at one existing call site: `process()`'s
+   end-of-run `translation_quality_summary` construction used to read
+   `similarity_scorer.available` unconditionally to fill in a summary
+   field, which would have silently forced a load on every single run
+   just to populate a report field, defeating the laziness fix for
+   exactly the runs it matters most for. **Also fixed**: that call site
+   now reads `load_attempted` first, and reports a
+   `"not_needed_for_this_run_no_similarity_pairs_computed"` reason
+   (distinct from `"similarity_scorer_not_provided"` and from a real load
+   failure's actual exception message) when no load was ever attempted.
+   Test 57 proves construction alone attempts nothing (no network/model
+   access even attempted), that the first real use triggers exactly one
+   load attempt (verified via a fake `sentence_transformers` module
+   injected into `sys.modules`, so this is deterministic and needs no
+   network either way), that later calls do not load again, that a load
+   failure degrades gracefully without raising, and -- the integration
+   case that matters most -- that a full `process()` run against an
+   all-Spanish corpus never forces the load at all and reports the
+   correct non-misleading reason.
+
+**Three points confirmed already accurately documented, no code change
+needed:**
+- **Code-switching is still response-level routing, not sentence-level.**
+  Round 7 moved *translation* to per-sentence granularity, but *language
+  detection* is still done once per response
+  (`determine_response_language(raw_text, primary_lang)`), and every
+  sentence in that response inherits the single resulting
+  `source_language` -- there is no per-sentence language re-detection.
+  A response that code-switches between Catalan and Spanish sentence-by-
+  sentence is therefore still translated (or identity-copied) as if it
+  were entirely one language. This is an accurate, pre-existing
+  limitation, not newly introduced this round, and is recorded here
+  explicitly so it is never mistaken for something Round 7's per-sentence
+  redesign already fixed.
+- **Question-text wording is not in the frozen records** -- already
+  stated precisely in "What context Step 2 actually preserves" above;
+  unchanged this round.
+- **The sentiment/confusion signal remains legacy BART, pending the Stage
+  5 mDeBERTa replacement** -- already stated in "Sentiment / confusion
+  analysis stay out of Step 2" and the third-review section above;
+  unchanged this round, and out of scope for Step 2 either way.
+
+**New tests (51-57):** see each fix above for what its own test proves.
+`test_preprocess_v2_reliability.py`: **360/360 checks passing** after this
+round -- superseding the "295/295" count above. The frozen 6,396-sentence
+structure, the one-sentence-per-translation architecture, and every prior
+round's fixes are all unchanged and re-verified; this round adds a
+pre-run freshness gate, a stronger structural invariant, a corrected
+quality gate, a new diagnostic, and two memory-safety fixes, none of
+which touch what gets translated or how.
+
+## Round 10 -- diagnosis of the first real 950-response corpus run, anti-repetition generation parameters, and a raised short-text language-detection threshold
+
+The Round 9 delivery was run for real, for the first time, on the full
+950-response corpus (`python preprocess_v2.py --batch-size 1`, ~10.5
+hours on the user's M1 Mac). It completed without crashing or losing any
+data -- `structural_validity=True`, `translation_completeness_
+validity=True` -- but `translation_output_validity=False`
+(`translation_sanity_status="FAIL"`), so `STEP2_VALID=False`:
+`sentence_translation_summary` named 146 flagged sentence IDs. The user
+supplied the real `preprocessed_responses_v2.json`,
+`preprocessed_sentences_v2.json`, and `preprocessing_language_report.json`
+from that run; every one of the 146 flagged sentences was individually
+diagnosed against those files (not sampled -- every flagged ID was pulled
+up and read) and fell into exactly three buckets:
+
+1. **36 sentences (25%): genuine NLLB decoder repetition-loop failures.**
+   Short, low-information, often-repetitive Catalan source utterances
+   ("No, no.", "- Vint, vint.", "Força.") caused beam search to loop,
+   generating the same short phrase 70-93+ times instead of stopping
+   (confirmed via each sentence's `degenerate_output.repetition_detail`:
+   dominant repeated n-grams like "no, no, no," at counts 74-92, "veinte,
+   veinte, veinte," at count 15, and one outright hallucination,
+   "tortilla de tortilla", at count 87). All 36 also tripped the
+   language-mismatch check, because the resulting garbage doesn't read as
+   Spanish to `langdetect` either -- a symptom of the same underlying
+   failure, not a second, independent bug. Only 122 distinct source texts
+   sit behind the 146 flagged IDs: identical source sentences across
+   different responses share one cached translation
+   (`translation_cache.py`), so a single bad cached output can surface as
+   several flagged sentence IDs at once -- "No, no." alone accounts for
+   14 of the 146.
+2. **105 sentences (72%): `langdetect` false positives on correct
+   Spanish.** Every one of these 105 was manually read in full and
+   confirmed to be a fluent, grammatically correct Spanish translation of
+   short, informal transcribed speech (contractions, dialogue dashes,
+   interjections like "eh"/"Ostia", occasional code-switched loanwords).
+   `langdetect`'s statistical char-n-gram model misjudges genuinely
+   correct Spanish at these lengths -- misdetected mostly as Portuguese
+   (107 of 141 total mismatch flags), but also Catalan, Italian, French,
+   English, Somali, Tagalog, and German, often at reported confidence
+   above 0.99. `char_ratio` (translated length vs. source length) for
+   these 105 ranges 0.71-1.58 with zero outliers, confirming they are not
+   distorted or truncated translations -- just wrongly flagged as the
+   wrong language.
+3. **~4-5 sentences (3%, not separately remediated this round): borderline
+   repetition-threshold false positives.** A handful of long, otherwise
+   correctly-translated responses contain a short, natural phrase ("el
+   plan de", "el tema de", "que hay que", "se gasta el") that legitimately
+   repeats exactly `REPETITION_MIN_REPEATS` (4) times in normal rambling
+   speech, coincidentally meeting `check_degenerate_output()`'s repetition
+   threshold. This is a distinct, much smaller issue from buckets 1-2 --
+   the user was not asked to choose a remediation for it this round, and
+   neither generation-parameter fix below touches
+   `REPETITION_NGRAM_SIZE`/`REPETITION_MIN_REPEATS` or the detection logic
+   at all. **It is possible a small number of sentences in this bucket
+   remain flagged after the next real run even with both fixes below
+   applied** -- if so, that is expected, not a sign either fix failed, and
+   is a natural follow-up decision once real post-fix numbers exist.
+
+Presented to the user with full evidence and examples; the user chose the
+remediation for buckets 1 and 2 explicitly (via two separate decisions,
+not a single bundled one, since each touches different "frozen
+methodology" -- decoding parameters vs. language-detection logic -- that
+this project has been deliberately careful to keep stable and auditable
+across every prior round):
+
+**Fix for bucket 1 -- anti-repetition generation parameters (`GENERATION_PARAMS`, `preprocess_v2.py`).**
+Two parameters added, passed straight through to `model.generate()`:
+- `repetition_penalty = 1.3` -- a soft, proportional penalty applied at
+  every decoding step to the score of any already-generated token. It
+  discourages repetition without ever forbidding it, so it does not
+  distort short, legitimately-repetitive translations ("No, no, no." ->
+  "No, no, no.").
+- `no_repeat_ngram_size = 4` -- a hard constraint: once any 4-token
+  sequence has been generated, that exact sequence can never recur later
+  in the same output. This makes the observed failure mode -- the same
+  short phrase repeating dozens of times -- structurally impossible by
+  construction, while a 4-gram floor (one token wider than the 3-gram
+  `check_degenerate_output()` uses for *detection*) still leaves room for
+  genuine short 3-word repeats that occur naturally in this corpus's
+  rambling interview speech.
+Chosen as a standard, moderate combination for this specific NMT
+beam-search pathology, rather than a more aggressive setting (e.g.
+`no_repeat_ngram_size=2` or `3`) that would force paraphrasing of ordinary
+short emphatic repeats and risk degrading otherwise-correct translations.
+**`GENERATION_VERSION` bumped** to
+`"nllb600M-beams4-maxlen512-chunked-v2-antirep1"` -- per this project's
+established cache-invalidation discipline (see the "Cache impact, and why
+GENERATION_VERSION was bumped" note from the Round 7 write-up), any
+`GENERATION_PARAMS` change requires this, so that no translation generated
+under the old, non-anti-repetition settings can ever be silently served
+after this fix. Concretely, this means **the entire ~5.8k-sentence
+translation cache is invalidated, not just the 36 known-bad entries** --
+every sentence's cached translation was generated without these
+parameters, so its correctness under the new settings has never actually
+been verified, and reusing it selectively would defeat the point of a
+reproducible, auditable generation pipeline. **The next real run will
+therefore re-translate the full corpus from scratch (~5 hours, based on
+the prior run's timing), not resume from the existing cache.** This has
+not been validated against the real corpus yet -- confirming it actually
+resolves the 36 known repetition-loop cases (and doesn't introduce new
+ones) is the point of that next run, not something this delivery can
+verify itself, consistent with this project never running the real NLLB
+corpus on its own.
+
+**Fix for bucket 2 -- raised short-text language-detection threshold
+(`MIN_CHARS_FOR_DIRECT_DETECTION` / `MIN_WORDS_FOR_DIRECT_DETECTION`,
+`preprocess_v2.py`).** Raised from 30 chars / 5 words to **50 chars / 8
+words**, chosen from a data-driven tradeoff analysis run directly against
+the real corpus's 4,298 already-assessed sentences (4,157 correctly
+passed, 36 confirmed true-positive repetition-loop cases from bucket 1,
+105 false positives from bucket 2):
+
+| MIN_CHARS / MIN_WORDS | false positives resolved | correctly-passed sentences newly exempted | true positives still caught |
+|---|---|---|---|
+| 40 / 7  | 51/105 (49%) | 536/4157 (12.9%)  | 36/36 |
+| 45 / 7  | 66/105 (63%) | 731/4157 (17.6%)  | 36/36 |
+| **50 / 8 (chosen)** | **78/105 (74%)** | **974/4157 (23.4%)** | **36/36** |
+| 55 / 9  | 86/105 (82%) | 1171/4157 (28.2%) | 36/36 |
+| 60 / 10 | 89/105 (85%) | 1365/4157 (32.8%) | 36/36 |
+
+All five candidates caught 100% of the 36 confirmed true-positive
+repetition-loop sentences -- those all have `target_chars` well over 300,
+far above any threshold considered, so raising this threshold never risks
+hiding a real repetition-loop failure. 50/8 was picked as the point past
+which each further step buys progressively less false-positive resolution
+for progressively more corpus-wide assessment coverage given up (e.g. the
+55/9 -> 60/10 step buys only +3 points of resolution for +4.6 points of
+newly-exempted coverage); it is a reasoned middle-ground choice from this
+data, not the only defensible one -- if the next real run's post-fix
+numbers suggest otherwise, this is easy to revisit with the same method.
+Both bars must still be cleared together (`_is_sufficiently_long` is an
+AND, unchanged) -- this only changes where the bars sit, not the
+short-circuit logic, `NOT_ASSESSED_SHORT_TEXT` status, or the fact that a
+short output's `passed` stays `None`, never a false `False`.
+
+**New tests (58-59):** Test 58 proves the raised threshold using a real,
+grammatically correct short Spanish phrase that clears the *old* 30/5
+bars (so would have been assessed, and was exactly the shape of the real
+false positives) but not the *new* 50/8 bars (so is now correctly
+exempted, `NOT_ASSESSED_SHORT_TEXT`, `passed=None`) -- and separately
+confirms a genuinely long wrong-language text is still caught and a
+genuinely long correct translation still passes, so the raise provably
+only removes false positives rather than blinding the check generally.
+Test 59 proves `GENERATION_PARAMS` carries both new anti-repetition keys
+with sane values (`repetition_penalty > 1.0`; `no_repeat_ngram_size`
+strictly larger than `REPETITION_NGRAM_SIZE`, so generation-time blocking
+can never be tighter than what detection itself tolerates), that
+`GENERATION_VERSION` was actually bumped to reflect the change, and that
+the pre-existing deterministic decoding settings (`num_beams=4`,
+`do_sample=False`, `max_length=512`) were preserved, not replaced.
+`test_preprocess_v2_reliability.py`: **377/377 checks passing** after this
+round -- superseding the "360/360" count above.
+
+**Not run this round, and not run by this delivery at all:** the real
+NLLB corpus. Per this project's unbroken discipline across every prior
+round, these fixes are delivered for the user to review and run
+themselves, on their own machine, with network/model access this
+environment doesn't have. The full re-run this round's `GENERATION_
+VERSION` bump requires (~5 hours, no cache reuse) is the user's next step,
+not something performed here.
+
+## Round 11 -- demoting language-detection to non-fatal, a raised repetition threshold, and a documented terminology-audit gap
+
+The user independently re-analyzed the same three real Round 10 output
+files (`preprocessed_responses_v2.json`, `preprocessed_sentences_v2.json`,
+`preprocessing_language_report.json`) in detail and produced their own
+breakdown of the 146 flagged sentences, arriving at numbers consistent
+with the Round 10 diagnosis (141 language mismatches, 41 repetition
+flags, 36 overlapping both, 105 language-only, 5 repetition-only) but
+going further in two ways that changed this round's design: a concrete
+example of `langdetect`'s unreliability (`"- Bueno, tenemos dos
+empresas."` detected as Portuguese at 0.999995 confidence), a precise
+count of the 4 legitimate-repeated-phrase false positives inside the 41
+repetition flags (`"se gasta el ..."`, `"el plan de ..."`, `"el tema de
+..."`, `"que hay que ..."`, each repeating naturally exactly 4 times),
+and a new finding outside the 146 flags entirely: domain-terminology
+mistranslations inside sentences the automatic gate marks `FRESH_OK`
+(Catalan `truges` -> `"truegos"`/`"trozos"` instead of *cerdas*, `pagesos`
+-> `"paganos"` instead of *agricultores*/*ganaderos*, `engreix` ->
+`"carne de cerdo"`/`"engrejos"`/`"greso"`, `granges de mare` -> `"granjas
+de mamá"`). The user proposed a three-way remediation (language detector
+never fatal; severe repetition still fatal but the 4-repeat false
+positives fixed; terminology as a separate concern) and asked for
+agreement before any further code change, given this touches the same
+"frozen methodology" territory as Round 10 and partially reverses a
+choice made there.
+
+Four separate decisions were confirmed with the user (`AskUserQuestion`,
+each independent) before implementing:
+
+1. **Target-language mismatch is no longer part of any FATAL gate, at
+   any length** (`check_target_language()` in `preprocess_v2.py`,
+   `flagged` computation in `process()`'s sentence-quality Pass 2). Round
+   10 had raised the short-text exemption threshold (`MIN_CHARS_FOR_
+   DIRECT_DETECTION`/`MIN_WORDS_FOR_DIRECT_DETECTION`, still 50/8,
+   unchanged this round) to resolve 74% of the known false positives
+   while leaving mismatches above that bar fatal. This round goes
+   further: a language mismatch is now **never** fatal, at any length.
+   Justification is the data itself, not just precedent -- of the 141
+   real language-mismatch flags from the Round 10 run, manual review
+   found **zero** that were a real translation failure uniquely caught
+   by language detection and not already independently caught by `check_
+   degenerate_output()`; the 36 that were real failures were real
+   because of repetition, and `check_degenerate_output()` flagged them on
+   that basis regardless of what `check_target_language()` said. In other
+   words, on this corpus, on this run, language-mismatch-alone had 0%
+   precision as a fatal-error signal. `check_target_language()` is still
+   fully computed and reported -- response-level (`language_mismatch_
+   count`/`_ids` in `translation_quality_summary`, unchanged from prior
+   rounds) and, new this round, sentence-level (`sentence_language_
+   mismatch_count`/`_ids` in `sentence_translation_summary`, the direct
+   per-sentence mirror of `sentence_length_ratio_outlier_count`/`_ids`) --
+   and both now feed `translation_sanity_status="REVIEW"` the same way
+   length-ratio outliers and low-similarity responses already did.
+   `check_degenerate_output()` (empty output, a long output identical to
+   its source, and n-gram repetition) is now the **sole** sentence-level
+   FATAL signal.
+2. **`REPETITION_MIN_REPEATS` raised from 4 to 6** (`preprocess_v2.py`).
+   Directly fixes the 4 natural-repeated-phrase false positives the user
+   found inside the 41 repetition flags -- a short, ordinary phrase
+   recurring exactly 4 times in long, otherwise correctly-translated,
+   rambling interview speech no longer trips the detector. 6 was chosen
+   with real margin on both sides: every genuine NLLB repetition-loop
+   failure in the Round 10 run repeated its worst 3-gram at least 15
+   times (most 70-93+), so raising the bar to 6 cannot miss any of the 37
+   confirmed real failures, while comfortably clearing the observed
+   false-positive count of exactly 4. Note `check_degenerate_output()`'s
+   outer length guard (`len(tokens) >= REPETITION_NGRAM_SIZE *
+   REPETITION_MIN_REPEATS`) also moved with this change (3*6=18 words
+   minimum before repetition is even checked, up from 3*4=12) -- Test 61
+   proves the exact boundary (5 repeats: not flagged; 6 repeats: flagged)
+   directly.
+3. **The anti-repetition `GENERATION_PARAMS` fix and its full-corpus
+   re-run stand as delivered in Round 10, unchanged.** The user's initial
+   message this round proposed retranslating only the ~37-41 confirmed-
+   bad sentence IDs under the new `repetition_penalty`/`no_repeat_ngram_
+   size` settings and reusing the existing cache for everything else,
+   to avoid the ~5-hour full re-run. Given the choice explicitly again
+   this round (full re-run vs. a new targeted-retranslation mode with
+   explicit per-sentence generation-provenance tracking so a mixed-
+   version cache is never silently ambiguous), the user chose to keep
+   the full re-run. This preserves the reproducibility property this
+   project has protected since Round 7's original `GENERATION_VERSION`
+   design ("Cache impact, and why GENERATION_VERSION was bumped"): every
+   sentence in a delivered corpus was generated under one documented,
+   fully-verified decoding configuration, never a silent mix of two.
+4. **Domain-terminology mistranslations are documented as a known
+   limitation, not addressed with new tooling this round.** The `truges`/
+   `pagesos`/`engreix`/`granges de mare` examples above are real, and
+   real automatic detection: high `translation_quality_summary.semantic_
+   preservation` similarity does not catch a specific wrong-but-related-
+   sounding noun substituted for a correct domain term (a general-purpose
+   multilingual sentence embedding model has no notion of this corpus's
+   Catalan pig-farming dialect vocabulary). This is **out of scope for
+   Step 2's automatic `STEP2_VALID` gate** -- there is no principled,
+   general way to auto-detect "this specific noun is domain-wrong" without
+   either a curated glossary (which itself risks false alarms on
+   legitimate variation) or a domain expert's read, and building one
+   was explicitly declined this round in favor of documenting the gap
+   here for manual/domain-expert review. If this becomes a priority, the
+   `AskUserQuestion` alternative already scoped -- a separate, non-gating
+   terminology-audit diagnostic checked against a small user-supplied
+   glossary, never affecting `STEP2_VALID` -- remains available as a
+   future addition; nothing in this round's code forecloses it.
+
+**New tests (60-61):** Test 60 is the direct mirror of Test 54 (a bad
+sentence among two good neighbors in the same response) with the opposite
+expected outcome now that language mismatch is non-fatal: none of the
+three sentences is `FLAGGED`, the mismatched one is still correctly named
+in the new `sentence_language_mismatch_ids`, and `translation_output_
+validity`/`STEP2_VALID` are both `True` with `translation_sanity_
+status="REVIEW"`. Test 61 pins `REPETITION_MIN_REPEATS == 6` and proves
+the exact boundary directly: a 3-gram repeating 5 times is not flagged,
+the same 3-gram repeating 6 times is. **Existing tests updated in place**
+for the new behavior rather than left to silently assert the old, now-
+incorrect behavior: Test 33 (a language-mismatch-only failure) now
+asserts `STEP2_VALID=True`/`REVIEW`, the mirror of what it asserted
+through Round 10; Test 54 now uses a degenerate (repetitive) bad sentence
+instead of a wrong-language one, since a wrong-language sentence can no
+longer serve as "the one bad sentence" a sentence-level-fatality test
+needs; Tests 11, 34, and 53 (which all depend on tripping the repetition
+detector) were adjusted to repeat their test phrases enough times to
+clear the new `REPETITION_MIN_REPEATS=6` bar with margin, since their
+prior repeat counts (built around the old bar of 4) no longer trip
+detection at all -- `STUB_REPETITIVE_OUTPUT` now repeats its phrase 9
+times (was 7) and Test 53's response-level false-positive case now joins
+6 sentences (was 4). `test_preprocess_v2_reliability.py`: **390/390
+checks passing** after this round -- superseding the "377/377" count
+above.
+
+**Not run this round, and not run by this delivery at all:** the real
+NLLB corpus, for the same reason as every prior round. None of this
+round's changes require re-translation on their own -- `MIN_CHARS_FOR_
+DIRECT_DETECTION`/`MIN_WORDS_FOR_DIRECT_DETECTION` are unchanged from
+Round 10, and `REPETITION_MIN_REPEATS` and the language-mismatch-fatality
+change are both pure post-hoc scoring/gating logic over already-generated
+translations, not generation-time settings -- so a fresh run against an
+UNCHANGED `GENERATION_VERSION` would hit the existing cache for the
+entire already-translated corpus and only spend time on diagnostics/
+report assembly, not on NLLB inference. The ~5-hour cost this round's
+delivery still carries comes entirely from Round 10's `GENERATION_
+VERSION` bump (the anti-repetition parameters), confirmed to stand as-is
+in decision 3 above, not from anything new in Round 11.
+
+## Round 12 -- a factual correction on Round 11's re-run decision, and a targeted always-on fallback-retry mechanism replacing the global anti-repetition parameter change
+
+After Round 11 was delivered, the user reviewed it against a 15-point
+checklist and reported that it contradicted "the plan we just agreed on"
+-- specifically, that a targeted, provenance-aware repair mode had
+already been agreed, and Round 11's ZIP (which kept Round 10's global
+`GENERATION_PARAMS` change and its ~5-hour full re-run) broke that
+agreement. This needed a factual check before any further code change:
+the actual Round 11 `AskUserQuestion` record shows the retranslation-scope
+question was answered **"Full corpus re-run (as already delivered)"**,
+not a targeted-repair path -- see decision 3 in the Round 11 section
+above. That correction was given to the user directly, framed as a
+factual record check rather than a rebuttal, and the user did not dispute
+it; the conversation moved on to jointly designing the targeted-repair
+architecture as a **new** decision this round, not as compliance with a
+prior one that was never actually made. Two stale "living" reference
+sections elsewhere in this file (`## Translation-quality diagnostics` and
+`## The three-tier validity model`, both still describing pre-Round-11
+fatal-language-mismatch behavior) were also identified by the user as
+contradicting Round 11's actual code and have been corrected in place --
+see those sections below for their current, accurate text.
+
+Two decisions were confirmed with the user (`AskUserQuestion`, each
+independent) before implementing this round:
+
+1. **The targeted-repair mechanism is built as an always-on part of the
+   normal `process()` pipeline, not as a separate `--repair-existing`
+   CLI flag.** The user's original 15-point plan specified an explicit
+   repair-mode flag that would load a prior run's output JSON as trusted
+   input and repair only the sentences it named as bad. Offered the
+   choice between that and a simpler always-on design where the
+   translation cache itself does the targeting automatically (a sentence
+   whose primary translation is confirmed repetition-flagged gets one
+   extra retry call, unconditionally, on every run -- first-ever or a
+   rerun against a warm cache), the user chose the always-on design.
+   This is simpler (no new CLI surface, no "trust this prior JSON as
+   input" pathway to keep in sync with the pipeline's own output schema)
+   and strictly more general (it also self-heals a sentence that becomes
+   repetition-flagged for the first time on some future rerun, e.g. after
+   an unrelated code change, with no manual `--repair-existing` step
+   required).
+2. **The terminology-mistranslation audit (`truges`/`pagesos`/`engreix`/
+   `granges de mare`, documented as a known limitation in Round 11) will
+   use a term list the user supplies**, not one built without pig-farming
+   /Catalan-dialect domain expertise. This audit is **not built in this
+   round** -- it is blocked on the user actually supplying that list, which
+   has been requested but not yet received. Nothing else in this round
+   depends on it.
+
+**The architectural change, in detail.** Round 10's fix bumped the single,
+global `GENERATION_PARAMS`/`GENERATION_VERSION` used for every sentence's
+primary translation, which is why it required a full corpus re-run: the
+cache key includes `generation_version` (see `translation_cache.py`), so
+changing that one string for all callers invalidated the entire existing
+cache, including the ~5,755 sentences that were never wrong in the first
+place. This round reverts that: `GENERATION_PARAMS` and `GENERATION_
+VERSION` are back to their exact pre-Round-10 values (`{"num_beams": 4,
+"max_length": 512, "do_sample": False}` / `"nllb600M-beams4-maxlen512-
+chunked-v2"`, no anti-repetition keys, no "antirep" marker) -- Test 59,
+rewritten this round, pins this directly. **This means the real corpus's
+existing cache, built entirely under this exact pre-Round-10
+configuration, is fully valid again and will be hit for every sentence
+that was never repetition-flagged**, with zero re-translation cost.
+
+In place of the global change, a new, separate cache namespace and a
+narrowly-scoped retry function do the actual repair. `RETRY_GENERATION_
+PARAMS` (primary params plus `repetition_penalty=1.3`, `no_repeat_ngram_
+size=4`) and `RETRY_GENERATION_VERSION` (a distinct version string,
+containing "antirep-retry1", never equal to `GENERATION_VERSION`) are new
+module-level constants. `NLLBTranslator.translate_batch()` gained a new
+`generation_params: Optional[dict] = None` parameter -- when omitted it
+behaves exactly as before (falls back to the module-level `GENERATION_
+PARAMS`), and when supplied it overrides the decoding settings for that
+one call only, leaving the module-level default and every other caller
+untouched (Test 65 proves both the default-fallback and the per-call-only
+override directly against the real, unmodified class, using the
+established duck-typed fake-`self` pattern -- no model load). A new
+function, `attempt_repetition_fallback_retry(source_text, translator,
+cache, source_lang="ca", target_lang="es")`, checks the retry cache
+namespace first (`cache.get(..., RETRY_GENERATION_VERSION)`); on a miss it
+calls `translator.translate_batch([source_text], ..., generation_
+params=RETRY_GENERATION_PARAMS)`, caches the result under `RETRY_
+GENERATION_VERSION` on success, and returns a `cache_status` of
+`"CACHE_HIT"`, `"FRESH"`, or `"FAILED"` alongside the translated text (or
+`None` on failure -- a retry failure is logged and handled, never raised,
+consistent with this project's standing rule that no single sentence's
+translation failure may crash a multi-hour run).
+
+`process()`'s Pass 2 wires this in: for every sentence whose primary
+translation is independently confirmed as a repetition loop by `check_
+degenerate_output()` (the same function and the same `REPETITION_MIN_
+REPEATS=6` threshold from Round 11 -- nothing about what counts as
+"pathological repetition" changed this round, only what happens once one
+is found), exactly one fallback retry is attempted. If the retry's own
+`check_degenerate_output()` result comes back clean, the retry's text
+*replaces* `text_es` for that sentence and its clean diagnostic becomes
+the one recorded as `sentence_quality["degenerate_output"]` (so a
+resolved sentence is `FLAGGED=False` and contributes zero to `STEP2_
+VALID`'s gate); if the retry does not resolve it, the *original* primary
+text is kept unchanged (never replaced by a second bad translation) and
+the sentence stays `FLAGGED=True`, still fatal, exactly as before this
+round. Either way, the retry is attempted **once and only once** per
+unique source text needing it: because the retry cache is keyed by source
+text (like every other cache lookup in this project), two sentences that
+happen to share the same pathological source text -- confirmed to occur in
+the real corpus during the original diagnosis, e.g. "No, no." behind 14
+flagged sentence IDs -- only ever trigger one real `translate_batch` call
+between them; the second sentence's lookup is served as `CACHE_HIT` from
+the first (Test 64 proves this directly, including that `CALL_LOG` shows
+exactly one retry-mode call across two sentences).
+
+Full per-sentence provenance is recorded regardless of outcome, in a new
+`sentence_quality["repetition_fallback_retry"]` field (`None` when no
+retry was needed): `attempted` (bool), `reason` (currently always
+`"pathological_repetition"`), `cache_status`, `primary_generation_
+version` and `retry_generation_version` (so it's always explicit which
+exact decoding configuration produced each candidate), `primary_
+degenerate_output` (the *original*, pre-retry diagnostic that triggered
+the retry, preserved for audit even when the retry resolved it and the
+sentence's live `degenerate_output` field now shows the clean result
+instead), `resolved` (bool), and `selected_generation_version` (naming
+whichever version's output actually became the sentence's final `text_
+es`). This directly answers the audit-ability requirement behind the
+user's original repair-mode design: a mixed-provenance corpus is never
+silently ambiguous about which decoding configuration produced any given
+sentence's final text, without needing a `--repair-existing` mode or a
+"trust this prior JSON" pathway to get there.
+
+`sentence_translation_summary` gained four corpus-wide rollup fields
+mirroring the pattern already used for `sentence_language_mismatch_
+count`/`_ids`: `repetition_fallback_retry_attempted_count`, `_resolved_
+count`/`_resolved_ids`, and `_unresolved_count`/`_unresolved_ids`.
+`print_validation_report()` gained matching print lines. An unresolved
+retry does not change `STEP2_VALID`'s behavior at all -- it was fatal
+before this round (as an unrepaired repetition-flagged sentence) and
+remains fatal now (Test 63 proves this end to end: `text_es` is
+unchanged, `resolved=False`, `translation_output_validity=False`,
+`STEP2_VALID=False`); a resolved retry converts what would have been a
+fatal sentence into a clean one (Test 62 proves this end to end,
+including the exact `CALL_LOG` shape: one primary call, one retry call,
+no wasted extra calls, and `STEP2_VALID=True`).
+
+**New tests (62-65):** Test 62 is the full resolved-path integration test
+described above. Test 63 is its unresolved-path mirror, using a new
+`StubNLLBTranslator.REPETITIVE_STAYS_BAD_ON_RETRY_FOR_TEXTS` opt-out (a
+frozenset of source texts that stay bad even on a retry call) -- without
+this opt-out, the stub's new default retry behavior (a retry call returns
+clean output by default, matching the common case) would have silently
+"fixed" Tests 34 and 54's intentionally-persistent bad text and broken
+what those two existing tests were built to prove (that the fatal gate
+still fires when nothing resolves the problem); both were updated to mark
+their bad text with this opt-out so their original intent survives
+unchanged. Test 64 proves retry-cache reuse across two sentences sharing
+one bad source text. Test 65 exercises the real, unmodified `NLLBTranslator.
+translate_batch()`'s new `generation_params` override directly (new fake
+classes `_FakeTensorForGeneration`/`_FakeTokenizerForGeneration`/
+`_FakeModelForGeneration`/`_FakeSelfForGeneration`, following the
+established duck-typed fake-`self` pattern from Tests 2/3/14) -- no model
+load, confirms both the default-fallback and per-call-only-override
+behavior, and that `forced_bos_token_id` still resolves correctly in both
+cases. `StubNLLBTranslator.translate_batch()`'s `CALL_LOG` entries are now
+4-tuples (`source_lang, target_lang, list(texts), generation_params`) so
+tests can distinguish primary calls (`generation_params is None`) from
+retry calls (`generation_params` carrying `repetition_penalty`) directly,
+as Tests 62 and 64 do. `test_preprocess_v2_reliability.py`: **426/426
+checks passing** after this round -- superseding the "390/390" count
+above.
+
+**Re-run impact of this round, stated precisely:** none, for the corpus
+that already exists. Because `GENERATION_VERSION` is back to its exact
+pre-Round-10 value, a run against the real corpus's existing cache hits
+every one of the ~5,755 sentences that were never repetition-flagged at
+zero NLLB cost -- no full re-run, unlike Round 10's delivery. Only the
+sentences genuinely confirmed as repetition loops (the ~36-37 real
+failures identified across the Round 10/11 diagnoses) will incur new NLLB
+calls, and only one call per unique bad source text, not per flagged
+sentence ID (multiple sentence IDs sharing one bad source text, as
+observed in the real data, share one retry). This is the direct
+architectural fix for the concern the user raised about Round 11 still
+carrying Round 10's full-re-run cost forward unnecessarily.
+
+**Not addressed this round, and explicitly out of scope until the user
+supplies a term list (per decision 2 above):** the domain-terminology
+mistranslation audit. The `truges`/`pagesos`/`engreix`/`granges de mare`
+examples from Round 11 remain a real, undetected gap -- `STEP2_VALID`
+still says nothing about whether a specific noun was mistranslated to a
+wrong-but-plausible-sounding word, only about structural/generation-level
+failure. No code for this audit exists yet in this delivery.
+
+### Round 12 fixes from external review
+
+The user independently re-verified the Round 12 ZIP against the frozen
+artifact (950 responses, 6,396 sentence IDs, 5,792 Catalan + 604 Spanish
+sentence units, `input_sha256` matching) and the full architecture above
+("Round 12 architecture: approved"), and found four concrete problems
+with how it was packaged/implemented, all fixed in this delivery without
+changing the approved architecture:
+
+1. **A pre-run primary-cache coverage safety check, gating on request.**
+   The Round 12 ZIP is, correctly, code-only -- it never bundles the real
+   corpus's actual `data/cache/` file (see "Files in this delivery"
+   below). The user identified the real operational risk this creates: if
+   an operator replaces their project folder with a delivery and forgets
+   to restore their existing warm cache first, `python preprocess_v2.py`
+   would silently re-translate the entire corpus from scratch -- turning
+   a cheap targeted repair into another multi-hour run, with no warning
+   until it's too late. New function `compute_primary_cache_coverage()`
+   (in `preprocess_v2.py`) checks, cheaply and read-only (see point about
+   `TranslationCache.contains()` below), whether every one of this run's
+   Catalan sentence units already has a primary-cache entry under the
+   current `GENERATION_VERSION` -- counted by attempting the lookup for
+   **every sentence unit individually** (not by counting distinct cache
+   entries or distinct source texts first), per the user's own
+   specification, so sentences sharing one source text (documented cache
+   reuse throughout this project) are each counted correctly rather than
+   silently undercounted. `process()` now always computes and prints this
+   report immediately, before any NLLB call, in exactly the requested
+   shape:
+   ```
+   Primary cache coverage before run:
+     expected Catalan sentence units: 5792
+     covered: 5792
+     missing: 0
+     SAFE TO REUSE PRIMARY CACHE = True
+   ```
+   A new `require_warm_primary_cache` parameter (default `False` -- zero
+   behavior change for every existing caller, including this whole test
+   suite) turns this into a hard gate: when `True` and even one sentence
+   is missing, `process()` refuses to call the translation pass at all
+   (zero NLLB calls made) and fails the run cleanly through the exact same
+   machinery an aborted translation already uses (`translation_aborted_
+   early=True`, `abort_reason` naming the shortfall, every pending
+   sentence recorded `FAILED`, `STEP2_VALID=False`) -- no new exception
+   type, no new failure path to keep in sync with the rest of the report.
+   `main()`'s new `--require-warm-cache` CLI flag sets this for the real
+   corpus run (see "CLI" and "Execution sequence" below); the default
+   stays `False` specifically because a genuinely first-ever run has an
+   empty cache by definition and must not be blocked by its own safety
+   net. **Deliberately NOT wired into `terminal.py`'s menu-driven path**
+   in this round -- `_create_processed_versions()` is explicitly not tied
+   to the frozen production corpus (see its own comment, unchanged since
+   Round 7) and has no CLI flag surface to carry this through; a caller
+   who wants the same protection there can pass
+   `require_warm_primary_cache=True` directly to `preprocess_v2.process()`.
+   New `TranslationCache.contains()` method (`translation_cache.py`): a
+   pure existence check that, unlike `get()`, does **not** increment
+   `hits_this_run`/`misses_this_run` -- using `get()` for this coverage
+   check would have inflated the run's real cache-hit statistics by
+   however many sentences the check walks, ahead of the pipeline's own
+   genuine lookups for those same sentences moments later.
+2. **Successful-repair provenance now correctly updates the TOP-LEVEL
+   `translation_provenance` field, not just the nested diagnostic.** This
+   was a real bug: `provenance` (the primary attempt's `CACHE_HIT`/
+   `FRESH_OK`/etc.) was computed once before the repetition-retry check
+   and never reassigned even when the retry resolved the sentence and
+   `text_es_sent` WAS replaced -- so a repaired sentence could be written
+   to `sentences_out[...]["translation_provenance"]` (and rolled up into
+   `sentence_translation_summary.by_translation_provenance` and
+   `retried_ok_translations`) as if nothing had changed, silently
+   understating how much repair work actually happened. Fixed in `process
+   ()`'s Pass 2: the original primary provenance is preserved for audit
+   under the new `repetition_fallback_retry.primary_translation_
+   provenance` field, and `provenance` itself (and `sentence_status`, which
+   mirrors it) is reassigned to a new value, `"REPETITION_REPAIRED"`, the
+   moment a retry resolves a sentence -- also recorded in the nested record
+   as `repetition_fallback_retry.selected_translation_provenance`, so the
+   top-level field and the nested audit trail always agree. **Deliberately
+   NOT named `"RETRY_OK"`**, despite that being the label used in the
+   user's own suggested provenance table -- `"RETRY_OK"` already means
+   something different and pre-existing in this codebase (a PRIMARY-pass
+   piece that needed a transient-failure retry inside `translate_texts_
+   batched`, still entirely under `GENERATION_PARAMS`, unrelated to
+   repetition -- see `_on_retry_piece_done`'s long-standing logic). Reusing
+   it for the Round 12 repair outcome would have silently merged two
+   unrelated kinds of retry under one label, exactly the ambiguity this
+   project has spent eleven rounds eliminating. The corpus-wide rollups
+   are correct now as a direct consequence (no separate fix needed there):
+   `sentence_translation_summary.by_translation_provenance` and the report's
+   new flat `repetition_repaired_translations` field (plus its
+   `runtime_info` mirror) both read straight off the now-correct per-
+   sentence `translation_provenance` values.
+3. **A resolved fallback retry is now persisted to disk immediately.**
+   `attempt_repetition_fallback_retry()` previously called `cache.set()`
+   but not `cache.save()`, leaving a successful repair sitting only in
+   memory until some later batch's save happened to flush it. The PRIMARY
+   translation path has treated every successful translation this way
+   since the fifth external review specifically so a crash later in the
+   same run (e.g. during the embeddings/round-trip diagnostic pass, which
+   runs after all translation work) cannot lose already-completed work --
+   the same principle now applies here: `attempt_repetition_fallback_
+   retry()` calls `cache.save()` (atomic, warning-only on failure, same as
+   every other call site) immediately after a successful `cache.set()`, so
+   an expensive, hard-won repair (one real extra NLLB call, made at most
+   once per unique bad source text) is never silently redone on a future
+   run just because the process died before some unrelated later save.
+4. **A blank/empty fallback retry result is rejected, not cached as a
+   success.** `translate_batch()`'s underlying `tokenizer.batch_decode`
+   can legitimately return an empty string for a genuinely empty
+   generation -- the PRIMARY translation path already guards against this
+   exact case (`translate_texts_batched`'s `if translated is None or not
+   str(translated).strip()`), but `attempt_repetition_fallback_retry()`
+   did not have the matching guard, so a blank retry result would have
+   been cached under `RETRY_GENERATION_VERSION` as if it were a genuine
+   repair and served back as a false `CACHE_HIT` on every future lookup
+   for that source text. Now checked identically to the primary path: a
+   blank/`None` retry result is never cached, is reported as `"FAILED"`
+   (not a success), and the caller correctly keeps the sentence's original
+   (still-degenerate) primary translation, exactly like any other retry
+   failure.
+
+**New tests (66-70):** Test 66 is the direct regression test for fix 2,
+using the user's own reported scenario (a primary translation served as
+`CACHE_HIT` that turns out to need repair) and asserting the top-level
+`translation_provenance`, `sentence_status`, the nested `repetition_
+fallback_retry.primary_translation_provenance`/`selected_translation_
+provenance` pair, and every corpus-wide rollup (`by_translation_
+provenance`, `repetition_repaired_translations`, its `runtime_info`
+mirror) all agree and are no longer left stale under `CACHE_HIT`. Test 67
+proves fix 4 both at the unit level (`attempt_repetition_fallback_retry()`
+called directly against a translator stub that returns `""`) and end to
+end through `process()` (a new `StubNLLBTranslator.REPETITIVE_RETRY_
+RETURNS_BLANK_FOR_TEXTS` opt-in), confirming a blank retry is reported
+`"FAILED"`, is never cached, and the sentence correctly stays `FLAGGED`
+with its original text untouched. Test 68 proves fix 3 by calling
+`attempt_repetition_fallback_retry()` against a real on-disk cache file,
+then opening a **second, independent** `TranslationCache` instance
+pointed at the same path without ever calling `save()` again on the
+first -- the repaired translation is visible there, proof it was actually
+flushed to disk inside the function itself, not left for some later call
+to persist. Test 69 proves fix 1 with three scenarios: a cold cache with
+`require_warm_primary_cache=True` correctly aborts with zero NLLB calls
+made; a genuinely warm cache with the same flag set is correctly **not**
+blocked (and still needs no primary-direction NLLB calls -- any `CALL_LOG`
+entries there are the unrelated round-trip diagnostic, which legitimately
+still runs `es->ca` against the now-cached translation); and a cold cache
+with the flag left at its default (`False`) translates normally,
+confirming this round's change is fully opt-in and does not alter
+behavior for this test suite or any other existing caller. Test 70 is a
+direct unit test of `compute_primary_cache_coverage()`: two sentence IDs
+sharing one cached source text both count as covered independently (not
+"1 distinct entry, therefore covered"), a response with `translation_
+required=False` is correctly excluded from the expected count entirely,
+and `cache.stats()`'s hit/miss counters are provably untouched by the
+coverage check (using `contains()`, not `get()`).
+`test_preprocess_v2_reliability.py`: **466/466 checks passing** after
+these fixes -- superseding the "426/426" count above.
+
+**Not run this round either:** the real NLLB corpus. None of these four
+fixes touch generation parameters, `GENERATION_VERSION`, or the retry
+mechanism's decision logic (when a retry is attempted, what makes it
+"resolved") -- they fix how the *outcome* of that unchanged logic is
+persisted, cached, and labeled. A run against the real corpus's existing
+cache (restored into place first, per the execution sequence below) still
+needs no full re-translation.
 
 ## Tests
 
@@ -1368,28 +2533,76 @@ cleaning/splitting) and checks that `original_text`, `text_es`, and
 `topic_text_es_raw` all populate, plus that sentence IDs are produced.
 Output goes to `data/output/smoke_test/` only -- it never touches
 `data/output/preprocessed_responses_v2.json`,
-`data/cache/nllb_translation_cache_v1.json`, or any other production file.
+`data/cache/nllb_sentence_translation_cache_v1.json` (the real production
+cache -- see "Cache" above for why this section previously named the
+wrong, pre-Round-7 file here), or any other production file. `--smoke-
+test` uses its own fully isolated cache
+(`data/output/smoke_test/_smoke_test_cache.json`), deleted and rebuilt
+fresh on every run.
+
+`--require-warm-cache` (Round 12, added from external review): before
+translating anything, verifies every Catalan sentence in the frozen
+corpus is already present in the primary cache under the current
+`GENERATION_VERSION`, and refuses to proceed -- no NLLB calls made -- if
+any are missing, rather than silently re-translating them. See "Round 12
+fixes from external review" above for why this exists and exactly what it
+checks. Pass this on every run **except** a genuinely first-ever run
+against an empty cache (see "Execution sequence" below). Ignored by
+`--preflight`/`--smoke-test`, neither of which calls `process()` against
+the real corpus.
 
 Exit code is 0 only when the requested mode passed (or, for a full run,
 when `STEP2_VALID` is `True`); non-zero otherwise.
 
 ## Execution sequence for the next real run
 
-Run these, in order, on the M1 machine (network access required once, to
-download the ~2.4GB `facebook/nllb-200-distilled-600M` checkpoint -- it is
-then cached locally by `transformers` and no further network access is
-needed):
+**Updated for Round 12.** This delivery is a code-only ZIP by design (see
+"Files in this delivery" below) -- it does NOT contain the real corpus's
+existing translation cache. Restoring that cache to its correct path is
+now step 0, before anything else, and is exactly what `--require-warm-
+cache` (step 5 below) exists to verify was actually done correctly rather
+than silently trusting it.
 
+0. **Copy the existing cache back into place first.** From wherever the
+   prior real run's cache was preserved, restore it to
+   `data/cache/nllb_sentence_translation_cache_v1.json` in THIS project
+   directory (the exact path `SENTENCE_CACHE_PATH` points to -- see
+   "Cache" above for why this is the file that matters, not the
+   similarly-named `nllb_translation_cache_v1.json`). Skip this step ONLY
+   for a genuinely first-ever run against an empty cache.
 1. `python test_preprocess_v2_reliability.py` -- confirms the logic itself
-   (offline, ~seconds, no model download).
+   (offline, ~seconds, no model download). **466/466 checks** as of Round
+   12's external-review fixes.
 2. `python preprocess_v2.py --preflight` -- confirms the real model loads
    and translates on this machine, and which device it resolved to
    (`cuda` / `mps` / `cpu`).
 3. `python preprocess_v2.py --smoke-test` -- confirms the full pipeline
-   end-to-end on two small real examples.
-4. Review both outputs. Only once both pass, run `python terminal.py`
-   (menu option 1) for the real 950-response corpus.
-5. Read the printed validation report and/or
+   end-to-end on two small real examples. Uses its own isolated cache
+   file, never the real one from step 0.
+4. Review both outputs.
+5. Only once all of the above pass, run the real 950-response corpus via
+   `python preprocess_v2.py --require-warm-cache` (the CLI entry point,
+   not `terminal.py`'s menu -- `main()` is what ties a run to the actual
+   frozen corpus artifact and, as of Round 12, is the only entry point
+   this gate is wired into; see "Round 12 fixes from external review"
+   above). This prints the primary-cache coverage report FIRST, before
+   any NLLB call:
+   ```
+   Primary cache coverage before run:
+     expected Catalan sentence units: 5792
+     covered: 5792
+     missing: 0
+     SAFE TO REUSE PRIMARY CACHE = True
+   ```
+   If step 0 was done correctly, `missing` is `0` and the run proceeds,
+   translating only the sentences step 0's cache never covered in the
+   first place plus, per sentence, at most one new targeted anti-
+   repetition retry call for whatever is still genuinely repetition-
+   flagged. If step 0 was skipped or restored the wrong file, the run
+   stops immediately here (`STEP2_VALID=False`, zero NLLB calls made)
+   instead of silently re-translating the whole corpus -- fix the cache
+   path and re-run, rather than proceeding.
+6. Read the printed validation report and/or
    `data/output/preprocessing_language_report.json`. Confirm
    `STEP2_VALID = True` before treating the run as usable input to Stage
    3 (topic modelling) or Stage 3/5 (sentiment analysis). If
@@ -1401,7 +2614,7 @@ needed):
    `translation_quality_summary`'s `language_mismatch_ids` /
    `degenerate_output_ids` name exactly which responses need attention
    before re-running.
-6. Do not commit or push until that real run has been reviewed.
+7. Do not commit or push until that real run has been reviewed.
 
 ## Files in this delivery
 

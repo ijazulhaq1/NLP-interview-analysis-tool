@@ -129,8 +129,10 @@ WHAT STAYS FROM THE PREVIOUS REVISION
 import ml_backend  # noqa: F401 (import FIRST -- sets USE_TF=0/etc. before torch/transformers below; see ml_backend.py)
 
 import os
+import re
 import sys
 import time
+import hashlib
 import logging
 import argparse
 import platform
@@ -165,6 +167,44 @@ SMOKE_TEST_DIR = "data/output/smoke_test"
 # (not data/output/) also makes it obvious at a glance that this file is
 # not a pipeline *output* to be reviewed, but reusable translation memory.
 CACHE_PATH = "data/cache/nllb_translation_cache_v1.json"
+# A SEPARATE cache for the Round 7 one-sentence-per-translation redesign
+# (segment_source_sentences / translate_frozen_sentences_batched), never
+# the same file as CACHE_PATH above. The two caches are keyed on the exact
+# same text-hashing scheme (TranslationCache._key), but the TEXTS being
+# looked up are now individual frozen sentences, not multi-sentence
+# ~150-word chunks -- almost none of CACHE_PATH's existing entries would
+# ever hit against sentence-level lookups anyway, but the real reason for
+# a separate file is explicit, not incidental: the six-hour real run that
+# is CACHE_PATH's content stays byte-for-byte as it was, auditable
+# (see evidence/round7_full_corpus_run_2026-09-07/), never silently
+# overwritten by a later run against the new architecture.
+SENTENCE_CACHE_PATH = "data/cache/nllb_sentence_translation_cache_v1.json"
+FROZEN_SEGMENTATION_PATH = "data/frozen_source_sentence_segmentation_v1.json"
+# Bumped from 1 -> 2 when input_sha256 became a required field (see
+# validate_frozen_segmentation_against_input() and _hash_file() below) --
+# a frozen file written before this addition is a real, structural gap
+# (main() would have no way to detect a since-edited interviews.json), so
+# it is treated as unusable, not silently accepted with the field missing.
+FROZEN_SEGMENTATION_SCHEMA_VERSION = 2
+
+
+def _hash_file(path: str) -> Optional[str]:
+    """SHA-256 of a file's raw bytes, or None if it can't be read (missing,
+    permission error, etc.) -- callers must treat None as "hash unknown",
+    never as a value that could coincidentally match a recorded hash.
+    Deliberately the same algorithm/chunking as terminal.py's own
+    _hash_file() (kept as two small independent copies rather than an
+    import, since terminal.py imports preprocess_v2, not the reverse) --
+    both must produce the same digest for the same file.
+    """
+    try:
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except OSError:
+        return None
 
 NLLB_MODEL_NAME = "facebook/nllb-200-distilled-600M"
 LANG_TO_NLLB = {"ca": "cat_Latn", "es": "spa_Latn"}
@@ -174,6 +214,30 @@ REQUIRED_TRANSLATION_DIRECTION = "ca->es"  # the only direction this corpus requ
 # GENERATION_VERSION any time these change -- it is baked into the cache
 # key (see translation_cache.py) specifically so a settings change can
 # never silently serve a translation generated under the old settings.
+#
+# Round 12: this is the PRIMARY configuration -- the one every Catalan
+# sentence is translated with FIRST, and the one the real corpus's
+# existing ~5.8k-entry cache was built under. It deliberately does NOT
+# carry repetition_penalty/no_repeat_ngram_size (see RETRY_GENERATION_
+# PARAMS below for those) and GENERATION_VERSION is deliberately back to
+# its pre-Round-10 value -- both reverted from Round 10's global
+# antirep1 change. Round 10 added those two parameters HERE, applied to
+# every sentence, and bumped this version, which would have forced the
+# entire real cache to be discarded and the whole ~5,792-sentence corpus
+# re-translated just to fix ~37 sentences. Round 11 confirmed (with the
+# user, explicitly, twice) that this is unnecessary and undesirable:
+# undesirable because applying an anti-repetition penalty to EVERY
+# sentence risks subtly changing wording on the ~5,755 sentences that
+# were never broken (this corpus's interview speech genuinely contains
+# repetition, hesitation, and emphasis that a global penalty would
+# suppress indiscriminately), and unnecessary because the fix only needs
+# to reach the sentences that actually looped. See RETRY_GENERATION_
+# PARAMS/RETRY_GENERATION_VERSION and attempt_repetition_fallback_retry()
+# below for the targeted mechanism that replaced the global change.
+# Reverting this version means the real corpus's existing cache (built
+# entirely under this exact configuration) is fully valid again -- a run
+# against unchanged raw input hits it for all ~5,792 primary translations,
+# with zero NLLB calls needed for anything already known-good.
 GENERATION_PARAMS = {
     "num_beams": 4,
     "max_length": 512,
@@ -190,6 +254,43 @@ GENERATION_PARAMS = {
 # silently truncated whole-response translation -- can ever be served
 # under v2.
 GENERATION_VERSION = "nllb600M-beams4-maxlen512-chunked-v2"
+
+# Round 12: a SEPARATE, ADDITIONAL generation configuration and cache
+# namespace used ONLY by attempt_repetition_fallback_retry() -- one
+# targeted call for a sentence whose PRIMARY translation (under
+# GENERATION_PARAMS/GENERATION_VERSION above) was independently confirmed
+# degenerate by check_degenerate_output()'s repetition_flag, never applied
+# speculatively or corpus-wide.
+#   - repetition_penalty=1.3 is a soft, proportional penalty on the score
+#     of any already-generated token, applied every step. It discourages
+#     but never forbids repetition, so it does not distort short,
+#     legitimately-repetitive translations ("No, no, no." -> "No, no,
+#     no.").
+#   - no_repeat_ngram_size=4 is a hard constraint: once any 4-token
+#     sequence has been generated, that exact sequence can never recur in
+#     the same output. This directly makes the observed failure mode --
+#     the same short phrase repeating dozens of times -- structurally
+#     impossible, while a 4-gram floor (rather than the 3-gram size
+#     check_degenerate_output() uses for detection) still leaves room for
+#     genuine short 3-word repeats ("el tema de ... el tema de") that show
+#     up naturally in this corpus's rambling interview speech.
+# Chosen as a standard, moderate combination for this exact NMT beam-
+# search pathology rather than a more aggressive setting (e.g.
+# no_repeat_ngram_size=2 or 3) that would force paraphrasing of ordinary
+# short emphatic repeats. This has not been validated against the real
+# corpus by an actual run yet -- that run is the user's next step after
+# reviewing this fix, consistent with this project never running the real
+# NLLB corpus on its own. RETRY_GENERATION_VERSION is a distinct cache
+# key namespace from GENERATION_VERSION, not a successor to it -- a
+# sentence can have entries under BOTH (its primary attempt, and a
+# fallback retry), and the primary cache is never touched or invalidated
+# by anything written under this version.
+RETRY_GENERATION_PARAMS = {
+    **GENERATION_PARAMS,
+    "repetition_penalty": 1.3,
+    "no_repeat_ngram_size": 4,
+}
+RETRY_GENERATION_VERSION = "nllb600M-beams4-maxlen512-chunked-v2-antirep-retry1"
 
 DEFAULT_BATCH_SIZE = 8
 # Fixed after the fifth external review: on an Apple Silicon Mac, MPS is not
@@ -231,10 +332,49 @@ MAX_CONSECUTIVE_BATCH_FAILURES = 3
 EXPECTED_INTERVIEW_LANGUAGES = {"ca", "es"}
 
 # A response is "sufficiently long" for direct language detection if it
-# clears both bars (see the original Step 2 design notes for the
-# empirical basis of these thresholds against this corpus).
-MIN_CHARS_FOR_DIRECT_DETECTION = 30
-MIN_WORDS_FOR_DIRECT_DETECTION = 5
+# clears both bars.
+#
+# Round 10: raised from 30 chars / 5 words after the first real
+# 950-response corpus run flagged 146 sentences, 105 of which (72%) were
+# manually verified -- every one, full read, not sampled -- to be
+# fluent, grammatically correct Spanish translations of short/informal
+# transcribed speech that langdetect's statistical char-n-gram model
+# simply misjudges at these lengths (misdetected as Portuguese, Catalan,
+# Italian, French, English, Somali, Tagalog, German, often at >0.99
+# confidence; see STEP2_NLLB_CHANGES.md's Round 10 section for the full
+# diagnosis). 50 chars / 8 words was chosen from a data-driven tradeoff
+# analysis against that real corpus's 4298 already-assessed sentences:
+#   chars/words -> false positives resolved | correctly-passed sentences newly exempted
+#   40 / 7  -> 51/105 (49%) resolved | 536/4157 (12.9%) exempted
+#   45 / 7  -> 66/105 (63%) resolved | 731/4157 (17.6%) exempted
+#   50 / 8  -> 78/105 (74%) resolved | 974/4157 (23.4%) exempted  <- chosen
+#   55 / 9  -> 86/105 (82%) resolved | 1171/4157 (28.2%) exempted
+#   60 / 10 -> 89/105 (85%) resolved | 1365/4157 (32.8%) exempted
+# All five candidates still caught 100% of the 36 confirmed true-positive
+# repetition-loop sentences from that same run (those have target_chars
+# well over 300, far above any threshold considered). 50/8 was picked as
+# the middle-ground point where the curve of newly-exempted correctly-
+# passed sentences starts costing noticeably more coverage per additional
+# point of false-positive resolution (each +5/+1 step past this one buys
+# progressively less resolved-FP for progressively more exempted-from-
+# assessment sentences), not because it is the only defensible value --
+# see STEP2_NLLB_CHANGES.md's Round 10 section for the full table and
+# reasoning if this needs revisiting.
+#
+# Round 11: target_language_check's result is no longer part of any
+# FATAL gate at any length (see check_target_language()'s docstring and
+# translation_output_validity's computation below) -- a manual, full read
+# of every one of the 141 real language-mismatch flags from the Round 10
+# run found ZERO real translation failures that were caught by language
+# detection and NOT already independently caught by check_degenerate_
+# output(); the 36 that were real failures were real because of
+# repetition, not language. So this threshold no longer decides what's
+# FATAL, only what's worth including in the REVIEW-tier diagnostic
+# (NOT_ASSESSED_SHORT_TEXT text is excluded from language reporting
+# entirely, same as before) -- it stays at 50/8 because that reasoning is
+# unaffected by the fatality change, not because it needed re-justifying.
+MIN_CHARS_FOR_DIRECT_DETECTION = 50
+MIN_WORDS_FOR_DIRECT_DETECTION = 8
 
 LANGUAGE_TIE_BREAK_ORDER = ["ca", "es"]
 
@@ -243,7 +383,17 @@ LANGUAGE_TIE_BREAK_ORDER = ["ca", "es"]
 LENGTH_RATIO_LOW = 0.4
 LENGTH_RATIO_HIGH = 3.0
 REPETITION_NGRAM_SIZE = 3
-REPETITION_MIN_REPEATS = 4  # same 3-gram appearing >=4x flags repetition
+# Round 11: raised from 4 to 6. A manual review of the Round 10 run's 41
+# repetition flags found 4 false positives -- long, otherwise correctly-
+# translated responses where a short, natural phrase ("se gasta el ...",
+# "el plan de ...", "el tema de ...", "que hay que ...") legitimately
+# repeats exactly 4 times in normal rambling interview speech. The 37
+# genuine NLLB decoder repetition-loop failures in that same run all had
+# their worst-repeated 3-gram appear at LEAST 15 times (most were
+# 70-93+); 6 clears the observed false-positive count (4) with margin
+# while staying well under the lowest real collapse case observed (15),
+# so no known real failure is missed by this change.
+REPETITION_MIN_REPEATS = 6  # same 3-gram appearing >=6x flags repetition
 SIMILARITY_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 # Reported alongside the similarity distribution as a count, NEVER used as
 # a pass/fail gate -- see the module docstring and STEP2_VALID logic.
@@ -495,17 +645,31 @@ class NLLBTranslator:
                 "truncation=True silently discarding part of the input."
             )
 
-    def translate_batch(self, texts: List[str], source_lang: str, target_lang: str) -> List[str]:
+    def translate_batch(
+        self, texts: List[str], source_lang: str, target_lang: str,
+        generation_params: Optional[Dict[str, object]] = None,
+    ) -> List[str]:
         """Translates a batch of texts, all in the same direction. Retries
         once locally on failure; on a non-CPU device, a failure triggers a
         one-time, sticky fallback to CPU (recorded on the instance) before
         the retry. Raises NLLBTranslationError if the batch still fails
         after that, or immediately (no retry) if any input would exceed
         NLLB's token limit -- see _assert_within_token_limit().
+
+        generation_params (Round 12): defaults to the module-level
+        GENERATION_PARAMS (the PRIMARY configuration every normal call
+        uses) when not given. Passing a different dict -- as attempt_
+        repetition_fallback_retry() does, with RETRY_GENERATION_PARAMS --
+        overrides decoding settings for just this one call, without
+        touching the module-level default any other caller sees. This
+        replaces a Round 10 design where the anti-repetition parameters
+        were baked into GENERATION_PARAMS itself and applied to every
+        call; see that constant's comment for why that was reverted.
         """
         if not texts:
             return []
 
+        params = generation_params if generation_params is not None else GENERATION_PARAMS
         src_code = LANG_TO_NLLB[source_lang]
         tgt_code = LANG_TO_NLLB[target_lang]
 
@@ -523,7 +687,7 @@ class NLLBTranslator:
                     generated = self.model.generate(
                         **inputs,
                         forced_bos_token_id=self._forced_bos_token_id(tgt_code),
-                        **GENERATION_PARAMS,
+                        **params,
                     )
                 return self.tokenizer.batch_decode(generated, skip_special_tokens=True)
             except Exception as e:
@@ -687,9 +851,21 @@ def determine_response_language(text: str, interview_primary_language: str) -> T
 # ---------------------------------------------------------------------------
 
 def check_target_language(translated_text: str, expected_lang: str = "es") -> dict:
-    """langdetect on the OUTPUT of translation. Catches the most
-    catastrophic local-model failure mode: echoing the source language
-    back, or drifting into a third language.
+    """langdetect on the OUTPUT of translation.
+
+    Round 11: this result is diagnostic/REVIEW-only -- it is NEVER, at any
+    length, part of the FATAL sentence-quality gate (see
+    translation_output_validity's computation in process() for why: a
+    full manual review of the 141 language-mismatch flags from the first
+    real 950-response corpus run found every single one was either a
+    langdetect false positive on genuinely correct Spanish (105 of them,
+    often short/informal text misdetected as Portuguese/Catalan/Italian/
+    etc. at >0.99 confidence), or co-occurred with a real NLLB repetition-
+    loop failure that check_degenerate_output() independently, correctly
+    flagged on its own (36 of them) -- i.e. language detection alone
+    never contributed a genuine catch that degenerate-output detection
+    didn't already make. See STEP2_NLLB_CHANGES.md's Round 11 section for
+    the full breakdown.
 
     Very short output is NOT assessed (status="NOT_ASSESSED_SHORT_TEXT",
     passed=None) rather than run through langdetect at all -- reusing
@@ -701,10 +877,12 @@ def check_target_language(translated_text: str, expected_lang: str = "es") -> di
     unreliable-to-meaningless, and a correct NLLB translation of one of
     these could otherwise be marked a language mismatch purely because the
     detector guessed wrong on too little evidence -- caught in the second
-    external review. passed is None (never False) when not assessed, so a
-    caller that naively does `if not passed` on this dict without checking
-    status would need to notice -- see how language_mismatch_ids below is
-    computed (`passed is False`, not just falsy) for the safe pattern.
+    external review, and still worth excluding from the REVIEW-tier
+    reporting even though it can no longer be fatal either way. passed is
+    None (never False) when not assessed, so a caller that naively does
+    `if not passed` on this dict without checking status would need to
+    notice -- see how language_mismatch_ids below is computed (`passed is
+    False`, not just falsy) for the safe pattern.
     """
     if not _is_sufficiently_long(translated_text):
         return {
@@ -745,6 +923,20 @@ def check_degenerate_output(source_text: str, translated_text: str) -> dict:
     repetition_flag remain fatal at every length: an empty translation or
     an n-gram repetition loop is never a legitimate short-text outcome the
     way source==target can be.
+
+    Round 11: REPETITION_MIN_REPEATS raised 4 -> 6 after a manual review
+    of the first real corpus run found the same 3-gram repeating exactly
+    4 times legitimately in a handful of long, otherwise correctly-
+    translated responses (a short natural phrase like "el tema de"
+    recurring in normal rambling speech), while every genuine NLLB
+    decoder repetition-loop failure in that run repeated its worst 3-gram
+    at least 15 times (most 70+). is_empty and is_identical_to_source_
+    fatal are unaffected by this change. Round 11 also made this function
+    -- specifically repetition_flag/is_empty -- the ONLY sentence-level
+    FATAL quality signal; check_target_language()'s result no longer
+    contributes to `flagged` for a sentence at any length (see that
+    function's docstring and translation_output_validity's computation in
+    process()).
     """
     is_empty = not translated_text or not translated_text.strip()
     is_identical_to_source = (
@@ -775,6 +967,206 @@ def check_degenerate_output(source_text: str, translated_text: str) -> dict:
         "repetition_detail": repetition_detail,
         "flagged": is_empty or is_identical_to_source_fatal or repetition_flag,
     }
+
+
+def attempt_repetition_fallback_retry(
+    source_text: str,
+    translator: "NLLBTranslator",
+    cache: TranslationCache,
+    source_lang: str = "ca",
+    target_lang: str = "es",
+) -> dict:
+    """Round 12: one targeted, cache-aware retry for a sentence whose
+    PRIMARY translation (under GENERATION_PARAMS/GENERATION_VERSION) the
+    caller has already run through check_degenerate_output() and found
+    repetition_flag=True. Never called speculatively -- process()'s Pass 2
+    calls this only after independently confirming the primary result is
+    a genuine repetition loop, and only once per sentence.
+
+    Uses RETRY_GENERATION_PARAMS (anti-repetition decoding settings) and
+    RETRY_GENERATION_VERSION (a cache namespace entirely separate from
+    GENERATION_VERSION -- see those constants' comments). A cache hit
+    here means an earlier sentence with the IDENTICAL source text already
+    triggered this same retry (this corpus's cache reuse -- see
+    STEP2_NLLB_CHANGES.md's Round 10 diagnosis for how much of it there
+    is among the real repetition-loop cases, e.g. "No, no." alone behind
+    14 flagged sentence IDs) -- so a source text pathological enough to
+    need retrying once is never sent to NLLB a second time for it.
+
+    Returns {"text_es": Optional[str], "cache_status": "CACHE_HIT" |
+    "FRESH" | "FAILED", "generation_version": RETRY_GENERATION_VERSION}.
+    Never raises: this runs late in a multi-thousand-sentence corpus
+    pass, well after the primary translation and its own retry/abort
+    logic already completed, so a failure HERE (model error, or the
+    retried text still somehow exceeding the token limit) is caught and
+    reported as "FAILED" (text_es=None) -- the caller keeps the sentence's
+    original (still-degenerate) primary text_es in that case, never loses
+    data, and the sentence correctly stays FLAGGED.
+
+    Two fixes from external review, both applied here:
+
+    1. A `None`/blank result is never cached and never reported as a
+       success. `translate_batch()`'s underlying `tokenizer.batch_decode`
+       can legitimately return an empty string for a genuinely empty
+       generation (the same per-item empty-generation case the PRIMARY
+       path already guards against in `translate_texts_batched` -- see
+       its `if translated is None or not str(translated).strip()` check);
+       without the identical guard here, a blank retry result would have
+       been cached as if it were a real repaired translation and then
+       served back as CACHE_HIT on every future lookup for that source
+       text. A blank output is not a successful anti-repetition repair --
+       it's treated exactly like any other retry failure: reported as
+       "FAILED", never cached, and the caller keeps the original primary
+       text_es.
+    2. A successful fresh retry is saved to disk immediately
+       (`cache.save()`), not left for some later batch's save to pick up.
+       The PRIMARY path already treats every successful translation this
+       way (see translate_texts_batched's own `cache.save()` after each
+       batch, and its docstring on why) specifically so a crash later in
+       the same run -- e.g. during the embeddings/round-trip diagnostic
+       pass, which runs after all translation work -- cannot lose
+       already-completed work. A retry-repaired sentence is exactly the
+       kind of expensive, hard-won result (one extra real NLLB call, only
+       ever made once per unique bad source text) that must not be
+       silently redone on the next run because it was still only sitting
+       in memory when the process died.
+    """
+    cached = cache.get(source_text, source_lang, target_lang, translator.model_name, RETRY_GENERATION_VERSION)
+    if cached is not None:
+        return {
+            "text_es": cached["translated_text"], "cache_status": "CACHE_HIT",
+            "generation_version": RETRY_GENERATION_VERSION,
+        }
+    try:
+        translated = translator.translate_batch(
+            [source_text], source_lang, target_lang, generation_params=RETRY_GENERATION_PARAMS,
+        )[0]
+    except Exception as e:
+        logger.warning(
+            f"[attempt_repetition_fallback_retry] fallback retry failed for a repetition-flagged "
+            f"sentence -- keeping its original (still-degenerate) primary translation: {e}"
+        )
+        return {"text_es": None, "cache_status": "FAILED", "generation_version": RETRY_GENERATION_VERSION}
+
+    if translated is None or not str(translated).strip():
+        logger.warning(
+            "[attempt_repetition_fallback_retry] fallback retry produced a blank/empty result for "
+            "a repetition-flagged sentence -- a blank output is not a successful repair, so it is "
+            "NOT cached; keeping the original (still-degenerate) primary translation."
+        )
+        return {"text_es": None, "cache_status": "FAILED", "generation_version": RETRY_GENERATION_VERSION}
+
+    cache.set(
+        source_text, source_lang, target_lang, translated,
+        model_name=translator.model_name, generation_version=RETRY_GENERATION_VERSION,
+    )
+    # Immediate, crash-safe persistence -- see point 2 in the docstring
+    # above. cache.save() is atomic (write-temp -> fsync -> os.replace(),
+    # see TranslationCache.save()) and a no-op-safe warning-only failure,
+    # exactly like every other cache.save() call site in this module.
+    cache.save()
+    return {"text_es": translated, "cache_status": "FRESH", "generation_version": RETRY_GENERATION_VERSION}
+
+
+def compute_primary_cache_coverage(
+    pending: List[dict],
+    cache: TranslationCache,
+    translator: "NLLBTranslator",
+    source_lang: str = "ca",
+    target_lang: str = "es",
+) -> dict:
+    """Round 12, added from external review: a cheap, read-only pre-flight
+    check of how much of this run's Catalan sentence-translation work is
+    already sitting in the PRIMARY cache under the current GENERATION_
+    VERSION, computed BEFORE any NLLB call is made.
+
+    Why this exists: every code delivery for this project is, deliberately,
+    code-only -- it never bundles the real corpus's actual data/cache/
+    file (see STEP2_NLLB_CHANGES.md's "Files in this delivery"). If an
+    operator replaces their project folder with a new delivery and forgets
+    to copy their existing warm cache back into place, `process()` would
+    otherwise silently proceed to re-translate the entire corpus from
+    scratch -- turning what should be a cheap, targeted repetition-repair
+    run (a handful of new NLLB calls) into another multi-hour full run,
+    with no warning until it's already too late to stop. This function
+    (and process()'s `require_warm_primary_cache` gate that uses it) is
+    that warning, given up front.
+
+    `pending` is process()'s own Pass-1 list of per-response dicts (each
+    with "translation_required" and "sentences": [{"sentence_id",
+    "sentence_index", "text_source"}, ...]) -- this function does not
+    reload or resegment anything, it only reads what Pass 1 already built.
+
+    Coverage is counted by attempting the exact cache lookup for EVERY one
+    of the corpus's Catalan sentence UNITS individually (one `contains()`
+    call per sentence, for every response where translation_required is
+    True) -- deliberately not by counting distinct cache entries or
+    distinct source texts first. Two different sentence IDs can share one
+    source text (documented cache-reuse behavior throughout this project;
+    see attempt_repetition_fallback_retry()'s docstring for a real
+    example, "No, no." behind 14 sentence IDs in the real corpus) and
+    therefore one cache key -- but every sentence UNIT still individually
+    needs a translation to exist for the corpus to be considered fully
+    covered, however many distinct keys that maps to underneath. Counting
+    distinct entries instead would silently under-count what "coverage"
+    actually needs to mean here.
+
+    Uses TranslationCache.contains(), not get() -- a read-only existence
+    check that does NOT increment hits_this_run/misses_this_run. Using
+    get() here would inflate this run's real cache-hit statistics by
+    however many sentences this check walks, ahead of process()'s own
+    genuine lookups for those same sentences moments later.
+
+    Returns {"expected_catalan_sentence_units": int, "covered": int,
+    "missing": int, "missing_sentence_ids": List[str] (capped -- see
+    below), "missing_sentence_id_count": int, "safe_to_reuse_primary_
+    cache": bool (True exactly when missing == 0)}. `missing_sentence_ids`
+    is capped at 50 entries (with missing_sentence_id_count always the
+    true total) purely so a catastrophically-cold-cache run doesn't dump
+    thousands of IDs into a printed report or the JSON report file.
+    """
+    expected = 0
+    covered = 0
+    missing_sentence_ids: List[str] = []
+    missing_cap = 50
+    for r in pending:
+        if not r["translation_required"]:
+            continue
+        for sr in r["sentences"]:
+            expected += 1
+            if cache.contains(sr["text_source"], source_lang, target_lang, translator.model_name, GENERATION_VERSION):
+                covered += 1
+            else:
+                if len(missing_sentence_ids) < missing_cap:
+                    missing_sentence_ids.append(sr["sentence_id"])
+    missing = expected - covered
+    return {
+        "expected_catalan_sentence_units": expected,
+        "covered": covered,
+        "missing": missing,
+        "missing_sentence_ids": missing_sentence_ids,
+        "missing_sentence_id_count": missing,
+        "safe_to_reuse_primary_cache": missing == 0,
+    }
+
+
+def print_cache_coverage_report(coverage: dict) -> None:
+    """Prints compute_primary_cache_coverage()'s result in the exact shape
+    an operator needs to see, unmissably, before a multi-hour translation
+    pass either does or doesn't start -- printed by process() itself
+    (not deferred to print_validation_report(), which only runs at the
+    very end) specifically so this is the LAST thing visible before the
+    expensive part of a real run begins.
+    """
+    print("\nPrimary cache coverage before run:")
+    print(f"  expected Catalan sentence units: {coverage['expected_catalan_sentence_units']}")
+    print(f"  covered:                         {coverage['covered']}")
+    print(f"  missing:                         {coverage['missing']}")
+    print(f"  SAFE TO REUSE PRIMARY CACHE = {coverage['safe_to_reuse_primary_cache']}")
+    if coverage["missing"] > 0:
+        shown = coverage["missing_sentence_ids"]
+        more = coverage["missing_sentence_id_count"] - len(shown)
+        print(f"  missing sentence IDs (first {len(shown)}): {shown}" + (f" (+{more} more)" if more > 0 else ""))
 
 
 def compute_length_diagnostics(source_text: str, translated_text: str) -> dict:
@@ -847,29 +1239,61 @@ class SemanticSimilarityScorer:
     entirely for a corpus with no Catalan-original responses), and degrades
     gracefully (reports why) if sentence-transformers isn't installed
     rather than crashing Step 2 over an optional quality signal.
+
+    Genuinely lazy: __init__ does no model construction at all -- the
+    (potentially large) SentenceTransformer download/load only happens the
+    first time `available` or `batch_cosine_similarity` is actually called,
+    via `_ensure_loaded()`, and at most once (`_load_attempted` makes every
+    later call a no-op). This matters on memory-constrained machines: a run
+    with no similarity pairs to score (e.g. an all-Spanish-original corpus)
+    never pays the load cost, and callers that only want to know whether a
+    load was already attempted (rather than forcing one) should check
+    `load_attempted` instead of reading `available` directly.
     """
 
     def __init__(self, model_name: str = SIMILARITY_MODEL_NAME):
         self.model_name = model_name
         self.model = None
         self.unavailable_reason: Optional[str] = None
+        self._load_attempted = False
+
+    def _ensure_loaded(self) -> None:
+        if self._load_attempted:
+            return
+        self._load_attempted = True
         try:
             from sentence_transformers import SentenceTransformer
-            self.model = SentenceTransformer(model_name)
+            self.model = SentenceTransformer(self.model_name)
         except Exception as e:  # ImportError or a download/load failure
             self.unavailable_reason = str(e)
             logger.warning(
-                f"[SemanticSimilarityScorer] could not load '{model_name}': {e}. "
+                f"[SemanticSimilarityScorer] could not load '{self.model_name}': {e}. "
                 "Semantic-preservation and round-trip similarity will be omitted "
                 "from this run's report."
             )
 
     @property
+    def load_attempted(self) -> bool:
+        """True once a load has been attempted (success or failure), without
+        forcing one. Use this to inspect state without triggering the lazy
+        load as a side effect."""
+        return self._load_attempted
+
+    @property
     def available(self) -> bool:
+        """Whether the model loaded successfully. Triggers the lazy load on
+        first call -- this property IS the 'first actual use' trigger, so
+        only call it at a real use site (guarded by an actual need, as the
+        existing `similarity_pairs and ... .available` call sites already
+        are). Reporting code that must not force a load should check
+        `load_attempted` first."""
+        self._ensure_loaded()
         return self.model is not None
 
     def batch_cosine_similarity(self, texts_a: List[str], texts_b: List[str]) -> List[float]:
-        if not self.available or not texts_a:
+        if not texts_a:
+            return []
+        if not self.available:
             return []
         import numpy as np
         emb_a = self.model.encode(texts_a, convert_to_numpy=True, normalize_embeddings=True)
@@ -971,6 +1395,150 @@ def translate_texts_batched(
         cache.save()
 
     return results  # type: ignore[return-value]
+
+
+# ---------------------------------------------------------------------------
+# Segmentation repair: ellipsis-continuation merge (Round 7 segmentation
+# audit, source-side sentence redesign)
+# ---------------------------------------------------------------------------
+#
+# preprocessor.split_sentences_strict() (spaCy sentence boundaries) is
+# generally reliable on this corpus -- the historical "-Des" / "que vam
+# posar el Fibra, un 10." bad split from the old target-side-split file does
+# NOT reproduce with it (verified directly against the raw response). But
+# a source-side segmentation audit across all 950 raw responses (see
+# evidence/round7_full_corpus_run_2026-09-07/) found one real, narrow,
+# recurring artifact: this is transcribed spoken interview speech, and a
+# speaker trailing off mid-clause ("..."/"…") is routinely treated by
+# spaCy's parser-based sentence boundary detector as a full sentence end,
+# splitting the continuation off as its own "sentence" even though it's
+# clearly the same clause resuming. 38 confirmed cases across the corpus,
+# all reading as same-speaker disfluency continuations on manual review,
+# none as a topic or speaker shift -- including one utterance split into
+# THREE fragments by two separate ellipsis breaks:
+#   "-I allà van acabar ficant sensors..."
+#   "-...de camions com a tal, per saber que realment arriba a granja el
+#    que s'havia..."
+#   "-...enviat."
+#
+# This matters more once sentence boundaries become permanent, auditable
+# sentence IDs (the whole point of the source-side redesign) rather than
+# an intermediate detail re-derived after translation -- a segmentation
+# artifact here would otherwise get baked into the corpus permanently.
+
+_ELLIPSIS_TRAILING_RE = re.compile(r"(\.\.\.|…)\s*$")
+_LEADING_TURN_MARKER_RE = re.compile(r"^[-–—]\s*")
+_LEADING_ELLIPSIS_RE = re.compile(r"^(\.\.\.|…)\s*")
+_OPENING_PUNCT_CHARS = "\"'‘’“”(¿¡"
+
+
+def _looks_like_ellipsis_continuation(sentence: str) -> bool:
+    """True if `sentence`, after stripping a leading speaker-turn dash and
+    any leading ellipsis remnant, starts with a lowercase letter -- the
+    signature of a spoken-transcript disfluency continuation rather than a
+    genuinely new sentence. A digit, quote, or opening-punctuation start is
+    never treated as suspicious (not what this pattern looks like).
+
+    The leading dash is stripped before the check -- deliberately -- even
+    though a leading "-" is this corpus's speaker-turn marker. The audit
+    found this corpus reuses "-" for two different things: a genuine new
+    speaker turn, AND resuming after an ellipsis-marked pause by the SAME
+    speaker (e.g. "-I allà van acabar ficant sensors..." / "-...de
+    camions..." -- the dash reappears on the resumed fragment even though
+    it's the same utterance). So the dash alone is not a safe never-merge
+    signal here. What IS safe is requiring the PRECEDING sentence to
+    independently end in an ellipsis (see merge_ellipsis_continuations) --
+    a genuine new speaker turn being immediately preceded by a trailing-off
+    AND itself happening to start with a lowercase word was not observed in
+    any of the 38 audited cases.
+    """
+    s = _LEADING_TURN_MARKER_RE.sub("", sentence)
+    s = _LEADING_ELLIPSIS_RE.sub("", s)
+    for ch in s:
+        if ch.isalpha():
+            return ch.islower()
+        if ch.isdigit() or ch in _OPENING_PUNCT_CHARS:
+            return False
+    return False
+
+
+def merge_ellipsis_continuations(sentences: List[str]) -> Tuple[List[str], List[dict]]:
+    """Repairs the ellipsis-continuation segmentation artifact described
+    above. Only ever merges sentence i into sentence i+1, and only when
+    BOTH (a) sentence i ends in an ellipsis and (b)
+    _looks_like_ellipsis_continuation(sentence i+1) is True. Applied
+    iteratively (a `while`, not a single pass) so a multi-fragment chain
+    (the three-fragment "sensors.../...de camions.../...enviat." example)
+    collapses fully into one sentence, not just one link at a time: after
+    a merge, the newly-merged sentence is re-checked against whatever
+    follows it before moving on.
+
+    Only ever operates on the single list of sentences passed in -- i.e.
+    only ever merges within one response's own sentences. There is no
+    cross-response merging: this function has no notion of "response" at
+    all, and preprocess_v2.process() calls split_sentences_strict() (and
+    would call this) once per response, on that response's own sentence
+    list only.
+
+    The merged text strips the transcription artifacts (the trailing
+    ellipsis on the first fragment, the leading dash/ellipsis on the
+    fragment(s) being folded in) rather than concatenating them verbatim,
+    since the result is meant to read as one clean sentence, not a
+    concatenation of fragments with stray punctuation in the middle. The
+    first fragment's own leading marker (if it has one) is left untouched
+    -- it's the true start of the merged sentence.
+
+    Returns (merged_sentences, merge_log). merge_log has one entry per
+    merge actually performed -- {"before": [text_i, text_i+1], "after":
+    merged_text} -- specifically so every merge can be reviewed against
+    the original text before sentence IDs are frozen, rather than trusted
+    blindly.
+    """
+    result = list(sentences)
+    merge_log: List[dict] = []
+    i = 0
+    while i < len(result) - 1:
+        current = result[i]
+        nxt = result[i + 1]
+        if _ELLIPSIS_TRAILING_RE.search(current) and _looks_like_ellipsis_continuation(nxt):
+            head = _ELLIPSIS_TRAILING_RE.sub("", current).rstrip()
+            tail = _LEADING_TURN_MARKER_RE.sub("", nxt)
+            tail = _LEADING_ELLIPSIS_RE.sub("", tail).lstrip()
+            merged = f"{head} {tail}".strip()
+            merge_log.append({"before": [current, nxt], "after": merged})
+            result[i] = merged
+            del result[i + 1]
+            continue  # re-check the merged sentence against its new neighbor
+        i += 1
+    return result, merge_log
+
+
+def segment_source_sentences(
+    text: str,
+    lang: str,
+    preprocessor: "Preprocessor",
+) -> Tuple[List[str], List[dict]]:
+    """The single canonical source-side segmentation path: real spaCy
+    sentence boundaries (split_sentences_strict) followed by the
+    ellipsis-continuation repair (merge_ellipsis_continuations). This is
+    deliberately the ONE place that combines the two steps, so the frozen
+    sentence-ID structure and the (future) one-sentence-per-translation
+    redesign are guaranteed to segment text identically -- neither can
+    drift from the other by calling the two steps in a different order or
+    forgetting the merge step.
+
+    Returns (sentences, merge_log) -- merge_log is whatever
+    merge_ellipsis_continuations() logged, passed through unchanged, so a
+    caller that wants an audit trail (e.g. the sentence-ID-freezing script)
+    doesn't have to re-derive it.
+    """
+    try:
+        raw_sentences = preprocessor.split_sentences_strict(text, lang)
+    except Exception:
+        raw_sentences = [text]
+    if not raw_sentences:
+        raw_sentences = [text]
+    return merge_ellipsis_continuations(raw_sentences)
 
 
 # ---------------------------------------------------------------------------
@@ -1337,6 +1905,325 @@ def translate_responses_batched(
 
 
 # ---------------------------------------------------------------------------
+# One-sentence-per-translation (Round 7, step 6): the primary ca->es
+# translation path, built on the frozen source-side sentence structure.
+# translate_responses_batched/_split_into_translation_chunks above are
+# DELIBERATELY left in place, unchanged, and still used -- but only for
+# the secondary round-trip diagnostic sample (translating a handful of
+# already-reconstructed whole responses back to Catalan for a similarity
+# check), never for primary corpus translation any more.
+# ---------------------------------------------------------------------------
+
+def translate_frozen_sentences_batched(
+    segmented_responses: Dict[str, dict],
+    translator: NLLBTranslator,
+    cache: TranslationCache,
+    batch_failure_tracker: ConsecutiveBatchFailureTracker,
+    show_progress: bool = False,
+    progress_hook: Optional[Callable[[dict], None]] = None,
+) -> Dict[str, dict]:
+    """Translates every frozen source sentence independently -- one NLLB
+    call per sentence (batched across ALL responses, not chunked within
+    one), never several sentences bundled into a shared translation unit.
+    This is what makes NLLB structurally unable to merge or drop content
+    across a sentence boundary any more: there is no boundary inside any
+    single translation unit for it to lose. See the Round 7 segmentation
+    audit and evidence/round7_full_corpus_run_2026-09-07/ for the failure
+    mode this replaces.
+
+    `segmented_responses` is response_id -> {"source_language": "ca"|"es",
+    "sentences": [{"sentence_id", "sentence_index", "text_source"}, ...]}
+    -- the shape process() assembles from segment_source_sentences() (or
+    from the frozen data/frozen_source_sentence_segmentation_v1.json
+    file's own "responses" dict, when process() is given one explicitly).
+
+    A Spanish-source sentence is never sent to NLLB -- reproduced
+    unchanged with translation_provenance "SOURCE_ES". A Catalan sentence
+    is one translation unit unless it is, by itself, too long for one NLLB
+    call (rare -- the audit found a real 179-word single sentence); in
+    that one case it is hard-split the same tokenizer-verified way
+    _enforce_real_token_budget already does elsewhere in this module,
+    translated as pieces, and rejoined into that ONE sentence's text_es.
+    A failure on any piece fails the whole sentence -- never a silently
+    partial sentence. This is the old code's all-or-nothing-per-unit
+    principle, now applied at the correct grain: per sentence, not per
+    response, so one bad sentence no longer takes its neighbors down with
+    it (see process() for how a response is reconstructed from whatever
+    its sentences actually produced).
+
+    Failed sentences get exactly one automatic retry, as a second, smaller
+    flat batch, after every sentence has had its first attempt -- cheap at
+    sentence grain, and safe: everything that already succeeded is already
+    durably cached (translate_texts_batched saves incrementally) before
+    this second pass even starts, so a retry-pass failure can never lose
+    first-pass progress. The retry pass uses its OWN
+    ConsecutiveBatchFailureTracker, deliberately not the caller's -- a bad
+    retry pass should not spend the same abort budget the main pass may
+    have already partially used, and a retry-pass abort is logged and
+    treated as "retry didn't help" (those sentences stay FAILED) rather
+    than propagated as a run-aborting error.
+
+    translation_provenance per sentence is one of: SOURCE_ES, CACHE_HIT,
+    FRESH_OK, RETRY_OK, FAILED. Quality-diagnostic flagging (FLAGGED) is
+    deliberately NOT decided here -- exactly like the response-level
+    design this replaces, that judgment belongs to the caller (process()),
+    using check_target_language/check_degenerate_output at sentence grain
+    now -- keeping "did NLLB produce something" (this function's job)
+    separate from "is what it produced trustworthy" (the caller's job).
+
+    show_progress/progress_hook mirror translate_responses_batched's own,
+    and are genuinely per-SENTENCE -- there is no "wait for every chunk of
+    a response before ticking the bar" bookkeeping to do, because the
+    sentence IS the unit now. Progress is also genuinely INCREMENTAL: a
+    cache hit ticks essentially immediately (translate_texts_batched's own
+    progress_callback fires for cache hits before any model call), and a
+    fresh translation ticks the moment the batch containing its piece(s)
+    returns -- not after every batch in the whole corpus has finished. On
+    a real multi-thousand-sentence corpus this is the difference between a
+    progress bar that visibly advances throughout the run and one that
+    sits at 0/N for the entire first pass and then jumps to N/N in a
+    single burst right before returning (a real symptom this fixes -- see
+    the incremental-progress-reporting revision below this docstring for
+    the mechanism). This is done via the same technique translate_
+    responses_batched already used for chunk-level progress: translate_
+    texts_batched's own progress_callback fires per PIECE as soon as its
+    outcome is known, and a small piece-completion counter per sentence
+    ticks the outer bar/counters/progress_hook the moment ALL of a given
+    sentence's piece(s) -- almost always exactly one -- have reported in.
+    Building the actual `results` entries (the joined text) still happens
+    from the full returned list after each translate_texts_batched call,
+    exactly as before -- only the progress *signaling* moved earlier; the
+    translation data itself is unchanged and no less correct. A defensive
+    end-of-function reconciliation pass guarantees every Catalan sentence
+    is ticked exactly once no matter what: idempotent per-sentence ticking
+    means a sentence already accounted for live is never double-counted,
+    and any sentence that somehow never got a live tick (the only way that
+    can happen is the retry pass raising NLLBTranslationError partway
+    through, after some of its own callbacks already fired) is ticked at
+    the end using its REAL final outcome from `results` -- so the live
+    counters can never end up disagreeing with the data they describe, and
+    the bar always finishes at exactly total_ca_sentences.
+
+    Returns sentence_id -> {"text_es": Optional[str],
+    "translation_provenance": str, "hard_split_count": int}. May raise
+    NLLBTranslationError, propagated from the FIRST-pass translate_texts_
+    batched call only (see above for why the retry pass never propagates
+    one) -- the caller handles this exactly as the old response-level path
+    did (translation_aborted_early).
+    """
+    token_counter: Optional[Callable[[str], int]] = None
+    if hasattr(translator, "count_tokens"):
+        token_counter = functools.partial(translator.count_tokens, source_lang="ca")
+    token_limit = GENERATION_PARAMS["max_length"]
+
+    results: Dict[str, dict] = {}
+    sentence_source_text: Dict[str, str] = {}  # ca sentence_id -> its own text_source (for retry)
+    per_sentence_hard_splits: Dict[str, int] = {}
+
+    flat_pieces: List[str] = []
+    piece_owner: List[str] = []  # sentence_id per flat piece (repeats for a rare hard-split sentence)
+    piece_position_in_sentence: List[int] = []  # this piece's 0-based position within its own sentence
+    sentence_piece_total: Dict[str, int] = {}  # sentence_id -> how many pieces it has, total
+
+    for response_id, r in segmented_responses.items():
+        source_language = r["source_language"]
+        for s in r["sentences"]:
+            sentence_id = s["sentence_id"]
+            text = s["text_source"]
+
+            if source_language != "ca":
+                results[sentence_id] = {
+                    "text_es": text, "translation_provenance": "SOURCE_ES", "hard_split_count": 0,
+                }
+                continue
+
+            sentence_source_text[sentence_id] = text
+            if token_counter is not None:
+                pieces, hard_splits = _enforce_real_token_budget([text], token_counter, token_limit)
+            else:
+                pieces, hard_splits = [text], 0
+            per_sentence_hard_splits[sentence_id] = hard_splits
+            for piece in pieces:
+                piece_position_in_sentence.append(sentence_piece_total.get(sentence_id, 0))
+                sentence_piece_total[sentence_id] = sentence_piece_total.get(sentence_id, 0) + 1
+                flat_pieces.append(piece)
+                piece_owner.append(sentence_id)
+
+    total_ca_sentences = len(sentence_source_text)
+    progress_counts = {"cache_hits": 0, "fresh": 0, "retried_ok": 0, "failed": 0, "sentences_done": 0}
+    progress_start_time = time.time()
+    device_label = getattr(translator, "device", "unknown")
+    pbar = tqdm(total=total_ca_sentences, desc="NLLB ca->es (sentence)", unit="sent") if (show_progress and total_ca_sentences) else None
+
+    _ticked_sentences: set = set()
+
+    def _tick_progress(sentence_id: str, provenance: str) -> None:
+        # Idempotent: a sentence is counted exactly once no matter how many
+        # times something tries to tick it -- the live per-piece callbacks
+        # below, and the end-of-function reconciliation pass, can both
+        # reach the same sentence_id in the rare retry-pass-abort case, and
+        # only the first tick (whichever happens first) should count.
+        if sentence_id in _ticked_sentences:
+            return
+        _ticked_sentences.add(sentence_id)
+        progress_counts["sentences_done"] += 1
+        if provenance == "CACHE_HIT":
+            progress_counts["cache_hits"] += 1
+        elif provenance == "RETRY_OK":
+            progress_counts["retried_ok"] += 1
+        elif provenance == "FAILED":
+            progress_counts["failed"] += 1
+        else:  # FRESH_OK
+            progress_counts["fresh"] += 1
+        if pbar is not None:
+            pbar.set_postfix_str(
+                f"cache_hits={progress_counts['cache_hits']} fresh={progress_counts['fresh']} "
+                f"retried_ok={progress_counts['retried_ok']} failed={progress_counts['failed']} "
+                f"device={device_label}"
+            )
+            pbar.update(1)
+        if show_progress and progress_counts["sentences_done"] % PROGRESS_CHECKPOINT_INTERVAL == 0:
+            logger.info(
+                "[NLLB sentence checkpoint] Processed: %d/%d | Cache hits: %d | Fresh: %d | "
+                "Retried OK: %d | Failed: %d | Elapsed: %s",
+                progress_counts["sentences_done"], total_ca_sentences,
+                progress_counts["cache_hits"], progress_counts["fresh"],
+                progress_counts["retried_ok"], progress_counts["failed"],
+                _format_hms(time.time() - progress_start_time),
+            )
+        if progress_hook is not None:
+            progress_hook(dict(progress_counts, total=total_ca_sentences))
+
+    def _record(sentence_id: str, text_es: Optional[str], provenance: str) -> None:
+        results[sentence_id] = {
+            "text_es": text_es, "translation_provenance": provenance,
+            "hard_split_count": per_sentence_hard_splits.get(sentence_id, 0),
+        }
+
+    # --- First pass: every Catalan sentence's piece(s), cache-aware,
+    # batched across ALL responses at once. Progress ticks incrementally,
+    # per sentence, as translate_texts_batched's own progress_callback
+    # reports each piece's outcome -- see the docstring above. May raise
+    # NLLBTranslationError (propagated -- see docstring). ---
+    first_pass_piece_status: Dict[str, List[Optional[str]]] = {
+        sid: [None] * n for sid, n in sentence_piece_total.items()
+    }
+    first_pass_completed_pieces: Dict[str, int] = {sid: 0 for sid in sentence_piece_total}
+    first_pass_failed: List[str] = []
+
+    def _on_first_pass_piece_done(flat_index: int, status: str) -> None:
+        sentence_id = piece_owner[flat_index]
+        position = piece_position_in_sentence[flat_index]
+        first_pass_piece_status[sentence_id][position] = status
+        first_pass_completed_pieces[sentence_id] += 1
+        if first_pass_completed_pieces[sentence_id] != sentence_piece_total[sentence_id]:
+            return  # this sentence still has piece(s) outstanding
+        statuses = first_pass_piece_status[sentence_id]
+        if any(s == "WARNING_TRANSLATION_FAILED" for s in statuses):
+            # Deferred to the retry pass below -- not ticked yet, exactly
+            # like the original bulk-finalize code deferred it (a failed
+            # sentence isn't "done" until retry has had its shot).
+            first_pass_failed.append(sentence_id)
+            return
+        provenance = "CACHE_HIT" if all(s == "CACHE_HIT" for s in statuses) else "FRESH_OK"
+        _tick_progress(sentence_id, provenance)
+
+    piece_results = translate_texts_batched(
+        flat_pieces, "ca", "es", translator, cache, batch_failure_tracker,
+        progress_callback=_on_first_pass_piece_done,
+    ) if flat_pieces else []
+
+    per_sentence_pieces: Dict[str, List[Tuple[Optional[str], str]]] = {}
+    for flat_index, sentence_id in enumerate(piece_owner):
+        per_sentence_pieces.setdefault(sentence_id, []).append(piece_results[flat_index])
+
+    first_pass_failed_set = set(first_pass_failed)
+    for sentence_id, piece_list in per_sentence_pieces.items():
+        if sentence_id in first_pass_failed_set:
+            continue  # handled after the retry pass below
+        statuses = [p[1] for p in piece_list]
+        joined = " ".join(p[0] for p in piece_list if p[0])
+        provenance = "CACHE_HIT" if all(s == "CACHE_HIT" for s in statuses) else "FRESH_OK"
+        _record(sentence_id, joined, provenance)
+
+    # --- Second pass: one automatic retry for whatever failed on the
+    # first pass. Deliberately does not re-derive hard-split pieces --
+    # retries the SAME piece texts the first pass attempted (a piece
+    # already measured safely within the token budget failing is a
+    # transient/model-call failure, not a size problem -- see
+    # _assert_within_token_limit's own docstring on why an oversized input
+    # is never retried the same way). Progress ticks incrementally here
+    # too, via its own per-piece callback, so a long retry pass is visible
+    # as it runs rather than only once it (or its abort-recovery fallback)
+    # finishes. ---
+    if first_pass_failed:
+        retry_pieces: List[str] = []
+        retry_owner: List[str] = []
+        retry_position: List[int] = []
+        retry_piece_total: Dict[str, int] = {}
+        for i, sentence_id in enumerate(piece_owner):
+            if sentence_id not in first_pass_failed_set:
+                continue
+            retry_position.append(retry_piece_total.get(sentence_id, 0))
+            retry_piece_total[sentence_id] = retry_piece_total.get(sentence_id, 0) + 1
+            retry_pieces.append(flat_pieces[i])
+            retry_owner.append(sentence_id)
+
+        retry_piece_status: Dict[str, List[Optional[str]]] = {sid: [None] * n for sid, n in retry_piece_total.items()}
+        retry_completed_pieces: Dict[str, int] = {sid: 0 for sid in retry_piece_total}
+
+        def _on_retry_piece_done(flat_index: int, status: str) -> None:
+            sentence_id = retry_owner[flat_index]
+            position = retry_position[flat_index]
+            retry_piece_status[sentence_id][position] = status
+            retry_completed_pieces[sentence_id] += 1
+            if retry_completed_pieces[sentence_id] != retry_piece_total[sentence_id]:
+                return
+            statuses = retry_piece_status[sentence_id]
+            provenance = "FAILED" if any(s == "WARNING_TRANSLATION_FAILED" for s in statuses) else "RETRY_OK"
+            _tick_progress(sentence_id, provenance)
+
+        try:
+            retry_results = translate_texts_batched(
+                retry_pieces, "ca", "es", translator, cache, ConsecutiveBatchFailureTracker(),
+                progress_callback=_on_retry_piece_done,
+            )
+        except NLLBTranslationError as e:
+            logger.warning(f"[translate_frozen_sentences_batched] retry pass aborted, retried sentences stay FAILED: {e}")
+            retry_results = [(None, "WARNING_TRANSLATION_FAILED")] * len(retry_pieces)
+
+        per_sentence_retry_pieces: Dict[str, List[Tuple[Optional[str], str]]] = {}
+        for flat_index, sentence_id in enumerate(retry_owner):
+            per_sentence_retry_pieces.setdefault(sentence_id, []).append(retry_results[flat_index])
+
+        for sentence_id in first_pass_failed:
+            piece_list = per_sentence_retry_pieces.get(sentence_id, [])
+            statuses = [p[1] for p in piece_list]
+            if piece_list and not any(s == "WARNING_TRANSLATION_FAILED" for s in statuses):
+                joined = " ".join(p[0] for p in piece_list if p[0])
+                _record(sentence_id, joined, "RETRY_OK")
+            else:
+                _record(sentence_id, None, "FAILED")
+
+    # Safety-net reconciliation (see the docstring's incrementality
+    # paragraph): guarantees every Catalan sentence is ticked exactly once
+    # no matter how the retry pass above actually played out, including
+    # the rare case where it raises partway through after some of its own
+    # callbacks already fired. Ticks here always use the sentence's REAL
+    # final outcome from `results` (already fully populated by this
+    # point), so the live counters can never disagree with the data they
+    # describe, and the bar always reaches exactly total_ca_sentences.
+    for sentence_id in sentence_source_text:
+        if sentence_id not in _ticked_sentences:
+            _tick_progress(sentence_id, results[sentence_id]["translation_provenance"])
+
+    if pbar is not None:
+        pbar.close()
+
+    return results
+
+
+# ---------------------------------------------------------------------------
 # Main per-corpus processing
 # ---------------------------------------------------------------------------
 
@@ -1348,7 +2235,48 @@ def process(
     similarity_scorer: Optional[SemanticSimilarityScorer] = None,
     roundtrip_sample_size: int = DEFAULT_ROUNDTRIP_SAMPLE_SIZE,
     show_progress: bool = False,
+    frozen_segmentation: Optional[Dict[str, dict]] = None,
+    require_warm_primary_cache: bool = False,
 ) -> Tuple[dict, dict, dict]:
+    """`frozen_segmentation`, when given, is the "responses" dict from
+    data/frozen_source_sentence_segmentation_v1.json -- response_id ->
+    {"source_language": ..., "sentences": [{"sentence_id",
+    "sentence_index", "text_source"}, ...]}. This is the real corpus's
+    sentence IDs, frozen and archived per the Round 7 segmentation audit
+    (evidence/round7_full_corpus_run_2026-09-07/), never recomputed live
+    for a production run. main() always passes this. When it's None
+    (the default -- used by every test in this suite, which builds its own
+    small synthetic `raw_data` with no matching frozen file), this
+    function computes the same segmentation live via segment_source_
+    sentences() -- byte-identical to what freeze_sentence_segmentation.py
+    would produce for the same input and code version, just not tied to an
+    on-disk artifact. Either way, sentence IDs are `response_id::sNNN`
+    from the same segmentation function -- process() never re-splits
+    translated Spanish text into sentences any more (see the removed
+    "Pass 2" target-side split this replaces).
+
+    `require_warm_primary_cache` (Round 12, added from external review):
+    default False, so this parameter changes nothing for any existing
+    caller (every test in this suite, and terminal.py's menu-driven path,
+    which is intentionally NOT tied to the frozen production corpus -- see
+    _create_processed_versions()'s own comment on that). When True,
+    process() computes primary-cache coverage across every Catalan
+    sentence this run's `pending` set would need to translate (see
+    compute_primary_cache_coverage()) BEFORE making any NLLB call, prints
+    that report unconditionally either way, and -- if even one sentence is
+    missing from the primary cache under the CURRENT GENERATION_VERSION --
+    refuses to call translate_frozen_sentences_batched() at all. The run
+    is not silently allowed to fall through into a full (re-)translation;
+    instead it fails exactly the way any other aborted translation pass
+    does (translation_aborted_early=True, abort_reason set, every pending
+    Catalan sentence recorded as FAILED, STEP2_VALID=False), with the
+    coverage numbers themselves recorded in the returned report under
+    "primary_cache_coverage" for the JSON audit trail. main()'s
+    `--require-warm-cache` CLI flag is what sets this True for the real
+    corpus run -- see there for why the default here stays False (a
+    genuinely first-ever run has an empty cache by definition, and must
+    not be blocked by this same gate).
+    """
     process_start_time = time.time()
 
     # Diagnostic-only runtime metadata (fifth external review): printed/
@@ -1362,6 +2290,17 @@ def process(
 
     responses_out: Dict[str, dict] = {}
     sentences_out: Dict[str, dict] = {}
+    sentence_length_ratio_outlier_ids: List[str] = []
+    sentence_language_mismatch_ids: List[str] = []
+    repetition_fallback_retry_resolved_ids: List[str] = []
+    repetition_fallback_retry_unresolved_ids: List[str] = []
+    # Round 13 (external review): a response whose LIVE per-response
+    # language detection disagrees with what the FROZEN segmentation file
+    # recorded for it -- diagnostic/REVIEW-only, never fatal, never allowed
+    # to discard frozen sentences or flip translation_required. See the
+    # frozen-entry lookup below and STEP2_NLLB_CHANGES.md's Round 13
+    # section for why the frozen language is authoritative here.
+    source_language_mismatch_ids: List[str] = []
 
     warnings: List[dict] = []
     fatal_errors: List[dict] = []
@@ -1423,6 +2362,80 @@ def process(
                     "status": "WARNING", "reason": "unexpected_english_response_detected",
                 })
 
+            # Source-side sentence segmentation (Round 7 redesign): the
+            # frozen structure when the caller supplied one (main() always
+            # does, for a real corpus run), otherwise computed live via the
+            # exact same canonical function the freeze script uses --
+            # byte-identical for the same code version, just not tied to
+            # an on-disk artifact (see this function's docstring).
+            frozen_entry = frozen_segmentation.get(response_id) if frozen_segmentation is not None else None
+            if frozen_segmentation is not None and frozen_entry is None:
+                # This response has no frozen record at all -- still fatal.
+                # In the real main() CLI path this should never actually
+                # fire: validate_frozen_segmentation_against_input() already
+                # confirms, before process() is ever called, that the
+                # frozen file's response ID set exactly matches the current
+                # corpus's. It stays here as defense-in-depth for any other
+                # caller (tests, or a future caller) that hands process() a
+                # frozen_segmentation dict without going through that outer
+                # check first -- a response process() cannot find ANY
+                # frozen sentence structure for is not something the frozen
+                # LANGUAGE authority below can paper over.
+                fatal_errors.append({
+                    "id": response_id, "stage": "frozen_segmentation_lookup",
+                    "status": "FATAL", "reason": "missing_from_frozen_segmentation",
+                })
+                sentence_records = []
+            elif frozen_entry is not None:
+                # Round 13 (external review): frozen segmentation AND the
+                # frozen file's recorded source_language are BOTH
+                # authoritative once a frozen file is in play -- never the
+                # live per-response detector above. validate_frozen_
+                # segmentation_against_input() (called once, in main(),
+                # before process() ever runs) already confirms this exact
+                # response's original_text is byte-identical between the
+                # frozen file and the current corpus, so the language the
+                # freeze script recorded for this unchanged text is exactly
+                # as trustworthy as a fresh detection call over the same
+                # text would be -- there is no scientific reason to prefer
+                # a NEW live guess over the frozen one for the SAME bytes.
+                # A disagreement here is real and worth a look (langdetect
+                # is a known source of false positives throughout this
+                # project -- see Round 10/11), but it must never discard
+                # this response's frozen sentences, never flip
+                # translation_required, and never be fatal: doing so was a
+                # real bug (see STEP2_NLLB_CHANGES.md's Round 13 section)
+                # that silently dropped real frozen sentences (6396 ->
+                # 6393 in the real corpus) and mis-routed two genuinely
+                # Spanish responses into "requires NLLB translation".
+                if frozen_entry.get("source_language") != source_language:
+                    source_language_mismatch_ids.append(response_id)
+                    warnings.append({
+                        "id": response_id, "stage": "response_language_detection",
+                        "status": "REVIEW", "reason": "live_detector_disagrees_with_frozen_language",
+                        "live_detected_language": source_language,
+                        "frozen_language": frozen_entry["source_language"],
+                    })
+                    source_language = frozen_entry["source_language"]
+                sentence_records = [
+                    {"sentence_id": s["sentence_id"], "sentence_index": s["sentence_index"], "text_source": s["text_source"]}
+                    for s in frozen_entry["sentences"]
+                ]
+            else:
+                live_sentences, _merge_log = segment_source_sentences(raw_text, source_language, preprocessor)
+                sentence_records = [
+                    {"sentence_id": f"{response_id}::s{idx:03d}", "sentence_index": idx, "text_source": sent}
+                    for idx, sent in enumerate(live_sentences)
+                ]
+
+            for sr in sentence_records:
+                if sr["sentence_id"] in seen_sentence_ids:
+                    fatal_errors.append({
+                        "id": sr["sentence_id"], "stage": "sentence_id_generation",
+                        "status": "FATAL", "reason": "duplicate_sentence_id",
+                    })
+                seen_sentence_ids.add(sr["sentence_id"])
+
             pending.append({
                 "response_id": response_id,
                 "interview_id": interview_id,
@@ -1432,52 +2445,282 @@ def process(
                 "interview_primary_language": primary_lang,
                 "original_text": raw_text,
                 "translation_required": source_language == "ca",
+                "sentences": sentence_records,
             })
 
-    # --- Batched ca->es translation for every response that needs it.
-    # Chunked at sentence boundaries (translate_responses_batched) so a
-    # long response is never silently truncated by NLLB's
-    # max_length=512-subword-token generation limit. ---
-    ca_indices = [i for i, r in enumerate(pending) if r["translation_required"]]
-    ca_texts = [pending[i]["original_text"] for i in ca_indices]
-
-    translation_results: List[Optional[Tuple[Optional[str], str, int, int]]] = [None] * len(ca_texts)
-    if ca_texts:
-        try:
-            translation_results = translate_responses_batched(
-                ca_texts, "ca", "es", preprocessor, translator, cache, batch_failure_tracker,
-                show_progress=show_progress,
-            )
-        except NLLBTranslationError as e:
+    # --- Batched ca->es translation, one frozen source sentence per
+    # translation unit (translate_frozen_sentences_batched) -- see that
+    # function's docstring for why this replaces the old whole-response/
+    # chunk design entirely for primary translation. ---
+    segmented_for_translation = {
+        r["response_id"]: {"source_language": r["source_language"], "sentences": r["sentences"]}
+        for r in pending
+    }
+    sentence_translation_results: Dict[str, dict] = {}
+    primary_cache_coverage: Optional[dict] = None
+    if any(r["translation_required"] for r in pending):
+        # Round 12 (external review): a cheap, read-only pre-flight check,
+        # computed and printed BEFORE any NLLB call -- see
+        # compute_primary_cache_coverage()'s docstring for exactly why
+        # this exists. Always computed and printed when there's Catalan
+        # work to do, regardless of require_warm_primary_cache, so the
+        # numbers are visible either way; only the GATE (refusing to
+        # proceed) is conditional on that flag.
+        primary_cache_coverage = compute_primary_cache_coverage(pending, cache, translator)
+        print_cache_coverage_report(primary_cache_coverage)
+        if require_warm_primary_cache and not primary_cache_coverage["safe_to_reuse_primary_cache"]:
             translation_aborted_early = True
-            abort_reason = str(e)
-            logger.error(f"[process] {e}")
-            # Whatever wasn't attempted yet stays WARNING_TRANSLATION_FAILED
-            # below via the None entries already in translation_results.
-
-    for list_idx, response_idx in enumerate(ca_indices):
-        result = translation_results[list_idx] if list_idx < len(translation_results) else None
-        if result is None:
-            pending[response_idx]["text_es"] = None
-            pending[response_idx]["text_es_status"] = "WARNING_TRANSLATION_FAILED"
-            pending[response_idx]["translation_chunk_count"] = 0
-            pending[response_idx]["translation_hard_split_count"] = 0
+            abort_reason = (
+                f"primary cache coverage check failed: require_warm_primary_cache=True but "
+                f"{primary_cache_coverage['missing']} of "
+                f"{primary_cache_coverage['expected_catalan_sentence_units']} Catalan sentence "
+                "units are missing from the primary cache under the current GENERATION_VERSION "
+                f"({GENERATION_VERSION}). Refusing to silently start translating them. Either "
+                "restore the expected warm cache at the configured cache path before re-running, "
+                "or omit require_warm_primary_cache / --require-warm-cache if this is genuinely "
+                "meant to be a first-time (or partial) translation run."
+            )
+            logger.error(f"[process] {abort_reason}")
+            # Every ca sentence stays unattempted -- filled in as FAILED
+            # below via sentence_translation_results.get(..., None). No
+            # NLLB call was made.
         else:
-            text_es, status, chunk_count, hard_split_count = result
-            pending[response_idx]["text_es"] = text_es
-            pending[response_idx]["text_es_status"] = status
-            pending[response_idx]["translation_chunk_count"] = chunk_count
-            pending[response_idx]["translation_hard_split_count"] = hard_split_count
+            try:
+                sentence_translation_results = translate_frozen_sentences_batched(
+                    segmented_for_translation, translator, cache, batch_failure_tracker,
+                    show_progress=show_progress,
+                )
+            except NLLBTranslationError as e:
+                translation_aborted_early = True
+                abort_reason = str(e)
+                logger.error(f"[process] {e}")
+                # Every ca sentence stays unattempted -- filled in as
+                # FAILED below via sentence_translation_results.get(...,
+                # None).
 
-    for response_idx, r in enumerate(pending):
-        if not r["translation_required"]:
-            r["text_es"] = r["original_text"]
-            r["text_es_status"] = "IDENTITY_COPY"
-            r["translation_chunk_count"] = 0
-            r["translation_hard_split_count"] = 0
+    # --- Pass 2: assemble each response's sentences_out entries directly
+    # from the per-sentence translation results (NOT by re-splitting
+    # translated Spanish text -- that target-side step no longer exists),
+    # apply sentence-level quality diagnostics to decide FLAGGED, rebuild
+    # each response's text_es from its OWN sentences in order, and run the
+    # existing response-level quality diagnostics on that reconstruction
+    # for corpus-level summaries. ---
+    for r in pending:
+        response_id = r["response_id"]
+        interview_id = r["interview_id"]
+        question_id = r["question_id"]
+        translation_required = r["translation_required"]
 
-    # --- Pass 2: per-response quality diagnostics, topic-text prep, and
-    # sentence splitting (on the SPANISH text, once). ---
+        response_sentence_ids: List[str] = []
+        sentence_text_es_parts: List[str] = []
+        sentence_status_counts: Dict[str, int] = {}
+        sentence_provenance_counts: Dict[str, int] = {}
+        failed_sentence_ids: List[str] = []
+        flagged_sentence_ids: List[str] = []
+
+        for sr in r["sentences"]:
+            sentence_id = sr["sentence_id"]
+            response_sentence_ids.append(sentence_id)
+
+            translation = sentence_translation_results.get(sentence_id)
+            if translation is None:
+                # Not attempted at all -- either this response doesn't
+                # need translation (identity-copy path never populates
+                # sentence_translation_results, handled just below) or the
+                # whole run aborted before reaching this sentence.
+                if translation_required:
+                    text_es_sent: Optional[str] = None
+                    provenance = "FAILED"
+                else:
+                    text_es_sent = sr["text_source"]
+                    provenance = "SOURCE_ES"
+            else:
+                text_es_sent = translation["text_es"]
+                provenance = translation["translation_provenance"]
+
+            sentence_quality: Dict[str, Optional[dict]] = {
+                "target_language_check": None, "degenerate_output": None, "length_diagnostics": None,
+                "repetition_fallback_retry": None,
+            }
+            sentence_status = provenance
+            if text_es_sent is not None and provenance != "SOURCE_ES":
+                original_primary_degenerate_output = check_degenerate_output(sr["text_source"], text_es_sent)
+                final_degenerate_output = original_primary_degenerate_output
+
+                # Round 12: a PRIMARY translation that is itself a genuine
+                # repetition loop gets exactly one targeted, cache-aware
+                # retry under RETRY_GENERATION_PARAMS -- never speculative,
+                # only after the primary result is independently confirmed
+                # degenerate right here. If the retry resolves it, its
+                # output REPLACES text_es_sent for every use below (the
+                # response reconstruction, the sentence record, and all
+                # remaining quality diagnostics in this block are computed
+                # on the FINAL text, never the discarded primary one) and
+                # the ORIGINAL primary diagnostic is preserved under
+                # repetition_fallback_retry for provenance/audit. If the
+                # retry does NOT resolve it (or itself fails), text_es_sent
+                # is left exactly as the primary translation produced it,
+                # and the sentence correctly stays FLAGGED on that basis --
+                # see attempt_repetition_fallback_retry()'s docstring.
+                if original_primary_degenerate_output["repetition_flag"]:
+                    # Fix from external review: `provenance` (CACHE_HIT /
+                    # FRESH_OK / RETRY_OK[pass-1 transient-retry] / etc.)
+                    # describes the PRIMARY translation attempt only, and
+                    # was previously left unchanged even when the retry
+                    # below succeeded and text_es_sent was replaced --
+                    # so a repaired sentence could be written to disk as
+                    # e.g. "translation_provenance": "CACHE_HIT" even
+                    # though its actual final text came from the
+                    # anti-repetition retry, and every corpus-wide
+                    # provenance rollup (by_translation_provenance,
+                    # retried_ok_translations) inherited the same lie.
+                    # primary_provenance_for_audit preserves the ORIGINAL
+                    # value for the record; `provenance` itself is
+                    # reassigned below, on resolution, to a NEW, distinct
+                    # value -- deliberately NOT "RETRY_OK", which already
+                    # means something different in this codebase (a
+                    # PRIMARY-pass piece that needed a transient-failure
+                    # retry inside translate_texts_batched, still entirely
+                    # under GENERATION_PARAMS -- see _on_retry_piece_done
+                    # above). Reusing that label here would silently merge
+                    # two unrelated kinds of retry under one name, exactly
+                    # the ambiguity this project has been eliminating
+                    # round over round.
+                    primary_provenance_for_audit = provenance
+                    retry_result = attempt_repetition_fallback_retry(sr["text_source"], translator, cache)
+                    retry_text = retry_result["text_es"]
+                    retry_degenerate_output = (
+                        check_degenerate_output(sr["text_source"], retry_text) if retry_text is not None else None
+                    )
+                    resolved = retry_degenerate_output is not None and not retry_degenerate_output["flagged"]
+                    if resolved:
+                        text_es_sent = retry_text
+                        final_degenerate_output = retry_degenerate_output
+                        provenance = "REPETITION_REPAIRED"
+                        sentence_status = provenance
+                        repetition_fallback_retry_resolved_ids.append(sentence_id)
+                    else:
+                        repetition_fallback_retry_unresolved_ids.append(sentence_id)
+                    sentence_quality["repetition_fallback_retry"] = {
+                        "attempted": True,
+                        "reason": "pathological_repetition",
+                        "cache_status": retry_result["cache_status"],
+                        "primary_generation_version": GENERATION_VERSION,
+                        "retry_generation_version": RETRY_GENERATION_VERSION,
+                        "primary_degenerate_output": original_primary_degenerate_output,
+                        "resolved": resolved,
+                        "selected_generation_version": RETRY_GENERATION_VERSION if resolved else GENERATION_VERSION,
+                        # New fields from external review: the two-tier
+                        # provenance the top-level translation_provenance
+                        # field alone can't carry (it must stay one flat
+                        # value per sentence). primary_translation_
+                        # provenance is what the PRIMARY pass alone would
+                        # have recorded; selected_translation_provenance
+                        # mirrors whatever sentences_out[...]
+                        # ["translation_provenance"] actually ends up as
+                        # for this sentence (either unchanged from primary,
+                        # when unresolved, or "REPETITION_REPAIRED").
+                        "primary_translation_provenance": primary_provenance_for_audit,
+                        "selected_translation_provenance": provenance,
+                    }
+
+                sentence_quality["target_language_check"] = check_target_language(text_es_sent, "es")
+                sentence_quality["degenerate_output"] = final_degenerate_output
+                # Per-sentence length ratio (added after an external review
+                # noted response-level length/similarity diagnostics alone
+                # can't catch one sentence losing most of its content while
+                # the rest of the response statistically compensates --
+                # e.g. an 8-word source sentence collapsing to 1 word would
+                # barely move a whole response's aggregate ratio). This is
+                # diagnostic/REVIEW-only, deliberately NOT part of the
+                # `flagged` fatal-quality condition below -- source<->target
+                # length legitimately varies a lot sentence-to-sentence
+                # (a short acknowledgement, an elided clause), so an
+                # arbitrary per-sentence threshold would produce false
+                # positives the same way an early response-level length
+                # gate would have. See sentence_length_ratio_outlier_ids
+                # in the corpus-wide rollup below.
+                sentence_quality["length_diagnostics"] = compute_length_diagnostics(sr["text_source"], text_es_sent)
+                if sentence_quality["length_diagnostics"]["length_ratio_outlier"]:
+                    sentence_length_ratio_outlier_ids.append(sentence_id)
+                # Round 11: target_language_check is diagnostic/REVIEW-only
+                # here too, tracked separately below (sentence_language_
+                # mismatch_ids) rather than folded into `flagged` -- see
+                # check_target_language()'s docstring for why. degenerate_
+                # output (empty / long-identical / repetition) is now the
+                # ONLY sentence-level FATAL signal.
+                if sentence_quality["target_language_check"]["passed"] is False:
+                    sentence_language_mismatch_ids.append(sentence_id)
+                flagged = sentence_quality["degenerate_output"]["flagged"]
+                if flagged:
+                    sentence_status = "FLAGGED"
+                    flagged_sentence_ids.append(sentence_id)
+
+            if sentence_status == "FAILED":
+                failed_sentence_ids.append(sentence_id)
+            else:
+                if text_es_sent:
+                    sentence_text_es_parts.append(text_es_sent)
+
+            sentence_status_counts[sentence_status] = sentence_status_counts.get(sentence_status, 0) + 1
+            sentence_provenance_counts[provenance] = sentence_provenance_counts.get(provenance, 0) + 1
+
+            sentences_out[sentence_id] = {
+                "sentence_id": sentence_id,
+                "response_id": response_id,
+                "interview_id": interview_id,
+                "question_id": question_id,
+                "sentence_index": sr["sentence_index"],
+                "text_source": sr["text_source"],
+                "text_es": text_es_sent,
+                "sentence_status": sentence_status,
+                "translation_provenance": provenance,
+                "quality": sentence_quality,
+                "source_language": r["source_language"],
+                "translation_required": translation_required,
+            }
+
+        total_sentence_count = len(r["sentences"])
+        response_translation_complete = len(failed_sentence_ids) == 0
+        # Response-level text_es_status is an AGGREGATE derived from its
+        # sentences (per the redesign's completeness requirement), using
+        # translation_provenance (the mechanical outcome) rather than
+        # sentence_status (which collapses to FLAGGED once a quality
+        # diagnostic fires) -- a response where every sentence came back
+        # FLAGGED-but-translated is still "TRANSLATED", not treated as
+        # some fourth thing, exactly as a response with zero flagged
+        # sentences would be.
+        if not translation_required:
+            text_es_status = "IDENTITY_COPY"
+        elif total_sentence_count == 0 or len(failed_sentence_ids) == total_sentence_count:
+            # No sentences at all, or every single one failed -- no usable
+            # text_es for this response (matches the old code's meaning of
+            # WARNING_TRANSLATION_FAILED: nothing to reconstruct).
+            text_es_status = "WARNING_TRANSLATION_FAILED"
+        elif failed_sentence_ids:
+            # Some, but not all, sentences failed -- text_es IS still
+            # reconstructed from whatever succeeded (see below): a failed
+            # sentence no longer erases the rest of its response.
+            text_es_status = "PARTIAL_TRANSLATION_FAILURE"
+        elif sentence_provenance_counts.get("CACHE_HIT", 0) == total_sentence_count:
+            # Every sentence was a pure cache hit -- nothing fresh at all.
+            text_es_status = "CACHE_HIT"
+        else:
+            text_es_status = "TRANSLATED"
+
+        text_es = " ".join(sentence_text_es_parts) if sentence_text_es_parts else None
+
+        r["text_es"] = text_es
+        r["text_es_status"] = text_es_status
+        r["sentence_ids"] = response_sentence_ids
+        r["sentence_status_counts"] = sentence_status_counts
+        r["failed_sentence_ids"] = failed_sentence_ids
+        r["flagged_sentence_ids"] = flagged_sentence_ids
+        r["response_translation_complete"] = response_translation_complete
+
+    # --- Pass 3: per-response quality diagnostics (on the reconstructed
+    # text_es) and topic-text prep -- unchanged in spirit from before,
+    # just no longer the place sentence IDs are assigned. ---
     for r in pending:
         response_id = r["response_id"]
         interview_id = r["interview_id"]
@@ -1492,7 +2735,7 @@ def process(
             "semantic_preservation_similarity": None,
         }
 
-        if text_es_status == "WARNING_TRANSLATION_FAILED":
+        if text_es is None:
             warnings.append({
                 "id": response_id, "stage": "response_translation_ca_es",
                 "status": "WARNING", "reason": "translation_failed",
@@ -1531,29 +2774,16 @@ def process(
                     "reason": "topic_text_es_clean_empty_after_lemmatization_stopword_removal",
                 })
 
-        sentence_ids_for_response: List[str] = []
-        if text_es_status != "WARNING_TRANSLATION_FAILED":
-            raw_sentences = preprocessor.split_sentences_strict(text_es, "es")
-            for idx, sent_text in enumerate(raw_sentences):
-                sentence_id = f"{response_id}::s{idx:03d}"
-                if sentence_id in seen_sentence_ids:
-                    fatal_errors.append({
-                        "id": sentence_id, "stage": "sentence_id_generation",
-                        "status": "FATAL", "reason": "duplicate_sentence_id",
-                    })
-                    continue
-                seen_sentence_ids.add(sentence_id)
-                sentence_ids_for_response.append(sentence_id)
-                sentences_out[sentence_id] = {
-                    "sentence_id": sentence_id,
-                    "response_id": response_id,
-                    "interview_id": interview_id,
-                    "question_id": question_id,
-                    "sentence_index": idx,
-                    "text_es": sent_text,
-                    "source_language": r["source_language"],
-                    "translation_required": r["translation_required"],
-                }
+        # Sentence IDs, statuses, and sentences_out entries were already
+        # assembled in Pass 2, directly from the frozen source sentences
+        # and their translation results -- there is no re-splitting of
+        # text_es here any more (see this function's docstring: no
+        # target-side re-splitting is allowed once sentence IDs are
+        # frozen). This is just pulling those already-computed values onto
+        # the response record.
+        sentence_hard_split_count = sum(
+            sentence_translation_results.get(sid, {}).get("hard_split_count", 0) for sid in r["sentence_ids"]
+        )
 
         responses_out[response_id] = {
             "interview_id": interview_id,
@@ -1569,9 +2799,13 @@ def process(
             "topic_text_es_clean": topic_text_es_clean,
             "topic_text_es_clean_empty": topic_clean_empty,
             "quality": quality,
-            "sentence_ids": sentence_ids_for_response,
-            "translation_chunk_count": r.get("translation_chunk_count", 0),
-            "translation_hard_split_count": r.get("translation_hard_split_count", 0),
+            "sentence_ids": r["sentence_ids"],
+            "sentence_count": len(r["sentence_ids"]),
+            "sentence_status_counts": r["sentence_status_counts"],
+            "failed_sentence_ids": r["failed_sentence_ids"],
+            "flagged_sentence_ids": r["flagged_sentence_ids"],
+            "response_translation_complete": r["response_translation_complete"],
+            "sentence_hard_split_count": sentence_hard_split_count,
             "status": "OK",
         }
 
@@ -1627,7 +2861,49 @@ def process(
     # --- cross-checks (no silent failures) ---
     unmapped_sentences = [sid for sid, s in sentences_out.items() if s["response_id"] not in responses_out]
     accounted_for = len(responses_out)
-    silent_loss = (accounted_for != input_response_count) or bool(unmapped_sentences) or bool(fatal_errors)
+    # The validation target the Round 7 redesign explicitly asks for: the
+    # frozen source sentence count must equal the number of downstream
+    # sentence records produced, exactly -- not "produced approximately
+    # that many Spanish sentences by re-splitting Spanish text" (the old,
+    # now-removed target-side check this replaces). expected_sentence_
+    # count is the sum of each pending (non-excluded) response's OWN
+    # frozen sentence list length -- every one of those sentence IDs must
+    # show up in sentences_out exactly once, whether its translation
+    # succeeded, was flagged, or failed (a FAILED sentence still gets a
+    # sentences_out record -- see Pass 2 -- it just carries text_es=None).
+    expected_sentence_count = sum(len(r["sentences"]) for r in pending)
+    # The actual validation target is NOT just cardinality (expected count
+    # == actual count) -- two numbers matching by coincidence would still
+    # pass a pure count check even if, say, one frozen sentence ID were
+    # silently dropped from sentences_out while a duplicate of another one
+    # were produced. The real invariant this redesign promises is EXACT
+    # ID-SET equality: every frozen sentence ID that went into this run
+    # produces exactly one downstream sentence record, and no downstream
+    # record exists for anything else. missing_sentence_ids/
+    # unexpected_sentence_ids make a mismatch immediately actionable
+    # (which specific IDs, not just "off by N") rather than only visible as
+    # a bare count discrepancy.
+    expected_sentence_ids = {s["sentence_id"] for r in pending for s in r["sentences"]}
+    actual_sentence_ids = set(sentences_out.keys())
+    missing_sentence_ids = sorted(expected_sentence_ids - actual_sentence_ids)
+    unexpected_sentence_ids = sorted(actual_sentence_ids - expected_sentence_ids)
+    sentence_id_set_match = not missing_sentence_ids and not unexpected_sentence_ids
+    sentence_count_invariant = {
+        "expected": expected_sentence_count,
+        "actual": len(sentences_out),
+        "match": expected_sentence_count == len(sentences_out) and sentence_id_set_match,
+        "sentence_id_set_match": sentence_id_set_match,
+        "missing_sentence_id_count": len(missing_sentence_ids),
+        "missing_sentence_ids": missing_sentence_ids[:20],
+        "unexpected_sentence_id_count": len(unexpected_sentence_ids),
+        "unexpected_sentence_ids": unexpected_sentence_ids[:20],
+    }
+    silent_loss = (
+        accounted_for != input_response_count
+        or bool(unmapped_sentences)
+        or bool(fatal_errors)
+        or not sentence_count_invariant["match"]
+    )
 
     duplicate_response_id_count = sum(1 for f in fatal_errors if f["reason"] == "duplicate_response_id")
     duplicate_sentence_id_count = sum(1 for f in fatal_errors if f["reason"] == "duplicate_sentence_id")
@@ -1640,10 +2916,23 @@ def process(
     translation_failed_count = sum(
         1 for rid in translation_required_ids if responses_out[rid]["text_es_status"] == "WARNING_TRANSLATION_FAILED"
     )
-    # Response-level fresh-vs-cached split of translation_successful_count,
-    # for the runtime-info reporting added after the fifth external review
-    # (matches what the live progress bar/checkpoint counts during the
-    # run -- see translate_responses_batched).
+    # New in the Round 7 redesign: a response where SOME but not all of
+    # its sentences failed -- distinct from translation_failed_count
+    # (every sentence failed, no usable text_es at all). Per-sentence
+    # atomicity means this response still has a (partial) text_es and a
+    # full sentence-level record of exactly which sentence(s) failed (see
+    # responses_out[rid]["failed_sentence_ids"]) -- it is not silently
+    # folded into either the successful or the fully-failed bucket.
+    translation_partial_failure_count = sum(
+        1 for rid in translation_required_ids if responses_out[rid]["text_es_status"] == "PARTIAL_TRANSLATION_FAILURE"
+    )
+    # Response-level fresh-vs-cached split of translation_successful_count.
+    # Kept for reference (a response where every sentence was a cache hit
+    # vs. one where at least one sentence was freshly translated), but the
+    # runtime-info reporting below now uses the SENTENCE-level totals
+    # (sentence_translation_summary) instead, since the sentence is the
+    # actual live-progress-bar unit in the Round 7 redesign -- see
+    # translate_frozen_sentences_batched.
     translation_fresh_count = sum(
         1 for rid in translation_required_ids if responses_out[rid]["text_es_status"] == "TRANSLATED"
     )
@@ -1706,13 +2995,38 @@ def process(
         rid for rid, resp in responses_out.items() if resp.get("topic_text_es_clean_empty") is True
     ]
 
+    # NOTE: deliberately read `load_attempted` here, not `available` --
+    # `available` is the lazy-load trigger itself, and this is end-of-run
+    # report assembly, not a real use site. A corpus with no similarity
+    # pairs to score never reaches the `.available` check at the actual use
+    # sites above, so it must not be forced to load the model here just to
+    # fill in this summary field (that would silently defeat the laziness
+    # fix for exactly the runs it matters most for -- ones with nothing to
+    # score).
+    _similarity_scorer_used = similarity_scorer is not None and similarity_scorer.load_attempted
     translation_quality_summary = {
-        "similarity_model_available": similarity_scorer.available if similarity_scorer is not None else False,
+        "similarity_model_available": similarity_scorer.available if _similarity_scorer_used else False,
         "similarity_model_unavailable_reason": (
-            similarity_scorer.unavailable_reason if similarity_scorer is not None else "similarity_scorer_not_provided"
+            similarity_scorer.unavailable_reason if _similarity_scorer_used
+            else (
+                "similarity_scorer_not_provided" if similarity_scorer is None
+                else "not_needed_for_this_run_no_similarity_pairs_computed"
+            )
         ),
         "language_mismatch_count": len(language_mismatch_ids),
         "language_mismatch_ids": language_mismatch_ids,
+        # Round 13 (external review): a PRE-translation, INPUT-side signal
+        # -- the live per-response language detector disagreed with what
+        # the frozen segmentation file recorded for this response's source
+        # language. Deliberately named distinctly from language_mismatch_
+        # count above, which is the OUTPUT-side check (translated text vs.
+        # expected target language, post-translation) -- these are
+        # different checks at different pipeline stages and must never be
+        # conflated. Diagnostic/REVIEW-only: see the frozen-entry lookup in
+        # Pass 1 for why the frozen language is authoritative and this
+        # never discards sentences or changes translation_required.
+        "source_language_mismatch_count": len(source_language_mismatch_ids),
+        "source_language_mismatch_ids": source_language_mismatch_ids,
         "short_text_language_not_assessed_count": len(short_text_language_not_assessed_ids),
         "short_text_language_not_assessed_ids": short_text_language_not_assessed_ids,
         "degenerate_output_count": len(degenerate_output_ids),
@@ -1729,51 +3043,165 @@ def process(
         "roundtrip": roundtrip_summary,
     }
 
+    # Corpus-wide sentence-level rollup (Round 7 redesign) -- the sentence
+    # is the actual translation unit now, so this is what the live
+    # progress bar during a run and this report's runtime-info fields
+    # should agree with, the same way the old response-level fresh/cache_
+    # hit/failed counts were kept in agreement with translate_responses_
+    # batched's response-level progress bar (fifth/sixth external review).
+    sentence_status_totals: Dict[str, int] = {}
+    sentence_provenance_totals: Dict[str, int] = {}
+    sentence_hard_split_total = 0
+    for s in sentences_out.values():
+        sentence_status_totals[s["sentence_status"]] = sentence_status_totals.get(s["sentence_status"], 0) + 1
+        sentence_provenance_totals[s["translation_provenance"]] = sentence_provenance_totals.get(s["translation_provenance"], 0) + 1
+    for resp in responses_out.values():
+        sentence_hard_split_total += resp.get("sentence_hard_split_count", 0)
+    flagged_sentence_ids_corpus = [sid for sid, s in sentences_out.items() if s["sentence_status"] == "FLAGGED"]
+    sentence_translation_summary = {
+        "total_sentences": len(sentences_out),
+        "by_sentence_status": sentence_status_totals,
+        "by_translation_provenance": sentence_provenance_totals,
+        "hard_split_sentence_pieces": sentence_hard_split_total,
+        "responses_with_partial_translation_failure_count": translation_partial_failure_count,
+        "responses_with_partial_translation_failure_ids": [
+            rid for rid, resp in responses_out.items() if resp.get("text_es_status") == "PARTIAL_TRANSLATION_FAILURE"
+        ],
+        # flagged_sentence_count/ids is the corpus-wide view of exactly the
+        # signal translation_output_validity now gates on below (sentence_
+        # status_totals.get("FLAGGED", 0) is the same number, this is just
+        # named for what it actually means at the call site) -- also
+        # available per-response as responses_out[rid]["flagged_sentence_ids"].
+        "flagged_sentence_count": sentence_status_totals.get("FLAGGED", 0),
+        "flagged_sentence_ids": flagged_sentence_ids_corpus,
+        # Per-sentence length-ratio outliers (diagnostic/REVIEW-only -- see
+        # the length_diagnostics comment in Pass 2 above for why this is
+        # deliberately not part of the FLAGGED/fatal-gate condition).
+        "sentence_length_ratio_outlier_count": len(sentence_length_ratio_outlier_ids),
+        "sentence_length_ratio_outlier_ids": sentence_length_ratio_outlier_ids,
+        # Per-sentence target-language mismatches (Round 11, diagnostic/
+        # REVIEW-only -- see check_target_language()'s docstring for why
+        # this is deliberately not part of the FLAGGED/fatal-gate
+        # condition above, even though it was through Round 10).
+        "sentence_language_mismatch_count": len(sentence_language_mismatch_ids),
+        "sentence_language_mismatch_ids": sentence_language_mismatch_ids,
+        # Round 12: how many repetition-flagged PRIMARY translations got a
+        # targeted fallback retry, and how it went. "attempted" is the sum
+        # of resolved+unresolved (every sentence whose primary result
+        # tripped repetition_flag gets exactly one retry attempt).
+        # "resolved" sentences are no longer FLAGGED (their retry output
+        # replaced the primary text_es); "unresolved" sentences kept their
+        # original primary text_es and correctly remain FLAGGED -- see
+        # attempt_repetition_fallback_retry() and the repetition_fallback_
+        # retry field on each affected sentence (in sentences_out) for the
+        # full per-sentence detail (cache_status, both generation
+        # versions, the original primary diagnostic).
+        "repetition_fallback_retry_attempted_count": (
+            len(repetition_fallback_retry_resolved_ids) + len(repetition_fallback_retry_unresolved_ids)
+        ),
+        "repetition_fallback_retry_resolved_count": len(repetition_fallback_retry_resolved_ids),
+        "repetition_fallback_retry_resolved_ids": repetition_fallback_retry_resolved_ids,
+        "repetition_fallback_retry_unresolved_count": len(repetition_fallback_retry_unresolved_ids),
+        "repetition_fallback_retry_unresolved_ids": repetition_fallback_retry_unresolved_ids,
+    }
+
     structural_validity = not silent_loss
     translation_completeness_validity = (
         not translation_aborted_early
         and translation_failed_count == 0
+        and translation_partial_failure_count == 0
         and translation_successful_count == translation_required_count
         and missing_text_es_count == 0
         and missing_topic_text_es_raw_count == 0
     )
-    # Translation-output-QUALITY validity: a genuinely serious per-response
-    # failure -- the output landed in the wrong language, or is degenerate/
-    # repetitive/pathologically-identical-to-source text -- is not a "review
-    # this later" situation, it means Step 2 did not actually produce a
-    # usable Spanish-standardized response for that item. Any of these
-    # anywhere in the corpus is fatal to STEP2_VALID, same tier as
-    # structural_validity/translation_completeness_validity above.
+    # Translation-output-QUALITY validity is gated at SENTENCE grain, not
+    # response grain (patched after an external review of the Round 7/
+    # step 6 redesign found the response-level gate below was a real hole:
+    # check_degenerate_output() already runs once per sentence in Pass 2,
+    # correctly flagging a genuinely degenerate sentence as sentence_
+    # status="FLAGGED" -- but nothing downstream actually GATED on that. A
+    # response's own response-level checks run separately, on the JOIN of
+    # ALL its sentences' text, so a single bad sentence sitting among
+    # several good ones could easily still pass at response grain even
+    # though the sentence-level check had already correctly caught it.
+    # STEP2_VALID could end up True with a frozen analytical sentence
+    # explicitly marked bad -- exactly the failure mode the one-sentence-
+    # per-translation architecture exists to make detectable, going
+    # undetected by the gate itself.
     #
-    # This is DELIBERATELY narrower than "every quality diagnostic". Length-
-    # ratio outliers and somewhat-low semantic similarity are real signals
-    # worth a human looking at, but on their own they do not mean the
-    # translation is wrong -- interview responses vary a lot in how
-    # Catalan/Spanish phrasing compresses or expands, and similarity scores
-    # from a general-purpose embedding model are a noisy proxy, not ground
-    # truth. Gating STEP2_VALID on those would produce false negatives that
-    # block a perfectly good 950-response run over a handful of unusually
-    # phrased (but correctly translated) responses. They stay informational
-    # -- reported in translation_quality_summary and reflected in
-    # translation_sanity_status below, but never fatal.
-    translation_output_validity = (
-        translation_quality_summary["language_mismatch_count"] == 0
-        and translation_quality_summary["degenerate_output_count"] == 0
-    )
+    # The fix: the fatal gate is "no sentence anywhere in the corpus was
+    # flagged degenerate" -- the per-UNIT signal this architecture is
+    # built around, at the same grain as the frozen sentence IDs
+    # themselves. sentence_status="FLAGGED" is set exactly when a
+    # sentence's own check_degenerate_output fails (see Pass 2) --
+    # nothing sentence-level is excluded from this gate the way length-
+    # ratio/similarity are excluded below.
+    #
+    # Round 11: check_target_language's result was ALSO part of this gate
+    # through Round 10 (a sentence with passed=False was FLAGGED on that
+    # alone). Removed after a manual review of the first real 950-
+    # response corpus run's 141 language-mismatch flags found every one
+    # was either a langdetect false positive on genuinely correct Spanish
+    # (105) or already independently, correctly caught by check_
+    # degenerate_output (36) -- language detection alone never
+    # contributed a real catch check_degenerate_output didn't already
+    # make. It remains fully computed and reported at both response grain
+    # (language_mismatch_count/ids below) and sentence grain (sentence_
+    # language_mismatch_count/ids in sentence_translation_summary, added
+    # this round) -- still worth a human's attention -- but is REVIEW-
+    # tier only now, never FAIL, at any length. See STEP2_NLLB_CHANGES.md's
+    # Round 11 section for the full breakdown.
+    sentence_flagged_count = sentence_translation_summary["flagged_sentence_count"]
+    translation_output_validity = sentence_flagged_count == 0
+
+    # The RESPONSE-level equivalents (check_target_language/check_
+    # degenerate_output run once more, on the reconstructed whole-response
+    # text_es) are deliberately NOT part of the fatal gate any more. This
+    # is what the sixth external review's "many of the 25 degenerate flags
+    # were ordinary repeated domain phrasing, not NLLB collapse" finding
+    # was already pointing at: several individually-correct sentences that
+    # happen to repeat a common phrase (routine in transcribed interview
+    # speech) can still look repetitive once joined into one response-
+    # length block, even though NOT ONE of those sentences was itself
+    # flagged. Gating STEP2_VALID on that recreates exactly the false-
+    # positive problem the sixth review already fixed once, now at
+    # response instead of chunk grain. They stay fully computed and
+    # reported (language_mismatch_count/degenerate_output_count below,
+    # still worth a human's attention) but move to the REVIEW tier,
+    # alongside length-ratio/similarity, rather than FAIL.
+    response_level_language_mismatch_count = translation_quality_summary["language_mismatch_count"]
+    response_level_degenerate_output_count = translation_quality_summary["degenerate_output_count"]
     length_ratio_outlier_count = translation_quality_summary["length_ratio_outlier_count"]
     low_similarity_count = translation_quality_summary["semantic_preservation"]["count_below_informational_bound"]
     short_text_language_not_assessed_count = translation_quality_summary["short_text_language_not_assessed_count"]
     short_text_identical_output_count = translation_quality_summary["short_text_identical_output_count"]
+    sentence_length_ratio_outlier_count = sentence_translation_summary.get("sentence_length_ratio_outlier_count", 0)
+    # Round 11: the sentence-grain mirror of response_level_language_
+    # mismatch_count -- a sentence whose OWN target-language check failed
+    # is no longer fatal (see above), but should still surface at REVIEW
+    # tier just like its response-level equivalent already did.
+    sentence_language_mismatch_count = sentence_translation_summary.get("sentence_language_mismatch_count", 0)
+    # Round 13: the frozen-vs-live SOURCE-language disagreement, read back
+    # off translation_quality_summary (already reflects source_language_
+    # mismatch_ids computed in Pass 1) rather than the raw list directly,
+    # so this stays in the same "read the summary dict" style as every
+    # other REVIEW-tier signal below.
+    source_language_mismatch_count = translation_quality_summary.get("source_language_mismatch_count", 0)
     if not translation_output_validity:
-        # A genuinely serious failure occurred -- this is fatal (see
-        # translation_output_validity above), so "REVIEW" (which implies
-        # "otherwise fine, just take a look") would understate it.
+        # A genuinely serious failure occurred at sentence grain -- this is
+        # fatal (see translation_output_validity above), so "REVIEW" (which
+        # implies "otherwise fine, just take a look") would understate it.
         translation_sanity_status = "FAIL"
     elif (
         length_ratio_outlier_count > 0
         or low_similarity_count > 0
         or short_text_language_not_assessed_count > 0
         or short_text_identical_output_count > 0
+        or response_level_language_mismatch_count > 0
+        or response_level_degenerate_output_count > 0
+        or sentence_length_ratio_outlier_count > 0
+        or sentence_language_mismatch_count > 0
+        or source_language_mismatch_count > 0
     ):
         # Diagnostic-only signals: worth a human review pass, but never a
         # reason to block STEP2_VALID on their own. The short-text signals
@@ -1781,7 +3209,9 @@ def process(
         # "No." / acronym / number case: too little text to run langdetect
         # meaningfully on, or a source==target translation that is probably
         # correct rather than degenerate -- surfaced for a human glance,
-        # never fatal.
+        # never fatal. Sentence-level length-ratio outliers (added
+        # alongside the fatal-gate fix above) are the same kind of signal,
+        # just measured per sentence instead of per response -- see Pass 2.
         translation_sanity_status = "REVIEW"
     else:
         translation_sanity_status = "PASS"
@@ -1810,18 +3240,30 @@ def process(
         "duplicate_response_id_count": duplicate_response_id_count,
         "duplicate_sentence_id_count": duplicate_sentence_id_count,
         "cache_stats": cache.stats(),
+        # Round 12 (external review): None when there was no Catalan
+        # translation work at all this run (translation_required was
+        # False for every response); otherwise compute_primary_cache_
+        # coverage()'s result, for the JSON audit trail -- see that
+        # function's docstring and require_warm_primary_cache above.
+        "primary_cache_coverage": primary_cache_coverage,
         "silent_loss_check": {
             "input_response_count": input_response_count,
             "accounted_for_response_count": accounted_for,
             "unmapped_sentence_count": len(unmapped_sentences),
             "fatal_error_count": len(fatal_errors),
+            "sentence_count_invariant": sentence_count_invariant,
             "silent_loss_detected": silent_loss,
         },
+        # The Round 7 redesign's validation target, stated directly (not
+        # just buried inside silent_loss_check): every frozen source
+        # sentence ID produced exactly one downstream sentence record.
+        "sentence_count_invariant": sentence_count_invariant,
         "translation_aborted_early": translation_aborted_early,
         "abort_reason": abort_reason,
         "translation_required_count": translation_required_count,
         "translation_successful_count": translation_successful_count,
         "translation_failed_count": translation_failed_count,
+        "translation_partial_failure_count": translation_partial_failure_count,
         "missing_text_es_count": missing_text_es_count,
         "missing_topic_text_es_raw_count": missing_topic_text_es_raw_count,
         # topic_text_es_clean can legitimately end up empty after stopword
@@ -1839,14 +3281,7 @@ def process(
         "topic_text_es_clean_empty_count": len(topic_text_es_clean_empty_ids),
         "topic_text_es_clean_empty_ids": topic_text_es_clean_empty_ids,
         "expected_topic_model_document_count": len(responses_out) - len(topic_text_es_clean_empty_ids),
-        "translation_chunking": {
-            "total_chunks": sum(resp.get("translation_chunk_count", 0) for resp in responses_out.values()),
-            "responses_requiring_multiple_chunks": sum(
-                1 for resp in responses_out.values() if resp.get("translation_chunk_count", 0) > 1
-            ),
-            "hard_split_chunk_count": sum(resp.get("translation_hard_split_count", 0) for resp in responses_out.values()),
-            "max_chunk_words": MAX_TRANSLATE_CHUNK_WORDS,
-        },
+        "sentence_translation_summary": sentence_translation_summary,
         "translation_quality_summary": translation_quality_summary,
         "structural_validity": structural_validity,
         "translation_completeness_validity": translation_completeness_validity,
@@ -1881,10 +3316,25 @@ def process(
         "batch_size": translator.batch_size,
         "runtime_architecture": runtime_arch_info["runtime_architecture"],
         "elapsed_seconds": round(time.time() - process_start_time, 3),
+        # cache_hits is the raw cache.get() hit count (unchanged meaning);
+        # the four *_translations fields below are SENTENCE-level now (see
+        # sentence_translation_summary above) -- the sentence is the
+        # actual translation unit and live-progress-bar unit in the
+        # Round 7 redesign, so these agree with what a person watched
+        # scroll by during the run, not a response-level rollup over what
+        # used to be multi-sentence chunks.
         "cache_hits": cache.stats()["hits_this_run"],
-        "fresh_translations": translation_fresh_count,
-        "failed_translations": translation_failed_count,
-        "translation_chunks": sum(resp.get("translation_chunk_count", 0) for resp in responses_out.values()),
+        "fresh_translations": sentence_provenance_totals.get("FRESH_OK", 0),
+        "retried_ok_translations": sentence_provenance_totals.get("RETRY_OK", 0),
+        # Round 12 (external review, provenance fix): sentences whose
+        # FINAL text_es came from a resolved anti-repetition fallback
+        # retry, distinct from retried_ok_translations above (which is
+        # the PRIMARY pass's own transient-failure retry, unrelated --
+        # see the comment at the Pass 2 provenance fix for why these are
+        # deliberately never merged under one label).
+        "repetition_repaired_translations": sentence_provenance_totals.get("REPETITION_REPAIRED", 0),
+        "failed_translations": sentence_provenance_totals.get("FAILED", 0),
+        "translation_chunks": sentence_hard_split_total,
         "runtime_info": {
             "device": translator.device,
             "batch_size": translator.batch_size,
@@ -1893,10 +3343,12 @@ def process(
             "rosetta_warning": runtime_arch_info["warning"],
             "elapsed_seconds": round(time.time() - process_start_time, 3),
             "cache_hits": cache.stats()["hits_this_run"],
-            "cache_hit_translations": translation_cache_hit_count,
-            "fresh_translations": translation_fresh_count,
-            "failed_translations": translation_failed_count,
-            "translation_chunks": sum(resp.get("translation_chunk_count", 0) for resp in responses_out.values()),
+            "cache_hit_translations": sentence_provenance_totals.get("CACHE_HIT", 0),
+            "fresh_translations": sentence_provenance_totals.get("FRESH_OK", 0),
+            "retried_ok_translations": sentence_provenance_totals.get("RETRY_OK", 0),
+            "repetition_repaired_translations": sentence_provenance_totals.get("REPETITION_REPAIRED", 0),
+            "failed_translations": sentence_provenance_totals.get("FAILED", 0),
+            "translation_chunks": sentence_hard_split_total,
         },
     }
 
@@ -1964,6 +3416,12 @@ def run_preflight(verbose: bool = True, batch_size: int = DEFAULT_BATCH_SIZE) ->
         translator = NLLBTranslator(batch_size=batch_size)
         result["steps"]["tokenizer_loads"] = True
         result["steps"]["model_loads"] = True
+        # Stored so a caller running a full corpus run right after preflight
+        # (see main()) can reuse THIS already-loaded translator instead of
+        # constructing (and loading the ~600M-parameter model) a second
+        # time -- only set on success; a caller must never try to reuse a
+        # translator from a failed/partial preflight.
+        result["translator"] = translator
     except Exception as e:
         result["steps"]["tokenizer_loads"] = False
         result["steps"]["model_loads"] = False
@@ -2123,8 +3581,17 @@ def print_validation_report(report: dict) -> None:
     print(f"Duplicate sentence IDs                {report['duplicate_sentence_id_count']}")
     print(f"Unmapped sentences                    {silent_loss_check['unmapped_sentence_count']}")
     print()
+    pcc = report.get("primary_cache_coverage")
+    if pcc is not None:
+        print("Primary cache coverage (before this run's translation pass):")
+        print(f"  expected Catalan sentence units    {pcc['expected_catalan_sentence_units']}")
+        print(f"  covered                            {pcc['covered']}")
+        print(f"  missing                            {pcc['missing']}")
+        print(f"  SAFE TO REUSE PRIMARY CACHE         {pcc['safe_to_reuse_primary_cache']}")
+        print()
     print(f"Catalan responses requiring NLLB      {report['translation_required_count']}")
     print(f"Successful ca->es translations        {report['translation_successful_count']}")
+    print(f"Partially failed (some sentences)     {report.get('translation_partial_failure_count', 0)}")
     print(f"Failed translations                   {report['translation_failed_count']}")
     print()
     print(f"Missing text_es                       {report['missing_text_es_count']}")
@@ -2133,16 +3600,36 @@ def print_validation_report(report: dict) -> None:
     print(f"topic_text_es_clean empty (excluded)  {report['topic_text_es_clean_empty_count']}")
     print(f"Expected topic-model documents         {report['expected_topic_model_document_count']}")
     print()
-    chunking = report["translation_chunking"]
-    print(f"Total NLLB translation chunks         {chunking['total_chunks']}")
-    print(f"Responses needing >1 chunk             {chunking['responses_requiring_multiple_chunks']}")
-    print(f"Hard-split chunks (oversized sentence) {chunking['hard_split_chunk_count']}")
+    sci = report.get("sentence_count_invariant", {})
+    print(f"Frozen sentence IDs expected           {sci.get('expected', 'unknown')}")
+    print(f"Downstream sentence records produced   {sci.get('actual', 'unknown')}")
+    print(f"Sentence-count invariant holds         {sci.get('match', 'unknown')}")
+    print(f"  (exact frozen-ID-set match)           {sci.get('sentence_id_set_match', 'unknown')}")
+    if not sci.get("sentence_id_set_match", True):
+        print(f"  missing sentence IDs (frozen, not produced): {sci.get('missing_sentence_id_count', 0)}")
+        print(f"  unexpected sentence IDs (produced, not frozen): {sci.get('unexpected_sentence_id_count', 0)}")
+    sts = report.get("sentence_translation_summary", {})
+    by_status = sts.get("by_sentence_status", {})
+    print(f"Sentences: source_es={by_status.get('SOURCE_ES', 0)} cache_hit={by_status.get('CACHE_HIT', 0)} "
+          f"fresh={by_status.get('FRESH_OK', 0)} retry_ok={by_status.get('RETRY_OK', 0)} "
+          f"repetition_repaired={by_status.get('REPETITION_REPAIRED', 0)} "
+          f"flagged={by_status.get('FLAGGED', 0)} failed={by_status.get('FAILED', 0)}")
+    print(f"Hard-split sentence pieces (oversized sentence) {sts.get('hard_split_sentence_pieces', 0)}")
     print()
-    print(f"Language mismatches                   {tqs['language_mismatch_count']}")
-    print(f"  (short text, not assessed)           {tqs['short_text_language_not_assessed_count']}")
-    print(f"Degenerate outputs                    {tqs['degenerate_output_count']}")
-    print(f"  (short text, identical -- informational) {tqs['short_text_identical_output_count']}")
-    print(f"Length-ratio outliers                 {tqs['length_ratio_outlier_count']}")
+    print(f"FLAGGED sentences (fatal -- gates STEP2_VALID)  {sts.get('flagged_sentence_count', 0)}")
+    print(f"Sentence length-ratio outliers (review-only)    {sts.get('sentence_length_ratio_outlier_count', 0)}")
+    print(f"Sentence language mismatches (review-only)      {sts.get('sentence_language_mismatch_count', 0)}")
+    print(f"Repetition fallback retries attempted           {sts.get('repetition_fallback_retry_attempted_count', 0)}")
+    print(f"  resolved (no longer flagged)                  {sts.get('repetition_fallback_retry_resolved_count', 0)}")
+    print(f"  unresolved (still FLAGGED)                     {sts.get('repetition_fallback_retry_unresolved_count', 0)}")
+    print()
+    print("Response-level diagnostics (review-only -- see FLAGGED sentences above for the fatal gate):")
+    print(f"  Source-language mismatches (frozen vs. live, Round 13) {tqs.get('source_language_mismatch_count', 0)}")
+    print(f"  Language mismatches                 {tqs['language_mismatch_count']}")
+    print(f"    (short text, not assessed)         {tqs['short_text_language_not_assessed_count']}")
+    print(f"  Degenerate outputs                  {tqs['degenerate_output_count']}")
+    print(f"    (short text, identical -- informational) {tqs['short_text_identical_output_count']}")
+    print(f"  Length-ratio outliers               {tqs['length_ratio_outlier_count']}")
     print()
     print("Semantic similarity (original vs. translation):")
     print(f"  mean                                {sim['mean']}")
@@ -2170,6 +3657,8 @@ def print_validation_report(report: dict) -> None:
     print(f"Batch size                            {report.get('batch_size', 'unknown')}")
     print(f"Runtime architecture                  {report.get('runtime_architecture', 'unknown')}")
     print(f"Fresh translations                    {report.get('fresh_translations', 'unknown')}")
+    print(f"Retried-OK translations               {report.get('retried_ok_translations', 'unknown')}")
+    print(f"Repetition-repaired translations      {report.get('repetition_repaired_translations', 'unknown')}")
     print(f"Cache hits                            {report.get('cache_hits', 'unknown')}")
     print(f"Elapsed                               {_format_hms(report.get('elapsed_seconds', 0))}")
     runtime_info = report.get("runtime_info") or {}
@@ -2179,7 +3668,132 @@ def print_validation_report(report: dict) -> None:
         print(f"\nRun aborted early: {report.get('abort_reason')}")
 
 
-def main(mode: str = "full", batch_size: Optional[int] = None) -> bool:
+def validate_frozen_segmentation_against_input(
+    frozen_file: dict,
+    raw_data: Dict[str, Dict[str, str]],
+    input_file_path: str,
+) -> List[str]:
+    """Hard pre-run check that a loaded frozen segmentation file is still
+    the frozen file FOR this exact corpus, not a stale one left over from
+    a previous version of interviews.json that happens to still parse and
+    still have matching response IDs and languages. process()'s own
+    per-response frozen lookup (missing_from_frozen_segmentation /
+    frozen_segmentation_source_language_mismatch) cannot catch this on its
+    own -- it only ever iterates the CURRENT corpus's responses, so a
+    frozen response that quietly disappeared from the current input, or
+    one whose original text quietly changed while its ID and detected
+    language happened to stay the same, would never surface there.
+
+    Checks, in order:
+      1. schema_version is current -- an older frozen file predates
+         input_sha256 entirely and cannot be verified at all.
+      2. The frozen file's own declared response_count/total_sentence_count
+         agree with what is actually inside it (self-consistency -- catches
+         a hand-edited or corrupted frozen file).
+      3. input_sha256, recomputed from the actual on-disk input file right
+         now, matches what the frozen file recorded when it was generated
+         -- the cheapest, strongest single check: a match already proves
+         the input is byte-for-byte identical to what the freeze was built
+         from.
+      4. Response ID sets match exactly, both directions -- nothing in the
+         current corpus is missing from the frozen file, AND nothing in
+         the frozen file is stale (no longer present in the current
+         corpus).
+      5. Every response's original_text is identical between the frozen
+         file and the current corpus.
+    (4) and (5) are logically redundant with (3) whenever the whole-file
+    hash matches -- they are kept anyway, both because they give a far
+    more actionable error message when something DOES drift (which
+    specific response, not just "the file changed somehow"), and as an
+    independent way of catching the same class of problem.
+
+    Returns a list of human-readable problem descriptions; empty means
+    safe to proceed. Never raises -- always describes everything wrong,
+    not just the first thing found.
+    """
+    problems: List[str] = []
+
+    schema_version = frozen_file.get("schema_version")
+    if not isinstance(schema_version, int) or schema_version < FROZEN_SEGMENTATION_SCHEMA_VERSION:
+        problems.append(
+            f"frozen file schema_version is {schema_version!r}, expected >= "
+            f"{FROZEN_SEGMENTATION_SCHEMA_VERSION} -- re-run freeze_sentence_segmentation.py "
+            "to regenerate it with the current schema (an older file predates the "
+            "input-hash safety check and cannot be verified at all)."
+        )
+        return problems  # nothing else below is trustworthy without a current schema
+
+    frozen_responses = frozen_file.get("responses", {})
+    declared_response_count = frozen_file.get("response_count")
+    declared_sentence_count = frozen_file.get("total_sentence_count")
+    actual_response_count = len(frozen_responses)
+    actual_sentence_count = sum(len(r.get("sentences", [])) for r in frozen_responses.values())
+    if declared_response_count != actual_response_count:
+        problems.append(
+            f"frozen file's declared response_count ({declared_response_count!r}) does not "
+            f"match its actual number of response entries ({actual_response_count})."
+        )
+    if declared_sentence_count != actual_sentence_count:
+        problems.append(
+            f"frozen file's declared total_sentence_count ({declared_sentence_count!r}) does "
+            f"not match the actual sentence count inside it ({actual_sentence_count})."
+        )
+
+    recorded_hash = frozen_file.get("input_sha256")
+    current_hash = _hash_file(input_file_path)
+    if not recorded_hash:
+        problems.append("frozen file has no recorded input_sha256.")
+    elif current_hash is None:
+        problems.append(f"could not hash the current input file to verify against the frozen one: {input_file_path}")
+    elif recorded_hash != current_hash:
+        problems.append(
+            f"input_sha256 mismatch -- {input_file_path} has changed since the frozen "
+            f"segmentation was generated (frozen={recorded_hash}, current={current_hash}). "
+            "Re-run freeze_sentence_segmentation.py against the current corpus before "
+            "running Step 2 against it."
+        )
+
+    current_response_ids = set()
+    current_original_text: Dict[str, str] = {}
+    for interview_id, questions in raw_data.items():
+        for question_id, raw_text in questions.items():
+            if not raw_text or not raw_text.strip():
+                continue
+            response_id = f"{interview_id}::{question_id}"
+            current_response_ids.add(response_id)
+            current_original_text[response_id] = raw_text
+
+    frozen_response_ids = set(frozen_responses.keys())
+    missing_from_frozen = sorted(current_response_ids - frozen_response_ids)
+    stale_in_frozen = sorted(frozen_response_ids - current_response_ids)
+    if missing_from_frozen:
+        problems.append(
+            f"{len(missing_from_frozen)} response(s) in the current corpus are not in the "
+            f"frozen segmentation at all (e.g. {missing_from_frozen[:5]})."
+        )
+    if stale_in_frozen:
+        problems.append(
+            f"{len(stale_in_frozen)} response(s) in the frozen segmentation no longer exist "
+            f"in the current corpus (e.g. {stale_in_frozen[:5]}) -- this is exactly the case "
+            "process()'s own per-response frozen lookup can never detect by itself, since it "
+            "only ever iterates the CURRENT corpus's responses."
+        )
+
+    text_mismatches = sorted(
+        rid for rid in (current_response_ids & frozen_response_ids)
+        if frozen_responses[rid].get("original_text") != current_original_text[rid]
+    )
+    if text_mismatches:
+        problems.append(
+            f"{len(text_mismatches)} response(s) exist in both under the same ID, but their "
+            f"text differs from what the frozen segmentation was built from (e.g. "
+            f"{text_mismatches[:5]})."
+        )
+
+    return problems
+
+
+def main(mode: str = "full", batch_size: Optional[int] = None, require_warm_cache: bool = False) -> bool:
     # batch_size=None means "not explicitly requested" -- resolved here
     # (device-aware, after the fifth external review) rather than baked
     # into a fixed default, so an MPS/low-memory Mac gets a conservative
@@ -2203,14 +3817,6 @@ def main(mode: str = "full", batch_size: Optional[int] = None) -> bool:
     if mode == "smoke-test":
         return run_smoke_test(batch_size=batch_size)
 
-    preflight_passed, _ = run_preflight(verbose=True, batch_size=batch_size)
-    if not preflight_passed:
-        logger.error(
-            "Preflight failed -- aborting before processing the corpus. "
-            "Run `python preprocess_v2.py --preflight` for full detail."
-        )
-        return False
-
     if not os.path.exists(INPUT_FILE):
         logger.error(f"Input file not found: {INPUT_FILE}")
         return False
@@ -2220,14 +3826,85 @@ def main(mode: str = "full", batch_size: Optional[int] = None) -> bool:
         logger.error("No data loaded from input file")
         return False
 
+    # The Round 7 redesign's frozen sentence structure is REQUIRED for a
+    # real corpus run (not for --smoke-test, which uses its own small
+    # synthetic data and computes segmentation live -- see run_smoke_test)
+    # -- "frozen" means tied to this actual on-disk artifact, not silently
+    # recomputed from whatever segment_source_sentences() happens to
+    # produce on a given day. If this is missing, that's a setup problem
+    # to fix (run freeze_sentence_segmentation.py), not something to work
+    # around by falling back to live computation for a full run.
+    if not os.path.exists(FROZEN_SEGMENTATION_PATH):
+        logger.error(
+            f"Frozen sentence segmentation not found: {FROZEN_SEGMENTATION_PATH}. "
+            "Run `python freeze_sentence_segmentation.py` first -- see "
+            "evidence/round7_full_corpus_run_2026-09-07/README.md."
+        )
+        return False
+    frozen_file = JsonHandler.read_json(FROZEN_SEGMENTATION_PATH)
+    frozen_segmentation = frozen_file["responses"]
+
+    # Hard pre-run gate (checked BEFORE the expensive model load below, not
+    # after): the frozen file must still be the frozen file FOR this exact
+    # corpus, not a stale one that happens to still have matching response
+    # IDs and languages. process()'s own per-response frozen lookup cannot
+    # catch a response that quietly disappeared from the current input, or
+    # one whose text quietly changed -- see validate_frozen_segmentation_
+    # against_input()'s own docstring for the full list of what this
+    # checks and why each check is there.
+    frozen_validation_problems = validate_frozen_segmentation_against_input(frozen_file, raw_data, INPUT_FILE)
+    if frozen_validation_problems:
+        logger.error(
+            "Frozen segmentation no longer matches the current input corpus -- refusing to "
+            "run Step 2 against it. Re-run freeze_sentence_segmentation.py if this corpus "
+            "change is intentional. Problems found:"
+        )
+        for problem in frozen_validation_problems:
+            logger.error(f"  - {problem}")
+        return False
+
     preprocessor = Preprocessor()
-    cache = TranslationCache(CACHE_PATH)
-    translator = NLLBTranslator(batch_size=batch_size)
+    # SENTENCE_CACHE_PATH, not CACHE_PATH -- the old whole-response/chunk
+    # cache from the six-hour real run stays untouched and auditable (see
+    # evidence/round7_full_corpus_run_2026-09-07/). Sentence-level
+    # translations get their own cache file.
+    cache = TranslationCache(SENTENCE_CACHE_PATH)
+
+    # A single NLLBTranslator load, not two: run_preflight() below already
+    # constructs one (a real tokenizer/model load, confirmed by an actual
+    # translation call) purely to verify this environment can run NLLB at
+    # all -- it used to be thrown away immediately afterward, and a SECOND
+    # NLLBTranslator (a second full model load) was constructed here for
+    # the actual corpus run. On a low-memory machine (the exact Mac that
+    # previously crashed under memory pressure -- see get_runtime_
+    # architecture_info()/resolve_default_batch_size()), loading a ~600M-
+    # parameter model twice back-to-back before doing any real work is
+    # wasteful and risky for no benefit: preflight already used the same
+    # batch_size this run will use, so its translator is exactly the one
+    # this run needs. run_preflight() now returns it in its result dict
+    # (only on success) specifically so it can be reused here instead.
+    preflight_passed, preflight_result = run_preflight(verbose=True, batch_size=batch_size)
+    if not preflight_passed:
+        logger.error(
+            "Preflight failed -- aborting before processing the corpus. "
+            "Run `python preprocess_v2.py --preflight` for full detail."
+        )
+        return False
+    translator = preflight_result["translator"]
     similarity_scorer = SemanticSimilarityScorer()
+
+    if require_warm_cache:
+        logger.info(
+            "--require-warm-cache is set: this run will refuse to proceed if the primary "
+            "cache is missing any of this corpus's Catalan sentence units under the current "
+            "GENERATION_VERSION, rather than silently re-translating them."
+        )
 
     responses_out, sentences_out, report = process(
         raw_data, preprocessor, cache, translator, similarity_scorer,
         show_progress=True,
+        frozen_segmentation=frozen_segmentation,
+        require_warm_primary_cache=require_warm_cache,
     )
 
     # Final safety-net save: translate_texts_batched already saves the
@@ -2288,6 +3965,18 @@ def _parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
              "there can drive a low-memory Mac into swapping). Always overrides the "
              "automatic choice when given explicitly.",
     )
+    parser.add_argument(
+        "--require-warm-cache", action="store_true",
+        help=(
+            "Round 12 safety gate: before translating anything, verify every Catalan "
+            "sentence in the frozen corpus is already in the primary cache under the "
+            "current GENERATION_VERSION, and refuse to proceed (no NLLB calls made) if "
+            "any are missing, instead of silently re-translating them. Pass this on every "
+            "run EXCEPT a genuinely first-ever run against an empty cache -- see "
+            "STEP2_NLLB_CHANGES.md's 'Execution sequence for the next real run'. Ignored "
+            "with --preflight/--smoke-test (neither calls process())."
+        ),
+    )
     return parser.parse_args(argv)
 
 
@@ -2298,5 +3987,5 @@ if __name__ == "__main__":
     elif args.smoke_test:
         ok = main(mode="smoke-test", batch_size=args.batch_size)
     else:
-        ok = main(mode="full", batch_size=args.batch_size)
+        ok = main(mode="full", batch_size=args.batch_size, require_warm_cache=args.require_warm_cache)
     sys.exit(0 if ok else 1)

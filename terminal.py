@@ -1,6 +1,5 @@
 import os
 import nltk
-import json
 import hashlib
 from typing import Dict, List, Optional, TYPE_CHECKING
 from json_handler import JsonHandler
@@ -134,7 +133,12 @@ class TerminalInterface:
 
     def _get_nllb_cache(self) -> "preprocess_v2.TranslationCache":
         if self._nllb_cache is None:
-            self._nllb_cache = preprocess_v2.TranslationCache(preprocess_v2.CACHE_PATH)
+            # SENTENCE_CACHE_PATH (Round 7 redesign), not CACHE_PATH -- the
+            # old whole-response/chunk cache from the six-hour real run
+            # stays untouched and auditable (see
+            # evidence/round7_full_corpus_run_2026-09-07/). See
+            # preprocess_v2.SENTENCE_CACHE_PATH's own comment.
+            self._nllb_cache = preprocess_v2.TranslationCache(preprocess_v2.SENTENCE_CACHE_PATH)
         return self._nllb_cache
 
     def _get_nllb_similarity_scorer(self) -> "preprocess_v2.SemanticSimilarityScorer":
@@ -332,6 +336,18 @@ class TerminalInterface:
         cache = self._get_nllb_cache()
         similarity_scorer = self._get_nllb_similarity_scorer()
 
+        # Deliberately NOT passing frozen_segmentation here: source_data
+        # can legitimately be a filtered subset (_select_questions()) or
+        # synthetic data that would never match a frozen file keyed to the
+        # full 950-response corpus, and this method is the interactive/
+        # menu-driven entry point, not the one true full-corpus production
+        # run. process() computes segmentation live in that case -- via
+        # the exact same segment_source_sentences() function the frozen
+        # file itself was built from, so this is byte-identical to the
+        # frozen structure whenever source_data IS the full corpus (see
+        # the Round 7 segmentation audit -- 0 reconstruction mismatches).
+        # preprocess_v2.main() (the `python preprocess_v2.py` CLI path) is
+        # what ties a run to the actual frozen artifact -- see there.
         responses_out, sentences_out, report = preprocess_v2.process(
             source_data, self.preprocessor, cache, translator, similarity_scorer,
             show_progress=True,

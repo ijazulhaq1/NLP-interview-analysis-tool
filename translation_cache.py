@@ -96,6 +96,29 @@ class TranslationCache:
             self._misses += 1
         return cached
 
+    def contains(
+        self,
+        text: str,
+        source_lang: str,
+        target_lang: str,
+        model_name: str = "",
+        generation_version: str = "",
+    ) -> bool:
+        """Round 12: a pure existence check that does NOT touch hits_this_
+        run/misses_this_run. get()/get_text() are the right calls during
+        actual translation work -- every one of those lookups is a real
+        event worth counting toward this run's cache statistics. This
+        method exists for read-only, pre-flight/diagnostic checks (e.g.
+        preprocess_v2.compute_primary_cache_coverage()) that need to know
+        whether something is already cached WITHOUT that check itself
+        being counted as a lookup -- calling get() there would silently
+        inflate hits_this_run by however many sentences the coverage check
+        walks, ahead of process()'s own real lookups for those same
+        sentences moments later, corrupting the very stats this class
+        exists to report accurately.
+        """
+        return self._key(text, source_lang, target_lang, model_name, generation_version) in self._cache
+
     def get_text(
         self,
         text: str,
